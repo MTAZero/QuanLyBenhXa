@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C1F9D1E-B577-4E35-8CB1-8A220E05F7C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyBenhXa.BusinessLayer</RootNamespace>
+    <AssemblyName>QuanLyBenhXa.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\BusinessObjectBase.cs" />
+    <Compile Include="DataLayer\DataLayerBase.cs" />
+    <!--<Compile Include="InvalidBusinessObjectException.cs" />-->
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <!--<Compile Include="Validation\BrokenRule.cs" />
+    <Compile Include="Validation\BrokenRulesList.cs" />
+    <Compile Include="Validation\ValidateRuleBase.cs" />
+    <Compile Include="Validation\ValidateRuleNotNull.cs" />
+    <Compile Include="Validation\ValidateRuleRegexMatching.cs" />
+    <Compile Include="Validation\ValidateRuleStringMaxLength.cs" />
+    <Compile Include="Validation\ValidateRuleStringRequired.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />-->
+    <Compile Include="DataLayer\CAPBACSql.cs" />
+    <Compile Include="Entity\CAPBAC.cs" />
+    <Compile Include="BLL\CAPBACFactory.cs" />
+    <Compile Include="Key\CAPBACKeys.cs" />
+    <Compile Include="DataLayer\CHUCVUSql.cs" />
+    <Compile Include="Entity\CHUCVU.cs" />
+    <Compile Include="BLL\CHUCVUFactory.cs" />
+    <Compile Include="Key\CHUCVUKeys.cs" />
+    <Compile Include="DataLayer\DONVISql.cs" />
+    <Compile Include="Entity\DONVI.cs" />
+    <Compile Include="BLL\DONVIFactory.cs" />
+    <Compile Include="Key\DONVIKeys.cs" />
+    <Compile Include="DataLayer\DOITUONGSql.cs" />
+    <Compile Include="Entity\DOITUONG.cs" />
+    <Compile Include="BLL\DOITUONGFactory.cs" />
+    <Compile Include="Key\DOITUONGKeys.cs" />
+    <Compile Include="DataLayer\VATTUSql.cs" />
+    <Compile Include="Entity\VATTU.cs" />
+    <Compile Include="BLL\VATTUFactory.cs" />
+    <Compile Include="Key\VATTUKeys.cs" />
+    <Compile Include="DataLayer\PHANLOAISUCKHOESql.cs" />
+    <Compile Include="Entity\PHANLOAISUCKHOE.cs" />
+    <Compile Include="BLL\PHANLOAISUCKHOEFactory.cs" />
+    <Compile Include="Key\PHANLOAISUCKHOEKeys.cs" />
+    <Compile Include="DataLayer\TAIKHOANSql.cs" />
+    <Compile Include="Entity\TAIKHOAN.cs" />
+    <Compile Include="BLL\TAIKHOANFactory.cs" />
+    <Compile Include="Key\TAIKHOANKeys.cs" />
+    <Compile Include="DataLayer\BACSISql.cs" />
+    <Compile Include="Entity\BACSI.cs" />
+    <Compile Include="BLL\BACSIFactory.cs" />
+    <Compile Include="Key\BACSIKeys.cs" />
+    <Compile Include="DataLayer\BENHNHANSql.cs" />
+    <Compile Include="Entity\BENHNHAN.cs" />
+    <Compile Include="BLL\BENHNHANFactory.cs" />
+    <Compile Include="Key\BENHNHANKeys.cs" />
+    <Compile Include="DataLayer\NHOMBENHSql.cs" />
+    <Compile Include="Entity\NHOMBENH.cs" />
+    <Compile Include="BLL\NHOMBENHFactory.cs" />
+    <Compile Include="Key\NHOMBENHKeys.cs" />
+    <Compile Include="DataLayer\LOAIBENHSql.cs" />
+    <Compile Include="Entity\LOAIBENH.cs" />
+    <Compile Include="BLL\LOAIBENHFactory.cs" />
+    <Compile Include="Key\LOAIBENHKeys.cs" />
+    <Compile Include="DataLayer\BENHSql.cs" />
+    <Compile Include="Entity\BENH.cs" />
+    <Compile Include="BLL\BENHFactory.cs" />
+    <Compile Include="Key\BENHKeys.cs" />
+    <Compile Include="DataLayer\BENHVIENSql.cs" />
+    <Compile Include="Entity\BENHVIEN.cs" />
+    <Compile Include="BLL\BENHVIENFactory.cs" />
+    <Compile Include="Key\BENHVIENKeys.cs" />
+    <Compile Include="DataLayer\THUOCSql.cs" />
+    <Compile Include="Entity\THUOC.cs" />
+    <Compile Include="BLL\THUOCFactory.cs" />
+    <Compile Include="Key\THUOCKeys.cs" />
+    <Compile Include="DataLayer\NHAPTHUOCSql.cs" />
+    <Compile Include="Entity\NHAPTHUOC.cs" />
+    <Compile Include="BLL\NHAPTHUOCFactory.cs" />
+    <Compile Include="Key\NHAPTHUOCKeys.cs" />
+    <Compile Include="DataLayer\CHITIETNHAPSql.cs" />
+    <Compile Include="Entity\CHITIETNHAP.cs" />
+    <Compile Include="BLL\CHITIETNHAPFactory.cs" />
+    <Compile Include="Key\CHITIETNHAPKeys.cs" />
+    <Compile Include="DataLayer\KHAMTHUONGXUYENSql.cs" />
+    <Compile Include="Entity\KHAMTHUONGXUYEN.cs" />
+    <Compile Include="BLL\KHAMTHUONGXUYENFactory.cs" />
+    <Compile Include="Key\KHAMTHUONGXUYENKeys.cs" />
+    <Compile Include="DataLayer\CAPTHUOCSql.cs" />
+    <Compile Include="Entity\CAPTHUOC.cs" />
+    <Compile Include="BLL\CAPTHUOCFactory.cs" />
+    <Compile Include="Key\CAPTHUOCKeys.cs" />
+    <Compile Include="DataLayer\CHITIETCAPTHUOCSql.cs" />
+    <Compile Include="Entity\CHITIETCAPTHUOC.cs" />
+    <Compile Include="BLL\CHITIETCAPTHUOCFactory.cs" />
+    <Compile Include="Key\CHITIETCAPTHUOCKeys.cs" />
+    <Compile Include="DataLayer\MUONVATTUSql.cs" />
+    <Compile Include="Entity\MUONVATTU.cs" />
+    <Compile Include="BLL\MUONVATTUFactory.cs" />
+    <Compile Include="Key\MUONVATTUKeys.cs" />
+    <Compile Include="DataLayer\CHITIETMUONVATTUSql.cs" />
+    <Compile Include="Entity\CHITIETMUONVATTU.cs" />
+    <Compile Include="BLL\CHITIETMUONVATTUFactory.cs" />
+    <Compile Include="Key\CHITIETMUONVATTUKeys.cs" />
+    <Compile Include="DataLayer\GIAYGIOITHIEUSql.cs" />
+    <Compile Include="Entity\GIAYGIOITHIEU.cs" />
+    <Compile Include="BLL\GIAYGIOITHIEUFactory.cs" />
+    <Compile Include="Key\GIAYGIOITHIEUKeys.cs" />
+    <Compile Include="DataLayer\KHAMTHELUCSql.cs" />
+    <Compile Include="Entity\KHAMTHELUC.cs" />
+    <Compile Include="BLL\KHAMTHELUCFactory.cs" />
+    <Compile Include="Key\KHAMTHELUCKeys.cs" />
+    <Compile Include="DataLayer\KHAMCANLAMSANGSql.cs" />
+    <Compile Include="Entity\KHAMCANLAMSANG.cs" />
+    <Compile Include="BLL\KHAMCANLAMSANGFactory.cs" />
+    <Compile Include="Key\KHAMCANLAMSANGKeys.cs" />
+    <Compile Include="DataLayer\KHAMDINHKISql.cs" />
+    <Compile Include="Entity\KHAMDINHKI.cs" />
+    <Compile Include="BLL\KHAMDINHKIFactory.cs" />
+    <Compile Include="Key\KHAMDINHKIKeys.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
