@@ -155,7 +155,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
             if (txtKiHieu.Text == "")
             {
-                MessageBox.Show("Địa chỉ của đơn vị không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kí hiệu của đơn vị không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

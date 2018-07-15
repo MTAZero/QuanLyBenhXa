@@ -32,29 +32,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvBSMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvBS = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvBENHVIENMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvBENHVIEN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtKetLuan = new DevExpress.XtraEditors.MemoEdit();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtDiaChi = new DevExpress.XtraEditors.MemoEdit();
+            this.txtKiHieu = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTen = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KiHieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHVIENMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHVIEN)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKiHieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +93,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dgvBSMain);
+            this.groupBox1.Controls.Add(this.dgvBENHVIENMain);
             this.groupBox1.Location = new System.Drawing.Point(15, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(814, 487);
@@ -97,41 +101,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh viện";
             // 
-            // dgvBSMain
+            // dgvBENHVIENMain
             // 
-            this.dgvBSMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBSMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvBSMain.MainView = this.dgvBS;
-            this.dgvBSMain.Name = "dgvBSMain";
-            this.dgvBSMain.Size = new System.Drawing.Size(808, 464);
-            this.dgvBSMain.TabIndex = 2;
-            this.dgvBSMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvBS});
+            this.dgvBENHVIENMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBENHVIENMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvBENHVIENMain.MainView = this.dgvBENHVIEN;
+            this.dgvBENHVIENMain.Name = "dgvBENHVIENMain";
+            this.dgvBENHVIENMain.Size = new System.Drawing.Size(808, 464);
+            this.dgvBENHVIENMain.TabIndex = 2;
+            this.dgvBENHVIENMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvBENHVIEN});
             // 
-            // dgvBS
+            // dgvBENHVIEN
             // 
-            this.dgvBS.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvBS.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvBS.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvBS.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.Row.Options.UseFont = true;
-            this.dgvBS.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvBS.ColumnPanelRowHeight = 30;
-            this.dgvBS.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvBS.GridControl = this.dgvBSMain;
-            this.dgvBS.Name = "dgvBS";
-            this.dgvBS.OptionsBehavior.Editable = false;
-            this.dgvBS.OptionsBehavior.ReadOnly = true;
-            this.dgvBS.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvBS.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvBS.OptionsCustomization.AllowFilter = false;
-            this.dgvBS.OptionsCustomization.AllowGroup = false;
-            this.dgvBS.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvBS.OptionsFind.AllowFindPanel = false;
-            this.dgvBS.OptionsView.ShowGroupPanel = false;
-            this.dgvBS.PaintStyleName = "UltraFlat";
-            this.dgvBS.RowHeight = 30;
+            this.dgvBENHVIEN.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENHVIEN.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvBENHVIEN.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvBENHVIEN.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvBENHVIEN.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENHVIEN.Appearance.Row.Options.UseFont = true;
+            this.dgvBENHVIEN.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvBENHVIEN.ColumnPanelRowHeight = 30;
+            this.dgvBENHVIEN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.Ten,
+            this.DiaChi,
+            this.KiHieu});
+            this.dgvBENHVIEN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvBENHVIEN.GridControl = this.dgvBENHVIENMain;
+            this.dgvBENHVIEN.Name = "dgvBENHVIEN";
+            this.dgvBENHVIEN.OptionsBehavior.Editable = false;
+            this.dgvBENHVIEN.OptionsBehavior.ReadOnly = true;
+            this.dgvBENHVIEN.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvBENHVIEN.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvBENHVIEN.OptionsCustomization.AllowFilter = false;
+            this.dgvBENHVIEN.OptionsCustomization.AllowGroup = false;
+            this.dgvBENHVIEN.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvBENHVIEN.OptionsFind.AllowFindPanel = false;
+            this.dgvBENHVIEN.OptionsView.ShowGroupPanel = false;
+            this.dgvBENHVIEN.PaintStyleName = "UltraFlat";
+            this.dgvBENHVIEN.RowHeight = 30;
+            this.dgvBENHVIEN.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvBENHVIEN_FocusedRowChanged);
             // 
             // btnXoa
             // 
@@ -145,6 +155,7 @@
             this.btnXoa.Size = new System.Drawing.Size(423, 44);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -158,6 +169,7 @@
             this.btnThem.Size = new System.Drawing.Size(222, 44);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -171,6 +183,7 @@
             this.btnSua.Size = new System.Drawing.Size(195, 44);
             this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTimKiem
             // 
@@ -178,6 +191,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(313, 24);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -192,10 +206,10 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtKetLuan);
-            this.groupBox2.Controls.Add(this.textEdit1);
+            this.groupBox2.Controls.Add(this.txtDiaChi);
+            this.groupBox2.Controls.Add(this.txtKiHieu);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtHoTen);
+            this.groupBox2.Controls.Add(this.txtTen);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(848, 52);
             this.groupBox2.Name = "groupBox2";
@@ -204,15 +218,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bệnh viện";
             // 
-            // textEdit1
+            // label4
             // 
-            this.textEdit1.Location = new System.Drawing.Point(107, 69);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(295, 26);
-            this.textEdit1.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Địa chỉ:";
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(107, 112);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDiaChi.Size = new System.Drawing.Size(295, 64);
+            this.txtDiaChi.TabIndex = 11;
+            // 
+            // txtKiHieu
+            // 
+            this.txtKiHieu.Location = new System.Drawing.Point(107, 69);
+            this.txtKiHieu.Name = "txtKiHieu";
+            this.txtKiHieu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtKiHieu.Properties.Appearance.Options.UseFont = true;
+            this.txtKiHieu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtKiHieu.Size = new System.Drawing.Size(295, 26);
+            this.txtKiHieu.TabIndex = 3;
             // 
             // label3
             // 
@@ -223,15 +256,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Kí hiệu:";
             // 
-            // txtHoTen
+            // txtTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(107, 35);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtHoTen.Properties.Appearance.Options.UseFont = true;
-            this.txtHoTen.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtHoTen.Size = new System.Drawing.Size(295, 26);
-            this.txtHoTen.TabIndex = 1;
+            this.txtTen.Location = new System.Drawing.Point(107, 35);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTen.Properties.Appearance.Options.UseFont = true;
+            this.txtTen.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTen.Size = new System.Drawing.Size(295, 26);
+            this.txtTen.TabIndex = 1;
             // 
             // label2
             // 
@@ -242,24 +275,41 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên :";
             // 
-            // txtKetLuan
+            // STT
             // 
-            this.txtKetLuan.Location = new System.Drawing.Point(107, 112);
-            this.txtKetLuan.Name = "txtKetLuan";
-            this.txtKetLuan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtKetLuan.Properties.Appearance.Options.UseFont = true;
-            this.txtKetLuan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtKetLuan.Size = new System.Drawing.Size(295, 64);
-            this.txtKetLuan.TabIndex = 11;
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 80;
             // 
-            // label4
+            // Ten
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Địa chỉ:";
+            this.Ten.Caption = "Tên";
+            this.Ten.FieldName = "Ten";
+            this.Ten.Name = "Ten";
+            this.Ten.Visible = true;
+            this.Ten.VisibleIndex = 1;
+            this.Ten.Width = 218;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.Caption = "Địa chỉ";
+            this.DiaChi.FieldName = "DiaChi";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Visible = true;
+            this.DiaChi.VisibleIndex = 2;
+            this.DiaChi.Width = 263;
+            // 
+            // KiHieu
+            // 
+            this.KiHieu.Caption = "Kí hiệu";
+            this.KiHieu.FieldName = "KiHieu";
+            this.KiHieu.Name = "KiHieu";
+            this.KiHieu.Visible = true;
+            this.KiHieu.VisibleIndex = 3;
+            this.KiHieu.Width = 138;
             // 
             // ucDanhSachBenhVien
             // 
@@ -271,17 +321,18 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDanhSachBenhVien";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucDanhSachBenhVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHVIENMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHVIEN)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKiHieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,14 +347,18 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.TextEdit txtHoTen;
+        private DevExpress.XtraEditors.TextEdit txtTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl dgvBSMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvBS;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraGrid.GridControl dgvBENHVIENMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvBENHVIEN;
+        private DevExpress.XtraEditors.TextEdit txtKiHieu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.MemoEdit txtKetLuan;
+        private DevExpress.XtraEditors.MemoEdit txtDiaChi;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn Ten;
+        private DevExpress.XtraGrid.Columns.GridColumn DiaChi;
+        private DevExpress.XtraGrid.Columns.GridColumn KiHieu;
     }
 }
