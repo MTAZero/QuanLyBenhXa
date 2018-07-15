@@ -568,6 +568,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDanhSachBacSi";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucDanhSachBacSi_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
