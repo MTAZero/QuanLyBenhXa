@@ -1,4 +1,4 @@
-SET NOCOUNT ON
+﻿SET NOCOUNT ON
 GO
 USE [QLSUCKHOE]
 GO
@@ -121,7 +121,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[CHUCVU_Ins
 GO
 CREATE PROCEDURE [dbo].[CHUCVU_Insert]
 	@ID int output,
-	@TEN nvarchar(1) = null ,
+	@TEN nvarchar(MAX) = null ,
 	@KIHIEU nvarchar(MAX) = null ,
 	@GHICHU nvarchar(MAX) = null 
 
@@ -150,7 +150,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[CHUCVU_Upd
 GO
 CREATE PROCEDURE [dbo].[CHUCVU_Update]
 	@ID int,
-	@TEN nvarchar(1) = null,
+	@TEN nvarchar(MAX) = null,
 	@KIHIEU nvarchar(MAX) = null,
 	@GHICHU nvarchar(MAX) = null
 

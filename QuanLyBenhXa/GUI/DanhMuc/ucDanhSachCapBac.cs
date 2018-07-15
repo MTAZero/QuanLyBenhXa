@@ -30,7 +30,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             try
             {
                 int STT = 0;
-                String text = txtTimKiem.Text;
+                String text = txtTimKiem.Text.ToUpper();
 
                 dgvCapBacMain.DataSource = capbacService.GetAllEntities().ToList()
                     .Select(p => new
@@ -39,7 +39,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                         Ten = p.TEN,
                         KiHieu = p.KIHIEU
                     })
-                    .Where(p => p.Ten.Contains(text) || p.KiHieu.Contains(text))
+                    .Where(p => p.Ten.ToUpper().Contains(text) || p.KiHieu.ToUpper().Contains(text))
                     .Select(p => new
                     {
                         ID = p.ID,
@@ -240,7 +240,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                     }
                     else
                     {
-                        MessageBox.Show("Thêm thông tin nhà sản xuất thất bại\n",
+                        MessageBox.Show("Thêm thông tin cấp bậc thất bại\n",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -281,14 +281,14 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
                     if (capbacService.Update(cu))
                     {
-                        MessageBox.Show("Sửa thông tin nhà sản xuất thành công",
+                        MessageBox.Show("Sửa thông tin cấp bậc thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     else 
                     {
-                        MessageBox.Show("Sửa thông tin nhà sản xuất thất bại\n",
+                        MessageBox.Show("Sửa thông tin cấp bậc thất bại\n",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -324,7 +324,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa thông tin nhà sản xuất thất bại\n" + ex.Message,
+                    MessageBox.Show("Xóa thông tin cấp bậc thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
