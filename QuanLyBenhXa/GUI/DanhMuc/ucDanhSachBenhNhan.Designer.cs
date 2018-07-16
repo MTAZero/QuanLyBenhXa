@@ -32,28 +32,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvBSMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvBS = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvBENHNHANMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvBENHNHAN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTienSu = new DevExpress.XtraEditors.TextEdit();
             this.label15 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaBHYT = new DevExpress.XtraEditors.TextEdit();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.lookUpEdit3 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbxBenh = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbxDoiTuong = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxChucVu = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxDonVi = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxCapBac = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtNhomMau = new DevExpress.XtraEditors.TextEdit();
+            this.txtNgheNghiep = new DevExpress.XtraEditors.TextEdit();
+            this.txtQueQuan = new DevExpress.XtraEditors.TextEdit();
+            this.txtNamNhapNgu = new DevExpress.XtraEditors.TextEdit();
+            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,27 +68,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTrinhDo = new DevExpress.XtraEditors.TextEdit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHNHANMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHNHAN)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTienSu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaBHYT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDoiTuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDonVi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCapBac.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhomMau.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgheNghiep.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamNhapNgu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrinhDo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,7 +129,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dgvBSMain);
+            this.groupBox1.Controls.Add(this.dgvBENHNHANMain);
             this.groupBox1.Location = new System.Drawing.Point(15, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(583, 487);
@@ -131,41 +137,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
             // 
-            // dgvBSMain
+            // dgvBENHNHANMain
             // 
-            this.dgvBSMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBSMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvBSMain.MainView = this.dgvBS;
-            this.dgvBSMain.Name = "dgvBSMain";
-            this.dgvBSMain.Size = new System.Drawing.Size(577, 464);
-            this.dgvBSMain.TabIndex = 2;
-            this.dgvBSMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvBS});
+            this.dgvBENHNHANMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBENHNHANMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvBENHNHANMain.MainView = this.dgvBENHNHAN;
+            this.dgvBENHNHANMain.Name = "dgvBENHNHANMain";
+            this.dgvBENHNHANMain.Size = new System.Drawing.Size(577, 464);
+            this.dgvBENHNHANMain.TabIndex = 2;
+            this.dgvBENHNHANMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvBENHNHAN});
             // 
-            // dgvBS
+            // dgvBENHNHAN
             // 
-            this.dgvBS.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvBS.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvBS.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvBS.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.Row.Options.UseFont = true;
-            this.dgvBS.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvBS.ColumnPanelRowHeight = 30;
-            this.dgvBS.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvBS.GridControl = this.dgvBSMain;
-            this.dgvBS.Name = "dgvBS";
-            this.dgvBS.OptionsBehavior.Editable = false;
-            this.dgvBS.OptionsBehavior.ReadOnly = true;
-            this.dgvBS.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvBS.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvBS.OptionsCustomization.AllowFilter = false;
-            this.dgvBS.OptionsCustomization.AllowGroup = false;
-            this.dgvBS.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvBS.OptionsFind.AllowFindPanel = false;
-            this.dgvBS.OptionsView.ShowGroupPanel = false;
-            this.dgvBS.PaintStyleName = "UltraFlat";
-            this.dgvBS.RowHeight = 30;
+            this.dgvBENHNHAN.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENHNHAN.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvBENHNHAN.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvBENHNHAN.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvBENHNHAN.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENHNHAN.Appearance.Row.Options.UseFont = true;
+            this.dgvBENHNHAN.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvBENHNHAN.ColumnPanelRowHeight = 30;
+            this.dgvBENHNHAN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.HoTen,
+            this.ChucVu});
+            this.dgvBENHNHAN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvBENHNHAN.GridControl = this.dgvBENHNHANMain;
+            this.dgvBENHNHAN.Name = "dgvBENHNHAN";
+            this.dgvBENHNHAN.OptionsBehavior.Editable = false;
+            this.dgvBENHNHAN.OptionsBehavior.ReadOnly = true;
+            this.dgvBENHNHAN.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvBENHNHAN.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvBENHNHAN.OptionsCustomization.AllowFilter = false;
+            this.dgvBENHNHAN.OptionsCustomization.AllowGroup = false;
+            this.dgvBENHNHAN.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvBENHNHAN.OptionsFind.AllowFindPanel = false;
+            this.dgvBENHNHAN.OptionsView.ShowGroupPanel = false;
+            this.dgvBENHNHAN.PaintStyleName = "UltraFlat";
+            this.dgvBENHNHAN.RowHeight = 30;
+            this.dgvBENHNHAN.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvBENHNHAN_FocusedRowChanged);
             // 
             // btnXoa
             // 
@@ -179,6 +190,7 @@
             this.btnXoa.Size = new System.Drawing.Size(209, 44);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -192,6 +204,7 @@
             this.btnThem.Size = new System.Drawing.Size(222, 44);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -205,6 +218,7 @@
             this.btnSua.Size = new System.Drawing.Size(224, 44);
             this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTimKiem
             // 
@@ -212,6 +226,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(514, 24);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -225,20 +240,22 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.textEdit7);
+            this.groupBox2.Controls.Add(this.txtTrinhDo);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.txtTienSu);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textEdit1);
+            this.groupBox2.Controls.Add(this.txtMaBHYT);
             this.groupBox2.Controls.Add(this.dateNgaySinh);
-            this.groupBox2.Controls.Add(this.comboBoxEdit1);
-            this.groupBox2.Controls.Add(this.lookUpEdit3);
-            this.groupBox2.Controls.Add(this.lookUpEdit2);
-            this.groupBox2.Controls.Add(this.lookUpEdit1);
-            this.groupBox2.Controls.Add(this.cbxBenh);
-            this.groupBox2.Controls.Add(this.textEdit6);
-            this.groupBox2.Controls.Add(this.textEdit5);
-            this.groupBox2.Controls.Add(this.textEdit4);
-            this.groupBox2.Controls.Add(this.textEdit3);
-            this.groupBox2.Controls.Add(this.textEdit2);
+            this.groupBox2.Controls.Add(this.cbxGioiTinh);
+            this.groupBox2.Controls.Add(this.cbxDoiTuong);
+            this.groupBox2.Controls.Add(this.cbxChucVu);
+            this.groupBox2.Controls.Add(this.cbxDonVi);
+            this.groupBox2.Controls.Add(this.cbxCapBac);
+            this.groupBox2.Controls.Add(this.txtNhomMau);
+            this.groupBox2.Controls.Add(this.txtNgheNghiep);
+            this.groupBox2.Controls.Add(this.txtQueQuan);
+            this.groupBox2.Controls.Add(this.txtNamNhapNgu);
+            this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -260,15 +277,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bệnh nhân";
             // 
-            // textEdit7
+            // txtTienSu
             // 
-            this.textEdit7.Location = new System.Drawing.Point(98, 420);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit7.Size = new System.Drawing.Size(558, 26);
-            this.textEdit7.TabIndex = 29;
+            this.txtTienSu.Location = new System.Drawing.Point(98, 420);
+            this.txtTienSu.Name = "txtTienSu";
+            this.txtTienSu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTienSu.Properties.Appearance.Options.UseFont = true;
+            this.txtTienSu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTienSu.Size = new System.Drawing.Size(253, 26);
+            this.txtTienSu.TabIndex = 14;
             // 
             // label15
             // 
@@ -279,15 +296,15 @@
             this.label15.TabIndex = 28;
             this.label15.Text = "Tiền sử:";
             // 
-            // textEdit1
+            // txtMaBHYT
             // 
-            this.textEdit1.Location = new System.Drawing.Point(437, 145);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(219, 26);
-            this.textEdit1.TabIndex = 27;
+            this.txtMaBHYT.Location = new System.Drawing.Point(437, 145);
+            this.txtMaBHYT.Name = "txtMaBHYT";
+            this.txtMaBHYT.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtMaBHYT.Properties.Appearance.Options.UseFont = true;
+            this.txtMaBHYT.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtMaBHYT.Size = new System.Drawing.Size(219, 26);
+            this.txtMaBHYT.TabIndex = 6;
             // 
             // dateNgaySinh
             // 
@@ -307,144 +324,144 @@
             this.dateNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateNgaySinh.Size = new System.Drawing.Size(185, 26);
-            this.dateNgaySinh.TabIndex = 26;
+            this.dateNgaySinh.TabIndex = 7;
             // 
-            // comboBoxEdit1
+            // cbxGioiTinh
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(437, 200);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxGioiTinh.Location = new System.Drawing.Point(437, 200);
+            this.cbxGioiTinh.Name = "cbxGioiTinh";
+            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
-            "Bác sĩ",
-            "Quản trị"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(219, 26);
-            this.comboBoxEdit1.TabIndex = 25;
+            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
+            this.cbxGioiTinh.TabIndex = 8;
             // 
-            // lookUpEdit3
+            // cbxDoiTuong
             // 
-            this.lookUpEdit3.Location = new System.Drawing.Point(99, 145);
-            this.lookUpEdit3.Name = "lookUpEdit3";
-            this.lookUpEdit3.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit3.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit3.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit3.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxDoiTuong.Location = new System.Drawing.Point(99, 145);
+            this.cbxDoiTuong.Name = "cbxDoiTuong";
+            this.cbxDoiTuong.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxDoiTuong.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDoiTuong.Properties.Appearance.Options.UseFont = true;
+            this.cbxDoiTuong.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDoiTuong.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxDoiTuong.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDoiTuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit3.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit3.Properties.ShowHeader = false;
-            this.lookUpEdit3.Size = new System.Drawing.Size(253, 26);
-            this.lookUpEdit3.TabIndex = 24;
+            this.cbxDoiTuong.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDoiTuong.Properties.ShowHeader = false;
+            this.cbxDoiTuong.Size = new System.Drawing.Size(253, 26);
+            this.cbxDoiTuong.TabIndex = 5;
             // 
-            // lookUpEdit2
+            // cbxChucVu
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(437, 90);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit2.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit2.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxChucVu.Location = new System.Drawing.Point(437, 90);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit2.Properties.ShowHeader = false;
-            this.lookUpEdit2.Size = new System.Drawing.Size(219, 26);
-            this.lookUpEdit2.TabIndex = 23;
+            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.ShowHeader = false;
+            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
+            this.cbxChucVu.TabIndex = 4;
             // 
-            // lookUpEdit1
+            // cbxDonVi
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(437, 35);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit1.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit1.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxDonVi.Location = new System.Drawing.Point(437, 35);
+            this.cbxDonVi.Name = "cbxDonVi";
+            this.cbxDonVi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxDonVi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDonVi.Properties.Appearance.Options.UseFont = true;
+            this.cbxDonVi.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDonVi.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxDonVi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDonVi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit1.Properties.ShowHeader = false;
-            this.lookUpEdit1.Size = new System.Drawing.Size(219, 26);
-            this.lookUpEdit1.TabIndex = 22;
+            this.cbxDonVi.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDonVi.Properties.ShowHeader = false;
+            this.cbxDonVi.Size = new System.Drawing.Size(219, 26);
+            this.cbxDonVi.TabIndex = 2;
             // 
-            // cbxBenh
+            // cbxCapBac
             // 
-            this.cbxBenh.Location = new System.Drawing.Point(98, 90);
-            this.cbxBenh.Name = "cbxBenh";
-            this.cbxBenh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxBenh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenh.Properties.Appearance.Options.UseFont = true;
-            this.cbxBenh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenh.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxBenh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxCapBac.Location = new System.Drawing.Point(98, 90);
+            this.cbxCapBac.Name = "cbxCapBac";
+            this.cbxCapBac.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxCapBac.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCapBac.Properties.Appearance.Options.UseFont = true;
+            this.cbxCapBac.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCapBac.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxCapBac.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCapBac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxBenh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenh.Properties.ShowHeader = false;
-            this.cbxBenh.Size = new System.Drawing.Size(253, 26);
-            this.cbxBenh.TabIndex = 21;
+            this.cbxCapBac.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCapBac.Properties.ShowHeader = false;
+            this.cbxCapBac.Size = new System.Drawing.Size(253, 26);
+            this.cbxCapBac.TabIndex = 3;
             // 
-            // textEdit6
+            // txtNhomMau
             // 
-            this.textEdit6.Location = new System.Drawing.Point(437, 369);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit6.Size = new System.Drawing.Size(219, 26);
-            this.textEdit6.TabIndex = 20;
+            this.txtNhomMau.Location = new System.Drawing.Point(437, 369);
+            this.txtNhomMau.Name = "txtNhomMau";
+            this.txtNhomMau.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtNhomMau.Properties.Appearance.Options.UseFont = true;
+            this.txtNhomMau.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtNhomMau.Size = new System.Drawing.Size(219, 26);
+            this.txtNhomMau.TabIndex = 13;
             // 
-            // textEdit5
+            // txtNgheNghiep
             // 
-            this.textEdit5.Location = new System.Drawing.Point(98, 369);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit5.Size = new System.Drawing.Size(253, 26);
-            this.textEdit5.TabIndex = 19;
+            this.txtNgheNghiep.Location = new System.Drawing.Point(98, 369);
+            this.txtNgheNghiep.Name = "txtNgheNghiep";
+            this.txtNgheNghiep.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtNgheNghiep.Properties.Appearance.Options.UseFont = true;
+            this.txtNgheNghiep.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtNgheNghiep.Size = new System.Drawing.Size(253, 26);
+            this.txtNgheNghiep.TabIndex = 12;
             // 
-            // textEdit4
+            // txtQueQuan
             // 
-            this.textEdit4.Location = new System.Drawing.Point(98, 310);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit4.Size = new System.Drawing.Size(558, 26);
-            this.textEdit4.TabIndex = 18;
+            this.txtQueQuan.Location = new System.Drawing.Point(98, 310);
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtQueQuan.Properties.Appearance.Options.UseFont = true;
+            this.txtQueQuan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtQueQuan.Size = new System.Drawing.Size(558, 26);
+            this.txtQueQuan.TabIndex = 11;
             // 
-            // textEdit3
+            // txtNamNhapNgu
             // 
-            this.textEdit3.Location = new System.Drawing.Point(437, 255);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit3.Size = new System.Drawing.Size(219, 26);
-            this.textEdit3.TabIndex = 17;
+            this.txtNamNhapNgu.Location = new System.Drawing.Point(437, 255);
+            this.txtNamNhapNgu.Name = "txtNamNhapNgu";
+            this.txtNamNhapNgu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtNamNhapNgu.Properties.Appearance.Options.UseFont = true;
+            this.txtNamNhapNgu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtNamNhapNgu.Size = new System.Drawing.Size(219, 26);
+            this.txtNamNhapNgu.TabIndex = 10;
             // 
-            // textEdit2
+            // txtSDT
             // 
-            this.textEdit2.Location = new System.Drawing.Point(98, 255);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit2.Size = new System.Drawing.Size(253, 26);
-            this.textEdit2.TabIndex = 16;
+            this.txtSDT.Location = new System.Drawing.Point(98, 255);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtSDT.Size = new System.Drawing.Size(253, 26);
+            this.txtSDT.TabIndex = 9;
             // 
             // label14
             // 
@@ -573,6 +590,52 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ và tên:";
             // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 59;
+            // 
+            // HoTen
+            // 
+            this.HoTen.Caption = "Họ và tên";
+            this.HoTen.FieldName = "HoTen";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Visible = true;
+            this.HoTen.VisibleIndex = 1;
+            this.HoTen.Width = 335;
+            // 
+            // ChucVu
+            // 
+            this.ChucVu.Caption = "Chức vụ";
+            this.ChucVu.FieldName = "ChucVu";
+            this.ChucVu.Name = "ChucVu";
+            this.ChucVu.Visible = true;
+            this.ChucVu.VisibleIndex = 2;
+            this.ChucVu.Width = 305;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(362, 424);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 17);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Trình độ:";
+            // 
+            // txtTrinhDo
+            // 
+            this.txtTrinhDo.Location = new System.Drawing.Point(437, 420);
+            this.txtTrinhDo.Name = "txtTrinhDo";
+            this.txtTrinhDo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTrinhDo.Properties.Appearance.Options.UseFont = true;
+            this.txtTrinhDo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTrinhDo.Size = new System.Drawing.Size(219, 26);
+            this.txtTrinhDo.TabIndex = 30;
+            // 
             // ucDanhSachBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -583,29 +646,31 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDanhSachBenhNhan";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucDanhSachBenhNhan_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHNHANMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHNHAN)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTienSu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaBHYT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDoiTuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDonVi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCapBac.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhomMau.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgheNghiep.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNamNhapNgu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrinhDo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,8 +688,8 @@
         private DevExpress.XtraEditors.TextEdit txtHoTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl dgvBSMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvBS;
+        private DevExpress.XtraGrid.GridControl dgvBENHNHANMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvBENHNHAN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -637,19 +702,24 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.LookUpEdit cbxBenh;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.TextEdit txtNamNhapNgu;
+        private DevExpress.XtraEditors.TextEdit txtSDT;
+        private DevExpress.XtraEditors.TextEdit txtQueQuan;
+        private DevExpress.XtraEditors.TextEdit txtNhomMau;
+        private DevExpress.XtraEditors.TextEdit txtNgheNghiep;
+        private DevExpress.XtraEditors.LookUpEdit cbxDonVi;
+        private DevExpress.XtraEditors.LookUpEdit cbxCapBac;
+        private DevExpress.XtraEditors.LookUpEdit cbxChucVu;
+        private DevExpress.XtraEditors.LookUpEdit cbxDoiTuong;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxGioiTinh;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtMaBHYT;
+        private DevExpress.XtraEditors.TextEdit txtTienSu;
         private System.Windows.Forms.Label label15;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn HoTen;
+        private DevExpress.XtraGrid.Columns.GridColumn ChucVu;
+        private DevExpress.XtraEditors.TextEdit txtTrinhDo;
+        private System.Windows.Forms.Label label16;
     }
 }
