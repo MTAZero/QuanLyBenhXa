@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -67,7 +68,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>Student</returns>
         public LOAIBENH GetByPrimaryKey(LOAIBENHKeys keys)
         {
-            return _dataObject.SelectByPrimaryKey(keys); 
+            return _dataObject.SelectByPrimaryKey(keys);
         }
 
         /// <summary>
@@ -76,11 +77,11 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>list</returns>
         public List<LOAIBENH> GetAllEntities()
         {
-            return _dataObject.SelectAllEntities(); 
+            return _dataObject.SelectAllEntities();
         }
         public DataTable GetAll()
         {
-            return _dataObject.SelectAll(); 
+            return _dataObject.SelectAll();
         }
         /// <summary>
         /// get list of LOAIBENH by field
@@ -90,7 +91,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>list</returns>
         public List<LOAIBENH> GetAllBy(LOAIBENH.LOAIBENHFields fieldName, object value)
         {
-            return _dataObject.SelectByField(fieldName.ToString(), value);  
+            return _dataObject.SelectByField(fieldName.ToString(), value);
         }
 
         /// <summary>
@@ -100,7 +101,19 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(LOAIBENHKeys keys)
         {
-            return _dataObject.Delete(keys); 
+            try
+            {
+                BENHFactory BENHService = new BENHFactory();
+                LOAIBENH lb = GetAllBy(LOAIBENH.LOAIBENHFields.ID, keys.ID).FirstOrDefault();
+
+                List<BENH> dsBENH = BENHService.GetAllEntities().ToList().Where(p => p.LOAIBENHID == lb.ID).ToList();
+                foreach (BENH item in dsBENH) BENHService.Delete(new BENHKeys(item.ID));
+            }
+            catch
+            {
+            }
+
+            return _dataObject.Delete(keys);
         }
 
         /// <summary>
@@ -111,7 +124,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for successfully deleted</returns>
         public bool Delete(LOAIBENH.LOAIBENHFields fieldName, object value)
         {
-            return _dataObject.DeleteByField(fieldName.ToString(), value); 
+            return _dataObject.DeleteByField(fieldName.ToString(), value);
         }
 
         #endregion

@@ -32,52 +32,58 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtKetLuan = new DevExpress.XtraEditors.MemoEdit();
+            this.txtMoTa = new DevExpress.XtraEditors.MemoEdit();
             this.label4 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtBENH = new DevExpress.XtraEditors.TextEdit();
+            this.btnXoaBENH = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemBENH = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaBENH = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvBENHMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvBENH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvLOAIBENHMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvLOAIBENH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtLOAIBENH = new DevExpress.XtraEditors.TextEdit();
+            this.btnXoaLOAIBENH = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemLOAIBENH = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaLOAIBENH = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvBSMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvBS = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvNHOMBENHMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvNHOMBENH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.txtNHOMBENH = new DevExpress.XtraEditors.TextEdit();
+            this.btnXoaNHOMBENH = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemNHOMBENH = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaNHOMBENH = new DevExpress.XtraEditors.SimpleButton();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STTLoaiBenh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenLoaiBenh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STTBenh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenBenh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMoTa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBENH.Properties)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENH)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLOAIBENHMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLOAIBENH)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLOAIBENH.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNHOMBENHMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNHOMBENH)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNHOMBENH.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,13 +115,13 @@
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox6.Controls.Add(this.txtKetLuan);
+            this.groupBox6.Controls.Add(this.txtMoTa);
             this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.textEdit2);
-            this.groupBox6.Controls.Add(this.simpleButton4);
+            this.groupBox6.Controls.Add(this.txtBENH);
+            this.groupBox6.Controls.Add(this.btnXoaBENH);
             this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Controls.Add(this.simpleButton5);
-            this.groupBox6.Controls.Add(this.simpleButton6);
+            this.groupBox6.Controls.Add(this.btnThemBENH);
+            this.groupBox6.Controls.Add(this.btnSuaBENH);
             this.groupBox6.Location = new System.Drawing.Point(833, 333);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(449, 207);
@@ -123,15 +129,15 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thông tin bệnh";
             // 
-            // txtKetLuan
+            // txtMoTa
             // 
-            this.txtKetLuan.Location = new System.Drawing.Point(90, 80);
-            this.txtKetLuan.Name = "txtKetLuan";
-            this.txtKetLuan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtKetLuan.Properties.Appearance.Options.UseFont = true;
-            this.txtKetLuan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtKetLuan.Size = new System.Drawing.Size(353, 64);
-            this.txtKetLuan.TabIndex = 12;
+            this.txtMoTa.Location = new System.Drawing.Point(90, 80);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtMoTa.Properties.Appearance.Options.UseFont = true;
+            this.txtMoTa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtMoTa.Size = new System.Drawing.Size(353, 64);
+            this.txtMoTa.TabIndex = 2;
             // 
             // label4
             // 
@@ -142,28 +148,29 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Mô tả:";
             // 
-            // textEdit2
+            // txtBENH
             // 
-            this.textEdit2.Location = new System.Drawing.Point(90, 35);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit2.Size = new System.Drawing.Size(253, 26);
-            this.textEdit2.TabIndex = 1;
+            this.txtBENH.Location = new System.Drawing.Point(90, 35);
+            this.txtBENH.Name = "txtBENH";
+            this.txtBENH.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtBENH.Properties.Appearance.Options.UseFont = true;
+            this.txtBENH.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtBENH.Size = new System.Drawing.Size(253, 26);
+            this.txtBENH.TabIndex = 1;
             // 
-            // simpleButton4
+            // btnXoaBENH
             // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(315, 162);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(128, 34);
-            this.simpleButton4.TabIndex = 10;
-            this.simpleButton4.Text = "Xóa";
+            this.btnXoaBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoaBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaBENH.Appearance.Options.UseFont = true;
+            this.btnXoaBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnXoaBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaBENH.Image")));
+            this.btnXoaBENH.Location = new System.Drawing.Point(315, 162);
+            this.btnXoaBENH.Name = "btnXoaBENH";
+            this.btnXoaBENH.Size = new System.Drawing.Size(128, 34);
+            this.btnXoaBENH.TabIndex = 10;
+            this.btnXoaBENH.Text = "Xóa";
+            this.btnXoaBENH.Click += new System.EventHandler(this.btnXoaBenh_Click);
             // 
             // label3
             // 
@@ -174,38 +181,40 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên :";
             // 
-            // simpleButton5
+            // btnThemBENH
             // 
-            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton5.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(29, 162);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(137, 34);
-            this.simpleButton5.TabIndex = 8;
-            this.simpleButton5.Text = "Thêm";
+            this.btnThemBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemBENH.Appearance.Options.UseFont = true;
+            this.btnThemBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnThemBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemBENH.Image")));
+            this.btnThemBENH.Location = new System.Drawing.Point(29, 162);
+            this.btnThemBENH.Name = "btnThemBENH";
+            this.btnThemBENH.Size = new System.Drawing.Size(137, 34);
+            this.btnThemBENH.TabIndex = 8;
+            this.btnThemBENH.Text = "Thêm";
+            this.btnThemBENH.Click += new System.EventHandler(this.btnThemBenh_Click);
             // 
-            // simpleButton6
+            // btnSuaBENH
             // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton6.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(172, 162);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(137, 34);
-            this.simpleButton6.TabIndex = 9;
-            this.simpleButton6.Text = "Sửa";
+            this.btnSuaBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaBENH.Appearance.Options.UseFont = true;
+            this.btnSuaBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSuaBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaBENH.Image")));
+            this.btnSuaBENH.Location = new System.Drawing.Point(172, 162);
+            this.btnSuaBENH.Name = "btnSuaBENH";
+            this.btnSuaBENH.Size = new System.Drawing.Size(137, 34);
+            this.btnSuaBENH.TabIndex = 9;
+            this.btnSuaBENH.Text = "Sửa";
+            this.btnSuaBENH.Click += new System.EventHandler(this.btnSuaBenh_Click);
             // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.gridControl2);
+            this.groupBox5.Controls.Add(this.dgvBENHMain);
             this.groupBox5.Location = new System.Drawing.Point(830, 12);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(452, 315);
@@ -213,47 +222,51 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách bệnh";
             // 
-            // gridControl2
+            // dgvBENHMain
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(3, 20);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(446, 292);
-            this.gridControl2.TabIndex = 2;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.dgvBENHMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBENHMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvBENHMain.MainView = this.dgvBENH;
+            this.dgvBENHMain.Name = "dgvBENHMain";
+            this.dgvBENHMain.Size = new System.Drawing.Size(446, 292);
+            this.dgvBENHMain.TabIndex = 2;
+            this.dgvBENHMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvBENH});
             // 
-            // gridView2
+            // dgvBENH
             // 
-            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView2.Appearance.Row.Options.UseFont = true;
-            this.gridView2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.gridView2.ColumnPanelRowHeight = 30;
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsBehavior.ReadOnly = true;
-            this.gridView2.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView2.OptionsCustomization.AllowColumnResizing = false;
-            this.gridView2.OptionsCustomization.AllowFilter = false;
-            this.gridView2.OptionsCustomization.AllowGroup = false;
-            this.gridView2.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView2.OptionsFind.AllowFindPanel = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            this.gridView2.PaintStyleName = "UltraFlat";
-            this.gridView2.RowHeight = 30;
+            this.dgvBENH.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENH.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvBENH.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvBENH.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvBENH.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBENH.Appearance.Row.Options.UseFont = true;
+            this.dgvBENH.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvBENH.ColumnPanelRowHeight = 30;
+            this.dgvBENH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STTBenh,
+            this.TenBenh});
+            this.dgvBENH.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvBENH.GridControl = this.dgvBENHMain;
+            this.dgvBENH.Name = "dgvBENH";
+            this.dgvBENH.OptionsBehavior.Editable = false;
+            this.dgvBENH.OptionsBehavior.ReadOnly = true;
+            this.dgvBENH.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvBENH.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvBENH.OptionsCustomization.AllowFilter = false;
+            this.dgvBENH.OptionsCustomization.AllowGroup = false;
+            this.dgvBENH.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvBENH.OptionsFind.AllowFindPanel = false;
+            this.dgvBENH.OptionsView.ShowGroupPanel = false;
+            this.dgvBENH.PaintStyleName = "UltraFlat";
+            this.dgvBENH.RowHeight = 30;
+            this.dgvBENH.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvBENH_FocusedRowChanged);
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox3.Controls.Add(this.gridControl1);
+            this.groupBox3.Controls.Add(this.dgvLOAIBENHMain);
             this.groupBox3.Location = new System.Drawing.Point(6, 273);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(407, 270);
@@ -261,49 +274,53 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách loại bệnh";
             // 
-            // gridControl1
+            // dgvLOAIBENHMain
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(401, 247);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvLOAIBENHMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLOAIBENHMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvLOAIBENHMain.MainView = this.dgvLOAIBENH;
+            this.dgvLOAIBENHMain.Name = "dgvLOAIBENHMain";
+            this.dgvLOAIBENHMain.Size = new System.Drawing.Size(401, 247);
+            this.dgvLOAIBENHMain.TabIndex = 2;
+            this.dgvLOAIBENHMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvLOAIBENH});
             // 
-            // gridView1
+            // dgvLOAIBENH
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.gridView1.ColumnPanelRowHeight = 30;
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
-            this.gridView1.OptionsCustomization.AllowGroup = false;
-            this.gridView1.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.gridView1.OptionsFind.AllowFindPanel = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.PaintStyleName = "UltraFlat";
-            this.gridView1.RowHeight = 30;
+            this.dgvLOAIBENH.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvLOAIBENH.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvLOAIBENH.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvLOAIBENH.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvLOAIBENH.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvLOAIBENH.Appearance.Row.Options.UseFont = true;
+            this.dgvLOAIBENH.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvLOAIBENH.ColumnPanelRowHeight = 30;
+            this.dgvLOAIBENH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STTLoaiBenh,
+            this.TenLoaiBenh});
+            this.dgvLOAIBENH.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvLOAIBENH.GridControl = this.dgvLOAIBENHMain;
+            this.dgvLOAIBENH.Name = "dgvLOAIBENH";
+            this.dgvLOAIBENH.OptionsBehavior.Editable = false;
+            this.dgvLOAIBENH.OptionsBehavior.ReadOnly = true;
+            this.dgvLOAIBENH.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvLOAIBENH.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvLOAIBENH.OptionsCustomization.AllowFilter = false;
+            this.dgvLOAIBENH.OptionsCustomization.AllowGroup = false;
+            this.dgvLOAIBENH.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvLOAIBENH.OptionsFind.AllowFindPanel = false;
+            this.dgvLOAIBENH.OptionsView.ShowGroupPanel = false;
+            this.dgvLOAIBENH.PaintStyleName = "UltraFlat";
+            this.dgvLOAIBENH.RowHeight = 30;
+            this.dgvLOAIBENH.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvLOAIBENH_FocusedRowChanged);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textEdit1);
-            this.groupBox4.Controls.Add(this.simpleButton1);
+            this.groupBox4.Controls.Add(this.txtLOAIBENH);
+            this.groupBox4.Controls.Add(this.btnXoaLOAIBENH);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.simpleButton2);
-            this.groupBox4.Controls.Add(this.simpleButton3);
+            this.groupBox4.Controls.Add(this.btnThemLOAIBENH);
+            this.groupBox4.Controls.Add(this.btnSuaLOAIBENH);
             this.groupBox4.Location = new System.Drawing.Point(416, 333);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(354, 120);
@@ -311,28 +328,29 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin loại bệnh";
             // 
-            // textEdit1
+            // txtLOAIBENH
             // 
-            this.textEdit1.Location = new System.Drawing.Point(70, 35);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(253, 26);
-            this.textEdit1.TabIndex = 1;
+            this.txtLOAIBENH.Location = new System.Drawing.Point(70, 35);
+            this.txtLOAIBENH.Name = "txtLOAIBENH";
+            this.txtLOAIBENH.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtLOAIBENH.Properties.Appearance.Options.UseFont = true;
+            this.txtLOAIBENH.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtLOAIBENH.Size = new System.Drawing.Size(253, 26);
+            this.txtLOAIBENH.TabIndex = 1;
             // 
-            // simpleButton1
+            // btnXoaLOAIBENH
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(238, 77);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(110, 34);
-            this.simpleButton1.TabIndex = 10;
-            this.simpleButton1.Text = "Xóa";
+            this.btnXoaLOAIBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoaLOAIBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaLOAIBENH.Appearance.Options.UseFont = true;
+            this.btnXoaLOAIBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnXoaLOAIBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaLOAIBENH.Image")));
+            this.btnXoaLOAIBENH.Location = new System.Drawing.Point(238, 77);
+            this.btnXoaLOAIBENH.Name = "btnXoaLOAIBENH";
+            this.btnXoaLOAIBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnXoaLOAIBENH.TabIndex = 10;
+            this.btnXoaLOAIBENH.Text = "Xóa";
+            this.btnXoaLOAIBENH.Click += new System.EventHandler(this.btnXoaLoaiBenh_Click);
             // 
             // label1
             // 
@@ -343,35 +361,37 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên :";
             // 
-            // simpleButton2
+            // btnThemLOAIBENH
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(6, 77);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(110, 34);
-            this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "Thêm";
+            this.btnThemLOAIBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemLOAIBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLOAIBENH.Appearance.Options.UseFont = true;
+            this.btnThemLOAIBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnThemLOAIBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLOAIBENH.Image")));
+            this.btnThemLOAIBENH.Location = new System.Drawing.Point(6, 77);
+            this.btnThemLOAIBENH.Name = "btnThemLOAIBENH";
+            this.btnThemLOAIBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnThemLOAIBENH.TabIndex = 8;
+            this.btnThemLOAIBENH.Text = "Thêm";
+            this.btnThemLOAIBENH.Click += new System.EventHandler(this.btnThemLoaiBenh_Click);
             // 
-            // simpleButton3
+            // btnSuaLOAIBENH
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(122, 77);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(110, 34);
-            this.simpleButton3.TabIndex = 9;
-            this.simpleButton3.Text = "Sửa";
+            this.btnSuaLOAIBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaLOAIBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaLOAIBENH.Appearance.Options.UseFont = true;
+            this.btnSuaLOAIBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSuaLOAIBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaLOAIBENH.Image")));
+            this.btnSuaLOAIBENH.Location = new System.Drawing.Point(122, 77);
+            this.btnSuaLOAIBENH.Name = "btnSuaLOAIBENH";
+            this.btnSuaLOAIBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnSuaLOAIBENH.TabIndex = 9;
+            this.btnSuaLOAIBENH.Text = "Sửa";
+            this.btnSuaLOAIBENH.Click += new System.EventHandler(this.btnSuaLoaiBenh_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvBSMain);
+            this.groupBox1.Controls.Add(this.dgvNHOMBENHMain);
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(407, 255);
@@ -379,49 +399,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhóm bệnh";
             // 
-            // dgvBSMain
+            // dgvNHOMBENHMain
             // 
-            this.dgvBSMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBSMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvBSMain.MainView = this.dgvBS;
-            this.dgvBSMain.Name = "dgvBSMain";
-            this.dgvBSMain.Size = new System.Drawing.Size(401, 232);
-            this.dgvBSMain.TabIndex = 2;
-            this.dgvBSMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvBS});
+            this.dgvNHOMBENHMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNHOMBENHMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvNHOMBENHMain.MainView = this.dgvNHOMBENH;
+            this.dgvNHOMBENHMain.Name = "dgvNHOMBENHMain";
+            this.dgvNHOMBENHMain.Size = new System.Drawing.Size(401, 232);
+            this.dgvNHOMBENHMain.TabIndex = 2;
+            this.dgvNHOMBENHMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvNHOMBENH});
             // 
-            // dgvBS
+            // dgvNHOMBENH
             // 
-            this.dgvBS.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvBS.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvBS.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvBS.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.Row.Options.UseFont = true;
-            this.dgvBS.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvBS.ColumnPanelRowHeight = 30;
-            this.dgvBS.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvBS.GridControl = this.dgvBSMain;
-            this.dgvBS.Name = "dgvBS";
-            this.dgvBS.OptionsBehavior.Editable = false;
-            this.dgvBS.OptionsBehavior.ReadOnly = true;
-            this.dgvBS.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvBS.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvBS.OptionsCustomization.AllowFilter = false;
-            this.dgvBS.OptionsCustomization.AllowGroup = false;
-            this.dgvBS.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvBS.OptionsFind.AllowFindPanel = false;
-            this.dgvBS.OptionsView.ShowGroupPanel = false;
-            this.dgvBS.PaintStyleName = "UltraFlat";
-            this.dgvBS.RowHeight = 30;
+            this.dgvNHOMBENH.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvNHOMBENH.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvNHOMBENH.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvNHOMBENH.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvNHOMBENH.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvNHOMBENH.Appearance.Row.Options.UseFont = true;
+            this.dgvNHOMBENH.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvNHOMBENH.ColumnPanelRowHeight = 30;
+            this.dgvNHOMBENH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.Ten});
+            this.dgvNHOMBENH.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvNHOMBENH.GridControl = this.dgvNHOMBENHMain;
+            this.dgvNHOMBENH.Name = "dgvNHOMBENH";
+            this.dgvNHOMBENH.OptionsBehavior.Editable = false;
+            this.dgvNHOMBENH.OptionsBehavior.ReadOnly = true;
+            this.dgvNHOMBENH.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvNHOMBENH.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvNHOMBENH.OptionsCustomization.AllowFilter = false;
+            this.dgvNHOMBENH.OptionsCustomization.AllowGroup = false;
+            this.dgvNHOMBENH.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvNHOMBENH.OptionsFind.AllowFindPanel = false;
+            this.dgvNHOMBENH.OptionsView.ShowGroupPanel = false;
+            this.dgvNHOMBENH.PaintStyleName = "UltraFlat";
+            this.dgvNHOMBENH.RowHeight = 30;
+            this.dgvNHOMBENH.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvNHOMBENH_FocusedRowChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtHoTen);
-            this.groupBox2.Controls.Add(this.btnXoa);
+            this.groupBox2.Controls.Add(this.txtNHOMBENH);
+            this.groupBox2.Controls.Add(this.btnXoaNHOMBENH);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.btnThem);
-            this.groupBox2.Controls.Add(this.btnSua);
+            this.groupBox2.Controls.Add(this.btnThemNHOMBENH);
+            this.groupBox2.Controls.Add(this.btnSuaNHOMBENH);
             this.groupBox2.Location = new System.Drawing.Point(422, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(354, 120);
@@ -429,28 +453,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhóm bệnh";
             // 
-            // txtHoTen
+            // txtNHOMBENH
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(70, 35);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtHoTen.Properties.Appearance.Options.UseFont = true;
-            this.txtHoTen.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtHoTen.Size = new System.Drawing.Size(253, 26);
-            this.txtHoTen.TabIndex = 1;
+            this.txtNHOMBENH.Location = new System.Drawing.Point(70, 35);
+            this.txtNHOMBENH.Name = "txtNHOMBENH";
+            this.txtNHOMBENH.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtNHOMBENH.Properties.Appearance.Options.UseFont = true;
+            this.txtNHOMBENH.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtNHOMBENH.Size = new System.Drawing.Size(253, 26);
+            this.txtNHOMBENH.TabIndex = 1;
             // 
-            // btnXoa
+            // btnXoaNHOMBENH
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(238, 77);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(110, 34);
-            this.btnXoa.TabIndex = 10;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoaNHOMBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoaNHOMBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNHOMBENH.Appearance.Options.UseFont = true;
+            this.btnXoaNHOMBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnXoaNHOMBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaNHOMBENH.Image")));
+            this.btnXoaNHOMBENH.Location = new System.Drawing.Point(238, 77);
+            this.btnXoaNHOMBENH.Name = "btnXoaNHOMBENH";
+            this.btnXoaNHOMBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnXoaNHOMBENH.TabIndex = 10;
+            this.btnXoaNHOMBENH.Text = "Xóa";
+            this.btnXoaNHOMBENH.Click += new System.EventHandler(this.btnXoaNhomBenh_Click);
             // 
             // label2
             // 
@@ -461,31 +486,87 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên :";
             // 
-            // btnThem
+            // btnThemNHOMBENH
             // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(6, 77);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(110, 34);
-            this.btnThem.TabIndex = 8;
-            this.btnThem.Text = "Thêm";
+            this.btnThemNHOMBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemNHOMBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNHOMBENH.Appearance.Options.UseFont = true;
+            this.btnThemNHOMBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnThemNHOMBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNHOMBENH.Image")));
+            this.btnThemNHOMBENH.Location = new System.Drawing.Point(6, 77);
+            this.btnThemNHOMBENH.Name = "btnThemNHOMBENH";
+            this.btnThemNHOMBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnThemNHOMBENH.TabIndex = 8;
+            this.btnThemNHOMBENH.Text = "Thêm";
+            this.btnThemNHOMBENH.Click += new System.EventHandler(this.btnThemNhomBenh_Click);
             // 
-            // btnSua
+            // btnSuaNHOMBENH
             // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(122, 77);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(110, 34);
-            this.btnSua.TabIndex = 9;
-            this.btnSua.Text = "Sửa";
+            this.btnSuaNHOMBENH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuaNHOMBENH.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaNHOMBENH.Appearance.Options.UseFont = true;
+            this.btnSuaNHOMBENH.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSuaNHOMBENH.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaNHOMBENH.Image")));
+            this.btnSuaNHOMBENH.Location = new System.Drawing.Point(122, 77);
+            this.btnSuaNHOMBENH.Name = "btnSuaNHOMBENH";
+            this.btnSuaNHOMBENH.Size = new System.Drawing.Size(110, 34);
+            this.btnSuaNHOMBENH.TabIndex = 9;
+            this.btnSuaNHOMBENH.Text = "Sửa";
+            this.btnSuaNHOMBENH.Click += new System.EventHandler(this.btnSuaNhomBenh_Click);
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 102;
+            // 
+            // Ten
+            // 
+            this.Ten.Caption = "Tên nhóm bệnh";
+            this.Ten.FieldName = "Ten";
+            this.Ten.Name = "Ten";
+            this.Ten.Visible = true;
+            this.Ten.VisibleIndex = 1;
+            this.Ten.Width = 597;
+            // 
+            // STTLoaiBenh
+            // 
+            this.STTLoaiBenh.Caption = "STT";
+            this.STTLoaiBenh.FieldName = "STT";
+            this.STTLoaiBenh.Name = "STTLoaiBenh";
+            this.STTLoaiBenh.Visible = true;
+            this.STTLoaiBenh.VisibleIndex = 0;
+            this.STTLoaiBenh.Width = 117;
+            // 
+            // TenLoaiBenh
+            // 
+            this.TenLoaiBenh.Caption = "Tên loại bệnh";
+            this.TenLoaiBenh.FieldName = "Ten";
+            this.TenLoaiBenh.Name = "TenLoaiBenh";
+            this.TenLoaiBenh.Visible = true;
+            this.TenLoaiBenh.VisibleIndex = 1;
+            this.TenLoaiBenh.Width = 582;
+            // 
+            // STTBenh
+            // 
+            this.STTBenh.Caption = "STT";
+            this.STTBenh.FieldName = "STT";
+            this.STTBenh.Name = "STTBenh";
+            this.STTBenh.Visible = true;
+            this.STTBenh.VisibleIndex = 0;
+            this.STTBenh.Width = 104;
+            // 
+            // TenBenh
+            // 
+            this.TenBenh.Caption = "Tên bệnh";
+            this.TenBenh.FieldName = "Ten";
+            this.TenBenh.Name = "TenBenh";
+            this.TenBenh.Visible = true;
+            this.TenBenh.VisibleIndex = 1;
+            this.TenBenh.Width = 595;
             // 
             // ucDanhSachBenh
             // 
@@ -497,27 +578,28 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucDanhSachBenh";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucDanhSachBenh_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMoTa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBENH.Properties)).EndInit();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENHMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBENH)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLOAIBENHMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLOAIBENH)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLOAIBENH.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNHOMBENHMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNHOMBENH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNHOMBENH.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,34 +608,40 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
-        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private DevExpress.XtraEditors.SimpleButton btnXoaNHOMBENH;
+        private DevExpress.XtraEditors.SimpleButton btnThemNHOMBENH;
+        private DevExpress.XtraEditors.SimpleButton btnSuaNHOMBENH;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.TextEdit txtHoTen;
+        private DevExpress.XtraEditors.TextEdit txtNHOMBENH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl dgvBSMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvBS;
+        private DevExpress.XtraGrid.GridControl dgvNHOMBENHMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvNHOMBENH;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl dgvLOAIBENHMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvLOAIBENH;
         private System.Windows.Forms.GroupBox groupBox4;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit txtLOAIBENH;
+        private DevExpress.XtraEditors.SimpleButton btnXoaLOAIBENH;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnThemLOAIBENH;
+        private DevExpress.XtraEditors.SimpleButton btnSuaLOAIBENH;
         private System.Windows.Forms.GroupBox groupBox5;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl dgvBENHMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvBENH;
         private System.Windows.Forms.GroupBox groupBox6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.TextEdit txtBENH;
+        private DevExpress.XtraEditors.SimpleButton btnXoaBENH;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btnThemBENH;
+        private DevExpress.XtraEditors.SimpleButton btnSuaBENH;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.MemoEdit txtKetLuan;
+        private DevExpress.XtraEditors.MemoEdit txtMoTa;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn Ten;
+        private DevExpress.XtraGrid.Columns.GridColumn STTLoaiBenh;
+        private DevExpress.XtraGrid.Columns.GridColumn TenLoaiBenh;
+        private DevExpress.XtraGrid.Columns.GridColumn STTBenh;
+        private DevExpress.XtraGrid.Columns.GridColumn TenBenh;
     }
 }
