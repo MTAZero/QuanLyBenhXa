@@ -32,29 +32,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvBSMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvBS = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvBACSIMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvBACSI = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkCanBoCapCao = new System.Windows.Forms.CheckBox();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.lookUpEdit3 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbxBenh = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbxDoiTuong = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxChucVu = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxDonVi = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxCapBac = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtTrinhDo = new DevExpress.XtraEditors.TextEdit();
+            this.txtDanToc = new DevExpress.XtraEditors.TextEdit();
+            this.txtQueQuan = new DevExpress.XtraEditors.TextEdit();
+            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.cbxQuyen = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,24 +65,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBACSIMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBACSI)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDoiTuong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDonVi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCapBac.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrinhDo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDanToc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxQuyen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +121,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dgvBSMain);
+            this.groupBox1.Controls.Add(this.dgvBACSIMain);
             this.groupBox1.Location = new System.Drawing.Point(15, 52);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(583, 487);
@@ -128,41 +129,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bác sĩ";
             // 
-            // dgvBSMain
+            // dgvBACSIMain
             // 
-            this.dgvBSMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBSMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvBSMain.MainView = this.dgvBS;
-            this.dgvBSMain.Name = "dgvBSMain";
-            this.dgvBSMain.Size = new System.Drawing.Size(577, 464);
-            this.dgvBSMain.TabIndex = 2;
-            this.dgvBSMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvBS});
+            this.dgvBACSIMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBACSIMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvBACSIMain.MainView = this.dgvBACSI;
+            this.dgvBACSIMain.Name = "dgvBACSIMain";
+            this.dgvBACSIMain.Size = new System.Drawing.Size(577, 464);
+            this.dgvBACSIMain.TabIndex = 2;
+            this.dgvBACSIMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvBACSI});
             // 
-            // dgvBS
+            // dgvBACSI
             // 
-            this.dgvBS.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvBS.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvBS.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvBS.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBS.Appearance.Row.Options.UseFont = true;
-            this.dgvBS.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvBS.ColumnPanelRowHeight = 30;
-            this.dgvBS.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvBS.GridControl = this.dgvBSMain;
-            this.dgvBS.Name = "dgvBS";
-            this.dgvBS.OptionsBehavior.Editable = false;
-            this.dgvBS.OptionsBehavior.ReadOnly = true;
-            this.dgvBS.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvBS.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvBS.OptionsCustomization.AllowFilter = false;
-            this.dgvBS.OptionsCustomization.AllowGroup = false;
-            this.dgvBS.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvBS.OptionsFind.AllowFindPanel = false;
-            this.dgvBS.OptionsView.ShowGroupPanel = false;
-            this.dgvBS.PaintStyleName = "UltraFlat";
-            this.dgvBS.RowHeight = 30;
+            this.dgvBACSI.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBACSI.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvBACSI.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvBACSI.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvBACSI.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvBACSI.Appearance.Row.Options.UseFont = true;
+            this.dgvBACSI.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvBACSI.ColumnPanelRowHeight = 30;
+            this.dgvBACSI.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.HoTen,
+            this.ChucVu});
+            this.dgvBACSI.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvBACSI.GridControl = this.dgvBACSIMain;
+            this.dgvBACSI.Name = "dgvBACSI";
+            this.dgvBACSI.OptionsBehavior.Editable = false;
+            this.dgvBACSI.OptionsBehavior.ReadOnly = true;
+            this.dgvBACSI.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvBACSI.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvBACSI.OptionsCustomization.AllowFilter = false;
+            this.dgvBACSI.OptionsCustomization.AllowGroup = false;
+            this.dgvBACSI.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvBACSI.OptionsFind.AllowFindPanel = false;
+            this.dgvBACSI.OptionsView.ShowGroupPanel = false;
+            this.dgvBACSI.PaintStyleName = "UltraFlat";
+            this.dgvBACSI.RowHeight = 30;
+            this.dgvBACSI.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvBACSI_FocusedRowChanged);
             // 
             // btnXoa
             // 
@@ -174,8 +180,9 @@
             this.btnXoa.Location = new System.Drawing.Point(1074, 492);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(209, 44);
-            this.btnXoa.TabIndex = 10;
+            this.btnXoa.TabIndex = 16;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -187,8 +194,9 @@
             this.btnThem.Location = new System.Drawing.Point(616, 492);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(222, 44);
-            this.btnThem.TabIndex = 8;
+            this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -200,8 +208,9 @@
             this.btnSua.Location = new System.Drawing.Point(844, 492);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(224, 44);
-            this.btnSua.TabIndex = 9;
+            this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTimKiem
             // 
@@ -209,6 +218,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(514, 24);
             this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -222,21 +232,20 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.chkCanBoCapCao);
             this.groupBox2.Controls.Add(this.dateNgaySinh);
-            this.groupBox2.Controls.Add(this.comboBoxEdit1);
-            this.groupBox2.Controls.Add(this.lookUpEdit3);
-            this.groupBox2.Controls.Add(this.lookUpEdit2);
-            this.groupBox2.Controls.Add(this.lookUpEdit1);
-            this.groupBox2.Controls.Add(this.cbxBenh);
-            this.groupBox2.Controls.Add(this.textEdit6);
-            this.groupBox2.Controls.Add(this.textEdit5);
-            this.groupBox2.Controls.Add(this.textEdit4);
-            this.groupBox2.Controls.Add(this.textEdit3);
-            this.groupBox2.Controls.Add(this.textEdit2);
+            this.groupBox2.Controls.Add(this.cbxGioiTinh);
+            this.groupBox2.Controls.Add(this.cbxDoiTuong);
+            this.groupBox2.Controls.Add(this.cbxChucVu);
+            this.groupBox2.Controls.Add(this.cbxDonVi);
+            this.groupBox2.Controls.Add(this.cbxCapBac);
+            this.groupBox2.Controls.Add(this.txtTrinhDo);
+            this.groupBox2.Controls.Add(this.txtDanToc);
+            this.groupBox2.Controls.Add(this.txtQueQuan);
+            this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.cbxQuyen);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
@@ -255,11 +264,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bác sĩ";
             // 
+            // chkCanBoCapCao
+            // 
+            this.chkCanBoCapCao.AutoSize = true;
+            this.chkCanBoCapCao.Location = new System.Drawing.Point(437, -1);
+            this.chkCanBoCapCao.Name = "chkCanBoCapCao";
+            this.chkCanBoCapCao.Size = new System.Drawing.Size(119, 21);
+            this.chkCanBoCapCao.TabIndex = 1;
+            this.chkCanBoCapCao.Text = "Cán bộ cấp cao";
+            this.chkCanBoCapCao.UseVisualStyleBackColor = true;
+            // 
             // dateNgaySinh
             // 
             this.dateNgaySinh.EditValue = null;
             this.dateNgaySinh.Enabled = false;
-            this.dateNgaySinh.Location = new System.Drawing.Point(98, 200);
+            this.dateNgaySinh.Location = new System.Drawing.Point(98, 206);
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -273,148 +292,138 @@
             this.dateNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateNgaySinh.Size = new System.Drawing.Size(185, 26);
-            this.dateNgaySinh.TabIndex = 26;
+            this.dateNgaySinh.TabIndex = 8;
             // 
-            // comboBoxEdit1
+            // cbxGioiTinh
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(437, 200);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxGioiTinh.Location = new System.Drawing.Point(437, 206);
+            this.cbxGioiTinh.Name = "cbxGioiTinh";
+            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
-            "Bác sĩ",
-            "Quản trị"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(219, 26);
-            this.comboBoxEdit1.TabIndex = 25;
+            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
+            this.cbxGioiTinh.TabIndex = 9;
             // 
-            // lookUpEdit3
+            // cbxDoiTuong
             // 
-            this.lookUpEdit3.Location = new System.Drawing.Point(99, 145);
-            this.lookUpEdit3.Name = "lookUpEdit3";
-            this.lookUpEdit3.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit3.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit3.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit3.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxDoiTuong.Location = new System.Drawing.Point(98, 149);
+            this.cbxDoiTuong.Name = "cbxDoiTuong";
+            this.cbxDoiTuong.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxDoiTuong.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDoiTuong.Properties.Appearance.Options.UseFont = true;
+            this.cbxDoiTuong.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDoiTuong.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxDoiTuong.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDoiTuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit3.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit3.Properties.ShowHeader = false;
-            this.lookUpEdit3.Size = new System.Drawing.Size(253, 26);
-            this.lookUpEdit3.TabIndex = 24;
+            this.cbxDoiTuong.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDoiTuong.Properties.ShowHeader = false;
+            this.cbxDoiTuong.Size = new System.Drawing.Size(253, 26);
+            this.cbxDoiTuong.TabIndex = 6;
             // 
-            // lookUpEdit2
+            // cbxChucVu
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(437, 90);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit2.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit2.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxChucVu.Location = new System.Drawing.Point(437, 92);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit2.Properties.ShowHeader = false;
-            this.lookUpEdit2.Size = new System.Drawing.Size(219, 26);
-            this.lookUpEdit2.TabIndex = 23;
+            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.ShowHeader = false;
+            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
+            this.cbxChucVu.TabIndex = 5;
             // 
-            // lookUpEdit1
+            // cbxDonVi
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(437, 35);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEdit1.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.lookUpEdit1.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.lookUpEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxDonVi.Location = new System.Drawing.Point(437, 35);
+            this.cbxDonVi.Name = "cbxDonVi";
+            this.cbxDonVi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxDonVi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDonVi.Properties.Appearance.Options.UseFont = true;
+            this.cbxDonVi.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxDonVi.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxDonVi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDonVi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lookUpEdit1.Properties.ShowHeader = false;
-            this.lookUpEdit1.Size = new System.Drawing.Size(219, 26);
-            this.lookUpEdit1.TabIndex = 22;
+            this.cbxDonVi.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxDonVi.Properties.ShowHeader = false;
+            this.cbxDonVi.Size = new System.Drawing.Size(219, 26);
+            this.cbxDonVi.TabIndex = 3;
             // 
-            // cbxBenh
+            // cbxCapBac
             // 
-            this.cbxBenh.Location = new System.Drawing.Point(98, 90);
-            this.cbxBenh.Name = "cbxBenh";
-            this.cbxBenh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxBenh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenh.Properties.Appearance.Options.UseFont = true;
-            this.cbxBenh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenh.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxBenh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxCapBac.Location = new System.Drawing.Point(98, 92);
+            this.cbxCapBac.Name = "cbxCapBac";
+            this.cbxCapBac.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxCapBac.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCapBac.Properties.Appearance.Options.UseFont = true;
+            this.cbxCapBac.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxCapBac.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxCapBac.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCapBac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxBenh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenh.Properties.ShowHeader = false;
-            this.cbxBenh.Size = new System.Drawing.Size(253, 26);
-            this.cbxBenh.TabIndex = 21;
+            this.cbxCapBac.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxCapBac.Properties.ShowHeader = false;
+            this.cbxCapBac.Size = new System.Drawing.Size(253, 26);
+            this.cbxCapBac.TabIndex = 4;
             // 
-            // textEdit6
+            // txtTrinhDo
             // 
-            this.textEdit6.Location = new System.Drawing.Point(437, 369);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit6.Size = new System.Drawing.Size(219, 26);
-            this.textEdit6.TabIndex = 20;
+            this.txtTrinhDo.Location = new System.Drawing.Point(437, 377);
+            this.txtTrinhDo.Name = "txtTrinhDo";
+            this.txtTrinhDo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTrinhDo.Properties.Appearance.Options.UseFont = true;
+            this.txtTrinhDo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTrinhDo.Size = new System.Drawing.Size(219, 26);
+            this.txtTrinhDo.TabIndex = 13;
             // 
-            // textEdit5
+            // txtDanToc
             // 
-            this.textEdit5.Location = new System.Drawing.Point(98, 369);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit5.Size = new System.Drawing.Size(253, 26);
-            this.textEdit5.TabIndex = 19;
+            this.txtDanToc.Location = new System.Drawing.Point(98, 377);
+            this.txtDanToc.Name = "txtDanToc";
+            this.txtDanToc.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtDanToc.Properties.Appearance.Options.UseFont = true;
+            this.txtDanToc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDanToc.Size = new System.Drawing.Size(253, 26);
+            this.txtDanToc.TabIndex = 12;
             // 
-            // textEdit4
+            // txtQueQuan
             // 
-            this.textEdit4.Location = new System.Drawing.Point(98, 310);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit4.Size = new System.Drawing.Size(558, 26);
-            this.textEdit4.TabIndex = 18;
+            this.txtQueQuan.Location = new System.Drawing.Point(98, 320);
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtQueQuan.Properties.Appearance.Options.UseFont = true;
+            this.txtQueQuan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtQueQuan.Size = new System.Drawing.Size(558, 26);
+            this.txtQueQuan.TabIndex = 11;
             // 
-            // textEdit3
+            // txtSDT
             // 
-            this.textEdit3.Location = new System.Drawing.Point(437, 255);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit3.Size = new System.Drawing.Size(219, 26);
-            this.textEdit3.TabIndex = 17;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(98, 255);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit2.Size = new System.Drawing.Size(253, 26);
-            this.textEdit2.TabIndex = 16;
+            this.txtSDT.Location = new System.Drawing.Point(98, 263);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtSDT.Size = new System.Drawing.Size(253, 26);
+            this.txtSDT.TabIndex = 10;
             // 
             // cbxQuyen
             // 
-            this.cbxQuyen.Location = new System.Drawing.Point(437, 145);
+            this.cbxQuyen.Location = new System.Drawing.Point(437, 149);
             this.cbxQuyen.Name = "cbxQuyen";
             this.cbxQuyen.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.cbxQuyen.Properties.Appearance.Options.UseFont = true;
@@ -429,12 +438,12 @@
             "Quản trị"});
             this.cbxQuyen.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbxQuyen.Size = new System.Drawing.Size(219, 26);
-            this.cbxQuyen.TabIndex = 15;
+            this.cbxQuyen.TabIndex = 7;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(362, 373);
+            this.label14.Location = new System.Drawing.Point(362, 381);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 17);
             this.label14.TabIndex = 14;
@@ -443,25 +452,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 373);
+            this.label13.Location = new System.Drawing.Point(25, 381);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 17);
             this.label13.TabIndex = 13;
             this.label13.Text = "Dân tộc:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(367, 259);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 17);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Tài khoản:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 314);
+            this.label11.Location = new System.Drawing.Point(25, 324);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 17);
             this.label11.TabIndex = 11;
@@ -470,7 +470,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 259);
+            this.label10.Location = new System.Drawing.Point(25, 267);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 17);
             this.label10.TabIndex = 10;
@@ -479,7 +479,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(366, 149);
+            this.label9.Location = new System.Drawing.Point(362, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 17);
             this.label9.TabIndex = 9;
@@ -488,7 +488,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(366, 204);
+            this.label8.Location = new System.Drawing.Point(362, 210);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 8;
@@ -497,7 +497,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 204);
+            this.label7.Location = new System.Drawing.Point(25, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 17);
             this.label7.TabIndex = 7;
@@ -506,7 +506,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 149);
+            this.label6.Location = new System.Drawing.Point(25, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 17);
             this.label6.TabIndex = 6;
@@ -515,7 +515,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(366, 39);
+            this.label5.Location = new System.Drawing.Point(362, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 17);
             this.label5.TabIndex = 5;
@@ -524,7 +524,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(367, 94);
+            this.label4.Location = new System.Drawing.Point(362, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 17);
             this.label4.TabIndex = 4;
@@ -533,7 +533,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 94);
+            this.label3.Location = new System.Drawing.Point(25, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 2;
@@ -547,16 +547,43 @@
             this.txtHoTen.Properties.Appearance.Options.UseFont = true;
             this.txtHoTen.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtHoTen.Size = new System.Drawing.Size(253, 26);
-            this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 39);
+            this.label2.Location = new System.Drawing.Point(25, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ và tên:";
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 71;
+            // 
+            // HoTen
+            // 
+            this.HoTen.Caption = "Họ tên";
+            this.HoTen.FieldName = "HoTen";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Visible = true;
+            this.HoTen.VisibleIndex = 1;
+            this.HoTen.Width = 307;
+            // 
+            // ChucVu
+            // 
+            this.ChucVu.Caption = "Chức vụ";
+            this.ChucVu.FieldName = "ChucVu";
+            this.ChucVu.Name = "ChucVu";
+            this.ChucVu.Visible = true;
+            this.ChucVu.VisibleIndex = 2;
+            this.ChucVu.Width = 321;
             // 
             // ucDanhSachBacSi
             // 
@@ -573,22 +600,21 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBSMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBACSIMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBACSI)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDoiTuong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxDonVi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxCapBac.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrinhDo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDanToc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxQuyen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -608,8 +634,8 @@
         private DevExpress.XtraEditors.TextEdit txtHoTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl dgvBSMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvBS;
+        private DevExpress.XtraGrid.GridControl dgvBACSIMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvBACSI;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -619,20 +645,22 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraEditors.ComboBoxEdit cbxQuyen;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.LookUpEdit cbxBenh;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.TextEdit txtSDT;
+        private DevExpress.XtraEditors.TextEdit txtQueQuan;
+        private DevExpress.XtraEditors.TextEdit txtTrinhDo;
+        private DevExpress.XtraEditors.TextEdit txtDanToc;
+        private DevExpress.XtraEditors.LookUpEdit cbxDonVi;
+        private DevExpress.XtraEditors.LookUpEdit cbxCapBac;
+        private DevExpress.XtraEditors.LookUpEdit cbxChucVu;
+        private DevExpress.XtraEditors.LookUpEdit cbxDoiTuong;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxGioiTinh;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
+        private System.Windows.Forms.CheckBox chkCanBoCapCao;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn HoTen;
+        private DevExpress.XtraGrid.Columns.GridColumn ChucVu;
     }
 }
