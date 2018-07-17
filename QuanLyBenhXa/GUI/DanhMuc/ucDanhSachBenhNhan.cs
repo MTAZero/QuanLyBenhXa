@@ -151,9 +151,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             ans.QUEQUAN = txtQueQuan.Text;
             ans.MATHEBHYT = txtMaBHYT.Text;
             ans.TRINHDOVANHOA = txtTrinhDo.Text;
-            ans.NGHENGHIEP = txtNgheNghiep.Text;
+            ans.NGHENGHIEPTRUOCNN = txtNgheNghiepTruoc.Text;
+            ans.NGHENGHIEPSAUNN = txtNgheNghiepSau.Text;
             ans.NHOMMAU = txtNhomMau.Text;
-            ans.TIENSUBENH = txtTienSu.Text;
+            ans.TIENSUGIADINH = txtTienSuGiaDinh.Text;
+            ans.TIENSUBANTHAN = txtTienSuBanThan.Text;
             ans.NAMNHAPNGU = Int32.Parse(txtNamNhapNgu.Text);
 
             ans.DONVIID = (int)cbxDonVi.EditValue;
@@ -172,9 +174,9 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtSDT.Text = "";
             txtNamNhapNgu.Text = "";
             txtQueQuan.Text = "";
-            txtNgheNghiep.Text = "";
+            txtNgheNghiepSau.Text = "";
             txtNhomMau.Text = "";
-            txtTienSu.Text = "";
+            txtTienSuBanThan.Text = "";
             txtTrinhDo.Text = "";
 
             cbxCapBac.ItemIndex = 0;
@@ -198,9 +200,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 txtSDT.Text = tg.SDT;
                 txtNamNhapNgu.Text = tg.NAMNHAPNGU.ToString();
                 txtQueQuan.Text = tg.QUEQUAN;
-                txtNgheNghiep.Text = tg.NGHENGHIEP;
+                txtNgheNghiepSau.Text = tg.NGHENGHIEPSAUNN;
+                txtNgheNghiepTruoc.Text = tg.NGHENGHIEPTRUOCNN;
                 txtNhomMau.Text = tg.NHOMMAU;
-                txtTienSu.Text = tg.TIENSUBENH;
+                txtTienSuBanThan.Text = tg.TIENSUBANTHAN;
+                txtTienSuGiaDinh.Text = tg.TIENSUGIADINH;
                 txtTrinhDo.Text = tg.TRINHDOVANHOA;
 
                 cbxCapBac.EditValue = (int)tg.CAPBACID;
@@ -223,9 +227,9 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtSDT.Enabled = false;
             txtNamNhapNgu.Enabled = false;
             txtQueQuan.Enabled = false;
-            txtNgheNghiep.Enabled = false;
+            txtNgheNghiepSau.Enabled = false;
             txtNhomMau.Enabled = false;
-            txtTienSu.Enabled = false;
+            txtTienSuBanThan.Enabled = false;
             txtTrinhDo.Enabled = false;
 
             cbxCapBac.Enabled = false;
@@ -250,9 +254,9 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtSDT.Enabled = true;
             txtNamNhapNgu.Enabled = true;
             txtQueQuan.Enabled = true;
-            txtNgheNghiep.Enabled = true;
+            txtNgheNghiepSau.Enabled = true;
             txtNhomMau.Enabled = true;
-            txtTienSu.Enabled = true;
+            txtTienSuBanThan.Enabled = true;
             txtTrinhDo.Enabled = true;
 
             cbxCapBac.Enabled = true;
@@ -292,7 +296,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 return false;
             }
 
-            if (txtNgheNghiep.Text == "")
+            if (txtNgheNghiepSau.Text == "")
             {
                 MessageBox.Show("Nghề nghiệp của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -304,7 +308,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 return false;
             }
 
-            if (txtTienSu.Text == "")
+            if (txtTienSuBanThan.Text == "")
             {
                 MessageBox.Show("Tiền sử bệnh của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -352,9 +356,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cu.SDT = moi.SDT;
             cu.NAMNHAPNGU = moi.NAMNHAPNGU;
             cu.QUEQUAN = moi.QUEQUAN;
-            cu.NGHENGHIEP = moi.NGHENGHIEP;
+            cu.NGHENGHIEPTRUOCNN = moi.NGHENGHIEPTRUOCNN;
+            cu.NGHENGHIEPSAUNN = moi.NGHENGHIEPSAUNN;
             cu.NHOMMAU = moi.NHOMMAU;
-            cu.TIENSUBENH = moi.TIENSUBENH;
+            cu.TIENSUBANTHAN = moi.TIENSUBANTHAN;
+            cu.TIENSUGIADINH = moi.TIENSUGIADINH;
             cu.TRINHDOVANHOA = moi.TRINHDOVANHOA;
         }
 

@@ -1,4 +1,4 @@
-﻿SET NOCOUNT ON
+SET NOCOUNT ON
 GO
 USE [QLSUCKHOE]
 GO
@@ -994,10 +994,15 @@ CREATE PROCEDURE [dbo].[BENHNHAN_Insert]
 	@TRINHDOVANHOA nvarchar(MAX) = null ,
 	@CAPBACID int = null ,
 	@CHUCVUID int = null ,
-	@NGHENGHIEP nvarchar(MAX) = null ,
+	@NGHENGHIEPTRUOCNN nvarchar(MAX) = null ,
+	@NGHENGHIEPSAUNN nvarchar(MAX) = null ,
 	@DOITUONGID int = null ,
 	@DONVIID int = null ,
-	@TIENSUBENH nvarchar(MAX) = null ,
+	@TIENSUBANTHAN nvarchar(MAX) = null ,
+	@TIENSUGIADINH nvarchar(MAX) = null ,
+	@DANTOC nvarchar(MAX) = null ,
+	@DIACHI nvarchar(MAX) = null ,
+	@TINHTRANGCONGTAC int = null ,
 	@NHOMMAU nvarchar(MAX) = null ,
 	@DIUNG nvarchar(MAX) = null ,
 	@GHICHU nvarchar(MAX) = null 
@@ -1016,10 +1021,15 @@ INSERT [dbo].[BENHNHAN]
 	[TRINHDOVANHOA],
 	[CAPBACID],
 	[CHUCVUID],
-	[NGHENGHIEP],
+	[NGHENGHIEPTRUOCNN],
+	[NGHENGHIEPSAUNN],
 	[DOITUONGID],
 	[DONVIID],
-	[TIENSUBENH],
+	[TIENSUBANTHAN],
+	[TIENSUGIADINH],
+	[DANTOC],
+	[DIACHI],
+	[TINHTRANGCONGTAC],
 	[NHOMMAU],
 	[DIUNG],
 	[GHICHU]
@@ -1037,10 +1047,15 @@ VALUES
 	@TRINHDOVANHOA,
 	@CAPBACID,
 	@CHUCVUID,
-	@NGHENGHIEP,
+	@NGHENGHIEPTRUOCNN,
+	@NGHENGHIEPSAUNN,
 	@DOITUONGID,
 	@DONVIID,
-	@TIENSUBENH,
+	@TIENSUBANTHAN,
+	@TIENSUGIADINH,
+	@DANTOC,
+	@DIACHI,
+	@TINHTRANGCONGTAC,
 	@NHOMMAU,
 	@DIUNG,
 	@GHICHU
@@ -1065,10 +1080,15 @@ CREATE PROCEDURE [dbo].[BENHNHAN_Update]
 	@TRINHDOVANHOA nvarchar(MAX) = null,
 	@CAPBACID int = null,
 	@CHUCVUID int = null,
-	@NGHENGHIEP nvarchar(MAX) = null,
+	@NGHENGHIEPTRUOCNN nvarchar(MAX) = null,
+	@NGHENGHIEPSAUNN nvarchar(MAX) = null,
 	@DOITUONGID int = null,
 	@DONVIID int = null,
-	@TIENSUBENH nvarchar(MAX) = null,
+	@TIENSUBANTHAN nvarchar(MAX) = null,
+	@TIENSUGIADINH nvarchar(MAX) = null,
+	@DANTOC nvarchar(MAX) = null,
+	@DIACHI nvarchar(MAX) = null,
+	@TINHTRANGCONGTAC int = null,
 	@NHOMMAU nvarchar(MAX) = null,
 	@DIUNG nvarchar(MAX) = null,
 	@GHICHU nvarchar(MAX) = null
@@ -1087,10 +1107,15 @@ SET
 	[TRINHDOVANHOA] = @TRINHDOVANHOA,
 	[CAPBACID] = @CAPBACID,
 	[CHUCVUID] = @CHUCVUID,
-	[NGHENGHIEP] = @NGHENGHIEP,
+	[NGHENGHIEPTRUOCNN] = @NGHENGHIEPTRUOCNN,
+	[NGHENGHIEPSAUNN] = @NGHENGHIEPSAUNN,
 	[DOITUONGID] = @DOITUONGID,
 	[DONVIID] = @DONVIID,
-	[TIENSUBENH] = @TIENSUBENH,
+	[TIENSUBANTHAN] = @TIENSUBANTHAN,
+	[TIENSUGIADINH] = @TIENSUGIADINH,
+	[DANTOC] = @DANTOC,
+	[DIACHI] = @DIACHI,
+	[TINHTRANGCONGTAC] = @TINHTRANGCONGTAC,
 	[NHOMMAU] = @NHOMMAU,
 	[DIUNG] = @DIUNG,
 	[GHICHU] = @GHICHU
@@ -2019,7 +2044,8 @@ CREATE PROCEDURE [dbo].[KHAMTHUONGXUYEN_Insert]
 	@PHUONGPHAPDIEUTRI nvarchar(MAX) = null ,
 	@KETQUADIEUTRI varchar(MAX) = null ,
 	@CHIPHIKHAM int = null ,
-	@GHICHU nvarchar(MAX) = null 
+	@GHICHU nvarchar(MAX) = null ,
+	@TRIEUCHUNG nvarchar(MAX) = null 
 
 AS
 
@@ -2038,7 +2064,8 @@ INSERT [dbo].[KHAMTHUONGXUYEN]
 	[PHUONGPHAPDIEUTRI],
 	[KETQUADIEUTRI],
 	[CHIPHIKHAM],
-	[GHICHU]
+	[GHICHU],
+	[TRIEUCHUNG]
 
 )
 VALUES
@@ -2056,7 +2083,8 @@ VALUES
 	@PHUONGPHAPDIEUTRI,
 	@KETQUADIEUTRI,
 	@CHIPHIKHAM,
-	@GHICHU
+	@GHICHU,
+	@TRIEUCHUNG
 
 )
 	SELECT @ID=SCOPE_IDENTITY();
@@ -2081,7 +2109,8 @@ CREATE PROCEDURE [dbo].[KHAMTHUONGXUYEN_Update]
 	@PHUONGPHAPDIEUTRI nvarchar(MAX) = null,
 	@KETQUADIEUTRI varchar(MAX) = null,
 	@CHIPHIKHAM int = null,
-	@GHICHU nvarchar(MAX) = null
+	@GHICHU nvarchar(MAX) = null,
+	@TRIEUCHUNG nvarchar(MAX) = null
 
 AS
 
@@ -2100,7 +2129,8 @@ SET
 	[PHUONGPHAPDIEUTRI] = @PHUONGPHAPDIEUTRI,
 	[KETQUADIEUTRI] = @KETQUADIEUTRI,
 	[CHIPHIKHAM] = @CHIPHIKHAM,
-	[GHICHU] = @GHICHU
+	[GHICHU] = @GHICHU,
+	[TRIEUCHUNG] = @TRIEUCHUNG
  WHERE 
 	[ID] = @ID
 
@@ -2795,6 +2825,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMTHELUC
 GO
 CREATE PROCEDURE [dbo].[KHAMTHELUC_Insert]
 	@ID int output,
+	@BACSIID int = null ,
 	@CHIEUCAO nvarchar(MAX) = null ,
 	@CANNANG int = null ,
 	@MACH nvarchar(MAX) = null ,
@@ -2808,6 +2839,7 @@ AS
 
 INSERT [dbo].[KHAMTHELUC]
 (
+	[BACSIID],
 	[CHIEUCAO],
 	[CANNANG],
 	[MACH],
@@ -2820,6 +2852,7 @@ INSERT [dbo].[KHAMTHELUC]
 )
 VALUES
 (
+	@BACSIID,
 	@CHIEUCAO,
 	@CANNANG,
 	@MACH,
@@ -2839,6 +2872,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMTHELUC
 GO
 CREATE PROCEDURE [dbo].[KHAMTHELUC_Update]
 	@ID int,
+	@BACSIID int = null,
 	@CHIEUCAO nvarchar(MAX) = null,
 	@CANNANG int = null,
 	@MACH nvarchar(MAX) = null,
@@ -2852,6 +2886,7 @@ AS
 
 UPDATE [dbo].[KHAMTHELUC]
 SET
+	[BACSIID] = @BACSIID,
 	[CHIEUCAO] = @CHIEUCAO,
 	[CANNANG] = @CANNANG,
 	[MACH] = @MACH,
@@ -2934,6 +2969,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCANLAM
 GO
 CREATE PROCEDURE [dbo].[KHAMCANLAMSANG_Insert]
 	@ID int output,
+	@BACSIID int = null ,
 	@MAU nvarchar(MAX) = null ,
 	@NUOCTIEU nvarchar(MAX) = null ,
 	@SIEUAM nvarchar(MAX) = null ,
@@ -2947,6 +2983,7 @@ AS
 
 INSERT [dbo].[KHAMCANLAMSANG]
 (
+	[BACSIID],
 	[MAU],
 	[NUOCTIEU],
 	[SIEUAM],
@@ -2959,6 +2996,7 @@ INSERT [dbo].[KHAMCANLAMSANG]
 )
 VALUES
 (
+	@BACSIID,
 	@MAU,
 	@NUOCTIEU,
 	@SIEUAM,
@@ -2978,6 +3016,7 @@ if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCANLAM
 GO
 CREATE PROCEDURE [dbo].[KHAMCANLAMSANG_Update]
 	@ID int,
+	@BACSIID int = null,
 	@MAU nvarchar(MAX) = null,
 	@NUOCTIEU nvarchar(MAX) = null,
 	@SIEUAM nvarchar(MAX) = null,
@@ -2991,6 +3030,7 @@ AS
 
 UPDATE [dbo].[KHAMCANLAMSANG]
 SET
+	[BACSIID] = @BACSIID,
 	[MAU] = @MAU,
 	[NUOCTIEU] = @NUOCTIEU,
 	[SIEUAM] = @SIEUAM,
@@ -3069,15 +3109,149 @@ AS
 
 GO
 
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_Insert]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_Insert]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_Insert]
+	@ID int output,
+	@BACSIID int = null ,
+	@TAI nvarchar(MAX) = null ,
+	@RANG nvarchar(MAX) = null ,
+	@HAM nvarchar(MAX) = null ,
+	@MAT nvarchar(MAX) = null ,
+	@KHAC nvarchar(MAX) = null ,
+	@GHICHU nvarchar(MAX) = null 
+
+AS
+
+INSERT [dbo].[KHAMCHUYENKHOA]
+(
+	[BACSIID],
+	[TAI],
+	[RANG],
+	[HAM],
+	[MAT],
+	[KHAC],
+	[GHICHU]
+
+)
+VALUES
+(
+	@BACSIID,
+	@TAI,
+	@RANG,
+	@HAM,
+	@MAT,
+	@KHAC,
+	@GHICHU
+
+)
+	SELECT @ID=SCOPE_IDENTITY();
+
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_Update]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_Update]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_Update]
+	@ID int,
+	@BACSIID int = null,
+	@TAI nvarchar(MAX) = null,
+	@RANG nvarchar(MAX) = null,
+	@HAM nvarchar(MAX) = null,
+	@MAT nvarchar(MAX) = null,
+	@KHAC nvarchar(MAX) = null,
+	@GHICHU nvarchar(MAX) = null
+
+AS
+
+UPDATE [dbo].[KHAMCHUYENKHOA]
+SET
+	[BACSIID] = @BACSIID,
+	[TAI] = @TAI,
+	[RANG] = @RANG,
+	[HAM] = @HAM,
+	[MAT] = @MAT,
+	[KHAC] = @KHAC,
+	[GHICHU] = @GHICHU
+ WHERE 
+	[ID] = @ID
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_SelectByPrimaryKey]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_SelectByPrimaryKey]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_SelectByPrimaryKey]
+	@ID int
+AS
+
+	SELECT 
+	*	
+	FROM [dbo].[KHAMCHUYENKHOA]
+	WHERE 
+			[ID] = @ID
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_SelectAll]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_SelectAll]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_SelectAll]
+AS
+
+	SELECT 
+	*	
+	FROM [dbo].[KHAMCHUYENKHOA]
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_SelectByField]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_SelectByField]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_SelectByField]
+	@FieldName varchar(100),
+	@Value varchar(1000)
+AS
+
+	DECLARE @query varchar(2000);
+
+	SET @query = 'SELECT * FROM [dbo].[KHAMCHUYENKHOA] WHERE [' + @FieldName  + '] = ''' + @Value + ''''
+	EXEC(@query)
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_DeleteByPrimaryKey]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_DeleteByPrimaryKey]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_DeleteByPrimaryKey]
+	@ID int
+AS
+
+DELETE FROM [dbo].[KHAMCHUYENKHOA]
+ WHERE 
+	[ID] = @ID
+
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMCHUYENKHOA_DeleteByField]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMCHUYENKHOA_DeleteByField]
+GO
+CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_DeleteByField]
+	@FieldName varchar(100),
+	@Value varchar(1000)
+AS
+
+	DECLARE @query varchar(2000);
+
+	SET @query = 'DELETE FROM [dbo].[KHAMCHUYENKHOA] WHERE [' + @FieldName  + '] = ''' + @Value + ''''
+	EXEC(@query)
+
+GO
+
 if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[KHAMDINHKI_Insert]') and OBJECTPROPERTY(id, N'IsProcedure') = 1) drop procedure [dbo].[KHAMDINHKI_Insert]
 GO
 CREATE PROCEDURE [dbo].[KHAMDINHKI_Insert]
 	@ID int output,
 	@BENHNHANID int = null ,
 	@PHANLOAISUCKHOEID int = null ,
-	@BACSIID int = null ,
 	@KHAMTHELUCID int = null ,
 	@KHAMCANLAMSANGID int = null ,
+	@KHAMCHUYENKHOAID int = null ,
 	@KETLUAN nvarchar(MAX) = null ,
 	@THOIGIANKHAM datetime = null ,
 	@LOAIHINHKHAM int = null ,
@@ -3090,9 +3264,9 @@ INSERT [dbo].[KHAMDINHKI]
 (
 	[BENHNHANID],
 	[PHANLOAISUCKHOEID],
-	[BACSIID],
 	[KHAMTHELUCID],
 	[KHAMCANLAMSANGID],
+	[KHAMCHUYENKHOAID],
 	[KETLUAN],
 	[THOIGIANKHAM],
 	[LOAIHINHKHAM],
@@ -3104,9 +3278,9 @@ VALUES
 (
 	@BENHNHANID,
 	@PHANLOAISUCKHOEID,
-	@BACSIID,
 	@KHAMTHELUCID,
 	@KHAMCANLAMSANGID,
+	@KHAMCHUYENKHOAID,
 	@KETLUAN,
 	@THOIGIANKHAM,
 	@LOAIHINHKHAM,
@@ -3125,9 +3299,9 @@ CREATE PROCEDURE [dbo].[KHAMDINHKI_Update]
 	@ID int,
 	@BENHNHANID int = null,
 	@PHANLOAISUCKHOEID int = null,
-	@BACSIID int = null,
 	@KHAMTHELUCID int = null,
 	@KHAMCANLAMSANGID int = null,
+	@KHAMCHUYENKHOAID int = null,
 	@KETLUAN nvarchar(MAX) = null,
 	@THOIGIANKHAM datetime = null,
 	@LOAIHINHKHAM int = null,
@@ -3140,9 +3314,9 @@ UPDATE [dbo].[KHAMDINHKI]
 SET
 	[BENHNHANID] = @BENHNHANID,
 	[PHANLOAISUCKHOEID] = @PHANLOAISUCKHOEID,
-	[BACSIID] = @BACSIID,
 	[KHAMTHELUCID] = @KHAMTHELUCID,
 	[KHAMCANLAMSANGID] = @KHAMCANLAMSANGID,
+	[KHAMCHUYENKHOAID] = @KHAMCHUYENKHOAID,
 	[KETLUAN] = @KETLUAN,
 	[THOIGIANKHAM] = @THOIGIANKHAM,
 	[LOAIHINHKHAM] = @LOAIHINHKHAM,

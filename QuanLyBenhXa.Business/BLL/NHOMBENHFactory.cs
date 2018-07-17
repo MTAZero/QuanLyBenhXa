@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
-using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -101,18 +100,6 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(NHOMBENHKeys keys)
         {
-            try
-            {
-                LOAIBENHFactory LOAIBENHService = new LOAIBENHFactory();
-                NHOMBENH lb = GetAllBy(NHOMBENH.NHOMBENHFields.ID, keys.ID).FirstOrDefault();
-
-                List<LOAIBENH> dsBENH = LOAIBENHService.GetAllEntities().ToList().Where(p => p.NHOMBENHID == lb.ID).ToList();
-                foreach (LOAIBENH item in dsBENH) LOAIBENHService.Delete(new LOAIBENHKeys(item.ID));
-            }
-            catch
-            {
-            }
-
             return _dataObject.Delete(keys); 
         }
 

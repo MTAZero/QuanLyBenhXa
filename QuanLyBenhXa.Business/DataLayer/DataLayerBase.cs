@@ -52,10 +52,10 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         private void InitClass()
         {
             // create Connection Object
-            _mainConnection = new SqlConnection();            
+            _mainConnection = new SqlConnection();
 
             // Get connection string from Config File and set to the connection
-            _mainConnection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Main_DB"].ConnectionString;
+            _mainConnection.ConnectionString = ConfigurationManager.ConnectionStrings["Main_DB"].ConnectionString;
             _isDisposed = false;
         }
 

@@ -152,6 +152,10 @@
     <Compile Include="Entity\KHAMCANLAMSANG.cs" />
     <Compile Include="BLL\KHAMCANLAMSANGFactory.cs" />
     <Compile Include="Key\KHAMCANLAMSANGKeys.cs" />
+    <Compile Include="DataLayer\KHAMCHUYENKHOASql.cs" />
+    <Compile Include="Entity\KHAMCHUYENKHOA.cs" />
+    <Compile Include="BLL\KHAMCHUYENKHOAFactory.cs" />
+    <Compile Include="Key\KHAMCHUYENKHOAKeys.cs" />
     <Compile Include="DataLayer\KHAMDINHKISql.cs" />
     <Compile Include="Entity\KHAMDINHKI.cs" />
     <Compile Include="BLL\KHAMDINHKIFactory.cs" />

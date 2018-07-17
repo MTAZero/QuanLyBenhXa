@@ -58,6 +58,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@KETQUADIEUTRI", SqlDbType.VarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KETQUADIEUTRI));
 				sqlCommand.Parameters.Add(new SqlParameter("@CHIPHIKHAM", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CHIPHIKHAM));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
+				sqlCommand.Parameters.Add(new SqlParameter("@TRIEUCHUNG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TRIEUCHUNG));
 
 								
 				MainConnection.Open();
@@ -110,6 +111,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@KETQUADIEUTRI", SqlDbType.VarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KETQUADIEUTRI));
 				sqlCommand.Parameters.Add(new SqlParameter("@CHIPHIKHAM", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CHIPHIKHAM));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
+				sqlCommand.Parameters.Add(new SqlParameter("@TRIEUCHUNG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TRIEUCHUNG));
 
                 
                 MainConnection.Open();
@@ -436,6 +438,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHUONGXUYEN.KHAMTHUONGXUYENFields.GHICHU.ToString())))
 				{
 					businessObject.GHICHU = dataReader.GetString(dataReader.GetOrdinal(KHAMTHUONGXUYEN.KHAMTHUONGXUYENFields.GHICHU.ToString()));
+				}
+
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHUONGXUYEN.KHAMTHUONGXUYENFields.TRIEUCHUNG.ToString())))
+				{
+					businessObject.TRIEUCHUNG = dataReader.GetString(dataReader.GetOrdinal(KHAMTHUONGXUYEN.KHAMTHUONGXUYENFields.TRIEUCHUNG.ToString()));
 				}
 
 

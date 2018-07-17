@@ -23,7 +23,8 @@ namespace QuanLyBenhXa.BusinessLayer
 			PHUONGPHAPDIEUTRI,
 			KETQUADIEUTRI,
 			CHIPHIKHAM,
-			GHICHU
+			GHICHU,
+			TRIEUCHUNG
 		}
 		#endregion
 
@@ -44,6 +45,7 @@ namespace QuanLyBenhXa.BusinessLayer
 			string _kETQUADIEUTRI;
 			int? _cHIPHIKHAM;
 			string _gHICHU;
+			string _tRIEUCHUNG;
 
 		#endregion
 
@@ -181,6 +183,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_gHICHU = value;
+			 }
+		}
+
+		public string  TRIEUCHUNG
+		{
+			 get { return _tRIEUCHUNG; }
+			 set
+			 {
+					_tRIEUCHUNG = value;
 			 }
 		}
 

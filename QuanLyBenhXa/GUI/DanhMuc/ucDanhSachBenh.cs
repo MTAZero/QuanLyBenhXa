@@ -21,7 +21,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         private int indexLoaiBenh = 0, indexLoaiBenh1 = 0;
         private int indexBenh = 0, indexBenh1 = 0;
 
-
         #region Hàm khởi tạo
         public ucDanhSachBenh()
         {
@@ -48,7 +47,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                     .ToList();
 
                 UpdateDetailNHOMBENH();
-                LoadDgvLOAIBENH();
+                
 
                 try
                 {
@@ -65,6 +64,10 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             {
 
             }
+            finally
+            {
+                LoadDgvLOAIBENH();
+            }
         }
 
         private void LoadDgvLOAIBENH()
@@ -72,7 +75,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             try
             {
                 int NhomBenhID = getNHOMBENHByID().ID;
-                if (NhomBenhID == 0) return;
+                if (NhomBenhID == 0)
+                {
+                    dgvLOAIBENHMain.DataSource = null;
+                    return;
+                }
 
                 ClearControlLOAIBENH();
 
@@ -89,7 +96,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                     .ToList();
 
                 UpdateDetailLOAIBENH();
-                LoadDgvBENH();
+                
 
                 try
                 {
@@ -106,6 +113,10 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             {
 
             }
+            finally
+            {
+                LoadDgvBENH();
+            }
         }
 
         private void LoadDgvBENH()
@@ -113,7 +124,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             try
             {
                 int LoaiBenhID = getLOAIBENHByID().ID;
-                if (LoaiBenhID == 0) return;
+                if (LoaiBenhID == 0)
+                {
+                    dgvBENHMain.DataSource = null;
+                    return;
+                }
 
                 int STT = 0;
 
@@ -486,9 +501,9 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
             try
             {
-                indexLoaiBenh1 = indexLoaiBenh;
-                indexLoaiBenh = dgvLOAIBENH.FocusedRowHandle;
                 LoadDgvBENH();
+                indexLoaiBenh1 = indexLoaiBenh;
+                indexLoaiBenh = dgvLOAIBENH.FocusedRowHandle;     
             }
             catch { }
         }
@@ -511,9 +526,9 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
             try
             {
-                indexNhomBenh1 = indexNhomBenh;
-                indexNhomBenh = dgvNHOMBENH.FocusedRowHandle;
                 LoadDgvLOAIBENH();
+                indexNhomBenh1 = indexNhomBenh;
+                indexNhomBenh = dgvNHOMBENH.FocusedRowHandle;  
             }
             catch { }
         }

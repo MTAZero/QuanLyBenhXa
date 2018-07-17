@@ -7,9 +7,9 @@ using System.Collections.Generic;
 namespace QuanLyBenhXa.BusinessLayer.DataLayer
 {
 	/// <summary>
-	/// Data access layer class for KHAMTHELUC
+	/// Data access layer class for KHAMCHUYENKHOA
 	/// </summary>
-	class KHAMTHELUCSql : DataLayerBase 
+	class KHAMCHUYENKHOASql : DataLayerBase 
 	{
 
         #region Constructor
@@ -17,7 +17,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 		/// <summary>
 		/// Class constructor
 		/// </summary>
-		public KHAMTHELUCSql()
+		public KHAMCHUYENKHOASql()
 		{
 			// Nothing for now.
 		}
@@ -31,10 +31,10 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// </summary>
 		/// <param name="businessObject">business object</param>
 		/// <returns>true of successfully insert</returns>
-		public bool Insert(KHAMTHELUC businessObject)
+		public bool Insert(KHAMCHUYENKHOA businessObject)
 		{
 			SqlCommand	sqlCommand = new SqlCommand();
-			sqlCommand.CommandText = "dbo.[KHAMTHELUC_Insert]";
+			sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_Insert]";
 			sqlCommand.CommandType = CommandType.StoredProcedure;
 
 			// Use connection object of base class
@@ -45,13 +45,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
                 
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
-				sqlCommand.Parameters.Add(new SqlParameter("@CHIEUCAO", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CHIEUCAO));
-				sqlCommand.Parameters.Add(new SqlParameter("@CANNANG", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CANNANG));
-				sqlCommand.Parameters.Add(new SqlParameter("@MACH", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MACH));
-				sqlCommand.Parameters.Add(new SqlParameter("@HUYETAP", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HUYETAP));
-				sqlCommand.Parameters.Add(new SqlParameter("@VONGNGUC", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.VONGNGUC));
-				sqlCommand.Parameters.Add(new SqlParameter("@NHIETDO", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.NHIETDO));
-				sqlCommand.Parameters.Add(new SqlParameter("@KETQUALAMSANG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KETQUALAMSANG));
+				sqlCommand.Parameters.Add(new SqlParameter("@TAI", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TAI));
+				sqlCommand.Parameters.Add(new SqlParameter("@RANG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.RANG));
+				sqlCommand.Parameters.Add(new SqlParameter("@HAM", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HAM));
+				sqlCommand.Parameters.Add(new SqlParameter("@MAT", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MAT));
+				sqlCommand.Parameters.Add(new SqlParameter("@KHAC", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAC));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
 
 								
@@ -64,7 +62,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 			}
 			catch//(Exception ex)
 			{				
-				return false;//throw new Exception("KHAMTHELUC::Insert::Error occured.", ex);
+				return false;//throw new Exception("KHAMCHUYENKHOA::Insert::Error occured.", ex);
 			}
 			finally
 			{			
@@ -78,10 +76,10 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// </summary>
         /// <param name="businessObject">business object</param>
         /// <returns>true for successfully updated</returns>
-        public bool Update(KHAMTHELUC businessObject)
+        public bool Update(KHAMCHUYENKHOA businessObject)
         {
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_Update]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_Update]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -92,13 +90,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
                 
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
-				sqlCommand.Parameters.Add(new SqlParameter("@CHIEUCAO", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CHIEUCAO));
-				sqlCommand.Parameters.Add(new SqlParameter("@CANNANG", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CANNANG));
-				sqlCommand.Parameters.Add(new SqlParameter("@MACH", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MACH));
-				sqlCommand.Parameters.Add(new SqlParameter("@HUYETAP", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HUYETAP));
-				sqlCommand.Parameters.Add(new SqlParameter("@VONGNGUC", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.VONGNGUC));
-				sqlCommand.Parameters.Add(new SqlParameter("@NHIETDO", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.NHIETDO));
-				sqlCommand.Parameters.Add(new SqlParameter("@KETQUALAMSANG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KETQUALAMSANG));
+				sqlCommand.Parameters.Add(new SqlParameter("@TAI", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TAI));
+				sqlCommand.Parameters.Add(new SqlParameter("@RANG", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.RANG));
+				sqlCommand.Parameters.Add(new SqlParameter("@HAM", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HAM));
+				sqlCommand.Parameters.Add(new SqlParameter("@MAT", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MAT));
+				sqlCommand.Parameters.Add(new SqlParameter("@KHAC", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAC));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
 
                 
@@ -109,7 +105,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {
-                return false;//throw new Exception("KHAMTHELUC::Update::Error occured.", ex);
+                return false;//throw new Exception("KHAMCHUYENKHOA::Update::Error occured.", ex);
             }
             finally
             {
@@ -122,11 +118,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// Select by primary key
         /// </summary>
         /// <param name="keys">primary keys</param>
-        /// <returns>KHAMTHELUC business object</returns>
-        public KHAMTHELUC SelectByPrimaryKey(KHAMTHELUCKeys keys)
+        /// <returns>KHAMCHUYENKHOA business object</returns>
+        public KHAMCHUYENKHOA SelectByPrimaryKey(KHAMCHUYENKHOAKeys keys)
         {
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_SelectByPrimaryKey]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_SelectByPrimaryKey]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -144,7 +140,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 
                 if (dataReader.Read())
                 {
-                    KHAMTHELUC businessObject = new KHAMTHELUC();
+                    KHAMCHUYENKHOA businessObject = new KHAMCHUYENKHOA();
 
                     PopulateBusinessObjectFromReader(businessObject, dataReader);
 
@@ -157,7 +153,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {
-                return null;//throw new Exception("KHAMTHELUC::SelectByPrimaryKey::Error occured.", ex);
+                return null;//throw new Exception("KHAMCHUYENKHOA::SelectByPrimaryKey::Error occured.", ex);
             }
             finally
             {             
@@ -167,10 +163,10 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 
         }
 
-        public List<KHAMTHELUC> SelectAllEntities()
+        public List<KHAMCHUYENKHOA> SelectAllEntities()
         {
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_SelectAll]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_SelectAll]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -188,7 +184,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {                
-                return null;//throw new Exception("KHAMTHELUC::SelectAll::Error occured.", ex);
+                return null;//throw new Exception("KHAMCHUYENKHOA::SelectAll::Error occured.", ex);
             }
             finally
             {
@@ -202,7 +198,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         {
             DataTable result = new DataTable();
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_SelectAll]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_SelectAll]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -214,7 +210,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {                
-                return null;//throw new Exception("KHAMTHELUC::SelectAll::Error occured.", ex);
+                return null;//throw new Exception("KHAMCHUYENKHOA::SelectAll::Error occured.", ex);
             }
             finally
             {
@@ -228,12 +224,12 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// </summary>
         /// <param name="fieldName">name of field</param>
         /// <param name="value">value of field</param>
-        /// <returns>list of KHAMTHELUC</returns>
-        public List<KHAMTHELUC> SelectByField(string fieldName, object value)
+        /// <returns>list of KHAMCHUYENKHOA</returns>
+        public List<KHAMCHUYENKHOA> SelectByField(string fieldName, object value)
         {
 
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_SelectByField]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_SelectByField]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -254,7 +250,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {
-                return null;//throw new Exception("KHAMTHELUC::SelectByField::Error occured.", ex);
+                return null;//throw new Exception("KHAMCHUYENKHOA::SelectByField::Error occured.", ex);
             }
             finally
             {
@@ -270,10 +266,10 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// </summary>
         /// <param name="keys">primary keys</param>
         /// <returns>true for successfully deleted</returns>
-        public bool Delete(KHAMTHELUCKeys keys)
+        public bool Delete(KHAMCHUYENKHOAKeys keys)
         {
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_DeleteByPrimaryKey]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_DeleteByPrimaryKey]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -293,7 +289,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {
-                return false;//throw new Exception("KHAMTHELUC::DeleteByKey::Error occured.", ex);
+                return false;//throw new Exception("KHAMCHUYENKHOA::DeleteByKey::Error occured.", ex);
             }
             finally
             {                
@@ -312,7 +308,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         public bool DeleteByField(string fieldName, object value)
         {
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = "dbo.[KHAMTHELUC_DeleteByField]";
+            sqlCommand.CommandText = "dbo.[KHAMCHUYENKHOA_DeleteByField]";
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             // Use connection object of base class
@@ -333,7 +329,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             }
             catch //(Exception ex)
             {                
-                return false;//throw new Exception("KHAMTHELUC::DeleteByField::Error occured.", ex);
+                return false;//throw new Exception("KHAMCHUYENKHOA::DeleteByField::Error occured.", ex);
             }
             finally
             {             
@@ -352,55 +348,45 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// </summary>
         /// <param name="businessObject">business object</param>
         /// <param name="dataReader">data reader</param>
-        internal void PopulateBusinessObjectFromReader(KHAMTHELUC businessObject, IDataReader dataReader)
+        internal void PopulateBusinessObjectFromReader(KHAMCHUYENKHOA businessObject, IDataReader dataReader)
         {
 
 
-				businessObject.ID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.ID.ToString()));
+				businessObject.ID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.ID.ToString()));
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.BACSIID.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.BACSIID.ToString())))
 				{
-					businessObject.BACSIID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.BACSIID.ToString()));
+					businessObject.BACSIID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.BACSIID.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.CHIEUCAO.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.TAI.ToString())))
 				{
-					businessObject.CHIEUCAO = dataReader.GetString(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.CHIEUCAO.ToString()));
+					businessObject.TAI = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.TAI.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.CANNANG.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.RANG.ToString())))
 				{
-					businessObject.CANNANG = dataReader.GetInt32(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.CANNANG.ToString()));
+					businessObject.RANG = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.RANG.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.MACH.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.HAM.ToString())))
 				{
-					businessObject.MACH = dataReader.GetString(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.MACH.ToString()));
+					businessObject.HAM = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.HAM.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.HUYETAP.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.MAT.ToString())))
 				{
-					businessObject.HUYETAP = dataReader.GetString(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.HUYETAP.ToString()));
+					businessObject.MAT = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.MAT.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.VONGNGUC.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.KHAC.ToString())))
 				{
-					businessObject.VONGNGUC = dataReader.GetInt32(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.VONGNGUC.ToString()));
+					businessObject.KHAC = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.KHAC.ToString()));
 				}
 
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.NHIETDO.ToString())))
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.GHICHU.ToString())))
 				{
-					businessObject.NHIETDO = dataReader.GetInt32(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.NHIETDO.ToString()));
-				}
-
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.KETQUALAMSANG.ToString())))
-				{
-					businessObject.KETQUALAMSANG = dataReader.GetString(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.KETQUALAMSANG.ToString()));
-				}
-
-				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.GHICHU.ToString())))
-				{
-					businessObject.GHICHU = dataReader.GetString(dataReader.GetOrdinal(KHAMTHELUC.KHAMTHELUCFields.GHICHU.ToString()));
+					businessObject.GHICHU = dataReader.GetString(dataReader.GetOrdinal(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields.GHICHU.ToString()));
 				}
 
 
@@ -410,15 +396,15 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
         /// Populate business objects from the data reader
         /// </summary>
         /// <param name="dataReader">data reader</param>
-        /// <returns>list of KHAMTHELUC</returns>
-        internal List<KHAMTHELUC> PopulateObjectsFromReader(IDataReader dataReader)
+        /// <returns>list of KHAMCHUYENKHOA</returns>
+        internal List<KHAMCHUYENKHOA> PopulateObjectsFromReader(IDataReader dataReader)
         {
 
-            List<KHAMTHELUC> list = new List<KHAMTHELUC>();
+            List<KHAMCHUYENKHOA> list = new List<KHAMCHUYENKHOA>();
 
             while (dataReader.Read())
             {
-                KHAMTHELUC businessObject = new KHAMTHELUC();
+                KHAMCHUYENKHOA businessObject = new KHAMCHUYENKHOA();
                 PopulateBusinessObjectFromReader(businessObject, dataReader);
                 list.Add(businessObject);
             }

@@ -44,6 +44,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 			{
                 
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
+				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
 				sqlCommand.Parameters.Add(new SqlParameter("@MAU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MAU));
 				sqlCommand.Parameters.Add(new SqlParameter("@NUOCTIEU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.NUOCTIEU));
 				sqlCommand.Parameters.Add(new SqlParameter("@SIEUAM", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.SIEUAM));
@@ -90,6 +91,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
             {
                 
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
+				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
 				sqlCommand.Parameters.Add(new SqlParameter("@MAU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.MAU));
 				sqlCommand.Parameters.Add(new SqlParameter("@NUOCTIEU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.NUOCTIEU));
 				sqlCommand.Parameters.Add(new SqlParameter("@SIEUAM", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.SIEUAM));
@@ -355,6 +357,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 
 
 				businessObject.ID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMCANLAMSANG.KHAMCANLAMSANGFields.ID.ToString()));
+
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCANLAMSANG.KHAMCANLAMSANGFields.BACSIID.ToString())))
+				{
+					businessObject.BACSIID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMCANLAMSANG.KHAMCANLAMSANGFields.BACSIID.ToString()));
+				}
 
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMCANLAMSANG.KHAMCANLAMSANGFields.MAU.ToString())))
 				{

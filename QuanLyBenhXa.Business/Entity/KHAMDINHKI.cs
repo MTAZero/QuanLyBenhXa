@@ -12,9 +12,9 @@ namespace QuanLyBenhXa.BusinessLayer
 			ID,
 			BENHNHANID,
 			PHANLOAISUCKHOEID,
-			BACSIID,
 			KHAMTHELUCID,
 			KHAMCANLAMSANGID,
+			KHAMCHUYENKHOAID,
 			KETLUAN,
 			THOIGIANKHAM,
 			LOAIHINHKHAM,
@@ -28,9 +28,9 @@ namespace QuanLyBenhXa.BusinessLayer
 			int _iD;
 			int? _bENHNHANID;
 			int? _pHANLOAISUCKHOEID;
-			int? _bACSIID;
 			int? _kHAMTHELUCID;
 			int? _kHAMCANLAMSANGID;
+			int? _kHAMCHUYENKHOAID;
 			string _kETLUAN;
 			DateTime? _tHOIGIANKHAM;
 			int? _lOAIHINHKHAM;
@@ -68,15 +68,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			 }
 		}
 
-		public int?  BACSIID
-		{
-			 get { return _bACSIID; }
-			 set
-			 {
-					_bACSIID = value;
-			 }
-		}
-
 		public int?  KHAMTHELUCID
 		{
 			 get { return _kHAMTHELUCID; }
@@ -92,6 +83,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_kHAMCANLAMSANGID = value;
+			 }
+		}
+
+		public int?  KHAMCHUYENKHOAID
+		{
+			 get { return _kHAMCHUYENKHOAID; }
+			 set
+			 {
+					_kHAMCHUYENKHOAID = value;
 			 }
 		}
 

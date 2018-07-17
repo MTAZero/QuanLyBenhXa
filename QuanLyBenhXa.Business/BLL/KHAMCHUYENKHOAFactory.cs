@@ -6,20 +6,20 @@ using QuanLyBenhXa.BusinessLayer.DataLayer;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
-    public class LOAIBENHFactory
+    public class KHAMCHUYENKHOAFactory
     {
 
         #region data Members
 
-        LOAIBENHSql _dataObject = null;
+        KHAMCHUYENKHOASql _dataObject = null;
 
         #endregion
 
         #region Constructor
 
-        public LOAIBENHFactory()
+        public KHAMCHUYENKHOAFactory()
         {
-            _dataObject = new LOAIBENHSql();
+            _dataObject = new KHAMCHUYENKHOASql();
         }
 
         #endregion
@@ -28,11 +28,11 @@ namespace QuanLyBenhXa.BusinessLayer
         #region Public Methods
 
         /// <summary>
-        /// Insert new LOAIBENH
+        /// Insert new KHAMCHUYENKHOA
         /// </summary>
-        /// <param name="businessObject">LOAIBENH object</param>
+        /// <param name="businessObject">KHAMCHUYENKHOA object</param>
         /// <returns>true for successfully saved</returns>
-        public bool Insert(LOAIBENH businessObject)
+        public bool Insert(KHAMCHUYENKHOA businessObject)
         {
             if (!businessObject.IsValid)
             {
@@ -45,11 +45,11 @@ namespace QuanLyBenhXa.BusinessLayer
         }
 
         /// <summary>
-        /// Update existing LOAIBENH
+        /// Update existing KHAMCHUYENKHOA
         /// </summary>
-        /// <param name="businessObject">LOAIBENH object</param>
+        /// <param name="businessObject">KHAMCHUYENKHOA object</param>
         /// <returns>true for successfully saved</returns>
-        public bool Update(LOAIBENH businessObject)
+        public bool Update(KHAMCHUYENKHOA businessObject)
         {
             if (!businessObject.IsValid)
             {
@@ -61,20 +61,20 @@ namespace QuanLyBenhXa.BusinessLayer
         }
 
         /// <summary>
-        /// get LOAIBENH by primary key.
+        /// get KHAMCHUYENKHOA by primary key.
         /// </summary>
         /// <param name="keys">primary key</param>
         /// <returns>Student</returns>
-        public LOAIBENH GetByPrimaryKey(LOAIBENHKeys keys)
+        public KHAMCHUYENKHOA GetByPrimaryKey(KHAMCHUYENKHOAKeys keys)
         {
             return _dataObject.SelectByPrimaryKey(keys); 
         }
 
         /// <summary>
-        /// get list of all LOAIBENHs
+        /// get list of all KHAMCHUYENKHOAs
         /// </summary>
         /// <returns>list</returns>
-        public List<LOAIBENH> GetAllEntities()
+        public List<KHAMCHUYENKHOA> GetAllEntities()
         {
             return _dataObject.SelectAllEntities(); 
         }
@@ -83,12 +83,12 @@ namespace QuanLyBenhXa.BusinessLayer
             return _dataObject.SelectAll(); 
         }
         /// <summary>
-        /// get list of LOAIBENH by field
+        /// get list of KHAMCHUYENKHOA by field
         /// </summary>
         /// <param name="fieldName">field name</param>
         /// <param name="value">value</param>
         /// <returns>list</returns>
-        public List<LOAIBENH> GetAllBy(LOAIBENH.LOAIBENHFields fieldName, object value)
+        public List<KHAMCHUYENKHOA> GetAllBy(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields fieldName, object value)
         {
             return _dataObject.SelectByField(fieldName.ToString(), value);  
         }
@@ -98,18 +98,18 @@ namespace QuanLyBenhXa.BusinessLayer
         /// </summary>
         /// <param name="keys">primary key</param>
         /// <returns>true for succesfully deleted</returns>
-        public bool Delete(LOAIBENHKeys keys)
+        public bool Delete(KHAMCHUYENKHOAKeys keys)
         {
             return _dataObject.Delete(keys); 
         }
 
         /// <summary>
-        /// delete LOAIBENH by field.
+        /// delete KHAMCHUYENKHOA by field.
         /// </summary>
         /// <param name="fieldName">field name</param>
         /// <param name="value">value</param>
         /// <returns>true for successfully deleted</returns>
-        public bool Delete(LOAIBENH.LOAIBENHFields fieldName, object value)
+        public bool Delete(KHAMCHUYENKHOA.KHAMCHUYENKHOAFields fieldName, object value)
         {
             return _dataObject.DeleteByField(fieldName.ToString(), value); 
         }

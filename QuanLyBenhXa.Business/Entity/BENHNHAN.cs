@@ -20,10 +20,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			TRINHDOVANHOA,
 			CAPBACID,
 			CHUCVUID,
-			NGHENGHIEP,
+			NGHENGHIEPTRUOCNN,
+			NGHENGHIEPSAUNN,
 			DOITUONGID,
 			DONVIID,
-			TIENSUBENH,
+			TIENSUBANTHAN,
+			TIENSUGIADINH,
+			DANTOC,
+			DIACHI,
+			TINHTRANGCONGTAC,
 			NHOMMAU,
 			DIUNG,
 			GHICHU
@@ -43,10 +48,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			string _tRINHDOVANHOA;
 			int? _cAPBACID;
 			int? _cHUCVUID;
-			string _nGHENGHIEP;
+			string _nGHENGHIEPTRUOCNN;
+			string _nGHENGHIEPSAUNN;
 			int? _dOITUONGID;
 			int? _dONVIID;
-			string _tIENSUBENH;
+			string _tIENSUBANTHAN;
+			string _tIENSUGIADINH;
+			string _dANTOC;
+			string _dIACHI;
+			int? _tINHTRANGCONGTAC;
 			string _nHOMMAU;
 			string _dIUNG;
 			string _gHICHU;
@@ -154,12 +164,21 @@ namespace QuanLyBenhXa.BusinessLayer
 			 }
 		}
 
-		public string  NGHENGHIEP
+		public string  NGHENGHIEPTRUOCNN
 		{
-			 get { return _nGHENGHIEP; }
+			 get { return _nGHENGHIEPTRUOCNN; }
 			 set
 			 {
-					_nGHENGHIEP = value;
+					_nGHENGHIEPTRUOCNN = value;
+			 }
+		}
+
+		public string  NGHENGHIEPSAUNN
+		{
+			 get { return _nGHENGHIEPSAUNN; }
+			 set
+			 {
+					_nGHENGHIEPSAUNN = value;
 			 }
 		}
 
@@ -181,12 +200,48 @@ namespace QuanLyBenhXa.BusinessLayer
 			 }
 		}
 
-		public string  TIENSUBENH
+		public string  TIENSUBANTHAN
 		{
-			 get { return _tIENSUBENH; }
+			 get { return _tIENSUBANTHAN; }
 			 set
 			 {
-					_tIENSUBENH = value;
+					_tIENSUBANTHAN = value;
+			 }
+		}
+
+		public string  TIENSUGIADINH
+		{
+			 get { return _tIENSUGIADINH; }
+			 set
+			 {
+					_tIENSUGIADINH = value;
+			 }
+		}
+
+		public string  DANTOC
+		{
+			 get { return _dANTOC; }
+			 set
+			 {
+					_dANTOC = value;
+			 }
+		}
+
+		public string  DIACHI
+		{
+			 get { return _dIACHI; }
+			 set
+			 {
+					_dIACHI = value;
+			 }
+		}
+
+		public int?  TINHTRANGCONGTAC
+		{
+			 get { return _tINHTRANGCONGTAC; }
+			 set
+			 {
+					_tINHTRANGCONGTAC = value;
 			 }
 		}
 

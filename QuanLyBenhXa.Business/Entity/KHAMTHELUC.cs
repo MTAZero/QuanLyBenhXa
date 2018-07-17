@@ -10,6 +10,7 @@ namespace QuanLyBenhXa.BusinessLayer
 		public enum KHAMTHELUCFields
 		{
 			ID,
+			BACSIID,
 			CHIEUCAO,
 			CANNANG,
 			MACH,
@@ -24,6 +25,7 @@ namespace QuanLyBenhXa.BusinessLayer
 		#region Data Members
 
 			int _iD;
+			int? _bACSIID;
 			string _cHIEUCAO;
 			int? _cANNANG;
 			string _mACH;
@@ -43,6 +45,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_iD = value;
+			 }
+		}
+
+		public int?  BACSIID
+		{
+			 get { return _bACSIID; }
+			 set
+			 {
+					_bACSIID = value;
 			 }
 		}
 
