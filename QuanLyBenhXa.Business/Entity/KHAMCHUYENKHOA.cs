@@ -12,6 +12,8 @@ namespace QuanLyBenhXa.BusinessLayer
 			ID,
 			BACSIID,
 			TAI,
+			MUI,
+			HONG,
 			RANG,
 			HAM,
 			MAT,
@@ -25,6 +27,8 @@ namespace QuanLyBenhXa.BusinessLayer
 			int _iD;
 			int? _bACSIID;
 			string _tAI;
+			string _mUI;
+			string _hONG;
 			string _rANG;
 			string _hAM;
 			string _mAT;
@@ -59,6 +63,24 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_tAI = value;
+			 }
+		}
+
+		public string  MUI
+		{
+			 get { return _mUI; }
+			 set
+			 {
+					_mUI = value;
+			 }
+		}
+
+		public string  HONG
+		{
+			 get { return _hONG; }
+			 set
+			 {
+					_hONG = value;
 			 }
 		}
 

@@ -23,7 +23,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			TRINHDOVANHOA,
 			DOITUONGID,
 			DONVIID,
-			CANBOCAPCAO,
 			TAIKHOANID,
 			GHICHU
 		}
@@ -45,7 +44,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			string _tRINHDOVANHOA;
 			int? _dOITUONGID;
 			int? _dONVIID;
-			int? _cANBOCAPCAO;
 			int? _tAIKHOANID;
 			string _gHICHU;
 
@@ -176,15 +174,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_dONVIID = value;
-			 }
-		}
-
-		public int?  CANBOCAPCAO
-		{
-			 get { return _cANBOCAPCAO; }
-			 set
-			 {
-					_cANBOCAPCAO = value;
 			 }
 		}
 

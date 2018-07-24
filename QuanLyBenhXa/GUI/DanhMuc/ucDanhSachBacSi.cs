@@ -152,15 +152,12 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             ans.DANTOC = txtDanToc.Text;
             ans.TRINHDOVANHOA = txtTrinhDo.Text;
 
-            ans.CANBOCAPCAO = (chkCanBoCapCao.Checked == true) ? 1 : 0;
             ans.DONVIID = (int) cbxDonVi.EditValue;
             ans.CAPBACID = (int) cbxCapBac.EditValue;
             ans.CHUCVUID = (int) cbxChucVu.EditValue;
             ans.DOITUONGID = (int) cbxDoiTuong.EditValue;
             ans.QUYEN = cbxQuyen.SelectedIndex;
             ans.GIOITINH = cbxGioiTinh.SelectedIndex;
-
-            ans.CANBOCAPCAO = (chkCanBoCapCao.Checked) ? 1 : 0;
 
             return ans;
         }
@@ -203,7 +200,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 cbxDoiTuong.EditValue = (int) tg.DOITUONGID;
                 cbxQuyen.SelectedIndex = (int) tg.QUYEN;
                 cbxGioiTinh.SelectedIndex = (int) tg.GIOITINH;
-                chkCanBoCapCao.Checked = (tg.CANBOCAPCAO > 0) ? true : false;
                 dateNgaySinh.DateTime = (DateTime) tg.NGAYSINH;
             }
             catch
@@ -315,7 +311,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
         private void CapNhat(ref BACSI cu, BACSI moi)
         {
-            cu.CANBOCAPCAO = moi.CANBOCAPCAO;
             cu.HOTEN = moi.HOTEN;
             cu.DONVIID = moi.DONVIID;
             cu.CAPBACID = moi.CAPBACID;

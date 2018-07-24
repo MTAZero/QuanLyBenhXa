@@ -15,7 +15,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			GHICHU,
 			BACSIMUONID,
 			BACSITRAID,
-			BENHNHANID,
 			KHAMTHUONGXUYENID,
 			TRANGTHAI
 		}
@@ -29,7 +28,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			string _gHICHU;
 			int? _bACSIMUONID;
 			int? _bACSITRAID;
-			int? _bENHNHANID;
 			int? _kHAMTHUONGXUYENID;
 			int? _tRANGTHAI;
 
@@ -88,15 +86,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_bACSITRAID = value;
-			 }
-		}
-
-		public int?  BENHNHANID
-		{
-			 get { return _bENHNHANID; }
-			 set
-			 {
-					_bENHNHANID = value;
 			 }
 		}
 

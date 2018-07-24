@@ -12,6 +12,7 @@ namespace QuanLyBenhXa.BusinessLayer
 			ID,
 			BENHNHANID,
 			PHANLOAISUCKHOEID,
+			BACSIID,
 			KHAMTHELUCID,
 			KHAMCANLAMSANGID,
 			KHAMCHUYENKHOAID,
@@ -28,6 +29,7 @@ namespace QuanLyBenhXa.BusinessLayer
 			int _iD;
 			int? _bENHNHANID;
 			int? _pHANLOAISUCKHOEID;
+			int? _bACSIID;
 			int? _kHAMTHELUCID;
 			int? _kHAMCANLAMSANGID;
 			int? _kHAMCHUYENKHOAID;
@@ -65,6 +67,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_pHANLOAISUCKHOEID = value;
+			 }
+		}
+
+		public int?  BACSIID
+		{
+			 get { return _bACSIID; }
+			 set
+			 {
+					_bACSIID = value;
 			 }
 		}
 

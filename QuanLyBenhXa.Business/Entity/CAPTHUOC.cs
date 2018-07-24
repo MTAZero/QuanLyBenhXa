@@ -12,7 +12,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			ID,
 			NGAY,
 			BACSIID,
-			BENHNHANID,
 			KHAMTHUONGXUYENID,
 			GHICHU
 		}
@@ -23,7 +22,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			int _iD;
 			DateTime? _nGAY;
 			int? _bACSIID;
-			int? _bENHNHANID;
 			int? _kHAMTHUONGXUYENID;
 			string _gHICHU;
 
@@ -55,15 +53,6 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_bACSIID = value;
-			 }
-		}
-
-		public int?  BENHNHANID
-		{
-			 get { return _bENHNHANID; }
-			 set
-			 {
-					_bENHNHANID = value;
 			 }
 		}
 

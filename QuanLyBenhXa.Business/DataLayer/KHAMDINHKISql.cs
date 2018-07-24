@@ -46,6 +46,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@BENHNHANID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BENHNHANID));
 				sqlCommand.Parameters.Add(new SqlParameter("@PHANLOAISUCKHOEID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.PHANLOAISUCKHOEID));
+				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMTHELUCID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMTHELUCID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMCANLAMSANGID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMCANLAMSANGID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMCHUYENKHOAID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMCHUYENKHOAID));
@@ -94,6 +95,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@BENHNHANID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BENHNHANID));
 				sqlCommand.Parameters.Add(new SqlParameter("@PHANLOAISUCKHOEID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.PHANLOAISUCKHOEID));
+				sqlCommand.Parameters.Add(new SqlParameter("@BACSIID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.BACSIID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMTHELUCID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMTHELUCID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMCANLAMSANGID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMCANLAMSANGID));
 				sqlCommand.Parameters.Add(new SqlParameter("@KHAMCHUYENKHOAID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KHAMCHUYENKHOAID));
@@ -368,6 +370,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMDINHKI.KHAMDINHKIFields.PHANLOAISUCKHOEID.ToString())))
 				{
 					businessObject.PHANLOAISUCKHOEID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMDINHKI.KHAMDINHKIFields.PHANLOAISUCKHOEID.ToString()));
+				}
+
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMDINHKI.KHAMDINHKIFields.BACSIID.ToString())))
+				{
+					businessObject.BACSIID = dataReader.GetInt32(dataReader.GetOrdinal(KHAMDINHKI.KHAMDINHKIFields.BACSIID.ToString()));
 				}
 
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(KHAMDINHKI.KHAMDINHKIFields.KHAMTHELUCID.ToString())))

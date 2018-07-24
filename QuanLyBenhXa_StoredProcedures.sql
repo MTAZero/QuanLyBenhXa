@@ -9,6 +9,7 @@ CREATE PROCEDURE [dbo].[CAPBAC_Insert]
 	@ID int output,
 	@TEN nvarchar(MAX) = null ,
 	@KIHIEU nvarchar(MAX) = null ,
+	@CANBOCAPCAO int = null ,
 	@GHICHU nvarchar(MAX) = null 
 
 AS
@@ -17,6 +18,7 @@ INSERT [dbo].[CAPBAC]
 (
 	[TEN],
 	[KIHIEU],
+	[CANBOCAPCAO],
 	[GHICHU]
 
 )
@@ -24,6 +26,7 @@ VALUES
 (
 	@TEN,
 	@KIHIEU,
+	@CANBOCAPCAO,
 	@GHICHU
 
 )
@@ -38,6 +41,7 @@ CREATE PROCEDURE [dbo].[CAPBAC_Update]
 	@ID int,
 	@TEN nvarchar(MAX) = null,
 	@KIHIEU nvarchar(MAX) = null,
+	@CANBOCAPCAO int = null,
 	@GHICHU nvarchar(MAX) = null
 
 AS
@@ -46,6 +50,7 @@ UPDATE [dbo].[CAPBAC]
 SET
 	[TEN] = @TEN,
 	[KIHIEU] = @KIHIEU,
+	[CANBOCAPCAO] = @CANBOCAPCAO,
 	[GHICHU] = @GHICHU
  WHERE 
 	[ID] = @ID
@@ -818,7 +823,6 @@ CREATE PROCEDURE [dbo].[BACSI_Insert]
 	@TRINHDOVANHOA nvarchar(MAX) = null ,
 	@DOITUONGID int = null ,
 	@DONVIID int = null ,
-	@CANBOCAPCAO int = null ,
 	@TAIKHOANID int = null ,
 	@GHICHU nvarchar(MAX) = null 
 
@@ -839,7 +843,6 @@ INSERT [dbo].[BACSI]
 	[TRINHDOVANHOA],
 	[DOITUONGID],
 	[DONVIID],
-	[CANBOCAPCAO],
 	[TAIKHOANID],
 	[GHICHU]
 
@@ -859,7 +862,6 @@ VALUES
 	@TRINHDOVANHOA,
 	@DOITUONGID,
 	@DONVIID,
-	@CANBOCAPCAO,
 	@TAIKHOANID,
 	@GHICHU
 
@@ -886,7 +888,6 @@ CREATE PROCEDURE [dbo].[BACSI_Update]
 	@TRINHDOVANHOA nvarchar(MAX) = null,
 	@DOITUONGID int = null,
 	@DONVIID int = null,
-	@CANBOCAPCAO int = null,
 	@TAIKHOANID int = null,
 	@GHICHU nvarchar(MAX) = null
 
@@ -907,7 +908,6 @@ SET
 	[TRINHDOVANHOA] = @TRINHDOVANHOA,
 	[DOITUONGID] = @DOITUONGID,
 	[DONVIID] = @DONVIID,
-	[CANBOCAPCAO] = @CANBOCAPCAO,
 	[TAIKHOANID] = @TAIKHOANID,
 	[GHICHU] = @GHICHU
  WHERE 
@@ -2207,7 +2207,6 @@ CREATE PROCEDURE [dbo].[CAPTHUOC_Insert]
 	@ID int output,
 	@NGAY datetime = null ,
 	@BACSIID int = null ,
-	@BENHNHANID int = null ,
 	@KHAMTHUONGXUYENID int = null ,
 	@GHICHU nvarchar(MAX) = null 
 
@@ -2217,7 +2216,6 @@ INSERT [dbo].[CAPTHUOC]
 (
 	[NGAY],
 	[BACSIID],
-	[BENHNHANID],
 	[KHAMTHUONGXUYENID],
 	[GHICHU]
 
@@ -2226,7 +2224,6 @@ VALUES
 (
 	@NGAY,
 	@BACSIID,
-	@BENHNHANID,
 	@KHAMTHUONGXUYENID,
 	@GHICHU
 
@@ -2242,7 +2239,6 @@ CREATE PROCEDURE [dbo].[CAPTHUOC_Update]
 	@ID int,
 	@NGAY datetime = null,
 	@BACSIID int = null,
-	@BENHNHANID int = null,
 	@KHAMTHUONGXUYENID int = null,
 	@GHICHU nvarchar(MAX) = null
 
@@ -2252,7 +2248,6 @@ UPDATE [dbo].[CAPTHUOC]
 SET
 	[NGAY] = @NGAY,
 	[BACSIID] = @BACSIID,
-	[BENHNHANID] = @BENHNHANID,
 	[KHAMTHUONGXUYENID] = @KHAMTHUONGXUYENID,
 	[GHICHU] = @GHICHU
  WHERE 
@@ -2453,7 +2448,6 @@ CREATE PROCEDURE [dbo].[MUONVATTU_Insert]
 	@GHICHU nvarchar(MAX) = null ,
 	@BACSIMUONID int = null ,
 	@BACSITRAID int = null ,
-	@BENHNHANID int = null ,
 	@KHAMTHUONGXUYENID int = null ,
 	@TRANGTHAI int = null 
 
@@ -2466,7 +2460,6 @@ INSERT [dbo].[MUONVATTU]
 	[GHICHU],
 	[BACSIMUONID],
 	[BACSITRAID],
-	[BENHNHANID],
 	[KHAMTHUONGXUYENID],
 	[TRANGTHAI]
 
@@ -2478,7 +2471,6 @@ VALUES
 	@GHICHU,
 	@BACSIMUONID,
 	@BACSITRAID,
-	@BENHNHANID,
 	@KHAMTHUONGXUYENID,
 	@TRANGTHAI
 
@@ -2497,7 +2489,6 @@ CREATE PROCEDURE [dbo].[MUONVATTU_Update]
 	@GHICHU nvarchar(MAX) = null,
 	@BACSIMUONID int = null,
 	@BACSITRAID int = null,
-	@BENHNHANID int = null,
 	@KHAMTHUONGXUYENID int = null,
 	@TRANGTHAI int = null
 
@@ -2510,7 +2501,6 @@ SET
 	[GHICHU] = @GHICHU,
 	[BACSIMUONID] = @BACSIMUONID,
 	[BACSITRAID] = @BACSITRAID,
-	[BENHNHANID] = @BENHNHANID,
 	[KHAMTHUONGXUYENID] = @KHAMTHUONGXUYENID,
 	[TRANGTHAI] = @TRANGTHAI
  WHERE 
@@ -3115,6 +3105,8 @@ CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_Insert]
 	@ID int output,
 	@BACSIID int = null ,
 	@TAI nvarchar(MAX) = null ,
+	@MUI nvarchar(MAX) = null ,
+	@HONG nvarchar(MAX) = null ,
 	@RANG nvarchar(MAX) = null ,
 	@HAM nvarchar(MAX) = null ,
 	@MAT nvarchar(MAX) = null ,
@@ -3127,6 +3119,8 @@ INSERT [dbo].[KHAMCHUYENKHOA]
 (
 	[BACSIID],
 	[TAI],
+	[MUI],
+	[HONG],
 	[RANG],
 	[HAM],
 	[MAT],
@@ -3138,6 +3132,8 @@ VALUES
 (
 	@BACSIID,
 	@TAI,
+	@MUI,
+	@HONG,
 	@RANG,
 	@HAM,
 	@MAT,
@@ -3156,6 +3152,8 @@ CREATE PROCEDURE [dbo].[KHAMCHUYENKHOA_Update]
 	@ID int,
 	@BACSIID int = null,
 	@TAI nvarchar(MAX) = null,
+	@MUI nvarchar(MAX) = null,
+	@HONG nvarchar(MAX) = null,
 	@RANG nvarchar(MAX) = null,
 	@HAM nvarchar(MAX) = null,
 	@MAT nvarchar(MAX) = null,
@@ -3168,6 +3166,8 @@ UPDATE [dbo].[KHAMCHUYENKHOA]
 SET
 	[BACSIID] = @BACSIID,
 	[TAI] = @TAI,
+	[MUI] = @MUI,
+	[HONG] = @HONG,
 	[RANG] = @RANG,
 	[HAM] = @HAM,
 	[MAT] = @MAT,
@@ -3249,6 +3249,7 @@ CREATE PROCEDURE [dbo].[KHAMDINHKI_Insert]
 	@ID int output,
 	@BENHNHANID int = null ,
 	@PHANLOAISUCKHOEID int = null ,
+	@BACSIID int = null ,
 	@KHAMTHELUCID int = null ,
 	@KHAMCANLAMSANGID int = null ,
 	@KHAMCHUYENKHOAID int = null ,
@@ -3264,6 +3265,7 @@ INSERT [dbo].[KHAMDINHKI]
 (
 	[BENHNHANID],
 	[PHANLOAISUCKHOEID],
+	[BACSIID],
 	[KHAMTHELUCID],
 	[KHAMCANLAMSANGID],
 	[KHAMCHUYENKHOAID],
@@ -3278,6 +3280,7 @@ VALUES
 (
 	@BENHNHANID,
 	@PHANLOAISUCKHOEID,
+	@BACSIID,
 	@KHAMTHELUCID,
 	@KHAMCANLAMSANGID,
 	@KHAMCHUYENKHOAID,
@@ -3299,6 +3302,7 @@ CREATE PROCEDURE [dbo].[KHAMDINHKI_Update]
 	@ID int,
 	@BENHNHANID int = null,
 	@PHANLOAISUCKHOEID int = null,
+	@BACSIID int = null,
 	@KHAMTHELUCID int = null,
 	@KHAMCANLAMSANGID int = null,
 	@KHAMCHUYENKHOAID int = null,
@@ -3314,6 +3318,7 @@ UPDATE [dbo].[KHAMDINHKI]
 SET
 	[BENHNHANID] = @BENHNHANID,
 	[PHANLOAISUCKHOEID] = @PHANLOAISUCKHOEID,
+	[BACSIID] = @BACSIID,
 	[KHAMTHELUCID] = @KHAMTHELUCID,
 	[KHAMCANLAMSANGID] = @KHAMCANLAMSANGID,
 	[KHAMCHUYENKHOAID] = @KHAMCHUYENKHOAID,

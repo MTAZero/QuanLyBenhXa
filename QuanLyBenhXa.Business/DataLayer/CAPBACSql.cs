@@ -46,6 +46,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Output, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@TEN", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TEN));
 				sqlCommand.Parameters.Add(new SqlParameter("@KIHIEU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KIHIEU));
+				sqlCommand.Parameters.Add(new SqlParameter("@CANBOCAPCAO", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CANBOCAPCAO));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
 
 								
@@ -87,6 +88,7 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				sqlCommand.Parameters.Add(new SqlParameter("@ID", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.ID));
 				sqlCommand.Parameters.Add(new SqlParameter("@TEN", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.TEN));
 				sqlCommand.Parameters.Add(new SqlParameter("@KIHIEU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KIHIEU));
+				sqlCommand.Parameters.Add(new SqlParameter("@CANBOCAPCAO", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.CANBOCAPCAO));
 				sqlCommand.Parameters.Add(new SqlParameter("@GHICHU", SqlDbType.NVarChar, 2147483647, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.GHICHU));
 
                 
@@ -354,6 +356,11 @@ namespace QuanLyBenhXa.BusinessLayer.DataLayer
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(CAPBAC.CAPBACFields.KIHIEU.ToString())))
 				{
 					businessObject.KIHIEU = dataReader.GetString(dataReader.GetOrdinal(CAPBAC.CAPBACFields.KIHIEU.ToString()));
+				}
+
+				if (!dataReader.IsDBNull(dataReader.GetOrdinal(CAPBAC.CAPBACFields.CANBOCAPCAO.ToString())))
+				{
+					businessObject.CANBOCAPCAO = dataReader.GetInt32(dataReader.GetOrdinal(CAPBAC.CAPBACFields.CANBOCAPCAO.ToString()));
 				}
 
 				if (!dataReader.IsDBNull(dataReader.GetOrdinal(CAPBAC.CAPBACFields.GHICHU.ToString())))

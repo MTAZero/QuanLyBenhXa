@@ -19,7 +19,7 @@ namespace QuanLyBenhXa
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
 
-            //System.Configuration.ConfigurationManager.ConnectionStrings["Main_DB"].ConnectionString
+            //ConfigurationManager.ConnectionStrings["Main_DB"].ConnectionString;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace QuanLyBenhXa.BusinessLayer
 			ID,
 			TEN,
 			KIHIEU,
+			CANBOCAPCAO,
 			GHICHU
 		}
 		#endregion
@@ -21,6 +22,7 @@ namespace QuanLyBenhXa.BusinessLayer
 			int _iD;
 			string _tEN;
 			string _kIHIEU;
+			int? _cANBOCAPCAO;
 			string _gHICHU;
 
 		#endregion
@@ -51,6 +53,15 @@ namespace QuanLyBenhXa.BusinessLayer
 			 set
 			 {
 					_kIHIEU = value;
+			 }
+		}
+
+		public int?  CANBOCAPCAO
+		{
+			 get { return _cANBOCAPCAO; }
+			 set
+			 {
+					_cANBOCAPCAO = value;
 			 }
 		}
 
