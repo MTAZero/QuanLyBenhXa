@@ -227,11 +227,13 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtSDT.Enabled = false;
             txtNamNhapNgu.Enabled = false;
             txtQueQuan.Enabled = false;
+            txtNgheNghiepTruoc.Enabled = false;
             txtNgheNghiepSau.Enabled = false;
             txtNhomMau.Enabled = false;
             txtTienSuBanThan.Enabled = false;
+            txtTienSuGiaDinh.Enabled = false;
             txtTrinhDo.Enabled = false;
-
+            
             cbxCapBac.Enabled = false;
             cbxChucVu.Enabled = false;
             cbxDonVi.Enabled = false;
@@ -254,9 +256,11 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtSDT.Enabled = true;
             txtNamNhapNgu.Enabled = true;
             txtQueQuan.Enabled = true;
+            txtNgheNghiepTruoc.Enabled = true;
             txtNgheNghiepSau.Enabled = true;
             txtNhomMau.Enabled = true;
             txtTienSuBanThan.Enabled = true;
+            txtTienSuGiaDinh.Enabled = true;
             txtTrinhDo.Enabled = true;
 
             cbxCapBac.Enabled = true;
@@ -323,6 +327,16 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             if (dateNgaySinh.DateTime > DateTime.Now.AddYears(-20))
             {
                 MessageBox.Show("Ngày sinh của bệnh nhân không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                int nnn = Int32.Parse(txtNamNhapNgu.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Năm nhập ngũ phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

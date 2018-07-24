@@ -34,13 +34,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvBACSIMain = new DevExpress.XtraGrid.GridControl();
             this.dgvBACSI = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HoTen = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkCanBoCapCao = new System.Windows.Forms.CheckBox();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbxDoiTuong = new DevExpress.XtraEditors.LookUpEdit();
@@ -65,9 +67,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HoTen = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -170,6 +169,33 @@
             this.dgvBACSI.RowHeight = 30;
             this.dgvBACSI.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvBACSI_FocusedRowChanged);
             // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 71;
+            // 
+            // HoTen
+            // 
+            this.HoTen.Caption = "Họ tên";
+            this.HoTen.FieldName = "HoTen";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Visible = true;
+            this.HoTen.VisibleIndex = 1;
+            this.HoTen.Width = 307;
+            // 
+            // ChucVu
+            // 
+            this.ChucVu.Caption = "Chức vụ";
+            this.ChucVu.FieldName = "ChucVu";
+            this.ChucVu.Name = "ChucVu";
+            this.ChucVu.Visible = true;
+            this.ChucVu.VisibleIndex = 2;
+            this.ChucVu.Width = 321;
+            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -232,7 +258,6 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.chkCanBoCapCao);
             this.groupBox2.Controls.Add(this.dateNgaySinh);
             this.groupBox2.Controls.Add(this.cbxGioiTinh);
             this.groupBox2.Controls.Add(this.cbxDoiTuong);
@@ -263,16 +288,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bác sĩ";
-            // 
-            // chkCanBoCapCao
-            // 
-            this.chkCanBoCapCao.AutoSize = true;
-            this.chkCanBoCapCao.Location = new System.Drawing.Point(437, -1);
-            this.chkCanBoCapCao.Name = "chkCanBoCapCao";
-            this.chkCanBoCapCao.Size = new System.Drawing.Size(119, 21);
-            this.chkCanBoCapCao.TabIndex = 1;
-            this.chkCanBoCapCao.Text = "Cán bộ cấp cao";
-            this.chkCanBoCapCao.UseVisualStyleBackColor = true;
             // 
             // dateNgaySinh
             // 
@@ -558,33 +573,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ và tên:";
             // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 71;
-            // 
-            // HoTen
-            // 
-            this.HoTen.Caption = "Họ tên";
-            this.HoTen.FieldName = "HoTen";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Visible = true;
-            this.HoTen.VisibleIndex = 1;
-            this.HoTen.Width = 307;
-            // 
-            // ChucVu
-            // 
-            this.ChucVu.Caption = "Chức vụ";
-            this.ChucVu.FieldName = "ChucVu";
-            this.ChucVu.Name = "ChucVu";
-            this.ChucVu.Visible = true;
-            this.ChucVu.VisibleIndex = 2;
-            this.ChucVu.Width = 321;
-            // 
             // ucDanhSachBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -658,7 +646,6 @@
         private DevExpress.XtraEditors.LookUpEdit cbxDoiTuong;
         private DevExpress.XtraEditors.ComboBoxEdit cbxGioiTinh;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
-        private System.Windows.Forms.CheckBox chkCanBoCapCao;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn HoTen;
         private DevExpress.XtraGrid.Columns.GridColumn ChucVu;

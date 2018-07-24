@@ -176,7 +176,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cbxDoiTuong.ItemIndex = 0;
             cbxQuyen.SelectedIndex = 0;
             cbxGioiTinh.SelectedIndex = 0;
-            chkCanBoCapCao.Checked = false;
             dateNgaySinh.DateTime = DateTime.Now;
         }
 
@@ -222,7 +221,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cbxDoiTuong.Enabled = false;
             cbxQuyen.Enabled = false;
             cbxGioiTinh.Enabled = false;
-            chkCanBoCapCao.Enabled = false;
             dateNgaySinh.Enabled = false;
 
             dgvBACSIMain.Enabled = true;
@@ -247,7 +245,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cbxDoiTuong.Enabled = true;
             cbxQuyen.Enabled = true;
             cbxGioiTinh.Enabled = true;
-            chkCanBoCapCao.Enabled = true;
             dateNgaySinh.Enabled = true;
 
             dgvBACSIMain.Enabled = false;

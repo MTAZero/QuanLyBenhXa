@@ -98,6 +98,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
             ans.TEN = txtTen.Text;
             ans.KIHIEU = txtKiHieu.Text;
+            ans.CANBOCAPCAO = (chkCanBoCapCao.Checked == true) ? 1 : 0;
 
             return ans;
         }
@@ -106,6 +107,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             txtTen.Text = "";
             txtKiHieu.Text = "";
+            chkCanBoCapCao.Checked = false;
         }
 
         private void UpdateDetail()
@@ -118,6 +120,8 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
                 txtTen.Text = tg.TEN;
                 txtKiHieu.Text = tg.KIHIEU;
+                chkCanBoCapCao.Checked = (tg.CANBOCAPCAO == 1);
+
             }
             catch
             {
@@ -129,6 +133,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             txtTen.Enabled = false;
             txtKiHieu.Enabled = false;
+            chkCanBoCapCao.Enabled = false;
 
             dgvCapBacMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -142,6 +147,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             txtTen.Enabled = true;
             txtKiHieu.Enabled = true;
+            chkCanBoCapCao.Enabled = true;
 
             dgvCapBacMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -182,6 +188,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             cu.TEN = moi.TEN;
             cu.KIHIEU = moi.KIHIEU;
+            cu.CANBOCAPCAO = moi.CANBOCAPCAO;
         }
 
         #endregion
