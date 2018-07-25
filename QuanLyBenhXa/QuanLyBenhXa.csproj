@@ -147,6 +147,18 @@
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucKhoVatTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucKhoVatTu.Designer.cs">
+      <DependentUpon>ucKhoVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucKhoThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucKhoThuoc.Designer.cs">
+      <DependentUpon>ucKhoThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh\ucKhamDinhKi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,6 +212,12 @@
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoatDongChinh\ucKhoVatTu.resx">
+      <DependentUpon>ucKhoVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoatDongChinh\ucKhoThuoc.resx">
+      <DependentUpon>ucKhoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh\ucKhamDinhKi.resx">
       <DependentUpon>ucKhamDinhKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +256,10 @@
       <Project>{8c1f9d1e-b577-4e35-8cb1-8a220e05f7c5}</Project>
       <Name>QuanLyBenhXa.BusinessLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\TaiKhoan\" />
+    <Folder Include="GUI\ThongKe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

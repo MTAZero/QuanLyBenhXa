@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using QuanLyBenhXa.GUI.DanhMuc;
+using QuanLyBenhXa.GUI.HoatDongChinh;
 using QuanLyBenhXa.GUI.KhamBenh;
 using System;
 using System.Collections.Generic;
@@ -121,6 +122,22 @@ namespace QuanLyBenhXa.GUI
         private void barBenh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ucDanhSachBenh uc = new ucDanhSachBenh();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucKhoThuoc uc = new ucKhoThuoc();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barKhoVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucKhoVatTu uc = new ucKhoVatTu();
             panelMain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
