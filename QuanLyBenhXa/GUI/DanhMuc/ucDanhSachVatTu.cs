@@ -132,6 +132,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             txtTen.Enabled = false;
             txtKiHieu.Enabled = false;
+            txtSoLuong.Enabled = false;
 
             dgvVATTUMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -145,6 +146,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             txtTen.Enabled = true;
             txtKiHieu.Enabled = true;
+            txtSoLuong.Enabled = true;
 
             dgvVATTUMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -161,6 +163,16 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             if (txtKiHieu.Text == "")
             {
                 MessageBox.Show("Kí hiệu của vật tư không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                int k = Int32.Parse(txtSoLuong.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Số lượng vật tư phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -185,6 +197,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             cu.TEN = moi.TEN;
             cu.KYHIEU = moi.KYHIEU;
+            cu.SOLUONG = moi.SOLUONG;
         }
 
         #endregion

@@ -34,6 +34,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPHANLOAISUCKHOEMain = new DevExpress.XtraGrid.GridControl();
             this.dgvPHANLOAISUCKHOE = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.KiHieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -44,9 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.KiHieu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -137,6 +137,33 @@
             this.dgvPHANLOAISUCKHOE.PaintStyleName = "UltraFlat";
             this.dgvPHANLOAISUCKHOE.RowHeight = 30;
             this.dgvPHANLOAISUCKHOE.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvPHANLOAISUCKHOE_FocusedRowChanged);
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 92;
+            // 
+            // Ten
+            // 
+            this.Ten.Caption = "Tên";
+            this.Ten.FieldName = "Ten";
+            this.Ten.Name = "Ten";
+            this.Ten.Visible = true;
+            this.Ten.VisibleIndex = 1;
+            this.Ten.Width = 370;
+            // 
+            // KiHieu
+            // 
+            this.KiHieu.Caption = "Kí hiệu";
+            this.KiHieu.FieldName = "KiHieu";
+            this.KiHieu.Name = "KiHieu";
+            this.KiHieu.Visible = true;
+            this.KiHieu.VisibleIndex = 2;
+            this.KiHieu.Width = 237;
             // 
             // btnXoa
             // 
@@ -248,33 +275,6 @@
             this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên :";
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 92;
-            // 
-            // Ten
-            // 
-            this.Ten.Caption = "Tên";
-            this.Ten.FieldName = "Ten";
-            this.Ten.Name = "Ten";
-            this.Ten.Visible = true;
-            this.Ten.VisibleIndex = 1;
-            this.Ten.Width = 370;
-            // 
-            // KiHieu
-            // 
-            this.KiHieu.Caption = "Kí hiệu";
-            this.KiHieu.FieldName = "KiHieu";
-            this.KiHieu.Name = "KiHieu";
-            this.KiHieu.Visible = true;
-            this.KiHieu.VisibleIndex = 2;
-            this.KiHieu.Width = 237;
             // 
             // ucDanhSachPhanLoaiSucKhoe
             // 

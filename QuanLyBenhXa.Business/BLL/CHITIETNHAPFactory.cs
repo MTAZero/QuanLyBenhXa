@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -40,7 +41,22 @@ namespace QuanLyBenhXa.BusinessLayer
             }
 
 
-            return _dataObject.Insert(businessObject);
+
+            bool ans = _dataObject.Insert(businessObject);
+
+            try
+            {
+                NHAPTHUOCFactory NHAPTHUOCService = new NHAPTHUOCFactory();
+                NHAPTHUOC nhapthuoc = NHAPTHUOCService.GetAllEntities().ToList()
+                                      .Where(p => p.ID == businessObject.NHAPTHUOCID)
+                                      .FirstOrDefault();
+                NHAPTHUOCService.Update(nhapthuoc);
+            }
+            catch
+            {
+            }
+
+            return ans;
 
         }
 
@@ -56,8 +72,22 @@ namespace QuanLyBenhXa.BusinessLayer
                 businessObject.ShowErrorMessage();//throw new InvalidBusinessObjectException(businessObject.BrokenRulesList.ToString());
             }
 
+            bool ans;
+            ans = _dataObject.Update(businessObject);
 
-            return _dataObject.Update(businessObject);
+            try
+            {
+                NHAPTHUOCFactory NHAPTHUOCService = new NHAPTHUOCFactory();
+                NHAPTHUOC nhapthuoc = NHAPTHUOCService.GetAllEntities().ToList()
+                                      .Where(p => p.ID == businessObject.NHAPTHUOCID)
+                                      .FirstOrDefault();
+                NHAPTHUOCService.Update(nhapthuoc);
+            }
+            catch
+            {
+            }
+
+            return ans;
         }
 
         /// <summary>
@@ -100,7 +130,24 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(CHITIETNHAPKeys keys)
         {
-            return _dataObject.Delete(keys); 
+            CHITIETNHAP a = GetAllEntities().ToList().Where(p => p.ID == keys.ID).FirstOrDefault();
+
+            bool ans;
+            ans = _dataObject.Delete(keys);
+
+            try
+            {
+                NHAPTHUOCFactory NHAPTHUOCService = new NHAPTHUOCFactory();
+                NHAPTHUOC nhapthuoc = NHAPTHUOCService.GetAllEntities().ToList()
+                                      .Where(p => p.ID == a.NHAPTHUOCID)
+                                      .FirstOrDefault();
+                NHAPTHUOCService.Update(nhapthuoc);
+            }
+            catch
+            {
+            }
+
+            return ans;
         }
 
         /// <summary>

@@ -159,6 +159,12 @@
     <Compile Include="GUI\HoatDongChinh\ucKhoThuoc.Designer.cs">
       <DependentUpon>ucKhoThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucNhapThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\HoatDongChinh\ucNhapThuoc.Designer.cs">
+      <DependentUpon>ucNhapThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh\ucKhamDinhKi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoatDongChinh\ucKhoThuoc.resx">
       <DependentUpon>ucKhoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoatDongChinh\ucNhapThuoc.resx">
+      <DependentUpon>ucNhapThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh\ucKhamDinhKi.resx">
       <DependentUpon>ucKhamDinhKi.cs</DependentUpon>

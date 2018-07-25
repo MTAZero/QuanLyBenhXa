@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -56,6 +57,17 @@ namespace QuanLyBenhXa.BusinessLayer
                 businessObject.ShowErrorMessage();//throw new InvalidBusinessObjectException(businessObject.BrokenRulesList.ToString());
             }
 
+            try
+            {
+                CHITIETNHAPFactory CHITIETNHAPService = new CHITIETNHAPFactory();
+                businessObject.TONGTIEN = CHITIETNHAPService.GetAllEntities().ToList()
+                                                .Where(p => p.NHAPTHUOCID == businessObject.ID)
+                                                .Sum(p => p.THANHTIEN)
+                                                .Value;
+            }
+            catch
+            {
+            }
 
             return _dataObject.Update(businessObject);
         }
@@ -67,7 +79,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>Student</returns>
         public NHAPTHUOC GetByPrimaryKey(NHAPTHUOCKeys keys)
         {
-            return _dataObject.SelectByPrimaryKey(keys); 
+            return _dataObject.SelectByPrimaryKey(keys);
         }
 
         /// <summary>
@@ -76,11 +88,11 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>list</returns>
         public List<NHAPTHUOC> GetAllEntities()
         {
-            return _dataObject.SelectAllEntities(); 
+            return _dataObject.SelectAllEntities();
         }
         public DataTable GetAll()
         {
-            return _dataObject.SelectAll(); 
+            return _dataObject.SelectAll();
         }
         /// <summary>
         /// get list of NHAPTHUOC by field
@@ -90,7 +102,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>list</returns>
         public List<NHAPTHUOC> GetAllBy(NHAPTHUOC.NHAPTHUOCFields fieldName, object value)
         {
-            return _dataObject.SelectByField(fieldName.ToString(), value);  
+            return _dataObject.SelectByField(fieldName.ToString(), value);
         }
 
         /// <summary>
@@ -100,7 +112,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(NHAPTHUOCKeys keys)
         {
-            return _dataObject.Delete(keys); 
+            return _dataObject.Delete(keys);
         }
 
         /// <summary>
@@ -111,7 +123,7 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for successfully deleted</returns>
         public bool Delete(NHAPTHUOC.NHAPTHUOCFields fieldName, object value)
         {
-            return _dataObject.DeleteByField(fieldName.ToString(), value); 
+            return _dataObject.DeleteByField(fieldName.ToString(), value);
         }
 
         #endregion

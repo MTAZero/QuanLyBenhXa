@@ -47,7 +47,6 @@
             this.barKhamDinhKi = new DevExpress.XtraBars.BarButtonItem();
             this.barKhamThuongXuyen = new DevExpress.XtraBars.BarButtonItem();
             this.barNhapThuoc = new DevExpress.XtraBars.BarButtonItem();
-            this.barPhatThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barThongTinCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
@@ -117,7 +116,6 @@
             this.barKhamDinhKi,
             this.barKhamThuongXuyen,
             this.barNhapThuoc,
-            this.barPhatThuoc,
             this.barButtonItem17,
             this.barThongTinCaNhan,
             this.barDoiMatKhau,
@@ -128,7 +126,7 @@
             this.barVatTuYTe,
             this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 25;
+            this.ribbonControl1.MaxItemId = 26;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -258,14 +256,7 @@
             this.barNhapThuoc.Id = 14;
             this.barNhapThuoc.Name = "barNhapThuoc";
             this.barNhapThuoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barPhatThuoc
-            // 
-            this.barPhatThuoc.Caption = "Phát thuốc";
-            this.barPhatThuoc.Glyph = ((System.Drawing.Image)(resources.GetObject("barPhatThuoc.Glyph")));
-            this.barPhatThuoc.Id = 15;
-            this.barPhatThuoc.Name = "barPhatThuoc";
-            this.barPhatThuoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barNhapThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barNhapThuoc_ItemClick);
             // 
             // barButtonItem17
             // 
@@ -362,7 +353,6 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barNhapThuoc);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barPhatThuoc);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup5.ItemLinks.Add(this.barKhoVatTu);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
@@ -498,7 +488,6 @@
         private DevExpress.XtraBars.BarButtonItem barKhamDinhKi;
         private DevExpress.XtraBars.BarButtonItem barKhamThuongXuyen;
         private DevExpress.XtraBars.BarButtonItem barNhapThuoc;
-        private DevExpress.XtraBars.BarButtonItem barPhatThuoc;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem barThongTinCaNhan;

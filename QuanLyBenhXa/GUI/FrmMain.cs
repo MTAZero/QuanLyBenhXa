@@ -142,5 +142,13 @@ namespace QuanLyBenhXa.GUI
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
+
+        private void barNhapThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucNhapThuoc uc = new ucNhapThuoc();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
     }
 }
