@@ -50,14 +50,18 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                     .Select(p => new
                     {
                         ID = p.ID,
-                        TenDangNhap = p.TENDANGNHAP
+                        TenDangNhap = p.TENDANGNHAP,
+                        LoaiTaiKhoan = (TAIKHOANService.LoaiTaiKhoan(p) == 0) ? "Công khai" : "Cá nhân",
+                        ChuTaiKhoan = (TAIKHOANService.ChuSoHuu(p) == null) ? "Không" : TAIKHOANService.ChuSoHuu(p).HOTEN
                     })
-                    //.Where(p => p.Ten.ToUpper().Contains(text) || p.KiHieu.ToUpper().Contains(text))
+                    .Where(p => p.TenDangNhap.ToUpper().Contains(text) || p.LoaiTaiKhoan.ToUpper().Contains(text) || p.ChuTaiKhoan.ToUpper().Contains(text))
                     .Select(p => new
                     {
                         ID = p.ID,
                         STT = ++STT,
-                        Ten = p.TenDangNhap
+                        TenDangNhap = p.TenDangNhap,
+                        LoaiTaiKhoan = p.LoaiTaiKhoan,
+                        ChuTaiKhoan = p.ChuTaiKhoan
                     })
                     .ToList();
 
@@ -82,6 +86,8 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
         private void ucDanhSachTaiKhoan_Load(object sender, EventArgs e)
         {
             LoadInitControl();
+            LoadDgvTAIKHOAN();
+            LockControl();
         }
         #endregion
 
@@ -134,11 +140,13 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                 if (SOLUONG == 0)
                 {
                     cbxChuTaiKhoan.Visible = false;
+                    lblChuTaiKhoan.Visible = false;
                     rdTaiKhoanCongKhai.Checked = true;
                 }
                 else
                 {
                     cbxChuTaiKhoan.Visible = true;
+                    lblChuTaiKhoan.Visible = true;
                     rdTaiKhoanCaNhan.Checked = true;
                     BACSI bacsi = BACSIService.GetAllEntities().ToList()
                                   .Where(p => p.TAIKHOANID == tg.ID)
@@ -163,7 +171,6 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
             txtTimKiem.Enabled = true;
 
             btnThem.Enabled = true;
-            btnSua.Enabled = true;
             btnXoa.Enabled = true;
         }
 
@@ -171,6 +178,8 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
         {
             txtTenDangNhap.Enabled = true;
             cbxChuTaiKhoan.Enabled = true;
+            rdTaiKhoanCaNhan.Enabled = true;
+            rdTaiKhoanCongKhai.Enabled = true;
 
             dgvTAIKHOANMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -182,6 +191,44 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
             {
                 MessageBox.Show("Tên đăng nhập của tài khoản không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+
+            // kiem tra khoang trang
+            if (txtTenDangNhap.Text.Contains(' '))
+            {
+                MessageBox.Show("Tên đăng nhập của tài khoản không được chứa khoảng trắng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // kiểm tra trùng
+            try
+            {
+                int soluong = TAIKHOANService.GetAllEntities().ToList()
+                               .Where(p => p.TENDANGNHAP.ToUpper() == txtTenDangNhap.Text.ToUpper())
+                               .ToList()
+                               .Count;
+                if (soluong > 0) soluong = soluong / 0;
+            }
+            catch
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // kiểm tra cá nhân
+            if (rdTaiKhoanCaNhan.Checked == true)
+            {
+                try
+                {
+                    int bacsiid = (int)cbxChuTaiKhoan.EditValue;
+                    BACSI bacsi = BACSIService.GetByPrimaryKey(new BACSIKeys(bacsiid));
+                    if (bacsi.TAIKHOANID != null) bacsiid = bacsiid / 0;
+                }
+                catch
+                {
+                    MessageBox.Show("Cá nhân đã sở hữu tài khoản khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
 
             return true;
@@ -200,12 +247,6 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
             }
             return true;
         }
-
-        private void CapNhat(ref TAIKHOAN cu, TAIKHOAN moi)
-        {
-            cu.TENDANGNHAP = moi.TENDANGNHAP;
-        }
-
         #endregion
 
         #region Sự kiện
@@ -213,7 +254,6 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
         {
             if (btnThem.Text == "Thêm")
             {
-                btnSua.Enabled = false;
                 btnThem.Text = "Lưu";
                 btnXoa.Text = "Hủy";
 
@@ -233,7 +273,12 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                     LockControl();
 
                     TAIKHOAN moi = getTAIKHOANByForm();
-                    if (TAIKHOANService.Insert(moi))
+                    int bacsiID = 0;
+                    if (rdTaiKhoanCongKhai.Checked)
+                        bacsiID = 0;
+                    else
+                        bacsiID = (int) cbxChuTaiKhoan.EditValue;
+                    if (TAIKHOANService.Insert(moi, bacsiID))
                     {
                         MessageBox.Show("Thêm thông tin tài khoản thành công",
                                         "Thông báo",
@@ -252,57 +297,6 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                 return;
             }
         }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (!CheckLuaChon()) return;
-
-            if (btnSua.Text == "Sửa")
-            {
-                btnSua.Text = "Lưu";
-                btnXoa.Text = "Hủy";
-                btnThem.Enabled = false;
-
-                UnlockControl();
-
-                return;
-            }
-
-            if (btnSua.Text == "Lưu")
-            {
-                if (Check())
-                {
-                    btnSua.Text = "Sửa";
-                    btnXoa.Text = "Xóa";
-
-                    LockControl();
-
-                    TAIKHOAN cu = getTAIKHOANByID();
-                    TAIKHOAN moi = getTAIKHOANByForm();
-                    CapNhat(ref cu, moi);
-
-                    if (TAIKHOANService.Update(cu))
-                    {
-                        MessageBox.Show("Sửa thông tin tài khoản thành công",
-                                        "Thông báo",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sửa thông tin tài khoản thất bại\n",
-                                        "Thông báo",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                    }
-                    LoadDgvTAIKHOAN();
-                }
-
-                return;
-            }
-        }
-
-        
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -339,7 +333,6 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
             }
             if (btnXoa.Text == "Hủy")
             {
-                btnSua.Text = "Sửa";
                 btnThem.Text = "Thêm";
                 btnXoa.Text = "Xóa";
 
@@ -361,6 +354,20 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                 index = dgvTAIKHOAN.FocusedRowHandle;
             }
             catch { }
+        }
+
+        private void rdTaiKhoanCongKhai_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdTaiKhoanCaNhan.Checked)
+            {
+                cbxChuTaiKhoan.Visible = true;
+                lblChuTaiKhoan.Visible = true;
+            }
+            else
+            {
+                cbxChuTaiKhoan.Visible = false;
+                lblChuTaiKhoan.Visible = false;
+            }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)

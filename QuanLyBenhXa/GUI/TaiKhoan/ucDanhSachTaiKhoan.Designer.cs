@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDanhSachTaiKhoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +39,7 @@
             this.rdTaiKhoanCaNhan = new System.Windows.Forms.RadioButton();
             this.cbxChuTaiKhoan = new DevExpress.XtraEditors.LookUpEdit();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblChuTaiKhoan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvTAIKHOANMain = new DevExpress.XtraGrid.GridControl();
@@ -61,7 +60,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label1);
@@ -80,25 +78,12 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(856, 274);
+            this.btnThem.Location = new System.Drawing.Point(788, 274);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(138, 38);
-            this.btnThem.TabIndex = 23;
+            this.btnThem.Size = new System.Drawing.Size(255, 38);
+            this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(1000, 274);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(138, 38);
-            this.btnSua.TabIndex = 24;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -106,10 +91,10 @@
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(1144, 274);
+            this.btnXoa.Location = new System.Drawing.Point(1049, 274);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(138, 38);
-            this.btnXoa.TabIndex = 25;
+            this.btnXoa.Size = new System.Drawing.Size(233, 38);
+            this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -136,7 +121,7 @@
             this.groupBox3.Controls.Add(this.rdTaiKhoanCaNhan);
             this.groupBox3.Controls.Add(this.cbxChuTaiKhoan);
             this.groupBox3.Controls.Add(this.txtTenDangNhap);
-            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.lblChuTaiKhoan);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(788, 55);
             this.groupBox3.Name = "groupBox3";
@@ -151,10 +136,11 @@
             this.rdTaiKhoanCongKhai.Location = new System.Drawing.Point(317, 39);
             this.rdTaiKhoanCongKhai.Name = "rdTaiKhoanCongKhai";
             this.rdTaiKhoanCongKhai.Size = new System.Drawing.Size(144, 21);
-            this.rdTaiKhoanCongKhai.TabIndex = 7;
+            this.rdTaiKhoanCongKhai.TabIndex = 2;
             this.rdTaiKhoanCongKhai.TabStop = true;
             this.rdTaiKhoanCongKhai.Text = "Tài khoản công khai";
             this.rdTaiKhoanCongKhai.UseVisualStyleBackColor = true;
+            this.rdTaiKhoanCongKhai.CheckedChanged += new System.EventHandler(this.rdTaiKhoanCongKhai_CheckedChanged);
             // 
             // rdTaiKhoanCaNhan
             // 
@@ -163,10 +149,11 @@
             this.rdTaiKhoanCaNhan.Location = new System.Drawing.Point(156, 39);
             this.rdTaiKhoanCaNhan.Name = "rdTaiKhoanCaNhan";
             this.rdTaiKhoanCaNhan.Size = new System.Drawing.Size(134, 21);
-            this.rdTaiKhoanCaNhan.TabIndex = 6;
+            this.rdTaiKhoanCaNhan.TabIndex = 1;
             this.rdTaiKhoanCaNhan.TabStop = true;
             this.rdTaiKhoanCaNhan.Text = "Tài khoản cá nhân";
             this.rdTaiKhoanCaNhan.UseVisualStyleBackColor = true;
+            this.rdTaiKhoanCaNhan.CheckedChanged += new System.EventHandler(this.rdTaiKhoanCongKhai_CheckedChanged);
             // 
             // cbxChuTaiKhoan
             // 
@@ -183,7 +170,7 @@
             this.cbxChuTaiKhoan.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxChuTaiKhoan.Properties.ShowHeader = false;
             this.cbxChuTaiKhoan.Size = new System.Drawing.Size(296, 26);
-            this.cbxChuTaiKhoan.TabIndex = 5;
+            this.cbxChuTaiKhoan.TabIndex = 4;
             // 
             // txtTenDangNhap
             // 
@@ -192,14 +179,14 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(296, 24);
             this.txtTenDangNhap.TabIndex = 3;
             // 
-            // label4
+            // lblChuTaiKhoan
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Chủ tài khoản";
+            this.lblChuTaiKhoan.AutoSize = true;
+            this.lblChuTaiKhoan.Location = new System.Drawing.Point(30, 152);
+            this.lblChuTaiKhoan.Name = "lblChuTaiKhoan";
+            this.lblChuTaiKhoan.Size = new System.Drawing.Size(89, 17);
+            this.lblChuTaiKhoan.TabIndex = 2;
+            this.lblChuTaiKhoan.Text = "Chủ tài khoản";
             // 
             // label2
             // 
@@ -331,9 +318,8 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnThem;
-        private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblChuTaiKhoan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private DevExpress.XtraEditors.LookUpEdit cbxChuTaiKhoan;

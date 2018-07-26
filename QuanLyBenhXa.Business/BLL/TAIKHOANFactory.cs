@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -32,16 +33,30 @@ namespace QuanLyBenhXa.BusinessLayer
         /// </summary>
         /// <param name="businessObject">TAIKHOAN object</param>
         /// <returns>true for successfully saved</returns>
-        public bool Insert(TAIKHOAN businessObject)
+        public bool Insert(TAIKHOAN businessObject, int? bacsiID)
         {
             if (!businessObject.IsValid)
             {
                 businessObject.ShowErrorMessage();//throw new InvalidBusinessObjectException(businessObject.BrokenRulesList.ToString());
             }
 
+            bool ans = _dataObject.Insert(businessObject);
 
-            return _dataObject.Insert(businessObject);
+            if (bacsiID!=0 || bacsiID!=null)
+            {
+                try
+                {
+                    BACSIFactory BACSIService = new BACSIFactory();
+                    BACSI bacsi = BACSIService.GetByPrimaryKey(new BACSIKeys((int)bacsiID));
+                    bacsi.TAIKHOANID = businessObject.ID;
+                    BACSIService.Update(bacsi);
+                }
+                catch
+                {
+                }
+            }
 
+            return ans;
         }
 
         /// <summary>
@@ -100,6 +115,18 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(TAIKHOANKeys keys)
         {
+            BACSIFactory BACSIService = new BACSIFactory();
+            try
+            {
+                BACSI bacsi = BACSIService.GetAllEntities().ToList()
+                              .Where(p => p.TAIKHOANID == keys.ID)
+                              .FirstOrDefault();
+                bacsi.TAIKHOANID = null;
+                BACSIService.Update(bacsi);
+            }
+            catch
+            {
+            }
             return _dataObject.Delete(keys); 
         }
 
@@ -114,6 +141,30 @@ namespace QuanLyBenhXa.BusinessLayer
             return _dataObject.DeleteByField(fieldName.ToString(), value); 
         }
 
+        public int LoaiTaiKhoan(TAIKHOAN a)
+        {
+            // 0: tài khoản tự do
+            // 1: tài khoản sở hữu
+            BACSIFactory BACSIService = new BACSIFactory();
+            int soluong = BACSIService.GetAllEntities().ToList()
+                          .Where(p => p.TAIKHOANID == a.ID)
+                          .ToList()
+                          .Count;
+            if (soluong == 0) return 0;
+            return 1;
+        }
+
+        public BACSI ChuSoHuu(TAIKHOAN a)
+        {
+            BACSI ans = new BACSI();
+
+            BACSIFactory BACSIService = new BACSIFactory();
+            ans = BACSIService.GetAllEntities().ToList()
+                  .Where(p => p.TAIKHOANID == a.ID)
+                  .FirstOrDefault();
+
+            return ans;
+        }
         #endregion
 
     }
