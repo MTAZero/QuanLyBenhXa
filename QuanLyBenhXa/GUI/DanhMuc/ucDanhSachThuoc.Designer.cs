@@ -34,12 +34,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvTHUOCMain = new DevExpress.XtraGrid.GridControl();
             this.dgvTHUOC = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HanSuDung = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtHamLuong = new DevExpress.XtraEditors.MemoEdit();
             this.txtCachSuDung = new DevExpress.XtraEditors.MemoEdit();
             this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
@@ -50,11 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HanSuDung = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -150,6 +150,42 @@
             this.dgvTHUOC.RowHeight = 30;
             this.dgvTHUOC.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvTHUOC_FocusedRowChanged);
             // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 62;
+            // 
+            // Ten
+            // 
+            this.Ten.Caption = "Tên";
+            this.Ten.FieldName = "Ten";
+            this.Ten.Name = "Ten";
+            this.Ten.Visible = true;
+            this.Ten.VisibleIndex = 1;
+            this.Ten.Width = 300;
+            // 
+            // HanSuDung
+            // 
+            this.HanSuDung.Caption = "Hạn sử dụng";
+            this.HanSuDung.FieldName = "HanSuDung";
+            this.HanSuDung.Name = "HanSuDung";
+            this.HanSuDung.Visible = true;
+            this.HanSuDung.VisibleIndex = 2;
+            this.HanSuDung.Width = 185;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.Caption = "Số lượng";
+            this.SoLuong.FieldName = "SoLuong";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Visible = true;
+            this.SoLuong.VisibleIndex = 3;
+            this.SoLuong.Width = 152;
+            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,6 +265,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin thuốc";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(212, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "tháng";
             // 
             // txtHamLuong
             // 
@@ -325,51 +370,6 @@
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên thuốc:";
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 62;
-            // 
-            // Ten
-            // 
-            this.Ten.Caption = "Tên";
-            this.Ten.FieldName = "Ten";
-            this.Ten.Name = "Ten";
-            this.Ten.Visible = true;
-            this.Ten.VisibleIndex = 1;
-            this.Ten.Width = 300;
-            // 
-            // HanSuDung
-            // 
-            this.HanSuDung.Caption = "Hạn sử dụng";
-            this.HanSuDung.FieldName = "HanSuDung";
-            this.HanSuDung.Name = "HanSuDung";
-            this.HanSuDung.Visible = true;
-            this.HanSuDung.VisibleIndex = 2;
-            this.HanSuDung.Width = 185;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.Caption = "Số lượng";
-            this.SoLuong.FieldName = "SoLuong";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Visible = true;
-            this.SoLuong.VisibleIndex = 3;
-            this.SoLuong.Width = 152;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(212, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 17);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "tháng";
             // 
             // ucDanhSachThuoc
             // 

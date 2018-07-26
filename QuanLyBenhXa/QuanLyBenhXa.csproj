@@ -177,6 +177,12 @@
     <Compile Include="GUI\KhamBenh\ucKhamThuongXuyen.Designer.cs">
       <DependentUpon>ucKhamThuongXuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DanhMuc\ucDanhSachBenhNhan.resx">
@@ -233,6 +239,9 @@
     <EmbeddedResource Include="GUI\KhamBenh\ucKhamThuongXuyen.resx">
       <DependentUpon>ucKhamThuongXuyen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.resx">
+      <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -267,7 +276,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\TaiKhoan\" />
     <Folder Include="GUI\ThongKe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -51,6 +51,13 @@ namespace QuanLyBenhXa.BusinessLayer
                                       .Where(p => p.ID == businessObject.NHAPTHUOCID)
                                       .FirstOrDefault();
                 NHAPTHUOCService.Update(nhapthuoc);
+
+                THUOCFactory THUOCService = new THUOCFactory();
+                THUOC thuoc = THUOCService.GetAllEntities().ToList()
+                                .Where(p => p.ID == businessObject.THUOCID)
+                                .FirstOrDefault();
+                thuoc.SOLUONG += businessObject.SOLUONG;
+                THUOCService.Update(thuoc);
             }
             catch
             {

@@ -2,6 +2,7 @@
 using QuanLyBenhXa.GUI.DanhMuc;
 using QuanLyBenhXa.GUI.HoatDongChinh;
 using QuanLyBenhXa.GUI.KhamBenh;
+using QuanLyBenhXa.GUI.TaiKhoan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -146,6 +147,14 @@ namespace QuanLyBenhXa.GUI
         private void barNhapThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ucNhapThuoc uc = new ucNhapThuoc();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barDanhSachTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucDanhSachTaiKhoan uc = new ucDanhSachTaiKhoan();
             panelMain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
