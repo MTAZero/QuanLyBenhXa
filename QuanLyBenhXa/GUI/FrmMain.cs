@@ -172,10 +172,13 @@ namespace QuanLyBenhXa.GUI
             ribonTaiKhoan.Visible = false;
             ribonPublic.Visible = false;
 
+            pageAdmin.Visible = false;
+
             if (ThamSoHeThong.curBacsi.ID == 0)
             {
                 // Tài khoản công khai
                 ribonPublic.Visible = true;
+                ribonAdmin.Visible = true;
                 return;
             }
 
@@ -183,8 +186,11 @@ namespace QuanLyBenhXa.GUI
 
             if (ThamSoHeThong.curBacsi.QUYEN == 0)
             {
-                ribonPublic.Visible = true;
                 // tài khoản bác sĩ thường
+                ribonPublic.Visible = true;
+                ribonAdmin.Visible = true;
+                pageAdmin.Visible = true;
+                
                 return;
             }
 
@@ -195,6 +201,7 @@ namespace QuanLyBenhXa.GUI
                 ribonTaiKhoan.Visible = true;
                 ribonThongKe.Visible = true;
                 ribonPublic.Visible = true;
+                pageAdmin.Visible = true;
                 return;
             }
         }

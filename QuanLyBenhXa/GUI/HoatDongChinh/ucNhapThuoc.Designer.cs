@@ -452,6 +452,7 @@
             // 
             // cbxBacSi
             // 
+            this.cbxBacSi.Enabled = false;
             this.cbxBacSi.Location = new System.Drawing.Point(129, 30);
             this.cbxBacSi.Name = "cbxBacSi";
             this.cbxBacSi.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;

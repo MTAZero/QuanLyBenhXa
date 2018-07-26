@@ -36,6 +36,8 @@ namespace QuanLyBenhXa.GUI.HoatDongChinh
             cbxBacSi.Properties.DisplayMember = "Ten";
             cbxBacSi.Properties.ValueMember = "ID";
 
+            cbxBacSi.EditValue = ThamSoHeThong.curBacsi.ID;
+
             // thuoc
             cbxThuoc.Properties.DataSource = THUOCService.GetAllEntities().ToList().Select(p => new { ID = p.ID, Ten = p.TEN }).ToList();
             cbxThuoc.Properties.DisplayMember = "Ten";
@@ -85,8 +87,6 @@ namespace QuanLyBenhXa.GUI.HoatDongChinh
         #region Hàm chức năng
         private void LockPHIEUNHAP()
         {
-            cbxBacSi.Enabled = false;
-            DateNgay.Enabled = false;
             txtGhiChu.Enabled = false;
             btnLuu.Enabled = false;
             btnLapPhieuNhap.Enabled = true;
@@ -95,8 +95,6 @@ namespace QuanLyBenhXa.GUI.HoatDongChinh
 
         private void UnLockPHIEUNHAP()
         {
-            cbxBacSi.Enabled = true;
-            DateNgay.Enabled = true;
             txtGhiChu.Enabled = true;
             btnLuu.Enabled = true;
             btnLapPhieuNhap.Enabled = false;
@@ -107,7 +105,6 @@ namespace QuanLyBenhXa.GUI.HoatDongChinh
         {
             try
             {
-                cbxBacSi.ItemIndex = 0;
                 DateNgay.DateTime = DateTime.Now;
                 txtGhiChu.Text = "";
                 CapNhatTongTien();

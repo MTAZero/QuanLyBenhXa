@@ -71,6 +71,13 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             ClearControl();
             LoadDgvDONVI();
             LockControl();
+
+            if (ThamSoHeThong.curBacsi.ID == 0 || ThamSoHeThong.curBacsi.QUYEN == 0)
+            {
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+            }
         }
         #endregion
 

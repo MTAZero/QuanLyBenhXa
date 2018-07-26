@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTenBacSi = new System.Windows.Forms.Label();
             this.panelMain = new DevExpress.XtraEditors.PanelControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBacSi = new DevExpress.XtraBars.BarButtonItem();
@@ -57,7 +58,7 @@
             this.barVatTuYTe = new DevExpress.XtraBars.BarButtonItem();
             this.barDanhSachTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.ribonPublic = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.pageAdmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribonAdmin = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -70,7 +71,6 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.txtTenBacSi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -88,6 +88,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 700);
             this.panel1.TabIndex = 0;
+            // 
+            // txtTenBacSi
+            // 
+            this.txtTenBacSi.AutoSize = true;
+            this.txtTenBacSi.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTenBacSi.Location = new System.Drawing.Point(48, 4);
+            this.txtTenBacSi.Name = "txtTenBacSi";
+            this.txtTenBacSi.Size = new System.Drawing.Size(0, 17);
+            this.txtTenBacSi.TabIndex = 3;
             // 
             // panelMain
             // 
@@ -344,25 +353,24 @@
             // ribonPublic
             // 
             this.ribonPublic.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
+            this.pageAdmin,
             this.ribbonPageGroup5,
             this.ribbonPageGroup6});
             this.ribonPublic.Name = "ribonPublic";
             this.ribonPublic.Text = "Hoạt động chính";
             // 
-            // ribbonPageGroup1
+            // pageAdmin
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barKhamDinhKi);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barKhamThuongXuyen);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.pageAdmin.ItemLinks.Add(this.barKhamDinhKi);
+            this.pageAdmin.ItemLinks.Add(this.barKhamThuongXuyen);
+            this.pageAdmin.ItemLinks.Add(this.barNhapThuoc);
+            this.pageAdmin.Name = "pageAdmin";
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barNhapThuoc);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup5.ItemLinks.Add(this.barKhoVatTu);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Quản lý thuốc - vật tư";
             // 
             // ribbonPageGroup6
             // 
@@ -448,15 +456,6 @@
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // txtTenBacSi
-            // 
-            this.txtTenBacSi.AutoSize = true;
-            this.txtTenBacSi.Location = new System.Drawing.Point(48, 4);
-            this.txtTenBacSi.Name = "txtTenBacSi";
-            this.txtTenBacSi.Size = new System.Drawing.Size(44, 17);
-            this.txtTenBacSi.TabIndex = 3;
-            this.txtTenBacSi.Text = "Name";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,7 +481,7 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribonPublic;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup pageAdmin;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribonAdmin;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;

@@ -166,6 +166,21 @@ namespace QuanLyBenhXa.GUI.DanhMuc
         {
             LoadDgvNHOMBENH();
             LockControl();
+
+            if (ThamSoHeThong.curBacsi.ID == 0 || ThamSoHeThong.curBacsi.QUYEN == 0)
+            {
+                btnThemNHOMBENH.Visible = false;
+                btnSuaNHOMBENH.Visible = false;
+                btnXoaNHOMBENH.Visible = false;
+
+                btnThemLOAIBENH.Visible = false;
+                btnSuaLOAIBENH.Visible = false;
+                btnXoaLOAIBENH.Visible = false;
+
+                btnThemBENH.Visible = false;
+                btnSuaBENH.Visible = false;
+                btnXoaBENH.Visible = false;
+            }
         }
         #endregion
 
