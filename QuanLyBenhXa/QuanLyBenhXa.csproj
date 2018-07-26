@@ -183,6 +183,7 @@
     <Compile Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.Designer.cs">
       <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\MD5Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DanhMuc\ucDanhSachBenhNhan.resx">

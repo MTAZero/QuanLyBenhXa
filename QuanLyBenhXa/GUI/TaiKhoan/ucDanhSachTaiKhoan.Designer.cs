@@ -30,31 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDanhSachTaiKhoan));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvTAIKHOANMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvTAIKHOAN = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdTaiKhoanCongKhai = new System.Windows.Forms.RadioButton();
+            this.rdTaiKhoanCaNhan = new System.Windows.Forms.RadioButton();
             this.cbxChuTaiKhoan = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvTAIKHOANMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvTAIKHOAN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenDangNhap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LoaiTaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ChuTaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rdTaiKhoanCaNhan = new System.Windows.Forms.RadioButton();
-            this.rdTaiKhoanCongKhai = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChuTaiKhoan.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOANMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOAN)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxChuTaiKhoan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +73,142 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1298, 558);
             this.panel1.TabIndex = 0;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.Location = new System.Drawing.Point(856, 274);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(138, 38);
+            this.btnThem.TabIndex = 23;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.Location = new System.Drawing.Point(1000, 274);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(138, 38);
+            this.btnSua.TabIndex = 24;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(1144, 274);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(138, 38);
+            this.btnXoa.TabIndex = 25;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(86, 16);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(313, 24);
+            this.txtTimKiem.TabIndex = 22;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Tìm kiếm";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdTaiKhoanCongKhai);
+            this.groupBox3.Controls.Add(this.rdTaiKhoanCaNhan);
+            this.groupBox3.Controls.Add(this.cbxChuTaiKhoan);
+            this.groupBox3.Controls.Add(this.txtTenDangNhap);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Location = new System.Drawing.Point(788, 55);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(495, 213);
+            this.groupBox3.TabIndex = 20;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chi tiết tài khoản";
+            // 
+            // rdTaiKhoanCongKhai
+            // 
+            this.rdTaiKhoanCongKhai.AutoSize = true;
+            this.rdTaiKhoanCongKhai.Location = new System.Drawing.Point(317, 39);
+            this.rdTaiKhoanCongKhai.Name = "rdTaiKhoanCongKhai";
+            this.rdTaiKhoanCongKhai.Size = new System.Drawing.Size(144, 21);
+            this.rdTaiKhoanCongKhai.TabIndex = 7;
+            this.rdTaiKhoanCongKhai.TabStop = true;
+            this.rdTaiKhoanCongKhai.Text = "Tài khoản công khai";
+            this.rdTaiKhoanCongKhai.UseVisualStyleBackColor = true;
+            // 
+            // rdTaiKhoanCaNhan
+            // 
+            this.rdTaiKhoanCaNhan.AutoSize = true;
+            this.rdTaiKhoanCaNhan.Checked = true;
+            this.rdTaiKhoanCaNhan.Location = new System.Drawing.Point(156, 39);
+            this.rdTaiKhoanCaNhan.Name = "rdTaiKhoanCaNhan";
+            this.rdTaiKhoanCaNhan.Size = new System.Drawing.Size(134, 21);
+            this.rdTaiKhoanCaNhan.TabIndex = 6;
+            this.rdTaiKhoanCaNhan.TabStop = true;
+            this.rdTaiKhoanCaNhan.Text = "Tài khoản cá nhân";
+            this.rdTaiKhoanCaNhan.UseVisualStyleBackColor = true;
+            // 
+            // cbxChuTaiKhoan
+            // 
+            this.cbxChuTaiKhoan.Location = new System.Drawing.Point(156, 148);
+            this.cbxChuTaiKhoan.Name = "cbxChuTaiKhoan";
+            this.cbxChuTaiKhoan.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxChuTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChuTaiKhoan.Properties.Appearance.Options.UseFont = true;
+            this.cbxChuTaiKhoan.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChuTaiKhoan.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxChuTaiKhoan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChuTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxChuTaiKhoan.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChuTaiKhoan.Properties.ShowHeader = false;
+            this.cbxChuTaiKhoan.Size = new System.Drawing.Size(296, 26);
+            this.cbxChuTaiKhoan.TabIndex = 5;
+            // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.Location = new System.Drawing.Point(156, 91);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(296, 24);
+            this.txtTenDangNhap.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Chủ tài khoản";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên đăng nhập";
             // 
             // groupBox2
             // 
@@ -127,115 +263,7 @@
             this.dgvTAIKHOAN.OptionsView.ShowGroupPanel = false;
             this.dgvTAIKHOAN.PaintStyleName = "UltraFlat";
             this.dgvTAIKHOAN.RowHeight = 30;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rdTaiKhoanCongKhai);
-            this.groupBox3.Controls.Add(this.rdTaiKhoanCaNhan);
-            this.groupBox3.Controls.Add(this.cbxChuTaiKhoan);
-            this.groupBox3.Controls.Add(this.txtTenDangNhap);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(788, 55);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(495, 213);
-            this.groupBox3.TabIndex = 20;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Chi tiết tài khoản";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(86, 16);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(313, 24);
-            this.txtTimKiem.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Tìm kiếm";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(856, 274);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(138, 38);
-            this.btnThem.TabIndex = 23;
-            this.btnThem.Text = "Thêm";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Appearance.Options.UseFont = true;
-            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(1000, 274);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(138, 38);
-            this.btnSua.TabIndex = 24;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(1144, 274);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(138, 38);
-            this.btnXoa.TabIndex = 25;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên đăng nhập";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Chủ tài khoản";
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(156, 91);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(296, 24);
-            this.txtTenDangNhap.TabIndex = 3;
-            // 
-            // cbxChuTaiKhoan
-            // 
-            this.cbxChuTaiKhoan.Location = new System.Drawing.Point(156, 148);
-            this.cbxChuTaiKhoan.Name = "cbxChuTaiKhoan";
-            this.cbxChuTaiKhoan.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxChuTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChuTaiKhoan.Properties.Appearance.Options.UseFont = true;
-            this.cbxChuTaiKhoan.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChuTaiKhoan.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxChuTaiKhoan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChuTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxChuTaiKhoan.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChuTaiKhoan.Properties.ShowHeader = false;
-            this.cbxChuTaiKhoan.Size = new System.Drawing.Size(296, 26);
-            this.cbxChuTaiKhoan.TabIndex = 5;
+            this.dgvTAIKHOAN.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvTAIKHOAN_FocusedRowChanged);
             // 
             // STT
             // 
@@ -273,29 +301,6 @@
             this.ChuTaiKhoan.VisibleIndex = 3;
             this.ChuTaiKhoan.Width = 218;
             // 
-            // rdTaiKhoanCaNhan
-            // 
-            this.rdTaiKhoanCaNhan.AutoSize = true;
-            this.rdTaiKhoanCaNhan.Checked = true;
-            this.rdTaiKhoanCaNhan.Location = new System.Drawing.Point(156, 39);
-            this.rdTaiKhoanCaNhan.Name = "rdTaiKhoanCaNhan";
-            this.rdTaiKhoanCaNhan.Size = new System.Drawing.Size(134, 21);
-            this.rdTaiKhoanCaNhan.TabIndex = 6;
-            this.rdTaiKhoanCaNhan.TabStop = true;
-            this.rdTaiKhoanCaNhan.Text = "Tài khoản cá nhân";
-            this.rdTaiKhoanCaNhan.UseVisualStyleBackColor = true;
-            // 
-            // rdTaiKhoanCongKhai
-            // 
-            this.rdTaiKhoanCongKhai.AutoSize = true;
-            this.rdTaiKhoanCongKhai.Location = new System.Drawing.Point(317, 39);
-            this.rdTaiKhoanCongKhai.Name = "rdTaiKhoanCongKhai";
-            this.rdTaiKhoanCongKhai.Size = new System.Drawing.Size(144, 21);
-            this.rdTaiKhoanCongKhai.TabIndex = 7;
-            this.rdTaiKhoanCongKhai.TabStop = true;
-            this.rdTaiKhoanCongKhai.Text = "Tài khoản công khai";
-            this.rdTaiKhoanCongKhai.UseVisualStyleBackColor = true;
-            // 
             // ucDanhSachTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,12 +311,12 @@
             this.Load += new System.EventHandler(this.ucDanhSachTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOANMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOAN)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChuTaiKhoan.Properties)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOANMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTAIKHOAN)).EndInit();
             this.ResumeLayout(false);
 
         }
