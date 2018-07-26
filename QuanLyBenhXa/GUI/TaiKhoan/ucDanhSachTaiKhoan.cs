@@ -277,7 +277,7 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                     if (rdTaiKhoanCongKhai.Checked)
                         bacsiID = 0;
                     else
-                        bacsiID = (int) cbxChuTaiKhoan.EditValue;
+                        bacsiID = (int)cbxChuTaiKhoan.EditValue;
                     if (TAIKHOANService.Insert(moi, bacsiID))
                     {
                         MessageBox.Show("Thêm thông tin tài khoản thành công",
@@ -305,7 +305,17 @@ namespace QuanLyBenhXa.GUI.TaiKhoan
                 if (!CheckLuaChon()) return;
 
                 TAIKHOAN cu = getTAIKHOANByID();
-                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa tài khoản này không?",
+
+                if (cu.ID == ThamSoHeThong.curTaikhoan.ID)
+                {
+                    MessageBox.Show("Bạn không thể xóa tài khoản của mình",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa tài khoản " + cu.TENDANGNHAP + " không?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,
                                                   MessageBoxIcon.Warning);

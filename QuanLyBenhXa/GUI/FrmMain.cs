@@ -17,10 +17,12 @@ namespace QuanLyBenhXa.GUI
 {
     public partial class FrmMain : MetroForm
     {
+        #region Hàm khởi tạo
         public FrmMain()
         {
             InitializeComponent();
         }
+        #endregion
 
         #region các hàm mở các form
         private void barCapBac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -102,7 +104,7 @@ namespace QuanLyBenhXa.GUI
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
-        #endregion
+
 
         private void barBenhNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -158,6 +160,82 @@ namespace QuanLyBenhXa.GUI
             panelMain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
+        }
+        #endregion
+
+        #region Load Form
+
+        private void LoadViewTheoTaiKhoan()
+        {
+            ribonAdmin.Visible = false;
+            ribonThongKe.Visible = false;
+            ribonTaiKhoan.Visible = false;
+            ribonPublic.Visible = false;
+
+            if (ThamSoHeThong.curBacsi.ID == 0)
+            {
+                // Tài khoản công khai
+                ribonPublic.Visible = true;
+                return;
+            }
+
+            if (ThamSoHeThong.curBacsi.QUYEN == 0)
+            {
+                ribonPublic.Visible = true;
+                // tài khoản bác sĩ thường
+                return;
+            }
+
+            if (ThamSoHeThong.curBacsi.QUYEN == 1)
+            {
+                // tài khoản bác sĩ quản trị
+                ribonAdmin.Visible = true;
+                ribonTaiKhoan.Visible = true;
+                ribonThongKe.Visible = true;
+                ribonPublic.Visible = true;
+                return;
+            }
+        }
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            LoadViewTheoTaiKhoan();
+            
+        }
+        #endregion
+
+        private void barDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Cancel) return;
+            this.Close();
+        }
+
+        private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (ThamSoHeThong.curBacsi.ID == 0)
+            {
+                MessageBox.Show("Đây là tài khoản công khai",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+        }
+
+        private void barDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (ThamSoHeThong.curBacsi.ID == 0)
+            {
+                MessageBox.Show("Tài khoản này không được phép đổi mật khẩu",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            FrmDoiMatKhau form = new FrmDoiMatKhau();
+            form.ShowDialog();
         }
     }
 }
