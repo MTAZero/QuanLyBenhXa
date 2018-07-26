@@ -179,6 +179,8 @@ namespace QuanLyBenhXa.GUI
                 return;
             }
 
+            txtTenBacSi.Text = ThamSoHeThong.curBacsi.HOTEN;
+
             if (ThamSoHeThong.curBacsi.QUYEN == 0)
             {
                 ribonPublic.Visible = true;
@@ -220,7 +222,10 @@ namespace QuanLyBenhXa.GUI
                                 MessageBoxIcon.Error);
                 return;
             }
+            FrmThongTinCaNhan form = new FrmThongTinCaNhan();
+            form.ShowDialog();
 
+            txtTenBacSi.Text = ThamSoHeThong.curBacsi.HOTEN;
         }
 
         private void barDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

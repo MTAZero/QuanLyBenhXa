@@ -153,6 +153,12 @@
     <Compile Include="GUI\HoatDongChinh\FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HoatDongChinh\FrmThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoatDongChinh\FrmThongTinCaNhan.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoatDongChinh\ucKhoVatTu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoatDongChinh\FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoatDongChinh\FrmThongTinCaNhan.resx">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoatDongChinh\ucKhoVatTu.resx">
       <DependentUpon>ucKhoVatTu.cs</DependentUpon>

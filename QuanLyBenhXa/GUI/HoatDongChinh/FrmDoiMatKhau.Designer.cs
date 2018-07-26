@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoiMatKhau));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
-            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
-            this.txtXacNhan = new System.Windows.Forms.TextBox();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnDoiMatKhau = new DevExpress.XtraEditors.SimpleButton();
+            this.txtXacNhan = new System.Windows.Forms.TextBox();
+            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
+            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,57 +59,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(480, 214);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mật khẩu cũ: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu mới:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Xác nhận:";
-            // 
-            // txtMatKhauCu
-            // 
-            this.txtMatKhauCu.Location = new System.Drawing.Point(136, 16);
-            this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.Size = new System.Drawing.Size(303, 24);
-            this.txtMatKhauCu.TabIndex = 1;
-            this.txtMatKhauCu.UseSystemPasswordChar = true;
-            // 
-            // txtMatKhauMoi
-            // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(136, 67);
-            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(303, 24);
-            this.txtMatKhauMoi.TabIndex = 2;
-            this.txtMatKhauMoi.UseSystemPasswordChar = true;
-            // 
-            // txtXacNhan
-            // 
-            this.txtXacNhan.Location = new System.Drawing.Point(136, 118);
-            this.txtXacNhan.Name = "txtXacNhan";
-            this.txtXacNhan.Size = new System.Drawing.Size(303, 24);
-            this.txtXacNhan.TabIndex = 3;
-            this.txtXacNhan.UseSystemPasswordChar = true;
             // 
             // btnHuy
             // 
@@ -136,6 +85,57 @@
             this.btnDoiMatKhau.TabIndex = 4;
             this.btnDoiMatKhau.Text = "Đổi mật khẩu";
             this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            // 
+            // txtXacNhan
+            // 
+            this.txtXacNhan.Location = new System.Drawing.Point(136, 118);
+            this.txtXacNhan.Name = "txtXacNhan";
+            this.txtXacNhan.Size = new System.Drawing.Size(303, 24);
+            this.txtXacNhan.TabIndex = 3;
+            this.txtXacNhan.UseSystemPasswordChar = true;
+            // 
+            // txtMatKhauMoi
+            // 
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(136, 67);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(303, 24);
+            this.txtMatKhauMoi.TabIndex = 2;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
+            // 
+            // txtMatKhauCu
+            // 
+            this.txtMatKhauCu.Location = new System.Drawing.Point(136, 16);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.Size = new System.Drawing.Size(303, 24);
+            this.txtMatKhauCu.TabIndex = 1;
+            this.txtMatKhauCu.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Xác nhận:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mật khẩu mới:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mật khẩu cũ: ";
             // 
             // FrmDoiMatKhau
             // 

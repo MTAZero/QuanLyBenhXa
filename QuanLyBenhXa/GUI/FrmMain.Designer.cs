@@ -70,6 +70,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.txtTenBacSi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -78,6 +79,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtTenBacSi);
             this.panel1.Controls.Add(this.panelMain);
             this.panel1.Controls.Add(this.ribbonControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -446,6 +448,15 @@
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // txtTenBacSi
+            // 
+            this.txtTenBacSi.AutoSize = true;
+            this.txtTenBacSi.Location = new System.Drawing.Point(48, 4);
+            this.txtTenBacSi.Name = "txtTenBacSi";
+            this.txtTenBacSi.Size = new System.Drawing.Size(44, 17);
+            this.txtTenBacSi.TabIndex = 3;
+            this.txtTenBacSi.Text = "Name";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,5 +519,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribonThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribonTaiKhoan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private System.Windows.Forms.Label txtTenBacSi;
     }
 }
