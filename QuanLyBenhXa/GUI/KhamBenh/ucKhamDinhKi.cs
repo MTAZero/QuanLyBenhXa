@@ -77,6 +77,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private void ucKhamDinhKi_Load(object sender, EventArgs e)
         {
             LoadInitControl();
+            LockControl();
         }
         #endregion
 
@@ -93,7 +94,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return ans;
         }
-
         private KHAMTHELUC GetKHAMTHELUCByForm()
         {
             KHAMTHELUC ans = new KHAMTHELUC();
@@ -110,7 +110,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return ans;
         }
-
         private KHAMCANLAMSANG GetKHAMCANLAMSANGByForm()
         {
             KHAMCANLAMSANG ans = new KHAMCANLAMSANG();
@@ -127,7 +126,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return ans;
         }
-
         private KHAMCHUYENKHOA GetKHAMCHUYENKHOAByForm()
         {
             KHAMCHUYENKHOA ans = new KHAMCHUYENKHOA();
@@ -144,7 +142,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return ans;
         }
-
         private bool CheckKhamDinhKi()
         {
             if (txtKetLuan.Text == "")
@@ -159,7 +156,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return true;
         }
-
         private bool CheckKhamTheLuc()
         {
             if (txtTheLucChieuCao.Text == "")
@@ -206,7 +202,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return true;
         }
-
         private bool CheckKhamCanLamSang()
         {
             if (txtCanLamSangMau.Text == "")
@@ -253,7 +248,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return true;
         }
-
         private bool CheckKhamChuyenKhoa()
         {
             if (txtChuyenKhoaTai.Text == "")
@@ -300,7 +294,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             return true;
         }
-
         private void LockControl()
         {
             cbxBacSi.Enabled = false;
@@ -309,11 +302,13 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             cbxPhanLoaiSucKhoe.Enabled = false;
             txtKetLuan.Enabled = false;
 
+            btnThem.Enabled = true;
+            btnLuu.Enabled = false;
+
             LockControlKhamTheLuc();
             LockControlKhamChuyenKhoa();
             LockControlKhamCanLamSang();
         }
-
         private void LockControlKhamTheLuc()
         {
             cbxBacSiTheLuc.Enabled = false;
@@ -325,9 +320,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtTheLucVongNguc.Enabled = false;
             txtTheLucNhietDo.Enabled = false;
             txtTheLucKetQua.Enabled = false;
-           
         }
-
         private void LockControlKhamChuyenKhoa()
         {
             cbxBacSiKhamChuyenKhoa.Enabled = false;
@@ -340,7 +333,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtChuyenKhoaKhac.Enabled = false;
             txtChuyenKhoaKetQua.Enabled = false;
         }
-
         private void LockControlKhamCanLamSang()
         {
             cbxBacSiCanLamSang.Enabled = false;
@@ -353,12 +345,154 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtCanLamSangKetQua.Enabled = false;
             txtCanLamSangGhiChu.Enabled = false;
         }
-
-
         private void UnlockControl()
         {
+            cbxBacSi.Enabled = true;
+            cbxBenhNhan.Enabled = true;
+            dateThoiGianKham.Enabled = true;
+            cbxPhanLoaiSucKhoe.Enabled = true;
+            txtKetLuan.Enabled = true;
+
+            btnThem.Enabled = false;
+            btnLuu.Enabled = true;
+
+            UnlockControlKhamTheLuc();
+            UnlockControlKhamChuyenKhoa();
+            UnlockControlKhamCanLamSang();
+        }
+        private void UnlockControlKhamTheLuc()
+        {
+            cbxBacSiTheLuc.Enabled = true;
+            txtTheLucChieuCao.Enabled = true;
+            txtTheLucCanNang.Enabled = true;
+            txtTheLucMach.Enabled = true;
+            txtTheLucHuyetAp.Enabled = true;
+            txtTheLucGhiChu.Enabled = true;
+            txtTheLucVongNguc.Enabled = true;
+            txtTheLucNhietDo.Enabled = true;
+            txtTheLucKetQua.Enabled = true;
+        }
+        private void UnlockControlKhamChuyenKhoa()
+        {
+            cbxBacSiKhamChuyenKhoa.Enabled = true;
+            txtChuyenKhoaTai.Enabled = true;
+            txtChuyenKhoaMui.Enabled = true;
+            txtChuyenKhoaHong.Enabled = true;
+            txtChuyenKhoaRang.Enabled = true;
+            txtChuyenKhoaHam.Enabled = true;
+            txtChuyenKhoaMat.Enabled = true;
+            txtChuyenKhoaKhac.Enabled = true;
+            txtChuyenKhoaKetQua.Enabled = true;
+        }
+        private void UnlockControlKhamCanLamSang()
+        {
+            cbxBacSiCanLamSang.Enabled = true;
+            txtCanLamSangMau.Enabled = true;
+            txtCanLamSangXQuang.Enabled = true;
+            txtCanLamSangNuocTieu.Enabled = true;
+            txtCanLamSangXetNghiemKhac.Enabled = true;
+            txtCanLamSangSieuAm.Enabled = true;
+            txtCanLamSangDienTim.Enabled = true;
+            txtCanLamSangKetQua.Enabled = true;
+            txtCanLamSangGhiChu.Enabled = true;
+        }
+        private void ClearControl()
+        {
+            cbxBacSi.Enabled = true;
+            cbxBenhNhan.Enabled = true;
+            dateThoiGianKham.Enabled = true;
+            cbxPhanLoaiSucKhoe.Enabled = true;
+            txtKetLuan.Enabled = true;
+
+            ClearControlKhamTheLuc();
+            ClearControlKhamChuyenKhoa();
+            ClearControlKhamCanLamSang();
         }
 
+        private void ClearControlKhamTheLuc()
+        {
+            cbxBacSiTheLuc.ItemIndex = 0;
+            txtTheLucChieuCao.Text = "";
+            txtTheLucCanNang.Text = "";
+            txtTheLucMach.Text = "";
+            txtTheLucHuyetAp.Text = "";
+            txtTheLucGhiChu.Text = "";
+            txtTheLucVongNguc.Text = "";
+            txtTheLucNhietDo.Text = "";
+            txtTheLucKetQua.Text = "";
+        }
+
+        private void ClearControlKhamChuyenKhoa()
+        {
+            cbxBacSiKhamChuyenKhoa.ItemIndex = 0;
+            txtChuyenKhoaTai.Text = "";
+            txtChuyenKhoaMui.Text = "";
+            txtChuyenKhoaHong.Text = "";
+            txtChuyenKhoaRang.Text = "";
+            txtChuyenKhoaHam.Text = "";
+            txtChuyenKhoaMat.Text = "";
+            txtChuyenKhoaKhac.Text = "";
+            txtChuyenKhoaKetQua.Text = "";
+        }
+
+        private void ClearControlKhamCanLamSang()
+        {
+            cbxBacSiCanLamSang.ItemIndex = 0;
+            txtCanLamSangMau.Text = "";
+            txtCanLamSangXQuang.Text = "";
+            txtCanLamSangNuocTieu.Text = "";
+            txtCanLamSangXetNghiemKhac.Text = "";
+            txtCanLamSangSieuAm.Text = "";
+            txtCanLamSangDienTim.Text = "";
+            txtCanLamSangKetQua.Text = "";
+            txtCanLamSangGhiChu.Text = "";
+        }
+        #endregion
+
+        #region Sự kiện
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            UnlockControl();
+            ClearControl();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CheckKhamDinhKi())
+                {
+                    KHAMDINHKI khamdinhki = GetKHAMDINHKIByForm();
+                    KHAMCHUYENKHOA khamchuyenkhoa = GetKHAMCHUYENKHOAByForm();
+                    KHAMCANLAMSANG khamcanlamsang = GetKHAMCANLAMSANGByForm();
+                    KHAMTHELUC khamtheluc = GetKHAMTHELUCByForm();
+
+                    KHAMCHUYENKHOAService.Insert(khamchuyenkhoa);
+                    KHAMCANLAMSANGService.Insert(khamcanlamsang);
+                    KHAMTHELUCService.Insert(khamtheluc);
+
+                    khamdinhki.KHAMCHUYENKHOAID = khamchuyenkhoa.ID;
+                    khamdinhki.KHAMTHELUCID = khamtheluc.ID;
+                    khamdinhki.KHAMCANLAMSANGID = khamcanlamsang.ID;
+
+                    KHAMDINHKIService.Insert(khamdinhki);
+
+                    MessageBox.Show("Thêm thông tin khám định kì thành công",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    LockControl();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
         #endregion
     }
 }

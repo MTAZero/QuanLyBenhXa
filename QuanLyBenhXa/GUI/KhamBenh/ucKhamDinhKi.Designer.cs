@@ -104,8 +104,8 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtChuyenKhoaKhac = new System.Windows.Forms.Label();
+            this.txtChuyenKhoaKhac = new DevExpress.XtraEditors.TextEdit();
+            this.ll = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).BeginInit();
@@ -148,7 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaHong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaMui.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaTai.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaKhac.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -178,6 +178,7 @@
             this.btnDong.Size = new System.Drawing.Size(444, 44);
             this.btnDong.TabIndex = 8;
             this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLuu
             // 
@@ -190,6 +191,7 @@
             this.btnLuu.Size = new System.Drawing.Size(220, 44);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -202,6 +204,7 @@
             this.btnThem.Size = new System.Drawing.Size(217, 44);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Lượt khám mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -723,8 +726,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textEdit1);
             this.groupBox3.Controls.Add(this.txtChuyenKhoaKhac);
+            this.groupBox3.Controls.Add(this.ll);
             this.groupBox3.Controls.Add(this.txtChuyenKhoaKetQua);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txtChuyenKhoaMat);
@@ -997,24 +1000,24 @@
             this.label31.TabIndex = 31;
             this.label31.Text = "Tai";
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(60, 377);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(325, 26);
-            this.textEdit1.TabIndex = 44;
-            // 
             // txtChuyenKhoaKhac
             // 
-            this.txtChuyenKhoaKhac.AutoSize = true;
-            this.txtChuyenKhoaKhac.Location = new System.Drawing.Point(57, 357);
+            this.txtChuyenKhoaKhac.Location = new System.Drawing.Point(60, 377);
             this.txtChuyenKhoaKhac.Name = "txtChuyenKhoaKhac";
-            this.txtChuyenKhoaKhac.Size = new System.Drawing.Size(40, 17);
-            this.txtChuyenKhoaKhac.TabIndex = 45;
-            this.txtChuyenKhoaKhac.Text = "Khác";
+            this.txtChuyenKhoaKhac.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtChuyenKhoaKhac.Properties.Appearance.Options.UseFont = true;
+            this.txtChuyenKhoaKhac.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtChuyenKhoaKhac.Size = new System.Drawing.Size(325, 26);
+            this.txtChuyenKhoaKhac.TabIndex = 44;
+            // 
+            // ll
+            // 
+            this.ll.AutoSize = true;
+            this.ll.Location = new System.Drawing.Point(57, 357);
+            this.ll.Name = "ll";
+            this.ll.Size = new System.Drawing.Size(40, 17);
+            this.ll.TabIndex = 45;
+            this.ll.Text = "Khác";
             // 
             // ucKhamDinhKi
             // 
@@ -1072,7 +1075,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaHong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaMui.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaTai.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChuyenKhoaKhac.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1154,7 +1157,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.Label txtChuyenKhoaKhac;
+        private DevExpress.XtraEditors.TextEdit txtChuyenKhoaKhac;
+        private System.Windows.Forms.Label ll;
     }
 }
