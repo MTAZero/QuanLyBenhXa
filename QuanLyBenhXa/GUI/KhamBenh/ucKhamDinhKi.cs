@@ -170,15 +170,45 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 return false;
             }
 
+            try
+            {
+                int k = Int32.Parse(txtTheLucCanNang.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Cân nặng của khám thể lực phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (txtTheLucVongNguc.Text == "")
             {
                 MessageBox.Show("Vòng ngực của khám thể lực không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
+            try
+            {
+                int k = Int32.Parse(txtTheLucVongNguc.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Vòng ngực của khám thể lực phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (txtTheLucNhietDo.Text == "")
             {
                 MessageBox.Show("Nhiệt độ của khám thể lực không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                int k = Int32.Parse(txtTheLucNhietDo.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Nhiệt độ của khám thể lực phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -199,6 +229,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 MessageBox.Show("Kết quả khám thể lực không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            
 
             return true;
         }
