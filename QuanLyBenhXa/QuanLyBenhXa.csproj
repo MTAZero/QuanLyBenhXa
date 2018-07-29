@@ -58,6 +58,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -207,6 +208,48 @@
     <Compile Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.Designer.cs">
       <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThongKe\ucCapThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucCapThuoc.Designer.cs">
+      <DependentUpon>ucCapThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucMuonVatTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucMuonVatTu.Designer.cs">
+      <DependentUpon>ucMuonVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeNhapThuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeNhapThuoc.Designer.cs">
+      <DependentUpon>ucThongKeNhapThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeBenhLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeBenhLy.Designer.cs">
+      <DependentUpon>ucThongKeBenhLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeKhamDinhKi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeKhamDinhKi.Designer.cs">
+      <DependentUpon>ucThongKeKhamDinhKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeKhamThuongXuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeKhamThuongXuyen.Designer.cs">
+      <DependentUpon>ucThongKeKhamThuongXuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeLuotKham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\ucThongKeLuotKham.Designer.cs">
+      <DependentUpon>ucThongKeLuotKham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lib\MD5Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -280,6 +323,27 @@
     <EmbeddedResource Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.resx">
       <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucCapThuoc.resx">
+      <DependentUpon>ucCapThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucMuonVatTu.resx">
+      <DependentUpon>ucMuonVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucThongKeBenhLy.resx">
+      <DependentUpon>ucThongKeBenhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucThongKeKhamDinhKi.resx">
+      <DependentUpon>ucThongKeKhamDinhKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucThongKeKhamThuongXuyen.resx">
+      <DependentUpon>ucThongKeKhamThuongXuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucThongKeLuotKham.resx">
+      <DependentUpon>ucThongKeLuotKham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\ucThongKeNhapThuoc.resx">
+      <DependentUpon>ucThongKeNhapThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -314,7 +378,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\ThongKe\" />
     <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
