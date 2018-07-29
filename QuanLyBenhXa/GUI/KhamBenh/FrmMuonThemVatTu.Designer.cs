@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMuonThemVatTu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbxVatTu = new DevExpress.XtraEditors.LookUpEdit();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnMuon = new DevExpress.XtraEditors.SimpleButton();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.cbxVatTu = new DevExpress.XtraEditors.LookUpEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxVatTu.Properties)).BeginInit();
             this.SuspendLayout();
@@ -60,32 +60,46 @@
             this.panel1.Size = new System.Drawing.Size(618, 260);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnHuy
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vật tư";
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(415, 206);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(119, 34);
+            this.btnHuy.TabIndex = 10;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // label2
+            // btnMuon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Số lượng";
+            this.btnMuon.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnMuon.Appearance.Options.UseFont = true;
+            this.btnMuon.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnMuon.Image = ((System.Drawing.Image)(resources.GetObject("btnMuon.Image")));
+            this.btnMuon.Location = new System.Drawing.Point(290, 206);
+            this.btnMuon.Name = "btnMuon";
+            this.btnMuon.Size = new System.Drawing.Size(119, 34);
+            this.btnMuon.TabIndex = 9;
+            this.btnMuon.Text = "Mượn";
+            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
             // 
-            // label3
+            // txtGhiChu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ghi chú";
+            this.txtGhiChu.Location = new System.Drawing.Point(129, 102);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(405, 85);
+            this.txtGhiChu.TabIndex = 8;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(129, 59);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(100, 24);
+            this.txtSoLuong.TabIndex = 7;
             // 
             // cbxVatTu
             // 
@@ -104,44 +118,32 @@
             this.cbxVatTu.Size = new System.Drawing.Size(244, 26);
             this.cbxVatTu.TabIndex = 6;
             // 
-            // txtSoLuong
+            // label3
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(129, 59);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(100, 24);
-            this.txtSoLuong.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ghi chú";
             // 
-            // txtGhiChu
+            // label2
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(129, 102);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(405, 85);
-            this.txtGhiChu.TabIndex = 8;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Số lượng";
             // 
-            // btnHuy
+            // label1
             // 
-            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(415, 206);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(119, 34);
-            this.btnHuy.TabIndex = 10;
-            this.btnHuy.Text = "Hủy";
-            // 
-            // btnMuon
-            // 
-            this.btnMuon.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.btnMuon.Appearance.Options.UseFont = true;
-            this.btnMuon.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnMuon.Image = ((System.Drawing.Image)(resources.GetObject("btnMuon.Image")));
-            this.btnMuon.Location = new System.Drawing.Point(290, 206);
-            this.btnMuon.Name = "btnMuon";
-            this.btnMuon.Size = new System.Drawing.Size(119, 34);
-            this.btnMuon.TabIndex = 9;
-            this.btnMuon.Text = "Mượn";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(66, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Vật tư";
             // 
             // FrmMuonThemVatTu
             // 
@@ -154,6 +156,7 @@
             this.Name = "FrmMuonThemVatTu";
             this.Resizable = false;
             this.Text = "MƯỢN VẬT TƯ";
+            this.Load += new System.EventHandler(this.FrmMuonThemVatTu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxVatTu.Properties)).EndInit();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -39,6 +40,10 @@ namespace QuanLyBenhXa.BusinessLayer
                 businessObject.ShowErrorMessage();//throw new InvalidBusinessObjectException(businessObject.BrokenRulesList.ToString());
             }
 
+            THUOCFactory THUOCService = new THUOCFactory();
+            THUOC THUOC = THUOCService.GetAllEntities().Where(p => p.ID == businessObject.THUOCID).FirstOrDefault();
+            THUOC.SOLUONG -= businessObject.SOLUONG;
+            THUOCService.Update(THUOC);
 
             return _dataObject.Insert(businessObject);
 
@@ -100,6 +105,13 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(CHITIETCAPTHUOCKeys keys)
         {
+            CHITIETCAPTHUOC businessObject = GetAllEntities().Where(p => p.ID == keys.ID).FirstOrDefault();
+
+            THUOCFactory THUOCService = new THUOCFactory();
+            THUOC THUOC = THUOCService.GetAllEntities().Where(p => p.ID == businessObject.THUOCID).FirstOrDefault();
+            THUOC.SOLUONG += businessObject.SOLUONG;
+            THUOCService.Update(THUOC);
+
             return _dataObject.Delete(keys); 
         }
 

@@ -23,7 +23,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private KHAMCANLAMSANGFactory KHAMCANLAMSANGService = new KHAMCANLAMSANGFactory();
 
         // variable
-        private KHAMDINHKI khamdinhki = new KHAMDINHKI();
+        private KHAMDINHKI khamdinhki = ThamSoHeThong.khamdinhki;
 
         #region Hàm khởi tạo
         public ucKhamDinhKi()
@@ -229,8 +229,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 MessageBox.Show("Kết quả khám thể lực không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            
 
             return true;
         }
@@ -440,7 +438,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             ClearControlKhamChuyenKhoa();
             ClearControlKhamCanLamSang();
         }
-
         private void ClearControlKhamTheLuc()
         {
             cbxBacSiTheLuc.ItemIndex = 0;
@@ -453,7 +450,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtTheLucNhietDo.Text = "";
             txtTheLucKetQua.Text = "";
         }
-
         private void ClearControlKhamChuyenKhoa()
         {
             cbxBacSiKhamChuyenKhoa.ItemIndex = 0;
@@ -466,7 +462,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtChuyenKhoaKhac.Text = "";
             txtChuyenKhoaKetQua.Text = "";
         }
-
         private void ClearControlKhamCanLamSang()
         {
             cbxBacSiCanLamSang.ItemIndex = 0;
@@ -478,6 +473,10 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtCanLamSangDienTim.Text = "";
             txtCanLamSangKetQua.Text = "";
             txtCanLamSangGhiChu.Text = "";
+        }
+        private void UpdateDetail()
+        {
+
         }
         #endregion
 

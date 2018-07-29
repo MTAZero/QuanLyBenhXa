@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using QuanLyBenhXa.BusinessLayer.DataLayer;
+using System.Linq;
 
 namespace QuanLyBenhXa.BusinessLayer
 {
@@ -39,6 +40,10 @@ namespace QuanLyBenhXa.BusinessLayer
                 businessObject.ShowErrorMessage();//throw new InvalidBusinessObjectException(businessObject.BrokenRulesList.ToString());
             }
 
+            VATTUFactory VATTUService = new VATTUFactory();
+            VATTU vattu = VATTUService.GetAllEntities().Where(p => p.ID == businessObject.VATTUID).FirstOrDefault();
+            vattu.SOLUONG -= businessObject.SOLUONG;
+            VATTUService.Update(vattu);
 
             return _dataObject.Insert(businessObject);
 
@@ -100,6 +105,13 @@ namespace QuanLyBenhXa.BusinessLayer
         /// <returns>true for succesfully deleted</returns>
         public bool Delete(CHITIETMUONVATTUKeys keys)
         {
+            CHITIETMUONVATTU businessObject = GetAllEntities().ToList().Where(p => p.ID == keys.ID).FirstOrDefault();
+
+            VATTUFactory VATTUService = new VATTUFactory();
+            VATTU vattu = VATTUService.GetAllEntities().Where(p => p.ID == businessObject.VATTUID).FirstOrDefault();
+            vattu.SOLUONG += businessObject.SOLUONG;
+            VATTUService.Update(vattu);
+
             return _dataObject.Delete(keys); 
         }
 

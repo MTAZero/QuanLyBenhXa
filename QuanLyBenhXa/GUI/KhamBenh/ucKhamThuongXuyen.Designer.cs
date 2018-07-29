@@ -43,6 +43,9 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvCHITIETMUONVATTUMain = new DevExpress.XtraGrid.GridControl();
             this.dgvCHITIETMUONVATTU = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STTMuonVatTu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenMuonVatTu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoLuongMuonVatTu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtChiPhiKham = new DevExpress.XtraEditors.TextEdit();
             this.groupChuyenLenTuyenTren = new System.Windows.Forms.GroupBox();
             this.btnInGiayGioiThieu = new DevExpress.XtraEditors.SimpleButton();
@@ -53,6 +56,9 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvCHITIETCAPTHUOCMain = new DevExpress.XtraGrid.GridControl();
             this.dgvCHITIETCAPTHUOC = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupDieuTriTaiTuyen = new System.Windows.Forms.GroupBox();
             this.dateThoiGianRa = new DevExpress.XtraEditors.DateEdit();
             this.dateThoiGianVao = new DevExpress.XtraEditors.DateEdit();
@@ -244,7 +250,7 @@
             this.btnThuHoiThuoc.Name = "btnThuHoiThuoc";
             this.btnThuHoiThuoc.Size = new System.Drawing.Size(213, 34);
             this.btnThuHoiThuoc.TabIndex = 15;
-            this.btnThuHoiThuoc.Text = "Thu hồi thuốc";
+            this.btnThuHoiThuoc.Text = "Xóa";
             this.btnThuHoiThuoc.Click += new System.EventHandler(this.btnThuHoiThuoc_Click);
             // 
             // btnCapThemThuoc
@@ -294,6 +300,10 @@
             this.dgvCHITIETMUONVATTU.Appearance.Row.Options.UseFont = true;
             this.dgvCHITIETMUONVATTU.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.dgvCHITIETMUONVATTU.ColumnPanelRowHeight = 30;
+            this.dgvCHITIETMUONVATTU.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STTMuonVatTu,
+            this.TenMuonVatTu,
+            this.SoLuongMuonVatTu});
             this.dgvCHITIETMUONVATTU.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.dgvCHITIETMUONVATTU.GridControl = this.dgvCHITIETMUONVATTUMain;
             this.dgvCHITIETMUONVATTU.Name = "dgvCHITIETMUONVATTU";
@@ -308,6 +318,33 @@
             this.dgvCHITIETMUONVATTU.OptionsView.ShowGroupPanel = false;
             this.dgvCHITIETMUONVATTU.PaintStyleName = "UltraFlat";
             this.dgvCHITIETMUONVATTU.RowHeight = 30;
+            // 
+            // STTMuonVatTu
+            // 
+            this.STTMuonVatTu.Caption = "STT";
+            this.STTMuonVatTu.FieldName = "STT";
+            this.STTMuonVatTu.Name = "STTMuonVatTu";
+            this.STTMuonVatTu.Visible = true;
+            this.STTMuonVatTu.VisibleIndex = 0;
+            this.STTMuonVatTu.Width = 83;
+            // 
+            // TenMuonVatTu
+            // 
+            this.TenMuonVatTu.Caption = "Tên";
+            this.TenMuonVatTu.FieldName = "Ten";
+            this.TenMuonVatTu.Name = "TenMuonVatTu";
+            this.TenMuonVatTu.Visible = true;
+            this.TenMuonVatTu.VisibleIndex = 1;
+            this.TenMuonVatTu.Width = 378;
+            // 
+            // SoLuongMuonVatTu
+            // 
+            this.SoLuongMuonVatTu.Caption = "Số lượng";
+            this.SoLuongMuonVatTu.FieldName = "SoLuong";
+            this.SoLuongMuonVatTu.Name = "SoLuongMuonVatTu";
+            this.SoLuongMuonVatTu.Visible = true;
+            this.SoLuongMuonVatTu.VisibleIndex = 2;
+            this.SoLuongMuonVatTu.Width = 238;
             // 
             // txtChiPhiKham
             // 
@@ -435,6 +472,10 @@
             this.dgvCHITIETCAPTHUOC.Appearance.Row.Options.UseFont = true;
             this.dgvCHITIETCAPTHUOC.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.dgvCHITIETCAPTHUOC.ColumnPanelRowHeight = 30;
+            this.dgvCHITIETCAPTHUOC.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.Ten,
+            this.SoLuong});
             this.dgvCHITIETCAPTHUOC.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.dgvCHITIETCAPTHUOC.GridControl = this.dgvCHITIETCAPTHUOCMain;
             this.dgvCHITIETCAPTHUOC.Name = "dgvCHITIETCAPTHUOC";
@@ -449,6 +490,33 @@
             this.dgvCHITIETCAPTHUOC.OptionsView.ShowGroupPanel = false;
             this.dgvCHITIETCAPTHUOC.PaintStyleName = "UltraFlat";
             this.dgvCHITIETCAPTHUOC.RowHeight = 30;
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 81;
+            // 
+            // Ten
+            // 
+            this.Ten.Caption = "Tên";
+            this.Ten.FieldName = "Ten";
+            this.Ten.Name = "Ten";
+            this.Ten.Visible = true;
+            this.Ten.VisibleIndex = 1;
+            this.Ten.Width = 382;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.Caption = "Số lượng";
+            this.SoLuong.FieldName = "SoLuong";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Visible = true;
+            this.SoLuong.VisibleIndex = 2;
+            this.SoLuong.Width = 236;
             // 
             // groupDieuTriTaiTuyen
             // 
@@ -862,5 +930,11 @@
         private System.Windows.Forms.GroupBox groupDieuTriTaiDonVi;
         private System.Windows.Forms.Label label14;
         private DevExpress.XtraEditors.MemoEdit txtTrieuChung;
+        private DevExpress.XtraGrid.Columns.GridColumn STTMuonVatTu;
+        private DevExpress.XtraGrid.Columns.GridColumn TenMuonVatTu;
+        private DevExpress.XtraGrid.Columns.GridColumn SoLuongMuonVatTu;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn Ten;
+        private DevExpress.XtraGrid.Columns.GridColumn SoLuong;
     }
 }

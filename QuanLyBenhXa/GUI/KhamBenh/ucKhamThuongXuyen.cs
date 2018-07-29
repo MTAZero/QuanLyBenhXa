@@ -23,18 +23,16 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private CAPTHUOCFactory CAPTHUOCService = new CAPTHUOCFactory();
         private CHITIETCAPTHUOCFactory CHITIETCAPTHUOCService = new CHITIETCAPTHUOCFactory();
         private CHITIETMUONVATTUFactory CHITIETMUONVATTUService = new CHITIETMUONVATTUFactory();
-
-        // index
-        private int indexCapThuoc = 0, indexCapThuoc1 = 0;
-        private int indexMuonVatTu = 0, indexMuonVatTu1 = 0;
+        private THUOCFactory THUOCService = new THUOCFactory();
+        private VATTUFactory VATTUService = new VATTUFactory();
 
         // trang thai cua form
-        private int state = 0; // 0: chua nhap, 1: đang nhập thông tin, 2: đang cấp thuốc
+        // 0: chua nhap, 1: đang nhập thông tin, 2: đang cấp thuốc
 
         // variable
-        private KHAMTHUONGXUYEN khamthuongxuyen = new KHAMTHUONGXUYEN();
-        private CAPTHUOC capthuoc = new CAPTHUOC();
-        private MUONVATTU muonvattu = new MUONVATTU();
+        private KHAMTHUONGXUYEN khamthuongxuyen = ThamSoHeThong.khamthuongxuyen;
+        private CAPTHUOC capthuoc = ThamSoHeThong.capthuoc;
+        private MUONVATTU muonvattu = ThamSoHeThong.muonvattu;
 
         #region Hàm khởi tạo
         public ucKhamThuongXuyen()
@@ -73,16 +71,55 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
         private void LoadDgvCHITIETCAPTHUOC()
         {
+            try
+            {
+                int STT = 0;
 
+                dgvCHITIETCAPTHUOCMain.DataSource = CHITIETCAPTHUOCService.GetAllEntities().ToList()
+                    .Where(p=>p.CAPTHUOCID == capthuoc.ID)
+                    .Select(p => new
+                    {
+                        STT = ++STT,
+                        ID = p.ID,
+                        Ten = THUOCService.GetAllEntities().Where(z=>z.ID == p.THUOCID).FirstOrDefault().TEN,
+                        SoLuong = p.SOLUONG
+                    })
+                    .ToList();
+            }
+            catch
+            {
+
+            }
         }
 
         private void LoadDgvCHITIETMUONVATTU()
         {
+            try
+            {
+                int STT = 0;
+
+                dgvCHITIETMUONVATTUMain.DataSource = CHITIETMUONVATTUService.GetAllEntities().ToList()
+                    .Where(p=>p.MUONVATTUID == muonvattu.ID)
+                    .Select(p => new
+                    {
+                        ID = p.ID,
+                        STT = ++STT,
+                        Ten = VATTUService.GetAllEntities().Where(z=>z.ID == p.VATTUID).FirstOrDefault().TEN,
+                        SoLuong = p.SOLUONG
+                    })
+                    .ToList();
+            }
+            catch
+            {
+
+            }
         }
+
         private void ucKhamThuongXuyen_Load(object sender, EventArgs e)
         {
             LoadInitControl();
             ClearControl();
+            UpdateDetail();
             UpdateStateForm(0);
         }
         #endregion
@@ -182,6 +219,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                     txtTrieuChung.Text = tg.TRIEUCHUNG;
                 }
 
+                LoadDgvCHITIETCAPTHUOC();
+                LoadDgvCHITIETMUONVATTU();
             }
             catch
             {
@@ -426,7 +465,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
         private bool CheckLuaChonCHITIETCAPTHUOC()
         {
-            CHITIETMUONVATTU tg = getCHITIETMUONVATTUByID();
+            CHITIETCAPTHUOC tg = getCHITIETCAPTHUOCByID();
             if (tg.ID == 0)
             {
                 MessageBox.Show("Chưa có chi tiết cấp thuốc nào được chọn",
@@ -443,6 +482,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private void btnThem_Click(object sender, EventArgs e)
         {
             khamthuongxuyen = new KHAMTHUONGXUYEN();
+            ThamSoHeThong.khamthuongxuyen = khamthuongxuyen;
+
             dgvCHITIETCAPTHUOCMain.DataSource = null;
             dgvCHITIETMUONVATTUMain.DataSource = null;
 
@@ -465,16 +506,19 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                         if (kt == false) exceptionHelp /= 0;
 
                         khamthuongxuyen = tg;
+                        ThamSoHeThong.khamthuongxuyen = tg;
 
                         // thêm mới
-                        MUONVATTU muonvattu = new MUONVATTU();
+                        muonvattu = new MUONVATTU();
+                        ThamSoHeThong.muonvattu = muonvattu;
                         muonvattu.KHAMTHUONGXUYENID = khamthuongxuyen.ID;
                         muonvattu.BACSIMUONID = khamthuongxuyen.BACSIID;
                         muonvattu.NGAYMUON = khamthuongxuyen.THOIGIAN;
                         muonvattu.TRANGTHAI = 0; // đang mượn
                         MUONVATTUService.Insert(muonvattu);
 
-                        CAPTHUOC capthuoc = new CAPTHUOC();
+                        capthuoc = new CAPTHUOC();
+                        ThamSoHeThong.capthuoc = capthuoc;
                         capthuoc.KHAMTHUONGXUYENID = khamthuongxuyen.ID;
                         capthuoc.BACSIID = khamthuongxuyen.BACSIID;
                         capthuoc.NGAY = khamthuongxuyen.THOIGIAN;
@@ -540,7 +584,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         {
             try
             {
-
+                FrmCapThemThuoc form = new FrmCapThemThuoc(capthuoc.ID);
+                form.ShowDialog();
             }
             catch
             {
@@ -557,10 +602,24 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             {
                 if (CheckLuaChonCHITIETCAPTHUOC())
                 {
+                    CHITIETCAPTHUOC chitietcapthuoc = getCHITIETCAPTHUOCByID();
+                    DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa chi tiết cấp thuốc này không?",
+                                                      "Thông báo",
+                                                      MessageBoxButtons.OKCancel,
+                                                      MessageBoxIcon.Question);
+                    if (rs == DialogResult.Cancel) return;
+
+                    int exceptionHelp = 0;
+                    if (!CHITIETCAPTHUOCService.Delete(new CHITIETCAPTHUOCKeys(chitietcapthuoc.ID)))
+                        exceptionHelp /= 0;
                 }
             }
             catch
             {
+                MessageBox.Show("Xóa thông tin chi tiết cấp thuốc thất bại",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
             finally
             {
@@ -572,7 +631,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         {
             try
             {
-
+                FrmMuonThemVatTu form = new FrmMuonThemVatTu(muonvattu.ID);
+                form.ShowDialog();
             }
             catch
             {
@@ -589,11 +649,24 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             {
                 if (CheckLuaChonCHITIETMUONVATTU())
                 {
+                    CHITIETMUONVATTU chitietmuonvattu = getCHITIETMUONVATTUByID();
+                    DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa chi tiết mượn vật tư này không?",
+                                                      "Thông báo",
+                                                      MessageBoxButtons.OKCancel,
+                                                      MessageBoxIcon.Question);
+                    if (rs == DialogResult.Cancel) return;
 
+                    int exceptionHelp = 0;
+                    if (!CHITIETMUONVATTUService.Delete(new CHITIETMUONVATTUKeys(chitietmuonvattu.ID)))
+                        exceptionHelp /= 0;
                 }
             }
             catch
             {
+                MessageBox.Show("Xóa thông tin chi tiết mượn vật tư thất bại",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
             finally
             {

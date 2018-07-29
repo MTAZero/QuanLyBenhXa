@@ -71,6 +71,7 @@
             this.btnHuy.Size = new System.Drawing.Size(119, 34);
             this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnCap
             // 
@@ -83,6 +84,7 @@
             this.btnCap.Size = new System.Drawing.Size(119, 34);
             this.btnCap.TabIndex = 9;
             this.btnCap.Text = "Cấp";
+            this.btnCap.Click += new System.EventHandler(this.btnCap_Click);
             // 
             // txtGhiChu
             // 
@@ -152,6 +154,7 @@
             this.Name = "FrmCapThemThuoc";
             this.Resizable = false;
             this.Text = "CẤP THUỐC";
+            this.Load += new System.EventHandler(this.FrmCapThemThuoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxThuoc.Properties)).EndInit();
