@@ -474,10 +474,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtCanLamSangKetQua.Text = "";
             txtCanLamSangGhiChu.Text = "";
         }
-        private void UpdateDetail()
-        {
-
-        }
         #endregion
 
         #region Sự kiện
