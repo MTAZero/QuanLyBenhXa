@@ -177,6 +177,18 @@
     <Compile Include="GUI\HoatDongChinh\ucNhapThuoc.Designer.cs">
       <DependentUpon>ucNhapThuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KhamBenh\FrmCapThemThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh\FrmCapThemThuoc.Designer.cs">
+      <DependentUpon>FrmCapThemThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KhamBenh\FrmMuonThemVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KhamBenh\FrmMuonThemVatTu.Designer.cs">
+      <DependentUpon>FrmMuonThemVatTu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\KhamBenh\ucKhamDinhKi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -253,6 +265,12 @@
     <EmbeddedResource Include="GUI\HoatDongChinh\ucNhapThuoc.resx">
       <DependentUpon>ucNhapThuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh\FrmCapThemThuoc.resx">
+      <DependentUpon>FrmCapThemThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KhamBenh\FrmMuonThemVatTu.resx">
+      <DependentUpon>FrmMuonThemVatTu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\KhamBenh\ucKhamDinhKi.resx">
       <DependentUpon>ucKhamDinhKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +315,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GUI\ThongKe\" />
+    <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

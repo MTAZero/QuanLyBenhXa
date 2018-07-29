@@ -30,22 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucKhamThuongXuyen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupDieuTriTaiDonVi = new System.Windows.Forms.GroupBox();
+            this.txtTrieuChung = new DevExpress.XtraEditors.MemoEdit();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHoanThanhNhap = new DevExpress.XtraEditors.SimpleButton();
             this.btnTraVatTu = new DevExpress.XtraEditors.SimpleButton();
             this.btnMuonThemVatTu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThuHoiThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapThemThuoc = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dgvMuonVatTuMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvMuonVatTu = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvCHITIETMUONVATTUMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvCHITIETMUONVATTU = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtChiPhiKham = new DevExpress.XtraEditors.TextEdit();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvCapThuocMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvCapThuoc = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupChuyenLenTuyenTren = new System.Windows.Forms.GroupBox();
+            this.btnInGiayGioiThieu = new DevExpress.XtraEditors.SimpleButton();
             this.dateThoiGianChuyen = new DevExpress.XtraEditors.DateEdit();
             this.label10 = new System.Windows.Forms.Label();
             this.cbxBenhVien = new DevExpress.XtraEditors.LookUpEdit();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgvCHITIETCAPTHUOCMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvCHITIETCAPTHUOC = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupDieuTriTaiTuyen = new System.Windows.Forms.GroupBox();
             this.dateThoiGianRa = new DevExpress.XtraEditors.DateEdit();
             this.dateThoiGianVao = new DevExpress.XtraEditors.DateEdit();
@@ -53,10 +60,10 @@
             this.txtPhuongPhap = new DevExpress.XtraEditors.MemoEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuuThongTin = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxCachGiaiQuyet = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxCachGiaiQuyet = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.txtKetLuan = new DevExpress.XtraEditors.MemoEdit();
             this.cbxBenh = new DevExpress.XtraEditors.LookUpEdit();
@@ -70,19 +77,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
+            this.groupDieuTriTaiDonVi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).BeginInit();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMuonVatTuMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMuonVatTu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETMUONVATTUMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETMUONVATTU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChiPhiKham.Properties)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapThuocMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapThuoc)).BeginInit();
             this.groupChuyenLenTuyenTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianChuyen.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianChuyen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhVien.Properties)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETCAPTHUOCMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETCAPTHUOC)).BeginInit();
             this.groupDieuTriTaiTuyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianRa.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianRa.Properties)).BeginInit();
@@ -103,6 +111,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.groupDieuTriTaiDonVi);
+            this.panel1.Controls.Add(this.btnHuy);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Controls.Add(this.btnHoanThanhNhap);
             this.panel1.Controls.Add(this.btnTraVatTu);
             this.panel1.Controls.Add(this.btnMuonThemVatTu);
             this.panel1.Controls.Add(this.btnThuHoiThuoc);
@@ -112,7 +124,7 @@
             this.panel1.Controls.Add(this.groupChuyenLenTuyenTren);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupDieuTriTaiTuyen);
-            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Controls.Add(this.btnLuuThongTin);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
@@ -124,6 +136,76 @@
             this.panel1.Size = new System.Drawing.Size(1298, 558);
             this.panel1.TabIndex = 0;
             // 
+            // groupDieuTriTaiDonVi
+            // 
+            this.groupDieuTriTaiDonVi.Controls.Add(this.txtTrieuChung);
+            this.groupDieuTriTaiDonVi.Controls.Add(this.label14);
+            this.groupDieuTriTaiDonVi.Location = new System.Drawing.Point(429, 402);
+            this.groupDieuTriTaiDonVi.Name = "groupDieuTriTaiDonVi";
+            this.groupDieuTriTaiDonVi.Size = new System.Drawing.Size(396, 110);
+            this.groupDieuTriTaiDonVi.TabIndex = 23;
+            this.groupDieuTriTaiDonVi.TabStop = false;
+            this.groupDieuTriTaiDonVi.Text = "Điều trị tại đơn vị";
+            // 
+            // txtTrieuChung
+            // 
+            this.txtTrieuChung.Enabled = false;
+            this.txtTrieuChung.Location = new System.Drawing.Point(90, 34);
+            this.txtTrieuChung.Name = "txtTrieuChung";
+            this.txtTrieuChung.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTrieuChung.Properties.Appearance.Options.UseFont = true;
+            this.txtTrieuChung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTrieuChung.Size = new System.Drawing.Size(285, 65);
+            this.txtTrieuChung.TabIndex = 8;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 37);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Triệu chứng";
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(18, 518);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(181, 34);
+            this.btnHuy.TabIndex = 16;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Appearance.Options.UseFont = true;
+            this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.Location = new System.Drawing.Point(207, 478);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(207, 34);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "Sửa thông tin";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnHoanThanhNhap
+            // 
+            this.btnHoanThanhNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoanThanhNhap.Appearance.Options.UseFont = true;
+            this.btnHoanThanhNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHoanThanhNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnHoanThanhNhap.Image")));
+            this.btnHoanThanhNhap.Location = new System.Drawing.Point(831, 518);
+            this.btnHoanThanhNhap.Name = "btnHoanThanhNhap";
+            this.btnHoanThanhNhap.Size = new System.Drawing.Size(453, 34);
+            this.btnHoanThanhNhap.TabIndex = 20;
+            this.btnHoanThanhNhap.Text = "Hoàn thành cấp thuốc và mượn vật tư";
+            this.btnHoanThanhNhap.Click += new System.EventHandler(this.btnHoanThanhNhap_Click);
+            // 
             // btnTraVatTu
             // 
             this.btnTraVatTu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -131,11 +213,12 @@
             this.btnTraVatTu.Appearance.Options.UseFont = true;
             this.btnTraVatTu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnTraVatTu.Image = ((System.Drawing.Image)(resources.GetObject("btnTraVatTu.Image")));
-            this.btnTraVatTu.Location = new System.Drawing.Point(1071, 489);
+            this.btnTraVatTu.Location = new System.Drawing.Point(1068, 478);
             this.btnTraVatTu.Name = "btnTraVatTu";
-            this.btnTraVatTu.Size = new System.Drawing.Size(213, 34);
-            this.btnTraVatTu.TabIndex = 27;
-            this.btnTraVatTu.Text = "Xác nhận trả";
+            this.btnTraVatTu.Size = new System.Drawing.Size(216, 34);
+            this.btnTraVatTu.TabIndex = 17;
+            this.btnTraVatTu.Text = "Xóa";
+            this.btnTraVatTu.Click += new System.EventHandler(this.btnTraVatTu_Click);
             // 
             // btnMuonThemVatTu
             // 
@@ -144,11 +227,12 @@
             this.btnMuonThemVatTu.Appearance.Options.UseFont = true;
             this.btnMuonThemVatTu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnMuonThemVatTu.Image = ((System.Drawing.Image)(resources.GetObject("btnMuonThemVatTu.Image")));
-            this.btnMuonThemVatTu.Location = new System.Drawing.Point(837, 489);
+            this.btnMuonThemVatTu.Location = new System.Drawing.Point(834, 478);
             this.btnMuonThemVatTu.Name = "btnMuonThemVatTu";
             this.btnMuonThemVatTu.Size = new System.Drawing.Size(228, 34);
-            this.btnMuonThemVatTu.TabIndex = 26;
+            this.btnMuonThemVatTu.TabIndex = 16;
             this.btnMuonThemVatTu.Text = "Thêm vật tư";
+            this.btnMuonThemVatTu.Click += new System.EventHandler(this.btnMuonThemVatTu_Click);
             // 
             // btnThuHoiThuoc
             // 
@@ -159,8 +243,9 @@
             this.btnThuHoiThuoc.Location = new System.Drawing.Point(1071, 224);
             this.btnThuHoiThuoc.Name = "btnThuHoiThuoc";
             this.btnThuHoiThuoc.Size = new System.Drawing.Size(213, 34);
-            this.btnThuHoiThuoc.TabIndex = 25;
+            this.btnThuHoiThuoc.TabIndex = 15;
             this.btnThuHoiThuoc.Text = "Thu hồi thuốc";
+            this.btnThuHoiThuoc.Click += new System.EventHandler(this.btnThuHoiThuoc_Click);
             // 
             // btnCapThemThuoc
             // 
@@ -171,57 +256,58 @@
             this.btnCapThemThuoc.Location = new System.Drawing.Point(837, 224);
             this.btnCapThemThuoc.Name = "btnCapThemThuoc";
             this.btnCapThemThuoc.Size = new System.Drawing.Size(228, 34);
-            this.btnCapThemThuoc.TabIndex = 23;
+            this.btnCapThemThuoc.TabIndex = 14;
             this.btnCapThemThuoc.Text = "Cấp thêm thuốc";
+            this.btnCapThemThuoc.Click += new System.EventHandler(this.btnCapThemThuoc_Click);
             // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.dgvMuonVatTuMain);
-            this.groupBox6.Location = new System.Drawing.Point(831, 277);
+            this.groupBox6.Controls.Add(this.dgvCHITIETMUONVATTUMain);
+            this.groupBox6.Location = new System.Drawing.Point(831, 263);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(456, 209);
             this.groupBox6.TabIndex = 22;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Mượn vật tư";
             // 
-            // dgvMuonVatTuMain
+            // dgvCHITIETMUONVATTUMain
             // 
-            this.dgvMuonVatTuMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMuonVatTuMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvMuonVatTuMain.MainView = this.dgvMuonVatTu;
-            this.dgvMuonVatTuMain.Name = "dgvMuonVatTuMain";
-            this.dgvMuonVatTuMain.Size = new System.Drawing.Size(450, 186);
-            this.dgvMuonVatTuMain.TabIndex = 4;
-            this.dgvMuonVatTuMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvMuonVatTu});
+            this.dgvCHITIETMUONVATTUMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCHITIETMUONVATTUMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvCHITIETMUONVATTUMain.MainView = this.dgvCHITIETMUONVATTU;
+            this.dgvCHITIETMUONVATTUMain.Name = "dgvCHITIETMUONVATTUMain";
+            this.dgvCHITIETMUONVATTUMain.Size = new System.Drawing.Size(450, 186);
+            this.dgvCHITIETMUONVATTUMain.TabIndex = 4;
+            this.dgvCHITIETMUONVATTUMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvCHITIETMUONVATTU});
             // 
-            // dgvMuonVatTu
+            // dgvCHITIETMUONVATTU
             // 
-            this.dgvMuonVatTu.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvMuonVatTu.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvMuonVatTu.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvMuonVatTu.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvMuonVatTu.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvMuonVatTu.Appearance.Row.Options.UseFont = true;
-            this.dgvMuonVatTu.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvMuonVatTu.ColumnPanelRowHeight = 30;
-            this.dgvMuonVatTu.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvMuonVatTu.GridControl = this.dgvMuonVatTuMain;
-            this.dgvMuonVatTu.Name = "dgvMuonVatTu";
-            this.dgvMuonVatTu.OptionsBehavior.Editable = false;
-            this.dgvMuonVatTu.OptionsBehavior.ReadOnly = true;
-            this.dgvMuonVatTu.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvMuonVatTu.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvMuonVatTu.OptionsCustomization.AllowFilter = false;
-            this.dgvMuonVatTu.OptionsCustomization.AllowGroup = false;
-            this.dgvMuonVatTu.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvMuonVatTu.OptionsFind.AllowFindPanel = false;
-            this.dgvMuonVatTu.OptionsView.ShowGroupPanel = false;
-            this.dgvMuonVatTu.PaintStyleName = "UltraFlat";
-            this.dgvMuonVatTu.RowHeight = 30;
+            this.dgvCHITIETMUONVATTU.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvCHITIETMUONVATTU.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvCHITIETMUONVATTU.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvCHITIETMUONVATTU.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvCHITIETMUONVATTU.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvCHITIETMUONVATTU.Appearance.Row.Options.UseFont = true;
+            this.dgvCHITIETMUONVATTU.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvCHITIETMUONVATTU.ColumnPanelRowHeight = 30;
+            this.dgvCHITIETMUONVATTU.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvCHITIETMUONVATTU.GridControl = this.dgvCHITIETMUONVATTUMain;
+            this.dgvCHITIETMUONVATTU.Name = "dgvCHITIETMUONVATTU";
+            this.dgvCHITIETMUONVATTU.OptionsBehavior.Editable = false;
+            this.dgvCHITIETMUONVATTU.OptionsBehavior.ReadOnly = true;
+            this.dgvCHITIETMUONVATTU.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvCHITIETMUONVATTU.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvCHITIETMUONVATTU.OptionsCustomization.AllowFilter = false;
+            this.dgvCHITIETMUONVATTU.OptionsCustomization.AllowGroup = false;
+            this.dgvCHITIETMUONVATTU.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvCHITIETMUONVATTU.OptionsFind.AllowFindPanel = false;
+            this.dgvCHITIETMUONVATTU.OptionsView.ShowGroupPanel = false;
+            this.dgvCHITIETMUONVATTU.PaintStyleName = "UltraFlat";
+            this.dgvCHITIETMUONVATTU.RowHeight = 30;
             // 
             // txtChiPhiKham
             // 
@@ -231,69 +317,35 @@
             this.txtChiPhiKham.Properties.Appearance.Options.UseFont = true;
             this.txtChiPhiKham.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtChiPhiKham.Size = new System.Drawing.Size(225, 26);
-            this.txtChiPhiKham.TabIndex = 21;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.dgvCapThuocMain);
-            this.groupBox5.Location = new System.Drawing.Point(831, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(456, 209);
-            this.groupBox5.TabIndex = 19;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Cấp thuốc";
-            // 
-            // dgvCapThuocMain
-            // 
-            this.dgvCapThuocMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCapThuocMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvCapThuocMain.MainView = this.dgvCapThuoc;
-            this.dgvCapThuocMain.Name = "dgvCapThuocMain";
-            this.dgvCapThuocMain.Size = new System.Drawing.Size(450, 186);
-            this.dgvCapThuocMain.TabIndex = 3;
-            this.dgvCapThuocMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvCapThuoc});
-            // 
-            // dgvCapThuoc
-            // 
-            this.dgvCapThuoc.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvCapThuoc.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvCapThuoc.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvCapThuoc.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvCapThuoc.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvCapThuoc.Appearance.Row.Options.UseFont = true;
-            this.dgvCapThuoc.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvCapThuoc.ColumnPanelRowHeight = 30;
-            this.dgvCapThuoc.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvCapThuoc.GridControl = this.dgvCapThuocMain;
-            this.dgvCapThuoc.Name = "dgvCapThuoc";
-            this.dgvCapThuoc.OptionsBehavior.Editable = false;
-            this.dgvCapThuoc.OptionsBehavior.ReadOnly = true;
-            this.dgvCapThuoc.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvCapThuoc.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvCapThuoc.OptionsCustomization.AllowFilter = false;
-            this.dgvCapThuoc.OptionsCustomization.AllowGroup = false;
-            this.dgvCapThuoc.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvCapThuoc.OptionsFind.AllowFindPanel = false;
-            this.dgvCapThuoc.OptionsView.ShowGroupPanel = false;
-            this.dgvCapThuoc.PaintStyleName = "UltraFlat";
-            this.dgvCapThuoc.RowHeight = 30;
+            this.txtChiPhiKham.TabIndex = 4;
             // 
             // groupChuyenLenTuyenTren
             // 
-            this.groupChuyenLenTuyenTren.Controls.Add(this.simpleButton6);
+            this.groupChuyenLenTuyenTren.Controls.Add(this.btnInGiayGioiThieu);
             this.groupChuyenLenTuyenTren.Controls.Add(this.dateThoiGianChuyen);
             this.groupChuyenLenTuyenTren.Controls.Add(this.label10);
             this.groupChuyenLenTuyenTren.Controls.Add(this.cbxBenhVien);
             this.groupChuyenLenTuyenTren.Controls.Add(this.label11);
-            this.groupChuyenLenTuyenTren.Location = new System.Drawing.Point(429, 277);
+            this.groupChuyenLenTuyenTren.Location = new System.Drawing.Point(432, 227);
             this.groupChuyenLenTuyenTren.Name = "groupChuyenLenTuyenTren";
             this.groupChuyenLenTuyenTren.Size = new System.Drawing.Size(396, 169);
             this.groupChuyenLenTuyenTren.TabIndex = 18;
             this.groupChuyenLenTuyenTren.TabStop = false;
             this.groupChuyenLenTuyenTren.Text = "Chuyển lên tuyến trên";
+            // 
+            // btnInGiayGioiThieu
+            // 
+            this.btnInGiayGioiThieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnInGiayGioiThieu.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInGiayGioiThieu.Appearance.Options.UseFont = true;
+            this.btnInGiayGioiThieu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnInGiayGioiThieu.Image = ((System.Drawing.Image)(resources.GetObject("btnInGiayGioiThieu.Image")));
+            this.btnInGiayGioiThieu.Location = new System.Drawing.Point(205, 118);
+            this.btnInGiayGioiThieu.Name = "btnInGiayGioiThieu";
+            this.btnInGiayGioiThieu.Size = new System.Drawing.Size(172, 34);
+            this.btnInGiayGioiThieu.TabIndex = 13;
+            this.btnInGiayGioiThieu.Text = "In giấy giới thiệu";
+            this.btnInGiayGioiThieu.Click += new System.EventHandler(this.btnInGiayGioiThieu_Click);
             // 
             // dateThoiGianChuyen
             // 
@@ -313,7 +365,7 @@
             this.dateThoiGianChuyen.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateThoiGianChuyen.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateThoiGianChuyen.Size = new System.Drawing.Size(157, 26);
-            this.dateThoiGianChuyen.TabIndex = 25;
+            this.dateThoiGianChuyen.TabIndex = 12;
             // 
             // label10
             // 
@@ -339,7 +391,7 @@
             this.cbxBenhVien.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxBenhVien.Properties.ShowHeader = false;
             this.cbxBenhVien.Size = new System.Drawing.Size(244, 26);
-            this.cbxBenhVien.TabIndex = 20;
+            this.cbxBenhVien.TabIndex = 11;
             // 
             // label11
             // 
@@ -349,6 +401,54 @@
             this.label11.Size = new System.Drawing.Size(70, 17);
             this.label11.TabIndex = 1;
             this.label11.Text = "Bệnh viện:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.dgvCHITIETCAPTHUOCMain);
+            this.groupBox5.Location = new System.Drawing.Point(831, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(456, 209);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Cấp thuốc";
+            // 
+            // dgvCHITIETCAPTHUOCMain
+            // 
+            this.dgvCHITIETCAPTHUOCMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCHITIETCAPTHUOCMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvCHITIETCAPTHUOCMain.MainView = this.dgvCHITIETCAPTHUOC;
+            this.dgvCHITIETCAPTHUOCMain.Name = "dgvCHITIETCAPTHUOCMain";
+            this.dgvCHITIETCAPTHUOCMain.Size = new System.Drawing.Size(450, 186);
+            this.dgvCHITIETCAPTHUOCMain.TabIndex = 3;
+            this.dgvCHITIETCAPTHUOCMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvCHITIETCAPTHUOC});
+            // 
+            // dgvCHITIETCAPTHUOC
+            // 
+            this.dgvCHITIETCAPTHUOC.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvCHITIETCAPTHUOC.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvCHITIETCAPTHUOC.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvCHITIETCAPTHUOC.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvCHITIETCAPTHUOC.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvCHITIETCAPTHUOC.Appearance.Row.Options.UseFont = true;
+            this.dgvCHITIETCAPTHUOC.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvCHITIETCAPTHUOC.ColumnPanelRowHeight = 30;
+            this.dgvCHITIETCAPTHUOC.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvCHITIETCAPTHUOC.GridControl = this.dgvCHITIETCAPTHUOCMain;
+            this.dgvCHITIETCAPTHUOC.Name = "dgvCHITIETCAPTHUOC";
+            this.dgvCHITIETCAPTHUOC.OptionsBehavior.Editable = false;
+            this.dgvCHITIETCAPTHUOC.OptionsBehavior.ReadOnly = true;
+            this.dgvCHITIETCAPTHUOC.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvCHITIETCAPTHUOC.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvCHITIETCAPTHUOC.OptionsCustomization.AllowFilter = false;
+            this.dgvCHITIETCAPTHUOC.OptionsCustomization.AllowGroup = false;
+            this.dgvCHITIETCAPTHUOC.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvCHITIETCAPTHUOC.OptionsFind.AllowFindPanel = false;
+            this.dgvCHITIETCAPTHUOC.OptionsView.ShowGroupPanel = false;
+            this.dgvCHITIETCAPTHUOC.PaintStyleName = "UltraFlat";
+            this.dgvCHITIETCAPTHUOC.RowHeight = 30;
             // 
             // groupDieuTriTaiTuyen
             // 
@@ -383,7 +483,7 @@
             this.dateThoiGianRa.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateThoiGianRa.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateThoiGianRa.Size = new System.Drawing.Size(157, 26);
-            this.dateThoiGianRa.TabIndex = 24;
+            this.dateThoiGianRa.TabIndex = 9;
             // 
             // dateThoiGianVao
             // 
@@ -403,7 +503,7 @@
             this.dateThoiGianVao.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateThoiGianVao.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateThoiGianVao.Size = new System.Drawing.Size(157, 26);
-            this.dateThoiGianVao.TabIndex = 23;
+            this.dateThoiGianVao.TabIndex = 8;
             // 
             // label7
             // 
@@ -423,7 +523,7 @@
             this.txtPhuongPhap.Properties.Appearance.Options.UseFont = true;
             this.txtPhuongPhap.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtPhuongPhap.Size = new System.Drawing.Size(257, 81);
-            this.txtPhuongPhap.TabIndex = 21;
+            this.txtPhuongPhap.TabIndex = 10;
             // 
             // label8
             // 
@@ -443,17 +543,18 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Phương pháp:";
             // 
-            // simpleButton1
+            // btnLuuThongTin
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(207, 500);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(207, 44);
-            this.simpleButton1.TabIndex = 15;
-            this.simpleButton1.Text = "Lưu";
+            this.btnLuuThongTin.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuuThongTin.Appearance.Options.UseFont = true;
+            this.btnLuuThongTin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnLuuThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuThongTin.Image")));
+            this.btnLuuThongTin.Location = new System.Drawing.Point(207, 518);
+            this.btnLuuThongTin.Name = "btnLuuThongTin";
+            this.btnLuuThongTin.Size = new System.Drawing.Size(207, 34);
+            this.btnLuuThongTin.TabIndex = 17;
+            this.btnLuuThongTin.Text = "Lưu thông tin";
+            this.btnLuuThongTin.Click += new System.EventHandler(this.btnLuuThongTin_Click);
             // 
             // btnThem
             // 
@@ -461,11 +562,12 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(18, 500);
+            this.btnThem.Location = new System.Drawing.Point(18, 478);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(183, 44);
+            this.btnThem.Size = new System.Drawing.Size(183, 34);
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Lượt khám mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
             // 
@@ -475,7 +577,7 @@
             this.groupBox2.Controls.Add(this.cbxBenh);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(18, 274);
+            this.groupBox2.Location = new System.Drawing.Point(18, 260);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(396, 209);
             this.groupBox2.TabIndex = 13;
@@ -486,7 +588,6 @@
             // 
             this.cbxCachGiaiQuyet.Location = new System.Drawing.Point(133, 74);
             this.cbxCachGiaiQuyet.Name = "cbxCachGiaiQuyet";
-            this.cbxCachGiaiQuyet.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.cbxCachGiaiQuyet.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.cbxCachGiaiQuyet.Properties.Appearance.Options.UseFont = true;
             this.cbxCachGiaiQuyet.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -495,9 +596,14 @@
             this.cbxCachGiaiQuyet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxCachGiaiQuyet.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxCachGiaiQuyet.Properties.ShowHeader = false;
-            this.cbxCachGiaiQuyet.Size = new System.Drawing.Size(244, 26);
-            this.cbxCachGiaiQuyet.TabIndex = 23;
+            this.cbxCachGiaiQuyet.Properties.Items.AddRange(new object[] {
+            "Phát thuốc tại đơn vị",
+            "Điều trị tại bệnh xá",
+            "Điều trị tại tuyến trên"});
+            this.cbxCachGiaiQuyet.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxCachGiaiQuyet.Size = new System.Drawing.Size(219, 26);
+            this.cbxCachGiaiQuyet.TabIndex = 6;
+            this.cbxCachGiaiQuyet.SelectedIndexChanged += new System.EventHandler(this.cbxCachGiaiQuyet_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -517,7 +623,7 @@
             this.txtKetLuan.Properties.Appearance.Options.UseFont = true;
             this.txtKetLuan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtKetLuan.Size = new System.Drawing.Size(285, 81);
-            this.txtKetLuan.TabIndex = 21;
+            this.txtKetLuan.TabIndex = 7;
             // 
             // cbxBenh
             // 
@@ -534,7 +640,7 @@
             this.cbxBenh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxBenh.Properties.ShowHeader = false;
             this.cbxBenh.Size = new System.Drawing.Size(244, 26);
-            this.cbxBenh.TabIndex = 20;
+            this.cbxBenh.TabIndex = 5;
             // 
             // label5
             // 
@@ -594,7 +700,7 @@
             this.cbxBenhNhan.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxBenhNhan.Properties.ShowHeader = false;
             this.cbxBenhNhan.Size = new System.Drawing.Size(225, 26);
-            this.cbxBenhNhan.TabIndex = 19;
+            this.cbxBenhNhan.TabIndex = 2;
             // 
             // cbxBacSi
             // 
@@ -611,7 +717,7 @@
             this.cbxBacSi.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxBacSi.Properties.ShowHeader = false;
             this.cbxBacSi.Size = new System.Drawing.Size(225, 26);
-            this.cbxBacSi.TabIndex = 18;
+            this.cbxBacSi.TabIndex = 1;
             // 
             // dateThoiGianKham
             // 
@@ -631,7 +737,7 @@
             this.dateThoiGianKham.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateThoiGianKham.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateThoiGianKham.Size = new System.Drawing.Size(157, 26);
-            this.dateThoiGianKham.TabIndex = 17;
+            this.dateThoiGianKham.TabIndex = 3;
             // 
             // label3
             // 
@@ -660,19 +766,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bác sĩ:";
             // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton6.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(205, 118);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(172, 34);
-            this.simpleButton6.TabIndex = 27;
-            this.simpleButton6.Text = "In giấy giới thiệu";
-            // 
             // ucKhamThuongXuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,19 +773,23 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucKhamThuongXuyen";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucKhamThuongXuyen_Load);
             this.panel1.ResumeLayout(false);
+            this.groupDieuTriTaiDonVi.ResumeLayout(false);
+            this.groupDieuTriTaiDonVi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).EndInit();
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMuonVatTuMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMuonVatTu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETMUONVATTUMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETMUONVATTU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChiPhiKham.Properties)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapThuocMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapThuoc)).EndInit();
             this.groupChuyenLenTuyenTren.ResumeLayout(false);
             this.groupChuyenLenTuyenTren.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianChuyen.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianChuyen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhVien.Properties)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETCAPTHUOCMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCHITIETCAPTHUOC)).EndInit();
             this.groupDieuTriTaiTuyen.ResumeLayout(false);
             this.groupDieuTriTaiTuyen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianRa.Properties.CalendarTimeProperties)).EndInit();
@@ -718,7 +815,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLuuThongTin;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.MemoEdit txtKetLuan;
@@ -732,7 +829,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.LookUpEdit cbxCachGiaiQuyet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupDieuTriTaiTuyen;
         private System.Windows.Forms.Label label7;
@@ -750,14 +846,21 @@
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.TextEdit txtChiPhiKham;
         private System.Windows.Forms.GroupBox groupBox6;
-        private DevExpress.XtraGrid.GridControl dgvCapThuocMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvCapThuoc;
-        private DevExpress.XtraGrid.GridControl dgvMuonVatTuMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvMuonVatTu;
+        private DevExpress.XtraGrid.GridControl dgvCHITIETCAPTHUOCMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvCHITIETCAPTHUOC;
+        private DevExpress.XtraGrid.GridControl dgvCHITIETMUONVATTUMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvCHITIETMUONVATTU;
         private DevExpress.XtraEditors.SimpleButton btnThuHoiThuoc;
         private DevExpress.XtraEditors.SimpleButton btnCapThemThuoc;
         private DevExpress.XtraEditors.SimpleButton btnTraVatTu;
         private DevExpress.XtraEditors.SimpleButton btnMuonThemVatTu;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btnInGiayGioiThieu;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxCachGiaiQuyet;
+        private DevExpress.XtraEditors.SimpleButton btnHoanThanhNhap;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private System.Windows.Forms.GroupBox groupDieuTriTaiDonVi;
+        private System.Windows.Forms.Label label14;
+        private DevExpress.XtraEditors.MemoEdit txtTrieuChung;
     }
 }

@@ -197,10 +197,10 @@ namespace QuanLyBenhXa.GUI
             if (ThamSoHeThong.curBacsi.QUYEN == 1)
             {
                 // tài khoản bác sĩ quản trị
+                ribonPublic.Visible = true;
                 ribonAdmin.Visible = true;
                 ribonTaiKhoan.Visible = true;
                 ribonThongKe.Visible = true;
-                ribonPublic.Visible = true;
                 pageAdmin.Visible = true;
                 return;
             }
