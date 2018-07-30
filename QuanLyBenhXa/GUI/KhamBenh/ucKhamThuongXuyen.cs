@@ -34,9 +34,28 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private CAPTHUOC capthuoc = ThamSoHeThong.capthuoc;
         private MUONVATTU muonvattu = ThamSoHeThong.muonvattu;
 
+        // mode 
+        private int mode = 0;
+
         #region Hàm khởi tạo
         public ucKhamThuongXuyen()
         {
+            InitializeComponent();
+        }
+
+        public ucKhamThuongXuyen(KHAMTHUONGXUYEN _khamthuongxuyen)
+        {
+            khamthuongxuyen = _khamthuongxuyen;;
+
+            try
+            {
+                capthuoc = CAPTHUOCService.GetAllEntities().Where(p => p.KHAMTHUONGXUYENID == _khamthuongxuyen.ID).FirstOrDefault();
+                muonvattu = MUONVATTUService.GetAllEntities().Where(p => p.KHAMTHUONGXUYENID == _khamthuongxuyen.ID).FirstOrDefault();
+            }
+            catch
+            {
+            }
+
             InitializeComponent();
         }
         #endregion

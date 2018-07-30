@@ -44,6 +44,8 @@
             this.PhanLoaiSucKhoe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).BeginInit();
@@ -57,13 +59,15 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtTimKiem);
+            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.dateDenNgay);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.dateTuNgay);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 17);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(650, 74);
+            this.groupBox4.Size = new System.Drawing.Size(650, 92);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
@@ -71,7 +75,7 @@
             // dateDenNgay
             // 
             this.dateDenNgay.EditValue = null;
-            this.dateDenNgay.Location = new System.Drawing.Point(427, 28);
+            this.dateDenNgay.Location = new System.Drawing.Point(423, 16);
             this.dateDenNgay.Name = "dateDenNgay";
             this.dateDenNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -91,7 +95,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(356, 32);
+            this.label6.Location = new System.Drawing.Point(352, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 18;
@@ -100,7 +104,7 @@
             // dateTuNgay
             // 
             this.dateTuNgay.EditValue = null;
-            this.dateTuNgay.Location = new System.Drawing.Point(127, 28);
+            this.dateTuNgay.Location = new System.Drawing.Point(123, 16);
             this.dateTuNgay.Name = "dateTuNgay";
             this.dateTuNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -120,7 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 32);
+            this.label5.Location = new System.Drawing.Point(60, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 16;
@@ -129,9 +133,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvKHAMDINHKIMain);
-            this.groupBox1.Location = new System.Drawing.Point(12, 97);
+            this.groupBox1.Location = new System.Drawing.Point(12, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1269, 444);
+            this.groupBox1.Size = new System.Drawing.Size(1269, 426);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách khám định kì";
@@ -142,7 +146,7 @@
             this.dgvKHAMDINHKIMain.Location = new System.Drawing.Point(3, 20);
             this.dgvKHAMDINHKIMain.MainView = this.dgvKHAMDINHKI;
             this.dgvKHAMDINHKIMain.Name = "dgvKHAMDINHKIMain";
-            this.dgvKHAMDINHKIMain.Size = new System.Drawing.Size(1263, 421);
+            this.dgvKHAMDINHKIMain.Size = new System.Drawing.Size(1263, 403);
             this.dgvKHAMDINHKIMain.TabIndex = 5;
             this.dgvKHAMDINHKIMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvKHAMDINHKI});
@@ -249,6 +253,23 @@
             this.btnChiTiet.Text = "Chi tiết";
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(123, 54);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
+            this.txtTimKiem.TabIndex = 23;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Tìm kiếm";
+            // 
             // ucThongKeKhamDinhKi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +308,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn BenhNhan;
         private DevExpress.XtraGrid.Columns.GridColumn PhanLoaiSucKhoe;
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label1;
     }
 }

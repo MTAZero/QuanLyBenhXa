@@ -40,7 +40,7 @@
             this.panelMain.Size = new System.Drawing.Size(1289, 556);
             this.panelMain.TabIndex = 0;
             // 
-            // FrmChiTietKhamDinhKi
+            // FrmChiTietKhamThuongXuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -48,9 +48,9 @@
             this.Controls.Add(this.panelMain);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmChiTietKhamDinhKi";
+            this.Name = "FrmChiTietKhamThuongXuyen";
             this.Resizable = false;
-            this.Text = "CHI TIẾT KHÁM ĐỊNH KÌ";
+            this.Text = "CHI TIẾT KHÁM THƯỜNG XUYÊN";
             this.ResumeLayout(false);
 
         }

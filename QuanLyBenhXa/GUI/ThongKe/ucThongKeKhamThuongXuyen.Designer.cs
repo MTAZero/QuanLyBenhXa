@@ -45,6 +45,8 @@
             this.BenhNhan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Benh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CachGiaiQuyet = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -75,7 +77,7 @@
             this.btnChiTiet.Appearance.Options.UseFont = true;
             this.btnChiTiet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
-            this.btnChiTiet.Location = new System.Drawing.Point(1184, 61);
+            this.btnChiTiet.Location = new System.Drawing.Point(1187, 88);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(93, 30);
             this.btnChiTiet.TabIndex = 24;
@@ -84,13 +86,15 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtTimKiem);
+            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.dateDenNgay);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.dateTuNgay);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 17);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(641, 74);
+            this.groupBox4.Size = new System.Drawing.Size(703, 90);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
@@ -98,7 +102,7 @@
             // dateDenNgay
             // 
             this.dateDenNgay.EditValue = null;
-            this.dateDenNgay.Location = new System.Drawing.Point(413, 30);
+            this.dateDenNgay.Location = new System.Drawing.Point(420, 16);
             this.dateDenNgay.Name = "dateDenNgay";
             this.dateDenNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -118,7 +122,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(342, 34);
+            this.label6.Location = new System.Drawing.Point(349, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 18;
@@ -127,7 +131,7 @@
             // dateTuNgay
             // 
             this.dateTuNgay.EditValue = null;
-            this.dateTuNgay.Location = new System.Drawing.Point(113, 30);
+            this.dateTuNgay.Location = new System.Drawing.Point(120, 16);
             this.dateTuNgay.Name = "dateTuNgay";
             this.dateTuNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -147,7 +151,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 34);
+            this.label5.Location = new System.Drawing.Point(57, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 16;
@@ -156,9 +160,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvKHAMTHUONGXUYENMain);
-            this.groupBox1.Location = new System.Drawing.Point(12, 97);
+            this.groupBox1.Location = new System.Drawing.Point(12, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1268, 444);
+            this.groupBox1.Size = new System.Drawing.Size(1268, 428);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách khám thường xuyên";
@@ -169,7 +173,7 @@
             this.dgvKHAMTHUONGXUYENMain.Location = new System.Drawing.Point(3, 20);
             this.dgvKHAMTHUONGXUYENMain.MainView = this.dgvKHAMTHUONGXUYEN;
             this.dgvKHAMTHUONGXUYENMain.Name = "dgvKHAMTHUONGXUYENMain";
-            this.dgvKHAMTHUONGXUYENMain.Size = new System.Drawing.Size(1262, 421);
+            this.dgvKHAMTHUONGXUYENMain.Size = new System.Drawing.Size(1262, 405);
             this.dgvKHAMTHUONGXUYENMain.TabIndex = 5;
             this.dgvKHAMTHUONGXUYENMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvKHAMTHUONGXUYEN});
@@ -260,6 +264,23 @@
             this.CachGiaiQuyet.VisibleIndex = 5;
             this.CachGiaiQuyet.Width = 131;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Tìm kiếm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(120, 54);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
+            this.txtTimKiem.TabIndex = 21;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
             // ucThongKeKhamThuongXuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +321,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn Benh;
         private DevExpress.XtraGrid.Columns.GridColumn CachGiaiQuyet;
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label label1;
     }
 }

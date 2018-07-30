@@ -16,16 +16,16 @@ namespace QuanLyBenhXa.GUI.ThongKe
     public partial class FrmChiTietKhamThuongXuyen : MetroForm
     {
         // service 
-        private KHAMDINHKIFactory KHAMDINHKIService = new KHAMDINHKIFactory();
+        private KHAMTHUONGXUYENFactory KHAMTHUONGXUYENService = new KHAMTHUONGXUYENFactory();
 
         #region Hàm khởi tạo
-        public FrmChiTietKhamThuongXuyen(int _khamdinhkiid)
+        public FrmChiTietKhamThuongXuyen(int _id)
         {
             InitializeComponent();
 
-            KHAMDINHKI khamdinhki = KHAMDINHKIService.GetByPrimaryKey(new KHAMDINHKIKeys(_khamdinhkiid));
+            KHAMTHUONGXUYEN khamthuongxuyen = KHAMTHUONGXUYENService.GetByPrimaryKey(new KHAMTHUONGXUYENKeys(_id));
             panelMain.Controls.Clear();
-            ucKhamDinhKi uc = new ucKhamDinhKi(khamdinhki, 1);
+            ucKhamThuongXuyen uc = new ucKhamThuongXuyen(khamthuongxuyen);
             panelMain.Controls.Add(uc);
             uc.Show();
         }

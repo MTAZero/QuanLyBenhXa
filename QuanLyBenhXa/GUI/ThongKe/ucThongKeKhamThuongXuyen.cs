@@ -45,17 +45,27 @@ namespace QuanLyBenhXa.GUI.ThongKe
             try
             {
                 int stt = 0;
+                string text = txtTimKiem.Text.ToUpper();
                 var listKhamThuongXuyen = KHAMTHUONGXUYENService.GetAllEntities().ToList()
                                             .Where(p=>p.THOIGIAN >= dateTuNgay.DateTime && p.THOIGIAN<=dateDenNgay.DateTime)
                                             .Select(p => new
                                             {
                                                 ID = p.ID,
-                                                STT = ++stt,
                                                 Ngay = ((DateTime)p.THOIGIAN).ToString("dd/MM/yyyy"),
                                                 BacSi = BACSISerice.GetAllEntities().Where(z=>z.ID == p.BACSIID).FirstOrDefault().HOTEN,
                                                 BenhNhan = BENHNHANService.GetAllEntities().Where(z=>z.ID == p.BENHNHANID).FirstOrDefault().HOTEN,
                                                 Benh = BENHService.GetAllEntities().Where(z=>z.ID == p.BENHID).FirstOrDefault().TEN,
                                                 CachGiaiQuyet = CachGiaiQuyetStr((int)p.CACHGIAIQUYET)
+                                            })
+                                            .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.Benh.ToUpper().Contains(text) || p.CachGiaiQuyet.ToUpper().Contains(text))
+                                            .Select(p=> new {
+                                                ID = p.ID,
+                                                Ngay = p.Ngay,
+                                                BacSi = p.BacSi,
+                                                BenhNhan = p.BenhNhan,
+                                                Benh = p.Benh,
+                                                CachGiaiQuyet = p.CachGiaiQuyet,
+                                                STT = ++stt
                                             })
                                             .ToList();
                 dgvKHAMTHUONGXUYENMain.DataSource = listKhamThuongXuyen;
@@ -90,6 +100,11 @@ namespace QuanLyBenhXa.GUI.ThongKe
             {
                 MessageBox.Show("Chưa có phiếu khám thường xuyên nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LoadDgvKHAMTHUONGXUYEN();
         }
     }
 }

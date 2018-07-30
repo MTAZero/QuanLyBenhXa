@@ -38,16 +38,25 @@ namespace QuanLyBenhXa.GUI.ThongKe
             try
             {
                 int stt = 0;
+                string text = txtTimKiem.Text.ToUpper();
                 dgvKHAMDINHKIMain.DataSource = KHAMDINHKIService.GetAllEntities().ToList()
                                                 .Where(p=>p.THOIGIANKHAM>=dateTuNgay.DateTime && p.THOIGIANKHAM<= dateDenNgay.DateTime)
                                                 .Select(p => new
                                                 {
-                                                    ID = p.ID,
-                                                    STT = ++stt,
+                                                    ID = p.ID,     
                                                     Ngay = ((DateTime)p.THOIGIANKHAM).ToString("dd/MM/yyyy"),
                                                     BacSi = BACSIService.GetAllEntities().Where(z => z.ID == p.BACSIID).FirstOrDefault().HOTEN,
                                                     BenhNhan = BENHNHANService.GetAllEntities().Where(z => z.ID == p.BENHNHANID).FirstOrDefault().HOTEN,
                                                     PhanLoaiSucKhoe = PHANLOAISUCKHOEService.GetAllEntities().Where(z=>z.ID == p.PHANLOAISUCKHOEID).FirstOrDefault().TEN
+                                                })
+                                                .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.PhanLoaiSucKhoe.ToUpper().Contains(text))
+                                                .Select(p=> new {
+                                                    ID = p.ID,
+                                                    Ngay = p.Ngay,
+                                                    BacSi = p.BacSi,
+                                                    BenhNhan = p.BenhNhan,
+                                                    PhanLoaiSucKhoe = p.PhanLoaiSucKhoe,
+                                                    STT = ++stt
                                                 })
                                                 .ToList();
             }
@@ -82,6 +91,11 @@ namespace QuanLyBenhXa.GUI.ThongKe
             {
                 MessageBox.Show("Chưa có phiếu khám định kì nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LoadDgvKHAMDINHKI();
         }
     }
 }
