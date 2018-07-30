@@ -33,32 +33,32 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.cbxLoaiThongKe = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DgvBENHMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvBENH = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvTHOIGIANMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvTHOIGIAN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SoLuongKham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxLoaiThongKe = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvBENHMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBENH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiThongKe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHOIGIANMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHOIGIAN)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,99 +76,129 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.chart1);
-            this.groupBox2.Location = new System.Drawing.Point(617, 97);
+            this.groupBox2.Controls.Add(this.chartThongKe);
+            this.groupBox2.Location = new System.Drawing.Point(701, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 441);
+            this.groupBox2.Size = new System.Drawing.Size(581, 441);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đồ thị";
             // 
-            // chart1
+            // chartThongKe
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartThongKe.ChartAreas.Add(chartArea1);
+            this.chartThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 20);
-            this.chart1.Name = "chart1";
+            this.chartThongKe.Legends.Add(legend1);
+            this.chartThongKe.Location = new System.Drawing.Point(3, 20);
+            this.chartThongKe.Name = "chartThongKe";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(447, 418);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chartThongKe.Series.Add(series1);
+            this.chartThongKe.Size = new System.Drawing.Size(575, 418);
+            this.chartThongKe.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbxLoaiThongKe);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.dateEdit2);
+            this.groupBox4.Controls.Add(this.dateDenNgay);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.dateEdit1);
+            this.groupBox4.Controls.Add(this.dateTuNgay);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 17);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1058, 74);
+            this.groupBox4.Size = new System.Drawing.Size(870, 74);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
             // 
-            // dateEdit2
+            // cbxLoaiThongKe
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Enabled = false;
-            this.dateEdit2.Location = new System.Drawing.Point(389, 28);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateEdit2.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxLoaiThongKe.Location = new System.Drawing.Point(622, 28);
+            this.cbxLoaiThongKe.Name = "cbxLoaiThongKe";
+            this.cbxLoaiThongKe.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxLoaiThongKe.Properties.Appearance.Options.UseFont = true;
+            this.cbxLoaiThongKe.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxLoaiThongKe.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxLoaiThongKe.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxLoaiThongKe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbxLoaiThongKe.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxLoaiThongKe.Properties.Items.AddRange(new object[] {
+            "Tuần",
+            "Tháng",
+            "Năm"});
+            this.cbxLoaiThongKe.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxLoaiThongKe.Size = new System.Drawing.Size(219, 26);
+            this.cbxLoaiThongKe.TabIndex = 21;
+            this.cbxLoaiThongKe.SelectedIndexChanged += new System.EventHandler(this.cbxLoaiThongKe_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(528, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Loại thống kê";
+            // 
+            // dateDenNgay
+            // 
+            this.dateDenNgay.EditValue = null;
+            this.dateDenNgay.Location = new System.Drawing.Point(347, 28);
+            this.dateDenNgay.Name = "dateDenNgay";
+            this.dateDenNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateDenNgay.Properties.Appearance.Options.UseFont = true;
+            this.dateDenNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateEdit2.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateEdit2.Size = new System.Drawing.Size(139, 26);
-            this.dateEdit2.TabIndex = 19;
+            this.dateDenNgay.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateDenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateDenNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateDenNgay.Size = new System.Drawing.Size(139, 26);
+            this.dateDenNgay.TabIndex = 19;
+            this.dateDenNgay.DateTimeChanged += new System.EventHandler(this.dateDenNgay_DateTimeChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(318, 32);
+            this.label6.Location = new System.Drawing.Point(276, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 18;
             this.label6.Text = "Đến ngày";
             // 
-            // dateEdit1
+            // dateTuNgay
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(126, 28);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTuNgay.EditValue = null;
+            this.dateTuNgay.Location = new System.Drawing.Point(99, 28);
+            this.dateTuNgay.Name = "dateTuNgay";
+            this.dateTuNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateTuNgay.Properties.Appearance.Options.UseFont = true;
+            this.dateTuNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTuNgay.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateTuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateEdit1.Size = new System.Drawing.Size(131, 26);
-            this.dateEdit1.TabIndex = 17;
+            this.dateTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateTuNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateTuNgay.Size = new System.Drawing.Size(131, 26);
+            this.dateTuNgay.TabIndex = 17;
+            this.dateTuNgay.DateTimeChanged += new System.EventHandler(this.dateDenNgay_DateTimeChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 32);
+            this.label5.Location = new System.Drawing.Point(36, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 16;
@@ -176,53 +206,53 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DgvBENHMain);
+            this.groupBox1.Controls.Add(this.dgvTHOIGIANMain);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(599, 444);
+            this.groupBox1.Size = new System.Drawing.Size(683, 444);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách thời gian";
             // 
-            // DgvBENHMain
+            // dgvTHOIGIANMain
             // 
-            this.DgvBENHMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvBENHMain.Location = new System.Drawing.Point(3, 20);
-            this.DgvBENHMain.MainView = this.dgvBENH;
-            this.DgvBENHMain.Name = "DgvBENHMain";
-            this.DgvBENHMain.Size = new System.Drawing.Size(593, 421);
-            this.DgvBENHMain.TabIndex = 5;
-            this.DgvBENHMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvBENH});
+            this.dgvTHOIGIANMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTHOIGIANMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvTHOIGIANMain.MainView = this.dgvTHOIGIAN;
+            this.dgvTHOIGIANMain.Name = "dgvTHOIGIANMain";
+            this.dgvTHOIGIANMain.Size = new System.Drawing.Size(677, 421);
+            this.dgvTHOIGIANMain.TabIndex = 5;
+            this.dgvTHOIGIANMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvTHOIGIAN});
             // 
-            // dgvBENH
+            // dgvTHOIGIAN
             // 
-            this.dgvBENH.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBENH.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvBENH.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvBENH.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvBENH.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvBENH.Appearance.Row.Options.UseFont = true;
-            this.dgvBENH.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvBENH.ColumnPanelRowHeight = 30;
-            this.dgvBENH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvTHOIGIAN.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvTHOIGIAN.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvTHOIGIAN.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvTHOIGIAN.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvTHOIGIAN.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvTHOIGIAN.Appearance.Row.Options.UseFont = true;
+            this.dgvTHOIGIAN.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvTHOIGIAN.ColumnPanelRowHeight = 30;
+            this.dgvTHOIGIAN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.STT,
             this.ThoiGian,
             this.SoLuongKham});
-            this.dgvBENH.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvBENH.GridControl = this.DgvBENHMain;
-            this.dgvBENH.Name = "dgvBENH";
-            this.dgvBENH.OptionsBehavior.Editable = false;
-            this.dgvBENH.OptionsBehavior.ReadOnly = true;
-            this.dgvBENH.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvBENH.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvBENH.OptionsCustomization.AllowFilter = false;
-            this.dgvBENH.OptionsCustomization.AllowGroup = false;
-            this.dgvBENH.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvBENH.OptionsFind.AllowFindPanel = false;
-            this.dgvBENH.OptionsView.ShowGroupPanel = false;
-            this.dgvBENH.PaintStyleName = "UltraFlat";
-            this.dgvBENH.RowHeight = 30;
+            this.dgvTHOIGIAN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvTHOIGIAN.GridControl = this.dgvTHOIGIANMain;
+            this.dgvTHOIGIAN.Name = "dgvTHOIGIAN";
+            this.dgvTHOIGIAN.OptionsBehavior.Editable = false;
+            this.dgvTHOIGIAN.OptionsBehavior.ReadOnly = true;
+            this.dgvTHOIGIAN.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvTHOIGIAN.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvTHOIGIAN.OptionsCustomization.AllowFilter = false;
+            this.dgvTHOIGIAN.OptionsCustomization.AllowGroup = false;
+            this.dgvTHOIGIAN.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvTHOIGIAN.OptionsFind.AllowFindPanel = false;
+            this.dgvTHOIGIAN.OptionsView.ShowGroupPanel = false;
+            this.dgvTHOIGIAN.PaintStyleName = "UltraFlat";
+            this.dgvTHOIGIAN.RowHeight = 30;
             // 
             // STT
             // 
@@ -250,36 +280,6 @@
             this.SoLuongKham.Visible = true;
             this.SoLuongKham.VisibleIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(605, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 17);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Loại thống kê";
-            // 
-            // cbxLoaiThongKe
-            // 
-            this.cbxLoaiThongKe.Location = new System.Drawing.Point(699, 28);
-            this.cbxLoaiThongKe.Name = "cbxLoaiThongKe";
-            this.cbxLoaiThongKe.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxLoaiThongKe.Properties.Appearance.Options.UseFont = true;
-            this.cbxLoaiThongKe.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxLoaiThongKe.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxLoaiThongKe.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxLoaiThongKe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxLoaiThongKe.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxLoaiThongKe.Properties.Items.AddRange(new object[] {
-            "Tuần",
-            "Tháng",
-            "Quý",
-            "Năm"});
-            this.cbxLoaiThongKe.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxLoaiThongKe.Size = new System.Drawing.Size(219, 26);
-            this.cbxLoaiThongKe.TabIndex = 21;
-            // 
             // ucThongKeLuotKham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,19 +287,20 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucThongKeLuotKham";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucThongKeLuotKham_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartThongKe)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvBENHMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBENH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiThongKe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHOIGIANMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTHOIGIAN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,19 +309,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dateDenNgay;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateTuNgay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl DgvBENHMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvBENH;
+        private DevExpress.XtraGrid.GridControl dgvTHOIGIANMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvTHOIGIAN;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn ThoiGian;
         private DevExpress.XtraGrid.Columns.GridColumn SoLuongKham;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.ComboBoxEdit cbxLoaiThongKe;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartThongKe;
     }
 }

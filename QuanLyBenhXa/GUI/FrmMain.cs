@@ -3,6 +3,7 @@ using QuanLyBenhXa.GUI.DanhMuc;
 using QuanLyBenhXa.GUI.HoatDongChinh;
 using QuanLyBenhXa.GUI.KhamBenh;
 using QuanLyBenhXa.GUI.TaiKhoan;
+using QuanLyBenhXa.GUI.ThongKe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -161,6 +162,62 @@ namespace QuanLyBenhXa.GUI
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
+
+        private void barTKBCKhamDinhKi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucThongKeKhamDinhKi uc = new ucThongKeKhamDinhKi();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barTKBCKhamThuongXuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucThongKeKhamThuongXuyen uc = new ucThongKeKhamThuongXuyen();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barTKBCBenhLy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucThongKeBenhLy uc = new ucThongKeBenhLy();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barTKBCLuotKham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucThongKeLuotKham uc = new ucThongKeLuotKham();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barDanhSachNhapThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucThongKeNhapThuoc uc = new ucThongKeNhapThuoc();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barDanhSachCapThuoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucCapThuoc uc = new ucCapThuoc();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barDanhSachMuonVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ucMuonVatTu uc = new ucMuonVatTu();
+            panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
         #endregion
 
         #region Load Form
@@ -249,5 +306,7 @@ namespace QuanLyBenhXa.GUI
             FrmDoiMatKhau form = new FrmDoiMatKhau();
             form.ShowDialog();
         }
+
+        
     }
 }

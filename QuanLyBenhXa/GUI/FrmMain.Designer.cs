@@ -60,6 +60,7 @@
             this.barDanhSachNhapThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.barDanhSachCapThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.barDanhSachMuonVatTu = new DevExpress.XtraBars.BarButtonItem();
+            this.barTKBCKhamThuongXuyen = new DevExpress.XtraBars.BarButtonItem();
             this.ribonPublic = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pageAdmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -75,7 +76,6 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barTKBCKhamThuongXuyen = new DevExpress.XtraBars.BarButtonItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -234,6 +234,7 @@
             this.barTKBCKhamDinhKi.Id = 9;
             this.barTKBCKhamDinhKi.Name = "barTKBCKhamDinhKi";
             this.barTKBCKhamDinhKi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barTKBCKhamDinhKi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTKBCKhamDinhKi_ItemClick);
             // 
             // barTKBCBenhLy
             // 
@@ -242,6 +243,7 @@
             this.barTKBCBenhLy.Id = 10;
             this.barTKBCBenhLy.Name = "barTKBCBenhLy";
             this.barTKBCBenhLy.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barTKBCBenhLy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTKBCBenhLy_ItemClick);
             // 
             // barTKBCLuotKham
             // 
@@ -250,6 +252,7 @@
             this.barTKBCLuotKham.Id = 11;
             this.barTKBCLuotKham.Name = "barTKBCLuotKham";
             this.barTKBCLuotKham.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barTKBCLuotKham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTKBCLuotKham_ItemClick);
             // 
             // barKhamDinhKi
             // 
@@ -366,6 +369,7 @@
             this.barDanhSachNhapThuoc.Id = 26;
             this.barDanhSachNhapThuoc.Name = "barDanhSachNhapThuoc";
             this.barDanhSachNhapThuoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barDanhSachNhapThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDanhSachNhapThuoc_ItemClick);
             // 
             // barDanhSachCapThuoc
             // 
@@ -374,6 +378,7 @@
             this.barDanhSachCapThuoc.Id = 28;
             this.barDanhSachCapThuoc.Name = "barDanhSachCapThuoc";
             this.barDanhSachCapThuoc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barDanhSachCapThuoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDanhSachCapThuoc_ItemClick);
             // 
             // barDanhSachMuonVatTu
             // 
@@ -382,6 +387,16 @@
             this.barDanhSachMuonVatTu.Id = 29;
             this.barDanhSachMuonVatTu.Name = "barDanhSachMuonVatTu";
             this.barDanhSachMuonVatTu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barDanhSachMuonVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDanhSachMuonVatTu_ItemClick);
+            // 
+            // barTKBCKhamThuongXuyen
+            // 
+            this.barTKBCKhamThuongXuyen.Caption = "Khám thường xuyên";
+            this.barTKBCKhamThuongXuyen.Glyph = ((System.Drawing.Image)(resources.GetObject("barTKBCKhamThuongXuyen.Glyph")));
+            this.barTKBCKhamThuongXuyen.Id = 31;
+            this.barTKBCKhamThuongXuyen.Name = "barTKBCKhamThuongXuyen";
+            this.barTKBCKhamThuongXuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barTKBCKhamThuongXuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTKBCKhamThuongXuyen_ItemClick);
             // 
             // ribonPublic
             // 
@@ -497,14 +512,6 @@
             this.barButtonItem9.Id = 11;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barTKBCKhamThuongXuyen
-            // 
-            this.barTKBCKhamThuongXuyen.Caption = "Khám thường xuyên";
-            this.barTKBCKhamThuongXuyen.Glyph = ((System.Drawing.Image)(resources.GetObject("barTKBCKhamThuongXuyen.Glyph")));
-            this.barTKBCKhamThuongXuyen.Id = 31;
-            this.barTKBCKhamThuongXuyen.Name = "barTKBCKhamThuongXuyen";
-            this.barTKBCKhamThuongXuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FrmMain
             // 

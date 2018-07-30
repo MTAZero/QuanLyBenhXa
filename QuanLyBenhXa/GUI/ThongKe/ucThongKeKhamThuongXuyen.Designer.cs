@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvKHAMDINHKIMain = new DevExpress.XtraGrid.GridControl();
-            this.dgvKHAMDINHKI = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvKHAMTHUONGXUYENMain = new DevExpress.XtraGrid.GridControl();
+            this.dgvKHAMTHUONGXUYEN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ngay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BacSi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,13 +45,13 @@
             this.CachGiaiQuyet = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMDINHKIMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMDINHKI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMTHUONGXUYENMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMTHUONGXUYEN)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,70 +68,70 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dateEdit2);
+            this.groupBox4.Controls.Add(this.dateDenNgay);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.dateEdit1);
+            this.groupBox4.Controls.Add(this.dateTuNgay);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 17);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1057, 74);
+            this.groupBox4.Size = new System.Drawing.Size(641, 74);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
             // 
-            // dateEdit2
+            // dateDenNgay
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Enabled = false;
-            this.dateEdit2.Location = new System.Drawing.Point(553, 26);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateEdit2.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateDenNgay.EditValue = null;
+            this.dateDenNgay.Location = new System.Drawing.Point(413, 30);
+            this.dateDenNgay.Name = "dateDenNgay";
+            this.dateDenNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateDenNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateDenNgay.Properties.Appearance.Options.UseFont = true;
+            this.dateDenNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateDenNgay.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateDenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateEdit2.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateEdit2.Size = new System.Drawing.Size(185, 26);
-            this.dateEdit2.TabIndex = 19;
+            this.dateDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateDenNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateDenNgay.Size = new System.Drawing.Size(185, 26);
+            this.dateDenNgay.TabIndex = 19;
+            this.dateDenNgay.DateTimeChanged += new System.EventHandler(this.dateDenNgay_DateTimeChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(482, 30);
+            this.label6.Location = new System.Drawing.Point(342, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 18;
             this.label6.Text = "Đến ngày";
             // 
-            // dateEdit1
+            // dateTuNgay
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(253, 26);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTuNgay.EditValue = null;
+            this.dateTuNgay.Location = new System.Drawing.Point(113, 30);
+            this.dateTuNgay.Name = "dateTuNgay";
+            this.dateTuNgay.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateTuNgay.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateTuNgay.Properties.Appearance.Options.UseFont = true;
+            this.dateTuNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTuNgay.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateTuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateEdit1.Size = new System.Drawing.Size(185, 26);
-            this.dateEdit1.TabIndex = 17;
+            this.dateTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateTuNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateTuNgay.Size = new System.Drawing.Size(185, 26);
+            this.dateTuNgay.TabIndex = 17;
+            this.dateTuNgay.DateTimeChanged += new System.EventHandler(this.dateDenNgay_DateTimeChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 30);
+            this.label5.Location = new System.Drawing.Point(50, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 16;
@@ -139,56 +139,56 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvKHAMDINHKIMain);
+            this.groupBox1.Controls.Add(this.dgvKHAMTHUONGXUYENMain);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1057, 444);
+            this.groupBox1.Size = new System.Drawing.Size(1268, 444);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách khám thường xuyên";
             // 
-            // dgvKHAMDINHKIMain
+            // dgvKHAMTHUONGXUYENMain
             // 
-            this.dgvKHAMDINHKIMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKHAMDINHKIMain.Location = new System.Drawing.Point(3, 20);
-            this.dgvKHAMDINHKIMain.MainView = this.dgvKHAMDINHKI;
-            this.dgvKHAMDINHKIMain.Name = "dgvKHAMDINHKIMain";
-            this.dgvKHAMDINHKIMain.Size = new System.Drawing.Size(1051, 421);
-            this.dgvKHAMDINHKIMain.TabIndex = 5;
-            this.dgvKHAMDINHKIMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvKHAMDINHKI});
+            this.dgvKHAMTHUONGXUYENMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvKHAMTHUONGXUYENMain.Location = new System.Drawing.Point(3, 20);
+            this.dgvKHAMTHUONGXUYENMain.MainView = this.dgvKHAMTHUONGXUYEN;
+            this.dgvKHAMTHUONGXUYENMain.Name = "dgvKHAMTHUONGXUYENMain";
+            this.dgvKHAMTHUONGXUYENMain.Size = new System.Drawing.Size(1262, 421);
+            this.dgvKHAMTHUONGXUYENMain.TabIndex = 5;
+            this.dgvKHAMTHUONGXUYENMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvKHAMTHUONGXUYEN});
             // 
-            // dgvKHAMDINHKI
+            // dgvKHAMTHUONGXUYEN
             // 
-            this.dgvKHAMDINHKI.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvKHAMDINHKI.Appearance.HeaderPanel.Options.UseFont = true;
-            this.dgvKHAMDINHKI.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.dgvKHAMDINHKI.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dgvKHAMDINHKI.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
-            this.dgvKHAMDINHKI.Appearance.Row.Options.UseFont = true;
-            this.dgvKHAMDINHKI.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.dgvKHAMDINHKI.ColumnPanelRowHeight = 30;
-            this.dgvKHAMDINHKI.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvKHAMTHUONGXUYEN.Appearance.HeaderPanel.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvKHAMTHUONGXUYEN.Appearance.HeaderPanel.Options.UseFont = true;
+            this.dgvKHAMTHUONGXUYEN.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgvKHAMTHUONGXUYEN.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgvKHAMTHUONGXUYEN.Appearance.Row.Font = new System.Drawing.Font("Times New Roman", 11.25F);
+            this.dgvKHAMTHUONGXUYEN.Appearance.Row.Options.UseFont = true;
+            this.dgvKHAMTHUONGXUYEN.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.dgvKHAMTHUONGXUYEN.ColumnPanelRowHeight = 30;
+            this.dgvKHAMTHUONGXUYEN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.STT,
             this.Ngay,
             this.BacSi,
             this.BenhNhan,
             this.Benh,
             this.CachGiaiQuyet});
-            this.dgvKHAMDINHKI.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.dgvKHAMDINHKI.GridControl = this.dgvKHAMDINHKIMain;
-            this.dgvKHAMDINHKI.Name = "dgvKHAMDINHKI";
-            this.dgvKHAMDINHKI.OptionsBehavior.Editable = false;
-            this.dgvKHAMDINHKI.OptionsBehavior.ReadOnly = true;
-            this.dgvKHAMDINHKI.OptionsCustomization.AllowColumnMoving = false;
-            this.dgvKHAMDINHKI.OptionsCustomization.AllowColumnResizing = false;
-            this.dgvKHAMDINHKI.OptionsCustomization.AllowFilter = false;
-            this.dgvKHAMDINHKI.OptionsCustomization.AllowGroup = false;
-            this.dgvKHAMDINHKI.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.dgvKHAMDINHKI.OptionsFind.AllowFindPanel = false;
-            this.dgvKHAMDINHKI.OptionsView.ShowGroupPanel = false;
-            this.dgvKHAMDINHKI.PaintStyleName = "UltraFlat";
-            this.dgvKHAMDINHKI.RowHeight = 30;
+            this.dgvKHAMTHUONGXUYEN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.dgvKHAMTHUONGXUYEN.GridControl = this.dgvKHAMTHUONGXUYENMain;
+            this.dgvKHAMTHUONGXUYEN.Name = "dgvKHAMTHUONGXUYEN";
+            this.dgvKHAMTHUONGXUYEN.OptionsBehavior.Editable = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsBehavior.ReadOnly = true;
+            this.dgvKHAMTHUONGXUYEN.OptionsCustomization.AllowColumnMoving = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsCustomization.AllowColumnResizing = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsCustomization.AllowFilter = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsCustomization.AllowGroup = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.dgvKHAMTHUONGXUYEN.OptionsFind.AllowFindPanel = false;
+            this.dgvKHAMTHUONGXUYEN.OptionsView.ShowGroupPanel = false;
+            this.dgvKHAMTHUONGXUYEN.PaintStyleName = "UltraFlat";
+            this.dgvKHAMTHUONGXUYEN.RowHeight = 30;
             // 
             // STT
             // 
@@ -251,16 +251,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucThongKeKhamThuongXuyen";
             this.Size = new System.Drawing.Size(1298, 558);
+            this.Load += new System.EventHandler(this.ucThongKeKhamThuongXuyen_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTuNgay.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMDINHKIMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMDINHKI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMTHUONGXUYENMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHAMTHUONGXUYEN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,13 +270,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dateDenNgay;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateTuNgay;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraGrid.GridControl dgvKHAMDINHKIMain;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvKHAMDINHKI;
+        private DevExpress.XtraGrid.GridControl dgvKHAMTHUONGXUYENMain;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvKHAMTHUONGXUYEN;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn Ngay;
         private DevExpress.XtraGrid.Columns.GridColumn BacSi;
