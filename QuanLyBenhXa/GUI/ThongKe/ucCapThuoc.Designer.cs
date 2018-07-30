@@ -340,6 +340,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(498, 24);
             this.txtTimKiem.TabIndex = 21;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // ucCapThuoc
             // 

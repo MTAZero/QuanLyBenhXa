@@ -59,7 +59,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
 
                     if (kt >= dateDenNgay.DateTime) kt = dateDenNgay.DateTime;
 
-                    string thoigian = tg.ToString("dd/MM/yyyy") + " - " + kt.ToString("dd/MM/yyyy");
+                    string thoigian = tg.ToString("dd/MM/yyyy");
                     int soluong = KHAMTHUONGXUYENService.GetAllEntities().ToList()
                                     .Where(p => p.THOIGIAN >= tg && p.THOIGIAN <= kt)
                                     .ToList()

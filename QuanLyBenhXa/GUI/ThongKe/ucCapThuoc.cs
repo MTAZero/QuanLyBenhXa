@@ -56,6 +56,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                 .Select(p=> new {
                                                     STT = ++stt,
                                                     ID = p.ID,
+                                                    Ngay = p.Ngay,
                                                     BacSi = p.BacSi,
                                                     BenhNhan = p.BenhNhan,
                                                     Benh = p.Benh
@@ -107,9 +108,11 @@ namespace QuanLyBenhXa.GUI.ThongKe
         {
             LoadDgvCHITIETCAPTHUOC();
         }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LoadDgvCAPTHUOC();
+        }
         #endregion
-
-
-
     }
 }
