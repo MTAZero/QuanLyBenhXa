@@ -25,9 +25,19 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         // variable
         private KHAMDINHKI khamdinhki = ThamSoHeThong.khamdinhki;
 
+        // mode: 0: them, luu; 1: luu
+        private int mode = 0;
+
         #region Hàm khởi tạo
         public ucKhamDinhKi()
         {
+            InitializeComponent();
+        }
+
+        public ucKhamDinhKi(KHAMDINHKI _khamdinhki, int _mode)
+        {
+            khamdinhki = _khamdinhki;
+            mode = _mode;
             InitializeComponent();
         }
 
@@ -77,7 +87,14 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private void ucKhamDinhKi_Load(object sender, EventArgs e)
         {
             LoadInitControl();
-            LockControl();
+            if (mode == 0) LockControl();
+            if (mode == 1)
+            {
+                btnThem.Visible = false;
+                btnDong.Visible = false;
+                UpdateDetail();
+                UnlockControl();
+            }
         }
         #endregion
 
@@ -474,6 +491,124 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             txtCanLamSangKetQua.Text = "";
             txtCanLamSangGhiChu.Text = "";
         }
+        private void CapNhat()
+        {
+            try
+            {
+                KHAMDINHKI khamdinhki1 = GetKHAMDINHKIByForm();
+                KHAMCHUYENKHOA khamchuyenkhoa1 = GetKHAMCHUYENKHOAByForm();
+                KHAMCANLAMSANG khamcanlamsang1 = GetKHAMCANLAMSANGByForm();
+                KHAMTHELUC khamtheluc1 = GetKHAMTHELUCByForm();
+
+                khamdinhki1.ID = khamdinhki.ID;
+                khamdinhki1.KHAMCANLAMSANGID = khamdinhki.KHAMCANLAMSANGID;
+                khamdinhki1.KHAMTHELUCID = khamdinhki.KHAMTHELUCID;
+                khamdinhki1.KHAMCHUYENKHOAID = khamdinhki.KHAMCHUYENKHOAID;
+
+                khamchuyenkhoa1.ID = (int) khamdinhki.KHAMCHUYENKHOAID;
+                khamcanlamsang1.ID = (int)khamdinhki.KHAMCANLAMSANGID;
+                khamtheluc1.ID = (int)khamdinhki.KHAMTHELUCID;
+
+                KHAMDINHKIService.Update(khamdinhki1);
+                KHAMCHUYENKHOAService.Update(khamchuyenkhoa1);
+                KHAMCANLAMSANGService.Update(khamcanlamsang1);
+                KHAMTHELUCService.Update(khamtheluc1);
+            }
+            catch
+            {
+            }
+
+
+        }
+        private void UpdateDetailKhamDinhKi(KHAMDINHKI khamdinhki)
+        {
+            try
+            {
+                cbxBacSi.EditValue = khamdinhki.BACSIID;
+                cbxBenhNhan.EditValue = khamdinhki.BENHNHANID;
+                dateThoiGianKham.DateTime = (DateTime) khamdinhki.THOIGIANKHAM;
+                cbxPhanLoaiSucKhoe.EditValue = khamdinhki.PHANLOAISUCKHOEID;
+                txtKetLuan.Text = khamdinhki.KETLUAN;
+            }
+            catch
+            {
+            }
+        }
+
+        private void UpdateDetailKhamChuyenKhoa(KHAMCHUYENKHOA khamchuyenkhoa)
+        {
+            try
+            {
+                cbxBacSiKhamChuyenKhoa.EditValue = khamchuyenkhoa.BACSIID;
+                txtChuyenKhoaTai.Text = khamchuyenkhoa.TAI;
+                txtChuyenKhoaMui.Text = khamchuyenkhoa.MUI;
+                txtChuyenKhoaHong.Text = khamchuyenkhoa.HONG;
+                txtChuyenKhoaRang.Text = khamchuyenkhoa.RANG;
+                txtChuyenKhoaHam.Text = khamchuyenkhoa.HAM;
+                txtChuyenKhoaMat.Text = khamchuyenkhoa.MAT;
+                txtChuyenKhoaKhac.Text = khamchuyenkhoa.KHAC;
+                txtChuyenKhoaKetQua.Text = khamchuyenkhoa.GHICHU;
+            }
+            catch
+            {
+            }
+        }
+
+        private void UpdateDetailKhamTheLuc(KHAMTHELUC khamtheluc)
+        {
+            try
+            {
+                cbxBacSiTheLuc.EditValue = khamtheluc.BACSIID;
+                txtTheLucChieuCao.Text = khamtheluc.CHIEUCAO;
+                txtTheLucCanNang.Text = khamtheluc.CANNANG.ToString();
+                txtTheLucMach.Text = khamtheluc.MACH;
+                txtTheLucHuyetAp.Text = khamtheluc.HUYETAP;
+                txtTheLucGhiChu.Text = khamtheluc.GHICHU;
+                txtTheLucVongNguc.Text = khamtheluc.VONGNGUC.ToString();
+                txtTheLucNhietDo.Text = khamtheluc.NHIETDO.ToString();
+                txtTheLucKetQua.Text = khamtheluc.KETQUALAMSANG;
+            }
+            catch
+            {
+            }
+        }
+
+        private void UpdateDetailKhamCanLamSang(KHAMCANLAMSANG khamcanlamsang)
+        {
+            try
+            {
+                cbxBacSiCanLamSang.EditValue = khamcanlamsang.BACSIID;
+                txtCanLamSangMau.Text = khamcanlamsang.MAU;
+                txtCanLamSangXQuang.Text = khamcanlamsang.XQUANG;
+                txtCanLamSangNuocTieu.Text = khamcanlamsang.NUOCTIEU;
+                txtCanLamSangXetNghiemKhac.Text = khamcanlamsang.XETNGHIEMKHAC;
+                txtCanLamSangSieuAm.Text = khamcanlamsang.SIEUAM;
+                txtCanLamSangDienTim.Text = khamcanlamsang.DIENTIM;
+                txtCanLamSangKetQua.Text = khamcanlamsang.KETQUACANLAMSANG;
+                txtCanLamSangGhiChu.Text = khamcanlamsang.GHICHU;
+            }
+            catch
+            {
+            }
+        }
+
+        private void UpdateDetail()
+        {
+            try
+            {
+                UpdateDetailKhamDinhKi(khamdinhki);
+                KHAMCHUYENKHOA khamchuyenkhoa = KHAMCHUYENKHOAService.GetByPrimaryKey(new KHAMCHUYENKHOAKeys((int)khamdinhki.KHAMCHUYENKHOAID));
+                KHAMCANLAMSANG khamcanlamsang = KHAMCANLAMSANGService.GetByPrimaryKey(new KHAMCANLAMSANGKeys((int)khamdinhki.KHAMCANLAMSANGID));
+                KHAMTHELUC khamtheluc = KHAMTHELUCService.GetByPrimaryKey(new KHAMTHELUCKeys((int)khamdinhki.KHAMTHELUCID));
+
+                UpdateDetailKhamChuyenKhoa(khamchuyenkhoa);
+                UpdateDetailKhamCanLamSang(khamcanlamsang);
+                UpdateDetailKhamTheLuc(khamtheluc);
+            }
+            catch
+            {
+            }
+        }
         #endregion
 
         #region Sự kiện
@@ -489,26 +624,39 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             {
                 if (CheckKhamDinhKi())
                 {
-                    KHAMDINHKI khamdinhki = GetKHAMDINHKIByForm();
+                    KHAMDINHKI khamdinhki1 = GetKHAMDINHKIByForm();
                     KHAMCHUYENKHOA khamchuyenkhoa = GetKHAMCHUYENKHOAByForm();
                     KHAMCANLAMSANG khamcanlamsang = GetKHAMCANLAMSANGByForm();
                     KHAMTHELUC khamtheluc = GetKHAMTHELUCByForm();
 
-                    KHAMCHUYENKHOAService.Insert(khamchuyenkhoa);
-                    KHAMCANLAMSANGService.Insert(khamcanlamsang);
-                    KHAMTHELUCService.Insert(khamtheluc);
+                    if (khamdinhki.ID == 0)
+                    {
+                        KHAMCHUYENKHOAService.Insert(khamchuyenkhoa);
+                        KHAMCANLAMSANGService.Insert(khamcanlamsang);
+                        KHAMTHELUCService.Insert(khamtheluc);
 
-                    khamdinhki.KHAMCHUYENKHOAID = khamchuyenkhoa.ID;
-                    khamdinhki.KHAMTHELUCID = khamtheluc.ID;
-                    khamdinhki.KHAMCANLAMSANGID = khamcanlamsang.ID;
+                        khamdinhki1.KHAMCHUYENKHOAID = khamchuyenkhoa.ID;
+                        khamdinhki1.KHAMTHELUCID = khamtheluc.ID;
+                        khamdinhki1.KHAMCANLAMSANGID = khamcanlamsang.ID;
 
-                    KHAMDINHKIService.Insert(khamdinhki);
+                        KHAMDINHKIService.Insert(khamdinhki1);
 
-                    MessageBox.Show("Thêm thông tin khám định kì thành công",
+                        MessageBox.Show("Thêm thông tin khám định kì thành công",
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    LockControl();
+                        LockControl();
+                    }
+                    else
+                    {
+                        CapNhat();
+                        MessageBox.Show("Cập nhật thông tin khám định kì thành công",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    }
+
+                    
                 }
             }
             catch

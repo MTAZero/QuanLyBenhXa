@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucThongKeKhamThuongXuyen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnChiTiet);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,6 +68,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1298, 558);
             this.panel1.TabIndex = 2;
+            // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTiet.Appearance.Options.UseFont = true;
+            this.btnChiTiet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("btnChiTiet.Image")));
+            this.btnChiTiet.Location = new System.Drawing.Point(1184, 61);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(93, 30);
+            this.btnChiTiet.TabIndex = 24;
+            this.btnChiTiet.Text = "Chi tiết";
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // groupBox4
             // 
@@ -283,5 +299,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn BenhNhan;
         private DevExpress.XtraGrid.Columns.GridColumn Benh;
         private DevExpress.XtraGrid.Columns.GridColumn CachGiaiQuyet;
+        private DevExpress.XtraEditors.SimpleButton btnChiTiet;
     }
 }

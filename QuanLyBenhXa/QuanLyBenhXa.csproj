@@ -208,6 +208,18 @@
     <Compile Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.Designer.cs">
       <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThongKe\FrmChiTietKhamThuongXuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\FrmChiTietKhamThuongXuyen.Designer.cs">
+      <DependentUpon>FrmChiTietKhamThuongXuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongKe\FrmChiTietKhamDinhKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\FrmChiTietKhamDinhKi.Designer.cs">
+      <DependentUpon>FrmChiTietKhamDinhKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ThongKe\ucCapThuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +335,12 @@
     <EmbeddedResource Include="GUI\TaiKhoan\ucDanhSachTaiKhoan.resx">
       <DependentUpon>ucDanhSachTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\FrmChiTietKhamThuongXuyen.resx">
+      <DependentUpon>FrmChiTietKhamThuongXuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\FrmChiTietKhamDinhKi.resx">
+      <DependentUpon>FrmChiTietKhamDinhKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongKe\ucCapThuoc.resx">
       <DependentUpon>ucCapThuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +371,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -370,6 +389,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLyBenhXa.Business\QuanLyBenhXa.BusinessLayer.csproj">

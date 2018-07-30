@@ -76,8 +76,10 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
+            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +109,8 @@
             // 
             this.panelMain.Appearance.BackColor = System.Drawing.Color.White;
             this.panelMain.Appearance.Options.UseBackColor = true;
+            this.panelMain.ContentImage = global::QuanLyBenhXa.Properties.Resources.background;
+            this.panelMain.Controls.Add(this.label1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 140);
             this.panelMain.Name = "panelMain";
@@ -513,6 +517,17 @@
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(263, 524);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(772, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PHẦN MỀM QUẢN LÝ SỨC KHỎE QUÂN NHÂN V1.0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,11 +538,12 @@
             this.Name = "FrmMain";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
-            this.Text = "Quản lý bệnh xá";
+            this.Text = "Quản lý sức khỏe quân nhân";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).EndInit();
+            this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
 
@@ -581,5 +597,6 @@
         private DevExpress.XtraBars.BarButtonItem barDanhSachMuonVatTu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barTKBCKhamThuongXuyen;
+        private System.Windows.Forms.Label label1;
     }
 }

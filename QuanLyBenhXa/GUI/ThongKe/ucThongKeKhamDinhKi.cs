@@ -42,6 +42,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                 .Where(p=>p.THOIGIANKHAM>=dateTuNgay.DateTime && p.THOIGIANKHAM<= dateDenNgay.DateTime)
                                                 .Select(p => new
                                                 {
+                                                    ID = p.ID,
                                                     STT = ++stt,
                                                     Ngay = ((DateTime)p.THOIGIANKHAM).ToString("dd/MM/yyyy"),
                                                     BacSi = BACSIService.GetAllEntities().Where(z => z.ID == p.BACSIID).FirstOrDefault().HOTEN,
@@ -65,6 +66,22 @@ namespace QuanLyBenhXa.GUI.ThongKe
         private void dateTuNgay_DateTimeChanged(object sender, EventArgs e)
         {
             LoadDgvKHAMDINHKI();
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int khamdinhkiID = (int)dgvKHAMDINHKI.GetFocusedRowCellValue("ID");
+                FrmChiTietKhamDinhKi form = new FrmChiTietKhamDinhKi(khamdinhkiID);
+                form.ShowDialog();
+
+                LoadDgvKHAMDINHKI();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có phiếu khám định kì nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

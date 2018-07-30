@@ -163,11 +163,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 173);
+            this.label1.Location = new System.Drawing.Point(29, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 27);
+            this.label1.Size = new System.Drawing.Size(376, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ BỆNH XÁ";
+            this.label1.Text = "QUẢN LÝ SỨC KHỎE QUÂN NHÂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // defaultLookAndFeel1
