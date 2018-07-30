@@ -117,6 +117,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnInGiayGioiThieu);
             this.panel1.Controls.Add(this.groupDieuTriTaiDonVi);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnSua);
@@ -146,7 +147,7 @@
             // 
             this.groupDieuTriTaiDonVi.Controls.Add(this.txtTrieuChung);
             this.groupDieuTriTaiDonVi.Controls.Add(this.label14);
-            this.groupDieuTriTaiDonVi.Location = new System.Drawing.Point(429, 402);
+            this.groupDieuTriTaiDonVi.Location = new System.Drawing.Point(429, 347);
             this.groupDieuTriTaiDonVi.Name = "groupDieuTriTaiDonVi";
             this.groupDieuTriTaiDonVi.Size = new System.Drawing.Size(396, 110);
             this.groupDieuTriTaiDonVi.TabIndex = 23;
@@ -358,14 +359,13 @@
             // 
             // groupChuyenLenTuyenTren
             // 
-            this.groupChuyenLenTuyenTren.Controls.Add(this.btnInGiayGioiThieu);
             this.groupChuyenLenTuyenTren.Controls.Add(this.dateThoiGianChuyen);
             this.groupChuyenLenTuyenTren.Controls.Add(this.label10);
             this.groupChuyenLenTuyenTren.Controls.Add(this.cbxBenhVien);
             this.groupChuyenLenTuyenTren.Controls.Add(this.label11);
             this.groupChuyenLenTuyenTren.Location = new System.Drawing.Point(432, 227);
             this.groupChuyenLenTuyenTren.Name = "groupChuyenLenTuyenTren";
-            this.groupChuyenLenTuyenTren.Size = new System.Drawing.Size(396, 169);
+            this.groupChuyenLenTuyenTren.Size = new System.Drawing.Size(396, 114);
             this.groupChuyenLenTuyenTren.TabIndex = 18;
             this.groupChuyenLenTuyenTren.TabStop = false;
             this.groupChuyenLenTuyenTren.Text = "Chuyển lên tuyến trên";
@@ -377,7 +377,7 @@
             this.btnInGiayGioiThieu.Appearance.Options.UseFont = true;
             this.btnInGiayGioiThieu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnInGiayGioiThieu.Image = ((System.Drawing.Image)(resources.GetObject("btnInGiayGioiThieu.Image")));
-            this.btnInGiayGioiThieu.Location = new System.Drawing.Point(205, 118);
+            this.btnInGiayGioiThieu.Location = new System.Drawing.Point(429, 478);
             this.btnInGiayGioiThieu.Name = "btnInGiayGioiThieu";
             this.btnInGiayGioiThieu.Size = new System.Drawing.Size(172, 34);
             this.btnInGiayGioiThieu.TabIndex = 13;

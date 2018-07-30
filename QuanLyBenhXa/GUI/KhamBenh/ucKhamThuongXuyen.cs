@@ -229,7 +229,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
                 if (tg.CACHGIAIQUYET == 2)
                 {
-                    cbxBenhVien.ItemIndex = (int)tg.BENHNHANID;
+                    cbxBenhVien.EditValue = (int)tg.BENHVIENID;
                     dateThoiGianChuyen.DateTime = (DateTime)tg.THOIGIANCHUYEN;
                 }
 
@@ -267,7 +267,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
                 cbxBenhVien.Enabled = false;
                 dateThoiGianChuyen.Enabled = false;
-                btnInGiayGioiThieu.Enabled = false;
+                btnInGiayGioiThieu.Enabled = true;
 
                 txtTrieuChung.Enabled = false;
 
@@ -305,7 +305,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
                 cbxBenhVien.Enabled = true;
                 dateThoiGianChuyen.Enabled = true;
-                btnInGiayGioiThieu.Enabled = true;
+                btnInGiayGioiThieu.Enabled = false;
 
                 txtTrieuChung.Enabled = true;
 
@@ -596,7 +596,25 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
         private void btnInGiayGioiThieu_Click(object sender, EventArgs e)
         {
-            // report làm sau
+            if (khamthuongxuyen.ID == 0)
+            {
+                MessageBox.Show("Chưa nhập thông tin phiếu khám bệnh",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            if (khamthuongxuyen.CACHGIAIQUYET != 2)
+            {
+                MessageBox.Show("Bệnh nhân không chuyển lên tuyến trên để in giấy giới thiệu",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            FrmInGiayGioiThieu form = new FrmInGiayGioiThieu(khamthuongxuyen);
+            form.ShowDialog();
         }
 
         private void btnCapThemThuoc_Click(object sender, EventArgs e)
