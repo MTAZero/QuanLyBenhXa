@@ -151,10 +151,10 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             ans.BACSIID = (int)cbxBacSi.EditValue;
             ans.BENHNHANID = (int)cbxBenhNhan.EditValue;
             ans.THOIGIAN = dateThoiGianKham.DateTime;
-            ans.CHIPHIKHAM = Int32.Parse(txtChiPhiKham.Text);
             ans.BENHID = (int)cbxBenh.EditValue;
             ans.CACHGIAIQUYET = cbxCachGiaiQuyet.SelectedIndex;
             ans.CHANDOANSOBO = txtKetLuan.Text;
+            ans.TRIEUCHUNG = txtTrieuChung.Text;
 
             // điều trị tại tuyến
             if (ans.CACHGIAIQUYET == 1)
@@ -171,12 +171,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 ans.THOIGIANCHUYEN = dateThoiGianChuyen.DateTime;
             }
 
-            // điều trị tại đơn vị
-            if (ans.CACHGIAIQUYET == 0)
-            {
-                ans.TRIEUCHUNG = txtTrieuChung.Text;
-            }
-
             return ans;
         }
 
@@ -185,7 +179,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             cbxBacSi.ItemIndex = 0;
             cbxBenhNhan.ItemIndex = 0;
             dateThoiGianKham.DateTime = DateTime.Now;
-            txtChiPhiKham.Text = "";
 
             cbxBenh.ItemIndex = 0;
             cbxCachGiaiQuyet.SelectedIndex = 0;
@@ -212,13 +205,13 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 ClearControl();
 
                 cbxBacSi.EditValue = (int)tg.BACSIID;
-                cbxBenh.EditValue = (int)tg.BENHID;
+                cbxBenhNhan.EditValue = (int)tg.BENHNHANID;
                 dateThoiGianKham.DateTime = (DateTime)tg.THOIGIAN;
-                txtChiPhiKham.Text = tg.CHIPHIKHAM.ToString();
 
-                cbxBenh.ItemIndex = (int)tg.BENHID;
+                cbxBenh.EditValue = (int)tg.BENHID;
                 cbxCachGiaiQuyet.SelectedIndex = (int)tg.CACHGIAIQUYET;
                 txtKetLuan.Text = tg.CHANDOANSOBO;
+                txtTrieuChung.Text = tg.TRIEUCHUNG;
 
                 if (tg.CACHGIAIQUYET == 1)
                 {
@@ -231,11 +224,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 {
                     cbxBenhVien.EditValue = (int)tg.BENHVIENID;
                     dateThoiGianChuyen.DateTime = (DateTime)tg.THOIGIANCHUYEN;
-                }
-
-                if (tg.CACHGIAIQUYET == 0)
-                {
-                    txtTrieuChung.Text = tg.TRIEUCHUNG;
                 }
 
                 LoadDgvCHITIETCAPTHUOC();
@@ -255,7 +243,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 cbxBacSi.Enabled = false;
                 cbxBenhNhan.Enabled = false;
                 dateThoiGianKham.Enabled = false;
-                txtChiPhiKham.Enabled = false;
 
                 cbxBenh.Enabled = false;
                 cbxCachGiaiQuyet.Enabled = false;
@@ -293,7 +280,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 cbxBacSi.Enabled = true;
                 cbxBenhNhan.Enabled = true;
                 dateThoiGianKham.Enabled = true;
-                txtChiPhiKham.Enabled = true;
 
                 cbxBenh.Enabled = true;
                 cbxCachGiaiQuyet.Enabled = true;
@@ -331,7 +317,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 cbxBacSi.Enabled = false;
                 cbxBenhNhan.Enabled = false;
                 dateThoiGianKham.Enabled = false;
-                txtChiPhiKham.Enabled = false;
 
                 cbxBenh.Enabled = false;
                 cbxCachGiaiQuyet.Enabled = false;
@@ -366,14 +351,11 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
         private bool Check()
         {
-            // chi phi kham
-            try
+
+            // trieu chung
+            if (txtTrieuChung.Text == "")
             {
-                int k = Int32.Parse(txtChiPhiKham.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Chi phí khám phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Triệu chứng của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -401,16 +383,6 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                     return false;
                 }
 
-            }
-
-            // điều trị tại đơn vị
-            if (cbxCachGiaiQuyet.SelectedIndex == 0)
-            {
-                if (txtTrieuChung.Text == "")
-                {
-                    MessageBox.Show("Triệu chứng của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
             }
 
             return true;
@@ -453,10 +425,10 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             cu.BACSIID = moi.BACSIID;
             cu.BENHNHANID = moi.BENHNHANID;
             cu.THOIGIAN = moi.THOIGIAN;
-            cu.CHIPHIKHAM = moi.CHIPHIKHAM;
             cu.BENHID = moi.BENHID;
             cu.CACHGIAIQUYET = moi.CACHGIAIQUYET;
             cu.KETQUADIEUTRI = moi.KETQUADIEUTRI;
+            cu.CHANDOANSOBO = moi.CHANDOANSOBO;
 
             cu.THOIGIANVAO = moi.THOIGIANVAO;
             cu.THOIGIANRA = moi.THOIGIANRA;
@@ -716,11 +688,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         private void cbxCachGiaiQuyet_SelectedIndexChanged(object sender, EventArgs e)
         {
             groupDieuTriTaiTuyen.Enabled = false;
-            groupDieuTriTaiDonVi.Enabled = false;
             groupChuyenLenTuyenTren.Enabled = false;
-
-            if (cbxCachGiaiQuyet.SelectedIndex == 0)
-                groupDieuTriTaiDonVi.Enabled = true;
 
             if (cbxCachGiaiQuyet.SelectedIndex == 1)
                 groupDieuTriTaiTuyen.Enabled = true;

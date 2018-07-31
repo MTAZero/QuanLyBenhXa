@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTuNgay = new DevExpress.XtraEditors.DateEdit();
@@ -45,8 +47,7 @@
             this.BenhNhan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Benh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CachGiaiQuyet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.DonVi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,6 +99,23 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(120, 54);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
+            this.txtTimKiem.TabIndex = 21;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Tìm kiếm";
             // 
             // dateDenNgay
             // 
@@ -193,6 +211,7 @@
             this.Ngay,
             this.BacSi,
             this.BenhNhan,
+            this.DonVi,
             this.Benh,
             this.CachGiaiQuyet});
             this.dgvKHAMTHUONGXUYEN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -217,7 +236,7 @@
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
+            this.STT.Width = 34;
             // 
             // Ngay
             // 
@@ -226,7 +245,7 @@
             this.Ngay.Name = "Ngay";
             this.Ngay.Visible = true;
             this.Ngay.VisibleIndex = 1;
-            this.Ngay.Width = 82;
+            this.Ngay.Width = 74;
             // 
             // BacSi
             // 
@@ -235,7 +254,7 @@
             this.BacSi.Name = "BacSi";
             this.BacSi.Visible = true;
             this.BacSi.VisibleIndex = 2;
-            this.BacSi.Width = 143;
+            this.BacSi.Width = 121;
             // 
             // BenhNhan
             // 
@@ -244,7 +263,7 @@
             this.BenhNhan.Name = "BenhNhan";
             this.BenhNhan.Visible = true;
             this.BenhNhan.VisibleIndex = 3;
-            this.BenhNhan.Width = 164;
+            this.BenhNhan.Width = 130;
             // 
             // Benh
             // 
@@ -252,8 +271,8 @@
             this.Benh.FieldName = "Benh";
             this.Benh.Name = "Benh";
             this.Benh.Visible = true;
-            this.Benh.VisibleIndex = 4;
-            this.Benh.Width = 141;
+            this.Benh.VisibleIndex = 5;
+            this.Benh.Width = 113;
             // 
             // CachGiaiQuyet
             // 
@@ -261,25 +280,17 @@
             this.CachGiaiQuyet.FieldName = "CachGiaiQuyet";
             this.CachGiaiQuyet.Name = "CachGiaiQuyet";
             this.CachGiaiQuyet.Visible = true;
-            this.CachGiaiQuyet.VisibleIndex = 5;
-            this.CachGiaiQuyet.Width = 131;
+            this.CachGiaiQuyet.VisibleIndex = 6;
+            this.CachGiaiQuyet.Width = 115;
             // 
-            // label1
+            // DonVi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Tìm kiếm";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(120, 54);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
-            this.txtTimKiem.TabIndex = 21;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.DonVi.Caption = "Đơn vị";
+            this.DonVi.FieldName = "DonVi";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.Visible = true;
+            this.DonVi.VisibleIndex = 4;
+            this.DonVi.Width = 112;
             // 
             // ucThongKeKhamThuongXuyen
             // 
@@ -323,5 +334,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn DonVi;
     }
 }

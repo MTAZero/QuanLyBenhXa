@@ -317,6 +317,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 if (tg.ID == 0) return;
 
                 txtBENH.Text = tg.TEN;
+                txtMoTa.Text = tg.MOTA;
             }
             catch
             {
@@ -435,12 +436,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             if (txtBENH.Text == "")
             {
                 MessageBox.Show("Tên của bệnh không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtMoTa.Text == "")
-            {
-                MessageBox.Show("Mô tả của bệnh không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

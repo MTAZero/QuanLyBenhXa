@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucThongKeKhamDinhKi));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTuNgay = new DevExpress.XtraEditors.DateEdit();
@@ -44,8 +46,7 @@
             this.PhanLoaiSucKhoe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChiTiet = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.DonVi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties)).BeginInit();
@@ -71,6 +72,23 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Bộ lọc";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(123, 54);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
+            this.txtTimKiem.TabIndex = 23;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Tìm kiếm";
             // 
             // dateDenNgay
             // 
@@ -166,6 +184,7 @@
             this.Ngay,
             this.BacSi,
             this.BenhNhan,
+            this.DonVi,
             this.PhanLoaiSucKhoe});
             this.dgvKHAMDINHKI.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.dgvKHAMDINHKI.GridControl = this.dgvKHAMDINHKIMain;
@@ -189,7 +208,7 @@
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 37;
+            this.STT.Width = 30;
             // 
             // Ngay
             // 
@@ -198,7 +217,7 @@
             this.Ngay.Name = "Ngay";
             this.Ngay.Visible = true;
             this.Ngay.VisibleIndex = 1;
-            this.Ngay.Width = 80;
+            this.Ngay.Width = 88;
             // 
             // BacSi
             // 
@@ -207,7 +226,7 @@
             this.BacSi.Name = "BacSi";
             this.BacSi.Visible = true;
             this.BacSi.VisibleIndex = 2;
-            this.BacSi.Width = 151;
+            this.BacSi.Width = 171;
             // 
             // BenhNhan
             // 
@@ -216,7 +235,7 @@
             this.BenhNhan.Name = "BenhNhan";
             this.BenhNhan.Visible = true;
             this.BenhNhan.VisibleIndex = 3;
-            this.BenhNhan.Width = 174;
+            this.BenhNhan.Width = 146;
             // 
             // PhanLoaiSucKhoe
             // 
@@ -224,8 +243,8 @@
             this.PhanLoaiSucKhoe.FieldName = "PhanLoaiSucKhoe";
             this.PhanLoaiSucKhoe.Name = "PhanLoaiSucKhoe";
             this.PhanLoaiSucKhoe.Visible = true;
-            this.PhanLoaiSucKhoe.VisibleIndex = 4;
-            this.PhanLoaiSucKhoe.Width = 99;
+            this.PhanLoaiSucKhoe.VisibleIndex = 5;
+            this.PhanLoaiSucKhoe.Width = 120;
             // 
             // panel1
             // 
@@ -253,22 +272,14 @@
             this.btnChiTiet.Text = "Chi tiết";
             this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
-            // txtTimKiem
+            // DonVi
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(123, 54);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(485, 24);
-            this.txtTimKiem.TabIndex = 23;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Tìm kiếm";
+            this.DonVi.Caption = "Đơn vị";
+            this.DonVi.FieldName = "DonVi";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.Visible = true;
+            this.DonVi.VisibleIndex = 4;
+            this.DonVi.Width = 144;
             // 
             // ucThongKeKhamDinhKi
             // 
@@ -310,5 +321,6 @@
         private DevExpress.XtraEditors.SimpleButton btnChiTiet;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn DonVi;
     }
 }

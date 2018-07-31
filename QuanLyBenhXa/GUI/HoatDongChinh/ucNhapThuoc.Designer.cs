@@ -132,9 +132,9 @@
             this.txtThanhTien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanhTien.Location = new System.Drawing.Point(503, 94);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(60, 17);
+            this.txtThanhTien.Size = new System.Drawing.Size(16, 17);
             this.txtThanhTien.TabIndex = 12;
-            this.txtThanhTien.Text = "100 000";
+            this.txtThanhTien.Text = "0";
             // 
             // txtDonGia
             // 
@@ -416,9 +416,9 @@
             this.txtTongTien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(126, 197);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(60, 17);
+            this.txtTongTien.Size = new System.Drawing.Size(16, 17);
             this.txtTongTien.TabIndex = 11;
-            this.txtTongTien.Text = "100 000";
+            this.txtTongTien.Text = "0";
             // 
             // txtGhiChu
             // 

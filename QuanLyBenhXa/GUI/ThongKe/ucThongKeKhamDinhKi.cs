@@ -18,6 +18,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
         private BACSIFactory BACSIService = new BACSIFactory();
         private BENHNHANFactory BENHNHANService = new BENHNHANFactory();
         private PHANLOAISUCKHOEFactory PHANLOAISUCKHOEService = new PHANLOAISUCKHOEFactory();
+        private DONVIFactory DONVIService = new DONVIFactory();
 
         #region Hàm khởi tạo
         public ucThongKeKhamDinhKi()
@@ -47,15 +48,17 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                     Ngay = ((DateTime)p.THOIGIANKHAM).ToString("dd/MM/yyyy"),
                                                     BacSi = BACSIService.GetAllEntities().Where(z => z.ID == p.BACSIID).FirstOrDefault().HOTEN,
                                                     BenhNhan = BENHNHANService.GetAllEntities().Where(z => z.ID == p.BENHNHANID).FirstOrDefault().HOTEN,
-                                                    PhanLoaiSucKhoe = PHANLOAISUCKHOEService.GetAllEntities().Where(z=>z.ID == p.PHANLOAISUCKHOEID).FirstOrDefault().TEN
+                                                    PhanLoaiSucKhoe = PHANLOAISUCKHOEService.GetAllEntities().Where(z=>z.ID == p.PHANLOAISUCKHOEID).FirstOrDefault().TEN,
+                                                    DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys(BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).ID)).TEN
                                                 })
-                                                .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.PhanLoaiSucKhoe.ToUpper().Contains(text))
+                                                .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.PhanLoaiSucKhoe.ToUpper().Contains(text) || p.DonVi.ToUpper().Contains(text))
                                                 .Select(p=> new {
                                                     ID = p.ID,
                                                     Ngay = p.Ngay,
                                                     BacSi = p.BacSi,
                                                     BenhNhan = p.BenhNhan,
                                                     PhanLoaiSucKhoe = p.PhanLoaiSucKhoe,
+                                                    DonVi = p.DonVi,
                                                     STT = ++stt
                                                 })
                                                 .ToList();

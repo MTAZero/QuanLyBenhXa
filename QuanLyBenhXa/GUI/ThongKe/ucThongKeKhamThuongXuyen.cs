@@ -18,6 +18,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
         private BACSIFactory BACSISerice = new BACSIFactory();
         private BENHNHANFactory BENHNHANService = new BENHNHANFactory();
         private BENHFactory BENHService = new BENHFactory();
+        private DONVIFactory DONVIService = new DONVIFactory();
 
         #region Hàm khởi tạo
         public ucThongKeKhamThuongXuyen()
@@ -55,9 +56,10 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                 BacSi = BACSISerice.GetAllEntities().Where(z=>z.ID == p.BACSIID).FirstOrDefault().HOTEN,
                                                 BenhNhan = BENHNHANService.GetAllEntities().Where(z=>z.ID == p.BENHNHANID).FirstOrDefault().HOTEN,
                                                 Benh = BENHService.GetAllEntities().Where(z=>z.ID == p.BENHID).FirstOrDefault().TEN,
-                                                CachGiaiQuyet = CachGiaiQuyetStr((int)p.CACHGIAIQUYET)
+                                                CachGiaiQuyet = CachGiaiQuyetStr((int)p.CACHGIAIQUYET),
+                                                DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys(BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).ID)).TEN
                                             })
-                                            .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.Benh.ToUpper().Contains(text) || p.CachGiaiQuyet.ToUpper().Contains(text))
+                                            .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.Benh.ToUpper().Contains(text) || p.CachGiaiQuyet.ToUpper().Contains(text) || p.DonVi.ToUpper().Contains(text))
                                             .Select(p=> new {
                                                 ID = p.ID,
                                                 Ngay = p.Ngay,
@@ -65,6 +67,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                 BenhNhan = p.BenhNhan,
                                                 Benh = p.Benh,
                                                 CachGiaiQuyet = p.CachGiaiQuyet,
+                                                DonVi = p.DonVi,
                                                 STT = ++stt
                                             })
                                             .ToList();
