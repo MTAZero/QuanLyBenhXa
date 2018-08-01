@@ -37,7 +37,7 @@
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KiHieu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DonGia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -50,6 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtDonGia = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKiHieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonGia.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +129,7 @@
             this.STT,
             this.Ten,
             this.KiHieu,
-            this.SoLuong});
+            this.DonGia});
             this.dgvVATTU.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.dgvVATTU.GridControl = this.dgvVATTUMain;
             this.dgvVATTU.Name = "dgvVATTU";
@@ -168,16 +171,16 @@
             this.KiHieu.Name = "KiHieu";
             this.KiHieu.Visible = true;
             this.KiHieu.VisibleIndex = 2;
-            this.KiHieu.Width = 284;
+            this.KiHieu.Width = 172;
             // 
-            // SoLuong
+            // DonGia
             // 
-            this.SoLuong.Caption = "Số lượng";
-            this.SoLuong.FieldName = "SoLuong";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Visible = true;
-            this.SoLuong.VisibleIndex = 3;
-            this.SoLuong.Width = 137;
+            this.DonGia.Caption = "Đơn giá";
+            this.DonGia.FieldName = "DonGia";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.Visible = true;
+            this.DonGia.VisibleIndex = 3;
+            this.DonGia.Width = 249;
             // 
             // btnXoa
             // 
@@ -186,7 +189,7 @@
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(848, 295);
+            this.btnXoa.Location = new System.Drawing.Point(848, 327);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(423, 44);
             this.btnXoa.TabIndex = 10;
@@ -200,7 +203,7 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(848, 245);
+            this.btnThem.Location = new System.Drawing.Point(848, 277);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(222, 44);
             this.btnThem.TabIndex = 8;
@@ -214,7 +217,7 @@
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(1076, 245);
+            this.btnSua.Location = new System.Drawing.Point(1076, 277);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(195, 44);
             this.btnSua.TabIndex = 9;
@@ -241,6 +244,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.txtDonGia);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtSoLuong);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtKiHieu);
@@ -249,7 +254,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(848, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(423, 187);
+            this.groupBox2.Size = new System.Drawing.Size(423, 219);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin vật tư";
@@ -311,6 +316,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên :";
             // 
+            // txtDonGia
+            // 
+            this.txtDonGia.Location = new System.Drawing.Point(123, 177);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtDonGia.Properties.Appearance.Options.UseFont = true;
+            this.txtDonGia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDonGia.Size = new System.Drawing.Size(253, 26);
+            this.txtDonGia.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 181);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Đơn giá";
+            // 
             // ucDanhSachVatTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -333,6 +357,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKiHieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonGia.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,6 +384,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn KiHieu;
         private DevExpress.XtraEditors.TextEdit txtSoLuong;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraGrid.Columns.GridColumn SoLuong;
+        private DevExpress.XtraGrid.Columns.GridColumn DonGia;
+        private DevExpress.XtraEditors.TextEdit txtDonGia;
+        private System.Windows.Forms.Label label5;
     }
 }

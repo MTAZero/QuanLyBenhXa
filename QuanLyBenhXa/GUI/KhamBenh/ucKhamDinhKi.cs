@@ -82,6 +82,9 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             cbxPhanLoaiSucKhoe.Properties.ValueMember = "ID";
             cbxPhanLoaiSucKhoe.ItemIndex = 0;
 
+            cbxLoaiHinhKham.SelectedIndex = 0;
+            cbxBenhHiemNgheo.SelectedIndex = 0;
+
             dateThoiGianKham.DateTime = DateTime.Now;
         }
         private void ucKhamDinhKi_Load(object sender, EventArgs e)
@@ -108,6 +111,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             ans.THOIGIANKHAM = dateThoiGianKham.DateTime;
             ans.PHANLOAISUCKHOEID = (int)cbxPhanLoaiSucKhoe.EditValue;
             ans.KETLUAN = txtKetLuan.Text;
+            ans.BENHHIEMNGHEO = cbxBenhHiemNgheo.SelectedIndex;
+            ans.LOAIHINHKHAM = cbxLoaiHinhKham.SelectedIndex;
 
             return ans;
         }
@@ -375,6 +380,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             dateThoiGianKham.Enabled = false;
             cbxPhanLoaiSucKhoe.Enabled = false;
             txtKetLuan.Enabled = false;
+            cbxLoaiHinhKham.Enabled = false;
+            cbxBenhHiemNgheo.Enabled = false;
 
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
@@ -426,6 +433,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             dateThoiGianKham.Enabled = true;
             cbxPhanLoaiSucKhoe.Enabled = true;
             txtKetLuan.Enabled = true;
+            cbxLoaiHinhKham.Enabled = true;
+            cbxBenhHiemNgheo.Enabled = true;
 
             btnThem.Enabled = false;
             btnLuu.Enabled = true;
@@ -477,6 +486,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             dateThoiGianKham.Enabled = true;
             cbxPhanLoaiSucKhoe.Enabled = true;
             txtKetLuan.Enabled = true;
+            cbxLoaiHinhKham.Enabled = true;
+            cbxBenhHiemNgheo.Enabled = true;
 
             ClearControlKhamTheLuc();
             ClearControlKhamChuyenKhoa();
@@ -556,6 +567,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 dateThoiGianKham.DateTime = (DateTime) khamdinhki.THOIGIANKHAM;
                 cbxPhanLoaiSucKhoe.EditValue = khamdinhki.PHANLOAISUCKHOEID;
                 txtKetLuan.Text = khamdinhki.KETLUAN;
+                cbxBenhHiemNgheo.SelectedIndex = (int) khamdinhki.BENHHIEMNGHEO;
+                cbxLoaiHinhKham.SelectedIndex = (int)khamdinhki.LOAIHINHKHAM;
             }
             catch
             {

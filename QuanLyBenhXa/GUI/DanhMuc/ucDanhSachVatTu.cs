@@ -37,16 +37,18 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                         ID = p.ID,
                         Ten = p.TEN,
                         KiHieu = p.KYHIEU,
-                        SoLuong = p.SOLUONG
+                        SoLuong = p.SOLUONG,
+                        DonGia = p.GHICHU
                     })
-                    .Where(p => p.Ten.ToUpper().Contains(text) || p.KiHieu.ToUpper().Contains(text))
+                    .Where(p => p.Ten.ToUpper().Contains(text) || p.KiHieu.ToUpper().Contains(text) || p.DonGia.ToUpper().Contains(text))
                     .Select(p => new
                     {
                         ID = p.ID,
                         STT = ++STT,
                         Ten = p.Ten,
                         KiHieu = p.KiHieu,
-                        SoLuong = p.SoLuong
+                        SoLuong = p.SoLuong,
+                        DonGia = p.DonGia
                     })
                     .ToList();
 
@@ -106,6 +108,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             ans.TEN = txtTen.Text;
             ans.KYHIEU = txtKiHieu.Text;
             ans.SOLUONG = Int32.Parse(txtSoLuong.Text);
+            ans.GHICHU = txtDonGia.Text;
 
             return ans;
         }
@@ -115,6 +118,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtTen.Text = "";
             txtKiHieu.Text = "";
             txtSoLuong.Text = "0";
+            txtDonGia.Text = "";
         }
 
         private void UpdateDetail()
@@ -128,6 +132,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 txtTen.Text = tg.TEN;
                 txtKiHieu.Text = tg.KYHIEU;
                 txtSoLuong.Text = tg.SOLUONG.ToString();
+                txtDonGia.Text = tg.GHICHU;
             }
             catch
             {
@@ -140,6 +145,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtTen.Enabled = false;
             txtKiHieu.Enabled = false;
             txtSoLuong.Enabled = false;
+            txtDonGia.Enabled = false;
 
             dgvVATTUMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -154,6 +160,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtTen.Enabled = true;
             txtKiHieu.Enabled = true;
             txtSoLuong.Enabled = true;
+            txtDonGia.Enabled = true;
 
             dgvVATTUMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -183,6 +190,16 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 return false;
             }
 
+            try
+            {
+                int k = Int32.Parse(txtDonGia.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Đơn giá vật tư phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
@@ -205,6 +222,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cu.TEN = moi.TEN;
             cu.KYHIEU = moi.KYHIEU;
             cu.SOLUONG = moi.SOLUONG;
+            cu.GHICHU = moi.GHICHU;
         }
 
         #endregion
