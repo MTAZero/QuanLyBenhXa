@@ -117,13 +117,40 @@ namespace QuanLyBenhXa.GUI.KhamBenh
 
             ans.BACSIID = (int)cbxBacSiTheLuc.EditValue;
             ans.CHIEUCAO = txtTheLucChieuCao.Text;
-            ans.CANNANG = Int32.Parse(txtTheLucCanNang.Text);
+            ans.KETQUALAMSANG = txtTheLucKetQua.Text;
             ans.MACH = txtTheLucMach.Text;
             ans.HUYETAP = txtTheLucHuyetAp.Text;
             ans.GHICHU = txtTheLucGhiChu.Text;
-            ans.VONGNGUC = Int32.Parse(txtTheLucVongNguc.Text);
-            ans.NHIETDO = Int32.Parse(txtTheLucNhietDo.Text);
-            ans.KETQUALAMSANG = txtTheLucKetQua.Text;
+
+            // can nang
+            try
+            {
+                ans.CANNANG = Int32.Parse(txtTheLucCanNang.Text);
+            }
+            catch
+            {
+                ans.CANNANG = 0;
+            }
+            
+            // vong nguc
+            try
+            {
+                ans.VONGNGUC = Int32.Parse(txtTheLucVongNguc.Text);
+            }
+            catch
+            {
+                ans.VONGNGUC = 0;
+            }
+
+            // nhiet do
+            try
+            {
+                ans.NHIETDO = Int32.Parse(txtTheLucNhietDo.Text);
+            }
+            catch
+            {
+                ans.NHIETDO = 0;
+            }
 
             return ans;
         }
@@ -167,9 +194,9 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                 return false;
             }
 
-            if (!CheckKhamTheLuc()) return false;
-            if (!CheckKhamCanLamSang()) return false;
-            if (!CheckKhamChuyenKhoa()) return false;
+            //if (!CheckKhamTheLuc()) return false;
+            //if (!CheckKhamCanLamSang()) return false;
+            //if (!CheckKhamChuyenKhoa()) return false;
 
             return true;
         }
@@ -656,6 +683,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                                     MessageBoxIcon.Information);
                     }
 
+                    UpdateDetail();
                     
                 }
             }

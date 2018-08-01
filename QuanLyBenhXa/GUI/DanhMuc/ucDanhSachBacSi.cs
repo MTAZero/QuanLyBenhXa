@@ -266,30 +266,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 return false;
             }
 
-            if (txtSDT.Text == "")
-            {
-                MessageBox.Show("Số điện thoại của bác sĩ không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtQueQuan.Text == "")
-            {
-                MessageBox.Show("Quê quán của bác sĩ không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtDanToc.Text == "")
-            {
-                MessageBox.Show("Dân tộc của bác sĩ không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtTrinhDo.Text == "")
-            {
-                MessageBox.Show("Trình độ văn hóa của bác sĩ không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
             if (dateNgaySinh.DateTime > DateTime.Now.AddYears(-20))
             {
                 MessageBox.Show("Ngày sinh của bác sĩ không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

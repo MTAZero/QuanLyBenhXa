@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTenBacSi = new System.Windows.Forms.Label();
             this.panelMain = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBacSi = new DevExpress.XtraBars.BarButtonItem();
             this.barBenhNhan = new DevExpress.XtraBars.BarButtonItem();
@@ -64,7 +65,6 @@
             this.ribonPublic = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pageAdmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribonAdmin = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +76,6 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -116,6 +115,17 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1298, 558);
             this.panelMain.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(263, 524);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(772, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PHẦN MỀM QUẢN LÝ SỨC KHỎE QUÂN NHÂN V1.0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ribbonControl1
             // 
@@ -406,8 +416,7 @@
             // 
             this.ribonPublic.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.pageAdmin,
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup5});
             this.ribonPublic.Name = "ribonPublic";
             this.ribonPublic.Text = "Hoạt động chính";
             // 
@@ -423,14 +432,6 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup5.ItemLinks.Add(this.barKhoVatTu);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barThongTinCaNhan);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barDoiMatKhau);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barDangXuat);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Tài khoản";
             // 
             // ribonAdmin
             // 
@@ -495,6 +496,9 @@
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.barDanhSachTaiKhoan);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barThongTinCaNhan);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barDoiMatKhau);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barDangXuat);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // defaultLookAndFeel1
@@ -516,17 +520,6 @@
             this.barButtonItem9.Id = 11;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(263, 524);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(772, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PHẦN MỀM QUẢN LÝ SỨC KHỎE QUÂN NHÂN V1.0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmMain
             // 
@@ -581,7 +574,6 @@
         private DevExpress.XtraBars.BarButtonItem barThongTinCaNhan;
         private DevExpress.XtraBars.BarButtonItem barDoiMatKhau;
         private DevExpress.XtraBars.BarButtonItem barDangXuat;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barKhoVatTu;
         private DevExpress.XtraBars.BarButtonItem barBenhVien;
         private DevExpress.XtraBars.BarButtonItem barPhanLoaiSucKhoe;

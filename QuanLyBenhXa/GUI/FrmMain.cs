@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using DevExpress.XtraBars;
+using MetroFramework.Forms;
 using QuanLyBenhXa.GUI.DanhMuc;
 using QuanLyBenhXa.GUI.HoatDongChinh;
 using QuanLyBenhXa.GUI.KhamBenh;
@@ -247,7 +248,9 @@ namespace QuanLyBenhXa.GUI
                 ribonPublic.Visible = true;
                 ribonAdmin.Visible = true;
                 pageAdmin.Visible = true;
-                
+                ribonTaiKhoan.Visible = true;
+                barDanhSachTaiKhoan.Visibility = BarItemVisibility.Never; 
+
                 return;
             }
 
@@ -259,6 +262,7 @@ namespace QuanLyBenhXa.GUI
                 ribonTaiKhoan.Visible = true;
                 ribonThongKe.Visible = true;
                 pageAdmin.Visible = true;
+                barDanhSachTaiKhoan.Visibility = BarItemVisibility.Always;
                 return;
             }
         }

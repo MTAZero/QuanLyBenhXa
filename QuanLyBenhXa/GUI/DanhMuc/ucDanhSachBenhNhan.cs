@@ -87,15 +87,19 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                     {
                         ID = p.ID,
                         HoTen = p.HOTEN,
-                        ChucVu = CHUCVUService.GetAllEntities().ToList().Where(z => z.ID == p.CHUCVUID).FirstOrDefault().TEN
+                        ChucVu = CHUCVUService.GetAllEntities().ToList().Where(z => z.ID == p.CHUCVUID).FirstOrDefault().TEN,
+                        DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys((int)p.DONVIID)).TEN,
+                        DoiTuong = DOITUONGService.GetByPrimaryKey(new DOITUONGKeys((int)p.DOITUONGID)).TEN
                     })
-                    .Where(p => p.HoTen.ToUpper().Contains(text) || p.ChucVu.ToUpper().Contains(text))
+                    .Where(p => p.HoTen.ToUpper().Contains(text) || p.ChucVu.ToUpper().Contains(text) || p.DonVi.ToUpper().Contains(text) || p.DoiTuong.ToUpper().Contains(text))
                     .Select(p => new
                     {
                         ID = p.ID,
                         STT = ++STT,
                         HoTen = p.HoTen,
-                        ChucVu = p.ChucVu
+                        ChucVu = p.ChucVu,
+                        DonVi = p.DonVi,
+                        DoiTuong = p.DoiTuong
                     })
                     .ToList();
 
@@ -286,48 +290,6 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             if (txtHoTen.Text == "")
             {
                 MessageBox.Show("Họ và tên của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtMaBHYT.Text == "")
-            {
-                MessageBox.Show("Mã bảo hiểm y tế của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtSDT.Text == "")
-            {
-                MessageBox.Show("Số điện thoại của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtQueQuan.Text == "")
-            {
-                MessageBox.Show("Quê quán của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtNgheNghiepSau.Text == "")
-            {
-                MessageBox.Show("Nghề nghiệp của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtNhomMau.Text == "")
-            {
-                MessageBox.Show("Nhóm máu của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtTienSuBanThan.Text == "")
-            {
-                MessageBox.Show("Tiền sử bệnh của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (txtTrinhDo.Text == "")
-            {
-                MessageBox.Show("Trình độ văn hóa của bệnh nhân không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

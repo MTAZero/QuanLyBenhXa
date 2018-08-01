@@ -106,8 +106,9 @@
               <TextRun>
                 <Value>Đi khám bệnh, đi bệnh viện</Value>
                 <Style>
+                  <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
+                  <FontSize>10.5pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
@@ -325,11 +326,19 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Số sức khỏe(có, không mang theo): </Value>
+                <Value>Số sức khỏe: </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>11pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!SoSucKhoe.Value</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -445,7 +454,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>7.34426cm</Top>
-        <Left>6.55849cm</Left>
+        <Left>6.52322cm</Left>
         <Height>3.03417cm</Height>
         <Width>5.20285cm</Width>
         <ZIndex>4</ZIndex>
@@ -559,6 +568,10 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="Ngay">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SoSucKhoe">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

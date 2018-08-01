@@ -37,6 +37,14 @@ namespace QuanLyBenhXa.GUI.ThongKe
             dateDenNgay.DateTime = DateTime.Now;
         }
 
+        private String TrangThaiMuonVatTu(int? tt)
+        {
+            if (tt == 0) return "Đang mượn";
+            if (tt == 2) return "Chưa mượn";
+            if (tt == 1) return "Đã trả";
+            return "";
+        }
+
         private void LoadDgvMUONVATTU()
         {
             try
@@ -52,7 +60,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                     BacSi = BACSIService.GetAllEntities().Where(z => z.ID == p.BACSIMUONID).FirstOrDefault().HOTEN,
                                                     BenhNhan = BENHNHANService.GetAllEntities().Where(z => z.ID == KHAMTHUONGXUYENService.GetAllEntities().Where(y => y.ID == p.KHAMTHUONGXUYENID).FirstOrDefault().BENHNHANID).FirstOrDefault().HOTEN,
                                                     Benh = BENHService.GetAllEntities().Where(z => z.ID == KHAMTHUONGXUYENService.GetAllEntities().Where(y => y.ID == p.KHAMTHUONGXUYENID).FirstOrDefault().BENHID).FirstOrDefault().TEN,
-                                                    TrangThai = (p.TRANGTHAI == 0) ? "Đang mượn" : "Đã trả"
+                                                    TrangThai = TrangThaiMuonVatTu(p.TRANGTHAI)
                                                 })
                                                 .Where(p => p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.Benh.ToUpper().Contains(text) || p.TrangThai.ToUpper().Contains(text))
                                                 .Select(p => new
@@ -127,6 +135,12 @@ namespace QuanLyBenhXa.GUI.ThongKe
                 if (muonvattu.TRANGTHAI == 1)
                 {
                     MessageBox.Show("Thông tin mượn vật tư đã được trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (muonvattu.TRANGTHAI == 2)
+                {
+                    MessageBox.Show("Chưa có vật tư nào được mượn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 

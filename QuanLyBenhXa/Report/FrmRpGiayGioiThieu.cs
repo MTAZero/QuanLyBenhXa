@@ -33,7 +33,8 @@ namespace QuanLyBenhXa.Report
                     new ReportParameter("DonVi", param.DonVi),
                     new ReportParameter("Benh", param.Benh),
                     new ReportParameter("YKienDeNghi", param.YKienDeNghi),
-                    new ReportParameter("Ngay", param.Ngay)
+                    new ReportParameter("Ngay", param.Ngay),
+                    new ReportParameter("SoSucKhoe", param.SoSucKhoe)
              };
             this.reportViewer1.LocalReport.SetParameters(listPara);
 

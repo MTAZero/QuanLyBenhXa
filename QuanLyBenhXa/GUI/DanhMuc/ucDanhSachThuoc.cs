@@ -37,16 +37,16 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                         ID = p.ID,
                         Ten = p.TEN,
                         HanSuDung = p.HANSUDUNG.ToString(),
-                        SoLuong = p.SOLUONG
+                        DonViTinh = p.GHICHU
                     })
-                    .Where(p => p.Ten.ToUpper().Contains(text) || p.HanSuDung.ToUpper().Contains(text) || p.SoLuong.ToString().Contains(text))
+                    .Where(p => p.Ten.ToUpper().Contains(text) || p.HanSuDung.ToUpper().Contains(text) || p.DonViTinh.ToUpper().ToString().Contains(text))
                     .Select(p => new
                     {
                         ID = p.ID,
                         STT = ++STT,
                         Ten = p.Ten,
                         HanSuDung = p.HanSuDung,
-                        SoLuong = p.SoLuong
+                        DonViTinh = p.DonViTinh
                     })
                     .ToList();
 
@@ -108,6 +108,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             ans.CACHSUDUNG = txtCachSuDung.Text;
             ans.HANSUDUNG = Int32.Parse(txtHanSuDung.Text);
             ans.SOLUONG = Int32.Parse(txtSoLuong.Text);
+            ans.GHICHU = txtDonViTinh.Text;
 
             return ans;
         }
@@ -119,6 +120,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtCachSuDung.Text = "";
             txtHanSuDung.Text = "";
             txtSoLuong.Text = "0";
+            txtDonViTinh.Text = "";
         }
 
         private void UpdateDetail()
@@ -134,6 +136,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 txtCachSuDung.Text = tg.CACHSUDUNG;
                 txtHanSuDung.Text = tg.HANSUDUNG.ToString();
                 txtSoLuong.Text = tg.SOLUONG.ToString();
+                txtDonViTinh.Text = tg.GHICHU;
             }
             catch
             {
@@ -147,6 +150,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtHamLuong.Enabled = false;
             txtCachSuDung.Enabled = false;
             txtHanSuDung.Enabled = false;
+            txtDonViTinh.Enabled = false;
 
             dgvTHUOCMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -162,6 +166,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             txtHamLuong.Enabled = true;
             txtCachSuDung.Enabled = true;
             txtHanSuDung.Enabled = true;
+            txtDonViTinh.Enabled = true;
 
             dgvTHUOCMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -203,6 +208,12 @@ namespace QuanLyBenhXa.GUI.DanhMuc
                 return false;
             }
 
+            if (txtDonViTinh.Text == "")
+            {
+                MessageBox.Show("Đơn vị tính của thuốc không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
@@ -229,6 +240,7 @@ namespace QuanLyBenhXa.GUI.DanhMuc
             cu.CACHSUDUNG = moi.CACHSUDUNG;
             cu.HANSUDUNG = moi.HANSUDUNG;
             cu.SOLUONG = moi.SOLUONG;
+            cu.GHICHU = moi.GHICHU;
         }
 
         #endregion

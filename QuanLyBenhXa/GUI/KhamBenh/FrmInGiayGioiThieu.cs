@@ -39,35 +39,68 @@ namespace QuanLyBenhXa.GUI.KhamBenh
         #region Sự kiện
         private void btnXuatBaoCao_Click(object sender, EventArgs e)
         {
-            if (txtYKienDeNghi.Text == "")
+            if (Check())
             {
-                MessageBox.Show("Ý kiến đề nghị không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+
+                BENHNHAN benhnhan = BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)khamthuongxuyen.BENHNHANID));
+                dynamic param = new
+                {
+                    YKienDeNghi = txtYKienDeNghi.Text,
+                    BenhVienCapTren = BENHVIENService.GetByPrimaryKey(new BENHVIENKeys((int)khamthuongxuyen.BENHVIENID)).TEN,
+                    HoTen = benhnhan.HOTEN,
+                    Tuoi = DateTime.Now.Year - ((DateTime)benhnhan.NGAYSINH).Year,
+                    CapBac = CAPBACService.GetByPrimaryKey(new CAPBACKeys((int)benhnhan.CAPBACID)).TEN,
+                    ChucVu = CHUCVUService.GetByPrimaryKey(new CHUCVUKeys((int)benhnhan.CHUCVUID)).TEN,
+                    DonVi = txtDonVi.Text, //DONVIService.GetByPrimaryKey(new DONVIKeys((int)benhnhan.DONVIID)).TEN,
+                    Benh = txtCanBenh.Text, //BENHService.GetByPrimaryKey(new BENHKeys((int)khamthuongxuyen.BENHID)).TEN,
+                    Ngay = DateTime.Now.ToString(@"\N\g\à\y dd \t\h\á\n\g MM \n\ă\m yyyy"),
+                    SoSucKhoe = txtSoSucKhoe.Text
+                };
+
+                FrmRpGiayGioiThieu form = new FrmRpGiayGioiThieu(param);
+                this.Hide();
+                form.ShowDialog();
+                this.Close();
             }
-
-            BENHNHAN benhnhan = BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)khamthuongxuyen.BENHNHANID));
-            dynamic param = new
-            {
-                YKienDeNghi = txtYKienDeNghi.Text,
-                BenhVienCapTren = BENHVIENService.GetByPrimaryKey(new BENHVIENKeys((int)khamthuongxuyen.BENHVIENID)).TEN,
-                HoTen = benhnhan.HOTEN,
-                Tuoi = DateTime.Now.Year - ((DateTime)benhnhan.NGAYSINH).Year,
-                CapBac = CAPBACService.GetByPrimaryKey(new CAPBACKeys((int)benhnhan.CAPBACID)).TEN,
-                ChucVu = CHUCVUService.GetByPrimaryKey(new CHUCVUKeys((int)benhnhan.CHUCVUID)).TEN,
-                DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys((int)benhnhan.DONVIID)).TEN,
-                Benh = BENHService.GetByPrimaryKey(new BENHKeys((int) khamthuongxuyen.BENHID)).TEN,
-                Ngay = DateTime.Now.ToString(@"\N\g\à\y dd \t\h\á\n\g MM \n\ă\m yyyy")
-            };
-
-            FrmRpGiayGioiThieu form = new FrmRpGiayGioiThieu(param);
-            this.Hide();
-            form.ShowDialog();
-            this.Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        #endregion
+
+        #region Hàm chức năng
+        private bool Check()
+        {
+            // don vi
+            if (txtDonVi.Text == "")
+            {
+                MessageBox.Show("Đơn vị không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtCanBenh.Text == "")
+            {
+                MessageBox.Show("Căn bệnh không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtSoSucKhoe.Text == "")
+            {
+                MessageBox.Show("Số sức khỏe không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // y kien de nghi
+            if (txtYKienDeNghi.Text == "")
+            {
+                MessageBox.Show("Ý kiến đề nghị không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            return true;
         }
         #endregion
     }

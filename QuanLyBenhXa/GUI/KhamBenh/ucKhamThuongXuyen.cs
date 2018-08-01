@@ -117,7 +117,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
             {
                 int STT = 0;
 
-                dgvCHITIETMUONVATTUMain.DataSource = CHITIETMUONVATTUService.GetAllEntities().ToList()
+                var list = CHITIETMUONVATTUService.GetAllEntities().ToList()
                     .Where(p=>p.MUONVATTUID == muonvattu.ID)
                     .Select(p => new
                     {
@@ -127,6 +127,19 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                         SoLuong = p.SOLUONG
                     })
                     .ToList();
+
+                dgvCHITIETMUONVATTUMain.DataSource = list;
+
+                if (list.Count == 0)
+                {
+                    muonvattu.TRANGTHAI = 2; // chưa mượn
+                    MUONVATTUService.Update(muonvattu);
+                }
+                else
+                {
+                    muonvattu.TRANGTHAI = 0; // đang mượn
+                    MUONVATTUService.Update(muonvattu);
+                }
             }
             catch
             {
@@ -505,7 +518,7 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                         muonvattu.KHAMTHUONGXUYENID = khamthuongxuyen.ID;
                         muonvattu.BACSIMUONID = khamthuongxuyen.BACSIID;
                         muonvattu.NGAYMUON = khamthuongxuyen.THOIGIAN;
-                        muonvattu.TRANGTHAI = 0; // đang mượn
+                        muonvattu.TRANGTHAI = 2; // Chưa mượn 
                         MUONVATTUService.Insert(muonvattu);
 
                         capthuoc = new CAPTHUOC();

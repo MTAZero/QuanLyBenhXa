@@ -77,6 +77,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
+            this.DonVi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DoiTuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -136,9 +138,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dgvBENHNHANMain);
-            this.groupBox1.Location = new System.Drawing.Point(15, 52);
+            this.groupBox1.Location = new System.Drawing.Point(6, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 487);
+            this.groupBox1.Size = new System.Drawing.Size(569, 487);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
@@ -149,7 +151,7 @@
             this.dgvBENHNHANMain.Location = new System.Drawing.Point(3, 20);
             this.dgvBENHNHANMain.MainView = this.dgvBENHNHAN;
             this.dgvBENHNHANMain.Name = "dgvBENHNHANMain";
-            this.dgvBENHNHANMain.Size = new System.Drawing.Size(542, 464);
+            this.dgvBENHNHANMain.Size = new System.Drawing.Size(563, 464);
             this.dgvBENHNHANMain.TabIndex = 2;
             this.dgvBENHNHANMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvBENHNHAN});
@@ -167,7 +169,9 @@
             this.dgvBENHNHAN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.STT,
             this.HoTen,
-            this.ChucVu});
+            this.ChucVu,
+            this.DonVi,
+            this.DoiTuong});
             this.dgvBENHNHAN.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.dgvBENHNHAN.GridControl = this.dgvBENHNHANMain;
             this.dgvBENHNHAN.Name = "dgvBENHNHAN";
@@ -186,12 +190,12 @@
             // 
             // STT
             // 
-            this.STT.Caption = "STT";
+            this.STT.Caption = "TT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 59;
+            this.STT.Width = 35;
             // 
             // HoTen
             // 
@@ -200,7 +204,7 @@
             this.HoTen.Name = "HoTen";
             this.HoTen.Visible = true;
             this.HoTen.VisibleIndex = 1;
-            this.HoTen.Width = 335;
+            this.HoTen.Width = 183;
             // 
             // ChucVu
             // 
@@ -209,7 +213,7 @@
             this.ChucVu.Name = "ChucVu";
             this.ChucVu.Visible = true;
             this.ChucVu.VisibleIndex = 2;
-            this.ChucVu.Width = 305;
+            this.ChucVu.Width = 126;
             // 
             // btnXoa
             // 
@@ -218,7 +222,7 @@
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(1063, 492);
+            this.btnXoa.Location = new System.Drawing.Point(1075, 492);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(220, 44);
             this.btnXoa.TabIndex = 10;
@@ -232,7 +236,7 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(569, 492);
+            this.btnThem.Location = new System.Drawing.Point(581, 492);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(245, 44);
             this.btnThem.TabIndex = 8;
@@ -246,7 +250,7 @@
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(820, 492);
+            this.btnSua.Location = new System.Drawing.Point(832, 492);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(237, 44);
             this.btnSua.TabIndex = 9;
@@ -255,7 +259,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(81, 18);
+            this.txtTimKiem.Location = new System.Drawing.Point(72, 15);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(482, 24);
             this.txtTimKiem.TabIndex = 2;
@@ -264,7 +268,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Location = new System.Drawing.Point(3, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 17);
             this.label1.TabIndex = 0;
@@ -307,7 +311,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtHoTen);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(569, 18);
+            this.groupBox2.Location = new System.Drawing.Point(581, 18);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(714, 468);
             this.groupBox2.TabIndex = 1;
@@ -684,6 +688,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ và tên:";
             // 
+            // DonVi
+            // 
+            this.DonVi.Caption = "Đơn vị";
+            this.DonVi.FieldName = "DonVi";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.Visible = true;
+            this.DonVi.VisibleIndex = 3;
+            this.DonVi.Width = 160;
+            // 
+            // DoiTuong
+            // 
+            this.DoiTuong.Caption = "Đối tượng";
+            this.DoiTuong.FieldName = "DoiTuong";
+            this.DoiTuong.Name = "DoiTuong";
+            this.DoiTuong.Visible = true;
+            this.DoiTuong.VisibleIndex = 4;
+            this.DoiTuong.Width = 195;
+            // 
             // ucDanhSachBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -775,5 +797,7 @@
         private System.Windows.Forms.Label label17;
         private DevExpress.XtraEditors.TextEdit txtTienSuGiaDinh;
         private System.Windows.Forms.Label label13;
+        private DevExpress.XtraGrid.Columns.GridColumn DonVi;
+        private DevExpress.XtraGrid.Columns.GridColumn DoiTuong;
     }
 }
