@@ -295,6 +295,11 @@
     <Compile Include="Report\FrmRpGiayGioiThieu.Designer.cs">
       <DependentUpon>FrmRpGiayGioiThieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ThamSoHeThong.cs" />
     <EmbeddedResource Include="GUI\DanhMuc\ucDanhSachBenhNhan.resx">
       <DependentUpon>ucDanhSachBenhNhan.cs</DependentUpon>
@@ -409,7 +414,11 @@
     <EmbeddedResource Include="Report\FrmRpGiayGioiThieu.resx">
       <DependentUpon>FrmRpGiayGioiThieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpChiPhiKhamChuaBenhQuanNhan.rdlc" />
+    <EmbeddedResource Include="Report\rpDanhSachPhanLoaiSucKhoeCanBoCaoCap.rdlc" />
     <EmbeddedResource Include="Report\rpGiayGioiThieu.rdlc" />
+    <EmbeddedResource Include="Report\rpKeKhaiChiPhiKhamBenhQuanNhan.rdlc" />
+    <EmbeddedResource Include="Report\rpTongHopPhanLoaiSucKhoe.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -433,6 +442,17 @@
       <DependentUpon>QLSUCKHOE.mdf</DependentUpon>
     </Content>
     <Content Include="MetroFramework.txt" />
+    <None Include="Report\rpDataSet.xsc">
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\rpDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rpDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\rpDataSet.xss">
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
