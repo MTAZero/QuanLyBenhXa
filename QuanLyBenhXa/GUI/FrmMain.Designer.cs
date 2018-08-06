@@ -62,6 +62,8 @@
             this.barDanhSachCapThuoc = new DevExpress.XtraBars.BarButtonItem();
             this.barDanhSachMuonVatTu = new DevExpress.XtraBars.BarButtonItem();
             this.barTKBCKhamThuongXuyen = new DevExpress.XtraBars.BarButtonItem();
+            this.barBaoCaoPhanLoaiSucKhoe = new DevExpress.XtraBars.BarButtonItem();
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao = new DevExpress.XtraBars.BarButtonItem();
             this.ribonPublic = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pageAdmin = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -158,9 +160,11 @@
             this.barDanhSachNhapThuoc,
             this.barDanhSachCapThuoc,
             this.barDanhSachMuonVatTu,
-            this.barTKBCKhamThuongXuyen});
+            this.barTKBCKhamThuongXuyen,
+            this.barBaoCaoPhanLoaiSucKhoe,
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 32;
+            this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribonPublic,
@@ -412,6 +416,24 @@
             this.barTKBCKhamThuongXuyen.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barTKBCKhamThuongXuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTKBCKhamThuongXuyen_ItemClick);
             // 
+            // barBaoCaoPhanLoaiSucKhoe
+            // 
+            this.barBaoCaoPhanLoaiSucKhoe.Caption = "Báo cáo phân loại sức khỏe";
+            this.barBaoCaoPhanLoaiSucKhoe.Glyph = ((System.Drawing.Image)(resources.GetObject("barBaoCaoPhanLoaiSucKhoe.Glyph")));
+            this.barBaoCaoPhanLoaiSucKhoe.Id = 32;
+            this.barBaoCaoPhanLoaiSucKhoe.Name = "barBaoCaoPhanLoaiSucKhoe";
+            this.barBaoCaoPhanLoaiSucKhoe.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBaoCaoPhanLoaiSucKhoe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBaoCaoPhanLoaiSucKhoe_ItemClick);
+            // 
+            // barBaoCaoPhanLoaiSucKhoeCanBoCapCao
+            // 
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.Caption = "Báo cáo phân loại sức khỏe cán bộ cấp cao";
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.Glyph = ((System.Drawing.Image)(resources.GetObject("barBaoCaoPhanLoaiSucKhoeCanBoCapCao.Glyph")));
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.Id = 33;
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.Name = "barBaoCaoPhanLoaiSucKhoeCanBoCapCao";
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao_ItemClick);
+            // 
             // ribonPublic
             // 
             this.ribonPublic.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -476,6 +498,8 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barTKBCKhamThuongXuyen);
             this.ribbonPageGroup3.ItemLinks.Add(this.barTKBCBenhLy);
             this.ribbonPageGroup3.ItemLinks.Add(this.barTKBCLuotKham);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barBaoCaoPhanLoaiSucKhoe);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Thống kê";
             // 
@@ -590,5 +614,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barTKBCKhamThuongXuyen;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraBars.BarButtonItem barBaoCaoPhanLoaiSucKhoe;
+        private DevExpress.XtraBars.BarButtonItem barBaoCaoPhanLoaiSucKhoeCanBoCapCao;
     }
 }

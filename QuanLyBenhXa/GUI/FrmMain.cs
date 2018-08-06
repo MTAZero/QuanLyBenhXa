@@ -311,6 +311,16 @@ namespace QuanLyBenhXa.GUI
             form.ShowDialog();
         }
 
-        
+        private void barBaoCaoPhanLoaiSucKhoe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBaoCaoPhanLoaiSucKhoe form = new FrmBaoCaoPhanLoaiSucKhoe();
+            form.ShowDialog();
+        }
+
+        private void barBaoCaoPhanLoaiSucKhoeCanBoCapCao_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBaoCaoPLSKCanBoCaoCap form = new FrmBaoCaoPLSKCanBoCaoCap();
+            form.ShowDialog();
+        }
     }
 }
