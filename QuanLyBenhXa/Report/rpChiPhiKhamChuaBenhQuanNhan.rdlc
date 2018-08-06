@@ -258,7 +258,7 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>1.09071cm</Top>
         <Left>0.26141cm</Left>
-        <Height>4.0925cm</Height>
+        <Height>4.05723cm</Height>
         <Width>17.26375cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -1522,6 +1522,7 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
+                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixHeader>
             </TablixMember>

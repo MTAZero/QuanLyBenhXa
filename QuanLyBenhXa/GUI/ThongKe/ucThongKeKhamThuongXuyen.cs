@@ -109,5 +109,22 @@ namespace QuanLyBenhXa.GUI.ThongKe
         {
             LoadDgvKHAMTHUONGXUYEN();
         }
+
+        private void btnInChiPhiKhamBenh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int khamdinhkiID = (int)dgvKHAMTHUONGXUYEN.GetFocusedRowCellValue("ID");
+                FrmBaoCaoChiPhiKhamBenh form = new FrmBaoCaoChiPhiKhamBenh(khamdinhkiID);
+                this.Hide();
+                form.ShowDialog();
+
+                LoadDgvKHAMTHUONGXUYEN();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có phiếu khám thường xuyên nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

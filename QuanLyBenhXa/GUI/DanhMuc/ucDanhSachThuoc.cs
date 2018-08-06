@@ -182,7 +182,16 @@ namespace QuanLyBenhXa.GUI.DanhMuc
 
             if (txtHamLuong.Text == "")
             {
-                MessageBox.Show("Kí hiệu của thuốc không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đơn giá của thuốc không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                int k = Int32.Parse(txtHamLuong.Text);
+            }catch
+            {
+                MessageBox.Show("Đơn giá của thuốc phải là số nguyên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

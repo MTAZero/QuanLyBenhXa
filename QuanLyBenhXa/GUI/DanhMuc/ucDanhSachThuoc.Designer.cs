@@ -44,6 +44,8 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDonViTinh = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtHamLuong = new DevExpress.XtraEditors.MemoEdit();
             this.txtCachSuDung = new DevExpress.XtraEditors.MemoEdit();
@@ -55,20 +57,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTen = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDonViTinh = new DevExpress.XtraEditors.TextEdit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHUOCMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHUOC)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHamLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCachSuDung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHanSuDung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -271,6 +271,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin thuốc";
             // 
+            // txtDonViTinh
+            // 
+            this.txtDonViTinh.Enabled = false;
+            this.txtDonViTinh.Location = new System.Drawing.Point(123, 337);
+            this.txtDonViTinh.Name = "txtDonViTinh";
+            this.txtDonViTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtDonViTinh.Properties.Appearance.Options.UseFont = true;
+            this.txtDonViTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDonViTinh.Size = new System.Drawing.Size(83, 26);
+            this.txtDonViTinh.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 341);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 17);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Đơn vị tính";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -353,9 +373,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Hàm lượng:";
+            this.label3.Text = "Đơn giá";
             // 
             // txtTen
             // 
@@ -376,26 +396,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên thuốc:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 341);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 17);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Đơn vị tính";
-            // 
-            // txtDonViTinh
-            // 
-            this.txtDonViTinh.Enabled = false;
-            this.txtDonViTinh.Location = new System.Drawing.Point(123, 337);
-            this.txtDonViTinh.Name = "txtDonViTinh";
-            this.txtDonViTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtDonViTinh.Properties.Appearance.Options.UseFont = true;
-            this.txtDonViTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtDonViTinh.Size = new System.Drawing.Size(83, 26);
-            this.txtDonViTinh.TabIndex = 15;
-            // 
             // ucDanhSachThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -415,12 +415,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHUOC)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHamLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCachSuDung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHanSuDung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonViTinh.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

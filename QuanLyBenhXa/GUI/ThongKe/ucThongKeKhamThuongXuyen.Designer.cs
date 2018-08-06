@@ -45,9 +45,10 @@
             this.Ngay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BacSi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BenhNhan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DonVi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Benh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CachGiaiQuyet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DonVi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnInChiPhiKhamBenh = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -62,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnInChiPhiKhamBenh);
             this.panel1.Controls.Add(this.btnChiTiet);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox1);
@@ -265,6 +267,15 @@
             this.BenhNhan.VisibleIndex = 3;
             this.BenhNhan.Width = 130;
             // 
+            // DonVi
+            // 
+            this.DonVi.Caption = "Đơn vị";
+            this.DonVi.FieldName = "DonVi";
+            this.DonVi.Name = "DonVi";
+            this.DonVi.Visible = true;
+            this.DonVi.VisibleIndex = 4;
+            this.DonVi.Width = 112;
+            // 
             // Benh
             // 
             this.Benh.Caption = "Bệnh";
@@ -283,14 +294,18 @@
             this.CachGiaiQuyet.VisibleIndex = 6;
             this.CachGiaiQuyet.Width = 115;
             // 
-            // DonVi
+            // btnInChiPhiKhamBenh
             // 
-            this.DonVi.Caption = "Đơn vị";
-            this.DonVi.FieldName = "DonVi";
-            this.DonVi.Name = "DonVi";
-            this.DonVi.Visible = true;
-            this.DonVi.VisibleIndex = 4;
-            this.DonVi.Width = 112;
+            this.btnInChiPhiKhamBenh.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInChiPhiKhamBenh.Appearance.Options.UseFont = true;
+            this.btnInChiPhiKhamBenh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnInChiPhiKhamBenh.Image = ((System.Drawing.Image)(resources.GetObject("btnInChiPhiKhamBenh.Image")));
+            this.btnInChiPhiKhamBenh.Location = new System.Drawing.Point(1019, 88);
+            this.btnInChiPhiKhamBenh.Name = "btnInChiPhiKhamBenh";
+            this.btnInChiPhiKhamBenh.Size = new System.Drawing.Size(162, 30);
+            this.btnInChiPhiKhamBenh.TabIndex = 25;
+            this.btnInChiPhiKhamBenh.Text = "In chi phí khám bệnh";
+            this.btnInChiPhiKhamBenh.Click += new System.EventHandler(this.btnInChiPhiKhamBenh_Click);
             // 
             // ucThongKeKhamThuongXuyen
             // 
@@ -335,5 +350,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.Columns.GridColumn DonVi;
+        private DevExpress.XtraEditors.SimpleButton btnInChiPhiKhamBenh;
     }
 }
