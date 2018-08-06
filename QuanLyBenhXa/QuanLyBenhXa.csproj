@@ -417,7 +417,6 @@
     <EmbeddedResource Include="Report\rpChiPhiKhamChuaBenhQuanNhan.rdlc" />
     <EmbeddedResource Include="Report\rpDanhSachPhanLoaiSucKhoeCanBoCaoCap.rdlc" />
     <EmbeddedResource Include="Report\rpGiayGioiThieu.rdlc" />
-    <EmbeddedResource Include="Report\rpKeKhaiChiPhiKhamBenhQuanNhan.rdlc" />
     <EmbeddedResource Include="Report\rpTongHopPhanLoaiSucKhoe.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
