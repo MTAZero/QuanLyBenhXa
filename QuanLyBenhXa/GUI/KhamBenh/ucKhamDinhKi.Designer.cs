@@ -100,16 +100,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxBenhHiemNgheo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbxLoaiHinhKham = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.cbxBenhNhan = new DevExpress.XtraEditors.LookUpEdit();
             this.cbxBacSi = new DevExpress.XtraEditors.LookUpEdit();
             this.dateThoiGianKham = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.cbxLoaiHinhKham = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxBenhHiemNgheo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,12 +149,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxPhanLoaiSucKhoe.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBenhHiemNgheo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiHinhKham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBacSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiHinhKham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenhHiemNgheo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -873,13 +873,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbxBenhHiemNgheo);
             this.groupBox2.Controls.Add(this.txtKetLuan);
             this.groupBox2.Controls.Add(this.cbxPhanLoaiSucKhoe);
             this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label33);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(2, 249);
+            this.groupBox2.Location = new System.Drawing.Point(2, 205);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(444, 191);
+            this.groupBox2.Size = new System.Drawing.Size(444, 235);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kết quả khám";
@@ -931,9 +933,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbxBenhHiemNgheo);
             this.groupBox1.Controls.Add(this.cbxLoaiHinhKham);
-            this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.cbxBenhNhan);
             this.groupBox1.Controls.Add(this.cbxBacSi);
@@ -943,10 +943,69 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 213);
+            this.groupBox1.Size = new System.Drawing.Size(443, 184);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khám sức khỏe định kì";
+            // 
+            // cbxBenhHiemNgheo
+            // 
+            this.cbxBenhHiemNgheo.Location = new System.Drawing.Point(107, 187);
+            this.cbxBenhHiemNgheo.Name = "cbxBenhHiemNgheo";
+            this.cbxBenhHiemNgheo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxBenhHiemNgheo.Properties.Appearance.Options.UseFont = true;
+            this.cbxBenhHiemNgheo.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxBenhHiemNgheo.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxBenhHiemNgheo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxBenhHiemNgheo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxBenhHiemNgheo.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxBenhHiemNgheo.Properties.Items.AddRange(new object[] {
+            "Bệnh bình thường",
+            "Bệnh hiểm nghèo",
+            "Bệnh cần theo dõi",
+            "Bệnh mãn tính",
+            "Không bị bệnh"});
+            this.cbxBenhHiemNgheo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxBenhHiemNgheo.Size = new System.Drawing.Size(219, 26);
+            this.cbxBenhHiemNgheo.TabIndex = 9;
+            // 
+            // cbxLoaiHinhKham
+            // 
+            this.cbxLoaiHinhKham.Location = new System.Drawing.Point(151, 133);
+            this.cbxLoaiHinhKham.Name = "cbxLoaiHinhKham";
+            this.cbxLoaiHinhKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxLoaiHinhKham.Properties.Appearance.Options.UseFont = true;
+            this.cbxLoaiHinhKham.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxLoaiHinhKham.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxLoaiHinhKham.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxLoaiHinhKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxLoaiHinhKham.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxLoaiHinhKham.Properties.Items.AddRange(new object[] {
+            "Khám định kì",
+            "Phúc tra sức khỏe"});
+            this.cbxLoaiHinhKham.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxLoaiHinhKham.Size = new System.Drawing.Size(219, 26);
+            this.cbxLoaiHinhKham.TabIndex = 8;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(25, 191);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(83, 17);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Nhóm bệnh: ";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(26, 137);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(101, 17);
+            this.label32.TabIndex = 4;
+            this.label32.Text = "Loại hình khám:";
             // 
             // cbxBenhNhan
             // 
@@ -1029,65 +1088,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bác sĩ:";
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(26, 137);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(101, 17);
-            this.label32.TabIndex = 4;
-            this.label32.Text = "Loại hình khám:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(26, 176);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(113, 17);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Bệnh hiểm nghèo:";
-            // 
-            // cbxLoaiHinhKham
-            // 
-            this.cbxLoaiHinhKham.Location = new System.Drawing.Point(151, 133);
-            this.cbxLoaiHinhKham.Name = "cbxLoaiHinhKham";
-            this.cbxLoaiHinhKham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxLoaiHinhKham.Properties.Appearance.Options.UseFont = true;
-            this.cbxLoaiHinhKham.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxLoaiHinhKham.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxLoaiHinhKham.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxLoaiHinhKham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxLoaiHinhKham.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxLoaiHinhKham.Properties.Items.AddRange(new object[] {
-            "Khám định kì",
-            "Phúc tra sức khỏe"});
-            this.cbxLoaiHinhKham.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxLoaiHinhKham.Size = new System.Drawing.Size(219, 26);
-            this.cbxLoaiHinhKham.TabIndex = 8;
-            // 
-            // cbxBenhHiemNgheo
-            // 
-            this.cbxBenhHiemNgheo.Location = new System.Drawing.Point(151, 172);
-            this.cbxBenhHiemNgheo.Name = "cbxBenhHiemNgheo";
-            this.cbxBenhHiemNgheo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenhHiemNgheo.Properties.Appearance.Options.UseFont = true;
-            this.cbxBenhHiemNgheo.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxBenhHiemNgheo.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxBenhHiemNgheo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenhHiemNgheo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxBenhHiemNgheo.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxBenhHiemNgheo.Properties.Items.AddRange(new object[] {
-            "Bệnh bình thường",
-            "Bệnh hiểm nghèo",
-            "Bệnh cần theo dõi",
-            "Bệnh mãn tính",
-            "Không bị bệnh"});
-            this.cbxBenhHiemNgheo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxBenhHiemNgheo.Size = new System.Drawing.Size(219, 26);
-            this.cbxBenhHiemNgheo.TabIndex = 9;
-            // 
             // ucKhamDinhKi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1141,12 +1141,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxPhanLoaiSucKhoe.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxBenhHiemNgheo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiHinhKham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhNhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBacSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxLoaiHinhKham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxBenhHiemNgheo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
