@@ -319,6 +319,12 @@
     <Compile Include="Report\FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.Designer.cs">
       <DependentUpon>FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\FrmRpKhamDinhKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmRpKhamDinhKi.Designer.cs">
+      <DependentUpon>FrmRpKhamDinhKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\FrmRpCanBoDieuTri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -477,6 +483,9 @@
     <EmbeddedResource Include="Report\FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.resx">
       <DependentUpon>FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpKhamDinhKi.resx">
+      <DependentUpon>FrmRpKhamDinhKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpCanBoDieuTri.resx">
       <DependentUpon>FrmRpCanBoDieuTri.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,6 +502,7 @@
     <EmbeddedResource Include="Report\rpChiPhiKhamChuaBenhQuanNhan.rdlc" />
     <EmbeddedResource Include="Report\rpDanhSachPhanLoaiSucKhoeCanBoCaoCap.rdlc" />
     <EmbeddedResource Include="Report\rpGiayGioiThieu.rdlc" />
+    <EmbeddedResource Include="Report\rpKhamDinhKi.rdlc" />
     <EmbeddedResource Include="Report\rpTongHopPhanLoaiSucKhoe.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

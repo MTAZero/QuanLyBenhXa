@@ -57,7 +57,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
                                                 BenhNhan = BENHNHANService.GetAllEntities().Where(z=>z.ID == p.BENHNHANID).FirstOrDefault().HOTEN,
                                                 Benh = BENHService.GetAllEntities().Where(z=>z.ID == p.BENHID).FirstOrDefault().TEN,
                                                 CachGiaiQuyet = CachGiaiQuyetStr((int)p.CACHGIAIQUYET),
-                                                DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys(BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).ID)).TEN
+                                                DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys((int)BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).DONVIID)).TEN
                                             })
                                             .Where(p=>p.Ngay.ToUpper().Contains(text) || p.BacSi.ToUpper().Contains(text) || p.BenhNhan.ToUpper().Contains(text) || p.Benh.ToUpper().Contains(text) || p.CachGiaiQuyet.ToUpper().Contains(text) || p.DonVi.ToUpper().Contains(text))
                                             .Select(p=> new {
