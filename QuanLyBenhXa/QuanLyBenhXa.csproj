@@ -238,6 +238,12 @@
     <Compile Include="GUI\ThongKe\FrmBaoCaoChiPhiKhamBenh.Designer.cs">
       <DependentUpon>FrmBaoCaoChiPhiKhamBenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThongKe\FrmBaoCaoCanBoCaoCapDieuTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongKe\FrmBaoCaoCanBoCaoCapDieuTri.Designer.cs">
+      <DependentUpon>FrmBaoCaoCanBoCaoCapDieuTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ThongKe\FrmBaoCaoPLSKCanBoCaoCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,12 @@
     </Compile>
     <Compile Include="Report\FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.Designer.cs">
       <DependentUpon>FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmRpCanBoDieuTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmRpCanBoDieuTri.Designer.cs">
+      <DependentUpon>FrmRpCanBoDieuTri.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\FrmRpChiPhiKhamChuaBenhQuanNhan.cs">
       <SubType>Form</SubType>
@@ -415,6 +427,9 @@
     <EmbeddedResource Include="GUI\ThongKe\FrmBaoCaoChiPhiKhamBenh.resx">
       <DependentUpon>FrmBaoCaoChiPhiKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongKe\FrmBaoCaoCanBoCaoCapDieuTri.resx">
+      <DependentUpon>FrmBaoCaoCanBoCaoCapDieuTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongKe\FrmBaoCaoPLSKCanBoCaoCap.resx">
       <DependentUpon>FrmBaoCaoPLSKCanBoCaoCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -462,6 +477,9 @@
     <EmbeddedResource Include="Report\FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.resx">
       <DependentUpon>FrmDanhSachPhanLoaiSucKhoeCanBoCaoCap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpCanBoDieuTri.resx">
+      <DependentUpon>FrmRpCanBoDieuTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmRpChiPhiKhamChuaBenhQuanNhan.resx">
       <DependentUpon>FrmRpChiPhiKhamChuaBenhQuanNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +489,7 @@
     <EmbeddedResource Include="Report\FrmRpTongHopPhanLoaiSucKhoe.resx">
       <DependentUpon>FrmRpTongHopPhanLoaiSucKhoe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpCanBoCapCaoDieuTri.rdlc" />
     <EmbeddedResource Include="Report\rpChiPhiKhamChuaBenhQuanNhan.rdlc" />
     <EmbeddedResource Include="Report\rpDanhSachPhanLoaiSucKhoeCanBoCaoCap.rdlc" />
     <EmbeddedResource Include="Report\rpGiayGioiThieu.rdlc" />

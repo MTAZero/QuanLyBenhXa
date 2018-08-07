@@ -3,5 +3,8 @@
 
     partial class rpDataSet
     {
+        partial class CanBoCapCaoDieuTriDataTable
+        {
+        }
     }
 }

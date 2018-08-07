@@ -51,7 +51,8 @@ namespace QuanLyBenhXa.GUI.KhamBenh
                     Tuoi = DateTime.Now.Year - ((DateTime)benhnhan.NGAYSINH).Year,
                     CapBac = CAPBACService.GetByPrimaryKey(new CAPBACKeys((int)benhnhan.CAPBACID)).TEN,
                     ChucVu = CHUCVUService.GetByPrimaryKey(new CHUCVUKeys((int)benhnhan.CHUCVUID)).TEN,
-                    DonVi = txtDonVi.Text, //DONVIService.GetByPrimaryKey(new DONVIKeys((int)benhnhan.DONVIID)).TEN,
+                    DonVi = txtDonVi.Text,
+                    DonViBenhNhan = DONVIService.GetByPrimaryKey(new DONVIKeys((int)benhnhan.DONVIID)).TEN,
                     Benh = txtCanBenh.Text, //BENHService.GetByPrimaryKey(new BENHKeys((int)khamthuongxuyen.BENHID)).TEN,
                     Ngay = DateTime.Now.ToString(@"\N\g\à\y dd \t\h\á\n\g MM \n\ă\m yyyy"),
                     SoSucKhoe = txtSoSucKhoe.Text

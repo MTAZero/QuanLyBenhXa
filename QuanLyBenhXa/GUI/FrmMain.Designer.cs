@@ -78,6 +78,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSucKhoeCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBaoCaoCanBoCapCaoDieuTri = new DevExpress.XtraBars.BarButtonItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -162,9 +163,10 @@
             this.barDanhSachMuonVatTu,
             this.barTKBCKhamThuongXuyen,
             this.barBaoCaoPhanLoaiSucKhoe,
-            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao});
+            this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao,
+            this.barBaoCaoCanBoCapCaoDieuTri});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 34;
+            this.ribbonControl1.MaxItemId = 35;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribonPublic,
@@ -500,6 +502,7 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barTKBCLuotKham);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBaoCaoPhanLoaiSucKhoe);
             this.ribbonPageGroup3.ItemLinks.Add(this.barBaoCaoPhanLoaiSucKhoeCanBoCapCao);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barBaoCaoCanBoCapCaoDieuTri);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Thống kê";
             // 
@@ -544,6 +547,15 @@
             this.barButtonItem9.Id = 11;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barBaoCaoCanBoCapCaoDieuTri
+            // 
+            this.barBaoCaoCanBoCapCaoDieuTri.Caption = "Báo cáo cán bộ cấp cao điều trị";
+            this.barBaoCaoCanBoCapCaoDieuTri.Glyph = ((System.Drawing.Image)(resources.GetObject("barBaoCaoCanBoCapCaoDieuTri.Glyph")));
+            this.barBaoCaoCanBoCapCaoDieuTri.Id = 34;
+            this.barBaoCaoCanBoCapCaoDieuTri.Name = "barBaoCaoCanBoCapCaoDieuTri";
+            this.barBaoCaoCanBoCapCaoDieuTri.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barBaoCaoCanBoCapCaoDieuTri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBaoCaoCanBoCapCaoDieuTri_ItemClick);
             // 
             // FrmMain
             // 
@@ -616,5 +628,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraBars.BarButtonItem barBaoCaoPhanLoaiSucKhoe;
         private DevExpress.XtraBars.BarButtonItem barBaoCaoPhanLoaiSucKhoeCanBoCapCao;
+        private DevExpress.XtraBars.BarButtonItem barBaoCaoCanBoCapCaoDieuTri;
     }
 }

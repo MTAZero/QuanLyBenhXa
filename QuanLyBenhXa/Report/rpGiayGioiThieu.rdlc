@@ -24,7 +24,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ĐƠN VỊ HVKTQS</Value>
+                <Value>=Parameters!DonVi.Value</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>11pt</FontSize>
@@ -303,15 +303,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Parameters!DonVi.Value</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
+                <Value>=Parameters!DonViBenhNhan.Value</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>11pt</FontSize>
@@ -572,6 +564,10 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="SoSucKhoe">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DonViBenhNhan">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

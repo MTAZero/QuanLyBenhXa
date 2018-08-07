@@ -24,7 +24,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>PHÂN LOẠI SỨC KHỎE CÁN BỘ CAO CẤP</Value>
+                <Value>CÁN BỘ CAO CẤP CẤP CỨU VÀ ĐIỀU TRỊ TẠI BỆNH VIỆN, BỆNH XÁ</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>16pt</FontSize>
@@ -38,10 +38,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.32314cm</Top>
-        <Left>0.34078cm</Left>
-        <Height>1.36729cm</Height>
-        <Width>25.83625cm</Width>
+        <Top>0.31432cm</Top>
+        <Left>0.42016cm</Left>
+        <Height>1.44667cm</Height>
+        <Width>25.65104cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -68,7 +68,7 @@
                             <Value>STT</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -117,25 +117,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.96063cm</Width>
+              <Width>4.685cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.91792cm</Width>
+              <Width>3.29375cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.61125cm</Width>
+              <Width>1.99729cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.83854cm</Width>
+              <Width>4.405cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.4525cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.13082cm</Width>
+              <Width>4.74896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.35606cm</Width>
+              <Width>1.99729cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -154,7 +154,7 @@
                               <Value>=Fields!HoTen.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -198,17 +198,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PhanLoaiSK">
+                    <Textbox Name="DonVi">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NamSinh.Value</Value>
+                              <Value>=Fields!DonVi.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -217,61 +217,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PhanLoaiSK</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="ChucVu">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!ChucVu.Value</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>ChucVu</rd:DefaultName>
+                      <rd:DefaultName>DonVi</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -316,7 +262,7 @@
                               <Value>=Fields!CapBac.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -360,17 +306,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PhanLoaiSK1">
+                    <Textbox Name="MacBenh">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PhanLoaiSK.Value</Value>
+                              <Value>=Fields!MacBenh.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -379,7 +325,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PhanLoaiSK1</rd:DefaultName>
+                      <rd:DefaultName>MacBenh</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -414,17 +360,71 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Benh">
+                    <Textbox Name="ThoiGianDieuTri">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Benh.Value</Value>
+                              <Value>=Fields!ThoiGianDieuTri.Value</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>ThoiGianDieuTri</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="BienPhapGiaiQuyet">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!BienPhapGiaiQuyet.Value</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -433,7 +433,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Benh</rd:DefaultName>
+                      <rd:DefaultName>BienPhapGiaiQuyet</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -468,26 +468,26 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="GhiChu">
+                    <Textbox Name="Textbox19">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!GhiChu.Value</Value>
+                              <Value />
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>GhiChu</rd:DefaultName>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -533,7 +533,7 @@
                 </GroupExpressions>
               </Group>
               <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox3">
                     <CanGrow>true</CanGrow>
@@ -545,7 +545,7 @@
                             <Value>Họ và tên</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -591,65 +591,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>0.6cm</Size>
-                <CellContents>
-                  <Textbox Name="Textbox2">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>Năm sinh</Value>
-                            <Style>
-                              <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
-                              <FontWeight>Bold</FontWeight>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox2</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Style>Solid</Style>
-                      </Border>
-                      <TopBorder>
-                        <Color>Black</Color>
-                        <Style>Solid</Style>
-                        <Width>1pt</Width>
-                      </TopBorder>
-                      <BottomBorder>
-                        <Color>Black</Color>
-                        <Style>Solid</Style>
-                        <Width>1pt</Width>
-                      </BottomBorder>
-                      <LeftBorder>
-                        <Color>Black</Color>
-                        <Style>Solid</Style>
-                        <Width>1pt</Width>
-                      </LeftBorder>
-                      <RightBorder>
-                        <Color>Black</Color>
-                        <Style>Solid</Style>
-                        <Width>1pt</Width>
-                      </RightBorder>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-            </TablixMember>
-            <TablixMember>
-              <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox6">
                     <CanGrow>true</CanGrow>
@@ -658,10 +600,10 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Chức vụ</Value>
+                            <Value>Đơn vị</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -707,7 +649,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox8">
                     <CanGrow>true</CanGrow>
@@ -719,7 +661,7 @@
                             <Value>Cấp bậc</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -765,19 +707,19 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
-                  <Textbox Name="Textbox4">
+                  <Textbox Name="Textbox10">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Phân loại SK</Value>
+                            <Value>Mắc bệnh</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -787,7 +729,7 @@
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox4</rd:DefaultName>
+                    <rd:DefaultName>Textbox10</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>Solid</Style>
@@ -823,7 +765,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox12">
                     <CanGrow>true</CanGrow>
@@ -832,10 +774,25 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Bệnh mãn tính cần theo dõi</Value>
+                            <Value>Thời gian </Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>nằm điều trị</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -881,7 +838,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>0.6cm</Size>
+                <Size>1.2197cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox14">
                     <CanGrow>true</CanGrow>
@@ -890,10 +847,10 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Ghi chú</Value>
+                            <Value>Biện pháp giải quyết</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
                           </TextRun>
@@ -904,6 +861,64 @@
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox14</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </BottomBorder>
+                      <LeftBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <RightBorder>
+                        <Color>Black</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>1.2197cm</Size>
+                <CellContents>
+                  <Textbox Name="Textbox18">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Ghi chú</Value>
+                            <Style>
+                              <FontFamily>Times New Roman</FontFamily>
+                              <FontSize>12pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox18</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>Solid</Style>
@@ -953,7 +968,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.52104cm</Size>
+                <Size>1.07125cm</Size>
                 <CellContents>
                   <Textbox Name="STT">
                     <CanGrow>true</CanGrow>
@@ -965,7 +980,7 @@
                             <Value>=Fields!STT.Value</Value>
                             <Style>
                               <FontFamily>Times New Roman</FontFamily>
-                              <FontSize>11pt</FontSize>
+                              <FontSize>12pt</FontSize>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -1010,11 +1025,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dtPhanLoaiSucKhoeCanBoCapCao</DataSetName>
-        <Top>1.83155cm</Top>
-        <Left>0.34078cm</Left>
-        <Height>1.2cm</Height>
-        <Width>25.83625cm</Width>
+        <DataSetName>CanBoCapCaoDieuTri</DataSetName>
+        <Top>1.93738cm</Top>
+        <Left>0.42016cm</Left>
+        <Height>1.8197cm</Height>
+        <Width>25.65104cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1023,13 +1038,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.51896cm</Height>
+    <Height>3.96875cm</Height>
     <Style />
   </Body>
-  <Width>26.56417cm</Width>
+  <Width>26.5cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
-    <PageWidth>29.7cm</PageWidth>
+    <PageWidth>26.5cm</PageWidth>
     <LeftMargin>1.5cm</LeftMargin>
     <RightMargin>1.5cm</RightMargin>
     <TopMargin>1.5cm</TopMargin>
@@ -1044,11 +1059,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>accd8f9d-361d-4370-a032-9a712ff42a2f</rd:DataSourceID>
+      <rd:DataSourceID>b17f7fd2-9427-4a69-9e76-623e8c05f3c6</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dtPhanLoaiSucKhoeCanBoCapCao">
+    <DataSet Name="CanBoCapCaoDieuTri">
       <Query>
         <DataSourceName>rpDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1062,35 +1077,31 @@
           <DataField>HoTen</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ChucVu">
-          <DataField>ChucVu</DataField>
+        <Field Name="DonVi">
+          <DataField>DonVi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CapBac">
           <DataField>CapBac</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PhanLoaiSK">
-          <DataField>PhanLoaiSK</DataField>
+        <Field Name="MacBenh">
+          <DataField>MacBenh</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Benh">
-          <DataField>Benh</DataField>
+        <Field Name="ThoiGianDieuTri">
+          <DataField>ThoiGianDieuTri</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="GhiChu">
-          <DataField>GhiChu</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NamSinh">
-          <DataField>NamSinh</DataField>
+        <Field Name="BienPhapGiaiQuyet">
+          <DataField>BienPhapGiaiQuyet</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>rpDataSet</rd:DataSetName>
         <rd:SchemaPath>D:\Work\2018\Anh Long\Thang 4\Quản lý sức khỏe người dùng\Source\Ver2\QuanLyBenhXa\QuanLyBenhXa\Report\rpDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>PhanLoaiSucKhoeCaoCap</rd:TableName>
+        <rd:TableName>CanBoCapCaoDieuTri</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -1098,5 +1109,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>d8e2cc45-3488-4613-af17-9fec82df7314</rd:ReportID>
+  <rd:ReportID>5afb7756-652f-4a2d-ab69-4c6c14ac7b43</rd:ReportID>
 </Report>

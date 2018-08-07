@@ -322,5 +322,11 @@ namespace QuanLyBenhXa.GUI
             FrmBaoCaoPLSKCanBoCaoCap form = new FrmBaoCaoPLSKCanBoCaoCap();
             form.ShowDialog();
         }
+
+        private void barBaoCaoCanBoCapCaoDieuTri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBaoCaoCanBoCaoCapDieuTri form = new FrmBaoCaoCanBoCaoCapDieuTri();
+            form.ShowDialog();
+        }
     }
 }
