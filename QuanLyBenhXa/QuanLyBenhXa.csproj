@@ -331,6 +331,9 @@
     <Compile Include="Report\FrmRpTongHopPhanLoaiSucKhoe.Designer.cs">
       <DependentUpon>FrmRpTongHopPhanLoaiSucKhoe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rpDataSet.cs">
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\rpDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

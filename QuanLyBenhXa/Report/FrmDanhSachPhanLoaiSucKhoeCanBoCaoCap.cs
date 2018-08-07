@@ -52,7 +52,8 @@ namespace QuanLyBenhXa.Report
                                                                     ChucVu = CHUCVUService.GetByPrimaryKey(new CHUCVUKeys(
                                                                                (int)BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).CHUCVUID
                                                                                )).TEN,
-                                                                    GhiChu = (p.GHICHU == null) ? "" : p.GHICHU
+                                                                    GhiChu = (p.GHICHU == null) ? "" : p.GHICHU,
+                                                                    PhanLoaiSK = ((DateTime)BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).NGAYSINH).Year.ToString()
                                                                 })
                                                                 .ToList();
 

@@ -65,17 +65,17 @@
             this.btnLuuThongTin = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTrieuChung = new DevExpress.XtraEditors.MemoEdit();
             this.cbxCachGiaiQuyet = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtKetLuan = new DevExpress.XtraEditors.MemoEdit();
             this.cbxBenh = new DevExpress.XtraEditors.LookUpEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTrieuChung = new DevExpress.XtraEditors.MemoEdit();
             this.cbxBenhNhan = new DevExpress.XtraEditors.LookUpEdit();
             this.cbxBacSi = new DevExpress.XtraEditors.LookUpEdit();
+            this.label14 = new System.Windows.Forms.Label();
             this.dateThoiGianKham = new DevExpress.XtraEditors.DateEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,11 +98,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianVao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhuongPhap.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCachGiaiQuyet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBacSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties.CalendarTimeProperties)).BeginInit();
@@ -604,17 +604,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kết quả khám";
             // 
-            // txtTrieuChung
-            // 
-            this.txtTrieuChung.Enabled = false;
-            this.txtTrieuChung.Location = new System.Drawing.Point(152, 161);
-            this.txtTrieuChung.Name = "txtTrieuChung";
-            this.txtTrieuChung.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtTrieuChung.Properties.Appearance.Options.UseFont = true;
-            this.txtTrieuChung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTrieuChung.Size = new System.Drawing.Size(238, 58);
-            this.txtTrieuChung.TabIndex = 8;
-            // 
             // cbxCachGiaiQuyet
             // 
             this.cbxCachGiaiQuyet.Location = new System.Drawing.Point(133, 74);
@@ -635,15 +624,6 @@
             this.cbxCachGiaiQuyet.Size = new System.Drawing.Size(219, 26);
             this.cbxCachGiaiQuyet.TabIndex = 6;
             this.cbxCachGiaiQuyet.SelectedIndexChanged += new System.EventHandler(this.cbxCachGiaiQuyet_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 164);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Triệu chứng";
             // 
             // label4
             // 
@@ -717,6 +697,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
             // 
+            // txtTrieuChung
+            // 
+            this.txtTrieuChung.Enabled = false;
+            this.txtTrieuChung.Location = new System.Drawing.Point(152, 161);
+            this.txtTrieuChung.Name = "txtTrieuChung";
+            this.txtTrieuChung.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTrieuChung.Properties.Appearance.Options.UseFont = true;
+            this.txtTrieuChung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTrieuChung.Size = new System.Drawing.Size(238, 58);
+            this.txtTrieuChung.TabIndex = 8;
+            // 
             // cbxBenhNhan
             // 
             this.cbxBenhNhan.Location = new System.Drawing.Point(152, 73);
@@ -750,6 +741,15 @@
             this.cbxBacSi.Properties.ShowHeader = false;
             this.cbxBacSi.Size = new System.Drawing.Size(225, 26);
             this.cbxBacSi.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 164);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Triệu chứng";
             // 
             // dateThoiGianKham
             // 
@@ -827,12 +827,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPhuongPhap.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCachGiaiQuyet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKetLuan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenh.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrieuChung.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBenhNhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBacSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateThoiGianKham.Properties.CalendarTimeProperties)).EndInit();

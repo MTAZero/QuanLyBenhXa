@@ -392,6 +392,10 @@ namespace QuanLyBenhXa.Report {
             
             private global::System.Data.DataColumn columnGhiChu;
             
+            private global::System.Data.DataColumn columnDonVi;
+            
+            private global::System.Data.DataColumn columnKetQuaKham;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TongHopPhanLoaiSucKhoeDataTable() {
@@ -459,6 +463,22 @@ namespace QuanLyBenhXa.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DonViColumn {
+                get {
+                    return this.columnDonVi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KetQuaKhamColumn {
+                get {
+                    return this.columnKetQuaKham;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -494,13 +514,15 @@ namespace QuanLyBenhXa.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TongHopPhanLoaiSucKhoeRow AddTongHopPhanLoaiSucKhoeRow(string STT, string HoTen, string PhanLoai, string GhiChu) {
+            public TongHopPhanLoaiSucKhoeRow AddTongHopPhanLoaiSucKhoeRow(string STT, string HoTen, string PhanLoai, string GhiChu, string DonVi, string KetQuaKham) {
                 TongHopPhanLoaiSucKhoeRow rowTongHopPhanLoaiSucKhoeRow = ((TongHopPhanLoaiSucKhoeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         STT,
                         HoTen,
                         PhanLoai,
-                        GhiChu};
+                        GhiChu,
+                        DonVi,
+                        KetQuaKham};
                 rowTongHopPhanLoaiSucKhoeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTongHopPhanLoaiSucKhoeRow);
                 return rowTongHopPhanLoaiSucKhoeRow;
@@ -527,6 +549,8 @@ namespace QuanLyBenhXa.Report {
                 this.columnHoTen = base.Columns["HoTen"];
                 this.columnPhanLoai = base.Columns["PhanLoai"];
                 this.columnGhiChu = base.Columns["GhiChu"];
+                this.columnDonVi = base.Columns["DonVi"];
+                this.columnKetQuaKham = base.Columns["KetQuaKham"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +564,10 @@ namespace QuanLyBenhXa.Report {
                 base.Columns.Add(this.columnPhanLoai);
                 this.columnGhiChu = new global::System.Data.DataColumn("GhiChu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGhiChu);
+                this.columnDonVi = new global::System.Data.DataColumn("DonVi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDonVi);
+                this.columnKetQuaKham = new global::System.Data.DataColumn("KetQuaKham", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKetQuaKham);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1711,6 +1739,38 @@ namespace QuanLyBenhXa.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DonVi {
+                get {
+                    try {
+                        return ((string)(this[this.tableTongHopPhanLoaiSucKhoe.DonViColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DonVi\' in table \'TongHopPhanLoaiSucKhoe\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTongHopPhanLoaiSucKhoe.DonViColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string KetQuaKham {
+                get {
+                    try {
+                        return ((string)(this[this.tableTongHopPhanLoaiSucKhoe.KetQuaKhamColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KetQuaKham\' in table \'TongHopPhanLoaiSucKhoe\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTongHopPhanLoaiSucKhoe.KetQuaKhamColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSTTNull() {
                 return this.IsNull(this.tableTongHopPhanLoaiSucKhoe.STTColumn);
             }
@@ -1755,6 +1815,30 @@ namespace QuanLyBenhXa.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGhiChuNull() {
                 this[this.tableTongHopPhanLoaiSucKhoe.GhiChuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDonViNull() {
+                return this.IsNull(this.tableTongHopPhanLoaiSucKhoe.DonViColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDonViNull() {
+                this[this.tableTongHopPhanLoaiSucKhoe.DonViColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKetQuaKhamNull() {
+                return this.IsNull(this.tableTongHopPhanLoaiSucKhoe.KetQuaKhamColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKetQuaKhamNull() {
+                this[this.tableTongHopPhanLoaiSucKhoe.KetQuaKhamColumn] = global::System.Convert.DBNull;
             }
         }
         

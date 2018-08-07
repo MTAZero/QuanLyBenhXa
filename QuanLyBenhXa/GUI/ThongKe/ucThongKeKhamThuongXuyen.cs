@@ -116,9 +116,7 @@ namespace QuanLyBenhXa.GUI.ThongKe
             {
                 int khamdinhkiID = (int)dgvKHAMTHUONGXUYEN.GetFocusedRowCellValue("ID");
                 FrmBaoCaoChiPhiKhamBenh form = new FrmBaoCaoChiPhiKhamBenh(khamdinhkiID);
-                this.Hide();
                 form.ShowDialog();
-
                 LoadDgvKHAMTHUONGXUYEN();
             }
             catch

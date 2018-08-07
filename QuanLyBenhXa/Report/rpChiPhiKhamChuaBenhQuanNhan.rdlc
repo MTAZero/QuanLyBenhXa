@@ -89,7 +89,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>. Giới tính </Value>
+                <Value>. Giới tính: </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>13pt</FontSize>
@@ -236,19 +236,6 @@
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>13pt</FontSize>
                   <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>13pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1522,7 +1509,6 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
-                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixHeader>
             </TablixMember>
@@ -2041,7 +2027,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>9.6387cm</Top>
-        <Left>5.62979cm</Left>
+        <Left>5.33197cm</Left>
         <Height>3.27229cm</Height>
         <Width>6.74625cm</Width>
         <ZIndex>7</ZIndex>
@@ -2066,7 +2052,7 @@
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>13pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
@@ -2157,9 +2143,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>9.6387cm</Top>
-        <Left>12.55243cm</Left>
+        <Left>12.1812cm</Left>
         <Height>3.27229cm</Height>
-        <Width>5cm</Width>
+        <Width>5.34396cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>

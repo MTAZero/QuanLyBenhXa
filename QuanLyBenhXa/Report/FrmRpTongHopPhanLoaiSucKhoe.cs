@@ -19,6 +19,7 @@ namespace QuanLyBenhXa.Report
         private KHAMDINHKIFactory KHAMDINHKIService = new KHAMDINHKIFactory();
         private BENHNHANFactory BENHNHANService = new BENHNHANFactory();
         private PHANLOAISUCKHOEFactory PHANLOAIService = new PHANLOAISUCKHOEFactory();
+        private DONVIFactory DONVIService = new DONVIFactory();
 
         // variable
         private DateTime tungay = new DateTime(), denngay = new DateTime();
@@ -40,7 +41,9 @@ namespace QuanLyBenhXa.Report
                                                                     STT = ++i,
                                                                     HoTen = BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).HOTEN,
                                                                     PhanLoai = PHANLOAIService.GetByPrimaryKey(new PHANLOAISUCKHOEKeys((int)p.PHANLOAISUCKHOEID)).TEN,
-                                                                    GhiChu = (p.GHICHU == null) ? "" : p.GHICHU
+                                                                    GhiChu = (p.GHICHU == null) ? "" : p.GHICHU,
+                                                                    DonVi = DONVIService.GetByPrimaryKey(new DONVIKeys((int)BENHNHANService.GetByPrimaryKey(new BENHNHANKeys((int)p.BENHNHANID)).DONVIID)).TEN,
+                                                                    KetQuaKham = p.KETLUAN
                                                                 })
                                                                 .ToList();
 

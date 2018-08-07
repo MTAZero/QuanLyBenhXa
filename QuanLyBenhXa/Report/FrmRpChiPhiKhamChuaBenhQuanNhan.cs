@@ -59,7 +59,7 @@ namespace QuanLyBenhXa.Report
                                                                     Dvt = THUOCService.GetByPrimaryKey(new THUOCKeys((int)p.THUOCID)).GHICHU,
                                                                     SoLuong = p.SOLUONG,
                                                                     DonGia = Int32.Parse(THUOCService.GetByPrimaryKey(new THUOCKeys((int)p.THUOCID)).HAMLUONG).ToString("N0"),
-                                                                    ThanhTien = p.SOLUONG * Int32.Parse(THUOCService.GetByPrimaryKey(new THUOCKeys((int)p.THUOCID)).HAMLUONG)
+                                                                    ThanhTien = ((int)p.SOLUONG * Int32.Parse(THUOCService.GetByPrimaryKey(new THUOCKeys((int)p.THUOCID)).HAMLUONG)).ToString("N0")
                                                                 })
                                                                .ToList();
 
@@ -74,7 +74,7 @@ namespace QuanLyBenhXa.Report
                                                                     Dvt = VATTUService.GetByPrimaryKey(new VATTUKeys((int)p.VATTUID)).KYHIEU,
                                                                     SoLuong = p.SOLUONG,
                                                                     DonGia = Int32.Parse(VATTUService.GetByPrimaryKey(new VATTUKeys((int)p.VATTUID)).GHICHU).ToString("N0"),
-                                                                    ThanhTien = p.SOLUONG * Int32.Parse(VATTUService.GetByPrimaryKey(new VATTUKeys((int)p.VATTUID)).GHICHU)
+                                                                    ThanhTien = ((int)p.SOLUONG * Int32.Parse(VATTUService.GetByPrimaryKey(new VATTUKeys((int)p.VATTUID)).GHICHU)).ToString("N0")
                                                                 })
                                                                 .ToList();
                 tong = CHITIETCAPTHUOCService.GetAllEntities().ToList()
@@ -109,11 +109,11 @@ namespace QuanLyBenhXa.Report
                     new ReportParameter("GioiTinh", (benhnhan.GIOITINH == 1) ? "Nam" : "Nữ"),
                     new ReportParameter("DonVi", DONVIService.GetByPrimaryKey(new DONVIKeys((int)benhnhan.DONVIID)).TEN),
                     new ReportParameter("MaTheBHYT", benhnhan.MATHEBHYT),
-                    new ReportParameter("ChanDoan", khamthuongxuyen.CHANDOANSOBO),
-                    new ReportParameter("Ngay", ((DateTime)khamthuongxuyen.THOIGIAN).ToString("dd/MM/yyyy")),
+                    new ReportParameter("ChanDoan", (khamthuongxuyen.CHANDOANSOBO == null) ? "" : khamthuongxuyen.CHANDOANSOBO),
+                    new ReportParameter("ThoiGian", ((DateTime)khamthuongxuyen.THOIGIAN).ToString("dd/MM/yyyy")),
                     new ReportParameter("NguoiLapBangKe", nguoilapbangke),
                     new ReportParameter("PhuTrachQuanY", phutrachquany),
-                    new ReportParameter("ThoiGian", ((DateTime)khamthuongxuyen.THOIGIAN).ToString("dd/MM/yyyy")),
+                    new ReportParameter("Ngay", ((DateTime)khamthuongxuyen.THOIGIAN).ToString(@"\N\g\à\y dd \t\h\á\n\g MM \n\ă\m yyyy")),
                     new ReportParameter("Tong", tong.ToString("N0"))
                 };
                 this.reportViewer1.LocalReport.SetParameters(listPara);
